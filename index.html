@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fix your tech problems fast with our step-by-step troubleshooting guides, tech glossary, and free calculators. Expert solutions for devices, software, and hardware issues.">
+    <meta name="keywords" content="tech troubleshooting, device repair, fix tech problems, tech glossary, computer help, phone repair guide">
+    <title>Tech Fix Guide - Troubleshooting & Solutions for All Your Devices</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-header p {
+            font-size: 1.125rem;
+            color: #6b7280;
+        }
+        
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        /* Popular Problems */
+        .problems-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .problem-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: background 0.3s;
+        }
+        
+        .problem-item:hover {
+            background: #eff6ff;
+        }
+        
+        .problem-item h4 {
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .problem-item p {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        /* Categories */
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .category-btn {
+            background: white;
+            border: 2px solid #3b82f6;
+            color: #3b82f6;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .category-btn:hover {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: #f8fafc;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            color: #6b7280;
+            font-size: 1.125rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #3b82f6;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3b82f6;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #3b82f6;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🔧 Tech Fix Guide</div>
+            <ul class="nav-links">
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+                <li><a href="#glossary">Glossary</a></li>
+                <li><a href="#calculators">Calculators</a></li>
+                <li><a href="#guides">Guides</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Fix Your Tech Problems Fast</h1>
+        <p>Step-by-step troubleshooting guides, tech glossary, and calculators to solve any device issue</p>
+        <div class="search-box">
+            <input type="text" placeholder="Search for your problem... (e.g., iPhone not charging, laptop overheating)">
+        </div>
+    </section>
+
+    <!-- Main Categories -->
+    <section class="container">
+        <div class="section-header">
+            <h2>What Do You Need Help With?</h2>
+            <p>Choose your device type or browse by problem</p>
+        </div>
+        
+        <div class="cards-grid">
+            <a href="#smartphones" class="card">
+                <div class="card-icon">📱</div>
+                <h3>Smartphones</h3>
+                <p>Fix iPhone, Android, and mobile device issues. Charging problems, screen issues, connectivity, and more.</p>
+            </a>
+            
+            <a href="#laptops" class="card">
+                <div class="card-icon">💻</div>
+                <h3>Laptops & Computers</h3>
+                <p>Troubleshoot Mac, Windows, and Linux problems. Performance issues, errors, hardware failures.</p>
+            </a>
+            
+            <a href="#gaming" class="card">
+                <div class="card-icon">🎮</div>
+                <h3>Gaming Consoles</h3>
+                <p>PlayStation, Xbox, Nintendo Switch fixes. Disc reading, connectivity, controller issues.</p>
+            </a>
+            
+            <a href="#tablets" class="card">
+                <div class="card-icon">📲</div>
+                <h3>Tablets & iPads</h3>
+                <p>Solve tablet problems. Touch screen issues, battery drain, app crashes, storage problems.</p>
+            </a>
+            
+            <a href="#wearables" class="card">
+                <div class="card-icon">⌚</div>
+                <h3>Wearables</h3>
+                <p>Apple Watch, Fitbit, smartwatch troubleshooting. Syncing, battery, sensor issues.</p>
+            </a>
+            
+            <a href="#accessories" class="card">
+                <div class="card-icon">🎧</div>
+                <h3>Accessories</h3>
+                <p>Headphones, speakers, keyboards, mice. Connection problems, audio issues, pairing.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Popular Problems -->
+    <section class="container" style="background: #f8fafc; padding: 3rem 2rem; border-radius: 12px;">
+        <div class="section-header">
+            <h2>🔥 Most Popular Problems</h2>
+            <p>Quick fixes for the issues people search for most</p>
+        </div>
+        
+        <div class="problems-list">
+            <a href="/problems/iphone-not-charging.html" class="problem-item">
+                <h4>iPhone Not Charging</h4>
+                <p>12 tested solutions to fix charging issues on any iPhone model</p>
+            </a>
+            
+            <a href="/problems/laptop-overheating.html" class="problem-item">
+                <h4>Laptop Overheating</h4>
+                <p>How to cool down your laptop and prevent thermal throttling</p>
+            </a>
+            
+            <a href="/problems/wifi-not-connecting.html" class="problem-item">
+                <h4>WiFi Not Connecting</h4>
+                <p>Fix WiFi connection problems on any device in 10 steps</p>
+            </a>
+            
+            <a href="/problems/blue-screen-windows.html" class="problem-item">
+                <h4>Windows Blue Screen</h4>
+                <p>Decode error codes and fix BSOD crashes permanently</p>
+            </a>
+            
+            <a href="/problems/phone-battery-drain.html" class="problem-item">
+                <h4>Phone Battery Draining Fast</h4>
+                <p>15 ways to extend battery life on Android and iPhone</p>
+            </a>
+            
+            <a href="/problems/slow-computer.html" class="problem-item">
+                <h4>Computer Running Slow</h4>
+                <p>Speed up your PC or Mac with these proven methods</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Tech Glossary Preview -->
+    <section class="container">
+        <div class="section-header">
+            <h2>📚 Tech Glossary</h2>
+            <p>Understand tech terms with practical examples and guides</p>
+        </div>
+        
+        <div class="categories">
+            <a href="/glossary/ram.html" class="category-btn">RAM</a>
+            <a href="/glossary/cpu.html" class="category-btn">CPU</a>
+            <a href="/glossary/gpu.html" class="category-btn">GPU</a>
+            <a href="/glossary/ssd.html" class="category-btn">SSD vs HDD</a>
+            <a href="/glossary/vpn.html" class="category-btn">VPN</a>
+            <a href="/glossary/bandwidth.html" class="category-btn">Bandwidth</a>
+            <a href="/glossary/cache.html" class="category-btn">Cache</a>
+            <a href="/glossary/firewall.html" class="category-btn">Firewall</a>
+        </div>
+    </section>
+
+    <!-- Calculators Section -->
+    <section class="container" id="calculators">
+        <div class="section-header">
+            <h2>🧮 Free Tech Calculators</h2>
+            <p>Helpful tools to make tech decisions easier</p>
+        </div>
+        
+        <div class="cards-grid">
+            <a href="/calculators/storage.html" class="card">
+                <div class="card-icon">💾</div>
+                <h3>Storage Calculator</h3>
+                <p>Calculate how much storage you need based on your usage</p>
+            </a>
+            
+            <a href="/calculators/ram.html" class="card">
+                <div class="card-icon">🎯</div>
+                <h3>RAM Calculator</h3>
+                <p>Find out how much RAM you need for your tasks</p>
+            </a>
+            
+            <a href="/calculators/bandwidth.html" class="card">
+                <div class="card-icon">📡</div>
+                <h3>Bandwidth Calculator</h3>
+                <p>Calculate internet speed needed for your household</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="container">
+        <div class="stats">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Troubleshooting Guides</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>Tech Terms Explained</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>Free Calculators</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Always Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container">
+        <div class="cta">
+            <h2>Can't Find Your Problem?</h2>
+            <p>Browse our complete library of troubleshooting guides and tech explanations</p>
+            <a href="#all-guides" class="cta-button">View All Guides</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/problems/iphone-not-charging.html">iPhone Not Charging</a></li>
+                    <li><a href="/problems/laptop-overheating.html">Laptop Overheating</a></li>
+                    <li><a href="/problems/wifi-not-connecting.html">WiFi Problems</a></li>
+                    <li><a href="/problems/blue-screen-windows.html">Blue Screen Fix</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/glossary/ram.html">What is RAM?</a></li>
+                    <li><a href="/glossary/cpu.html">What is CPU?</a></li>
+                    <li><a href="/glossary/vpn.html">What is VPN?</a></li>
+                    <li><a href="/glossary/ssd.html">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/calculators/storage.html">Storage Calculator</a></li>
+                    <li><a href="/calculators/ram.html">RAM Calculator</a></li>
+                    <li><a href="/calculators/bandwidth.html">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple search functionality (will be enhanced later)
+        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value.toLowerCase();
+                alert('Search functionality coming soon! You searched for: ' + query);
+                // TODO: Implement actual search
+            }
+        });
+    </script>
+</body>
+</html>
