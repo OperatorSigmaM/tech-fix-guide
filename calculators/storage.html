@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free storage calculator. Convert GB to TB, calculate how many photos, videos, games fit on your drive. Plan your storage needs accurately.">
+    <title>Storage Calculator - How Much Space Do You Need? (2025)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; background: #fff; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .calculator-container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        .page-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; line-height: 1.2; }
+        .page-header p { font-size: 1.125rem; color: #6b7280; margin-bottom: 2rem; }
+        
+        .calculator-tabs { display: flex; gap: 1rem; margin-bottom: 2rem; border-bottom: 2px solid #e5e7eb; }
+        .tab { padding: 1rem 1.5rem; background: none; border: none; color: #6b7280; font-size: 1rem; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.3s; }
+        .tab:hover { color: #3b82f6; }
+        .tab.active { color: #1e40af; border-bottom-color: #3b82f6; }
+        
+        .calculator-section { display: none; background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
+        .calculator-section.active { display: block; }
+        
+        .calc-group { margin-bottom: 2rem; }
+        .calc-group label { display: block; color: #1e40af; font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem; }
+        .calc-group input, .calc-group select { width: 100%; padding: 0.75rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; transition: border 0.3s; }
+        .calc-group input:focus, .calc-group select:focus { outline: none; border-color: #3b82f6; }
+        
+        .input-row { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; align-items: end; }
+        
+        .calc-button { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1.125rem; font-weight: 600; cursor: pointer; width: 100%; transition: transform 0.2s; }
+        .calc-button:hover { transform: translateY(-2px); }
+        .calc-button:active { transform: translateY(0); }
+        
+        .result-box { background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-left: 4px solid #10b981; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
+        .result-box h3 { color: #065f46; margin-bottom: 1rem; font-size: 1.5rem; }
+        .result-value { font-size: 3rem; font-weight: 700; color: #065f46; margin: 1rem 0; }
+        .result-detail { color: #047857; font-size: 1.125rem; margin-top: 0.5rem; }
+        
+        .file-breakdown { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+        .file-item { background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #3b82f6; }
+        .file-item-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .file-item-type { color: #6b7280; font-size: 0.9rem; margin-bottom: 0.25rem; }
+        .file-item-count { color: #1e40af; font-size: 1.5rem; font-weight: 700; }
+        
+        .storage-visual { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
+        .storage-bar { background: #e5e7eb; height: 60px; border-radius: 30px; overflow: hidden; position: relative; margin-bottom: 1rem; }
+        .storage-used { background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; transition: width 0.5s ease; }
+        .storage-legend { display: flex; justify-content: space-between; color: #6b7280; font-size: 0.9rem; }
+        
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .info-box strong { color: #1e40af; }
+        
+        .examples { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
+        .examples h3 { color: #1e40af; margin-bottom: 1rem; }
+        .example-list { display: grid; gap: 1rem; }
+        .example-item { background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #3b82f6; }
+        .example-item strong { color: #1e40af; }
+        
+        footer { background: #1f2937; color: white; padding: 2rem; margin-top: 4rem; text-align: center; }
+        footer a { color: #3b82f6; text-decoration: none; }
+        
+        @media (max-width: 768px) { 
+            .page-header h1 { font-size: 1.75rem; }
+            .calculator-container { padding: 1rem; }
+            .input-row { grid-template-columns: 1fr; }
+            .result-value { font-size: 2rem; }
+            .calculator-tabs { flex-wrap: wrap; }
+            .tab { flex: 1; min-width: 120px; padding: 0.75rem; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb">
+        <a href="/">Home</a> / <a href="/#calculators">Calculators</a> / Storage Calculator
+    </div>
+    
+    <div class="calculator-container">
+        <div class="page-header">
+            <h1>💾 Storage Calculator</h1>
+            <p>Calculate storage needs, convert units, and see what fits on your drive</p>
+        </div>
+
+        <div class="calculator-tabs">
+            <button class="tab active" onclick="switchTab('converter')">Unit Converter</button>
+            <button class="tab" onclick="switchTab('capacity')">File Capacity</button>
+            <button class="tab" onclick="switchTab('planner')">Storage Planner</button>
+        </div>
+
+        <!-- Unit Converter -->
+        <div id="converter" class="calculator-section active">
+            <h2 style="color: #1e40af; margin-bottom: 1.5rem;">Storage Unit Converter</h2>
+            
+            <div class="calc-group">
+                <label>Enter Value:</label>
+                <div class="input-row">
+                    <input type="number" id="convertValue" placeholder="Enter amount" value="1000">
+                    <select id="convertFrom">
+                        <option value="byte">Bytes</option>
+                        <option value="kb">KB</option>
+                        <option value="mb">MB</option>
+                        <option value="gb" selected>GB</option>
+                        <option value="tb">TB</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="calc-button" onclick="convertUnits()">Convert</button>
+
+            <div id="converterResult" style="display: none;" class="result-box">
+                <h3>Conversion Results:</h3>
+                <div id="conversionResults"></div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Quick Reference:</strong><br>
+                1 KB = 1,024 Bytes<br>
+                1 MB = 1,024 KB = 1,048,576 Bytes<br>
+                1 GB = 1,024 MB = 1,073,741,824 Bytes<br>
+                1 TB = 1,024 GB = 1,099,511,627,776 Bytes
+            </div>
+        </div>
+
+        <!-- File Capacity Calculator -->
+        <div id="capacity" class="calculator-section">
+            <h2 style="color: #1e40af; margin-bottom: 1.5rem;">How Many Files Fit?</h2>
+            
+            <div class="calc-group">
+                <label>Storage Capacity:</label>
+                <div class="input-row">
+                    <input type="number" id="storageSize" placeholder="Enter storage size" value="500">
+                    <select id="storageUnit">
+                        <option value="mb">MB</option>
+                        <option value="gb" selected>GB</option>
+                        <option value="tb">TB</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="calc-button" onclick="calculateCapacity()">Calculate</button>
+
+            <div id="capacityResult" style="display: none;" class="result-box">
+                <h3>Your 500 GB can hold:</h3>
+                <div class="file-breakdown" id="fileBreakdown"></div>
+            </div>
+
+            <div class="examples">
+                <h3>📏 Average File Sizes:</h3>
+                <div class="example-list">
+                    <div class="example-item">
+                        <strong>📸 Photo (JPEG):</strong> 3-5 MB each
+                    </div>
+                    <div class="example-item">
+                        <strong>📸 Photo (RAW):</strong> 20-30 MB each
+                    </div>
+                    <div class="example-item">
+                        <strong>🎵 Music (MP3):</strong> 3-5 MB per song
+                    </div>
+                    <div class="example-item">
+                        <strong>🎵 Music (FLAC):</strong> 30-50 MB per song
+                    </div>
+                    <div class="example-item">
+                        <strong>🎬 Movie (1080p):</strong> 2-4 GB
+                    </div>
+                    <div class="example-item">
+                        <strong>🎬 Movie (4K):</strong> 8-15 GB
+                    </div>
+                    <div class="example-item">
+                        <strong>🎮 Game (Modern):</strong> 50-150 GB
+                    </div>
+                    <div class="example-item">
+                        <strong>📄 Document:</strong> 0.1-1 MB
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Storage Planner -->
+        <div id="planner" class="calculator-section">
+            <h2 style="color: #1e40af; margin-bottom: 1.5rem;">Plan Your Storage Needs</h2>
+            
+            <div class="calc-group">
+                <label>📸 Photos (approx 4 MB each):</label>
+                <input type="number" id="photoCount" placeholder="Number of photos" value="10000">
+            </div>
+
+            <div class="calc-group">
+                <label>🎵 Music (approx 4 MB per song):</label>
+                <input type="number" id="musicCount" placeholder="Number of songs" value="5000">
+            </div>
+
+            <div class="calc-group">
+                <label>🎬 Movies 1080p (approx 3 GB each):</label>
+                <input type="number" id="movieCount" placeholder="Number of movies" value="50">
+            </div>
+
+            <div class="calc-group">
+                <label>🎬 Movies 4K (approx 12 GB each):</label>
+                <input type="number" id="movie4kCount" placeholder="Number of 4K movies" value="20">
+            </div>
+
+            <div class="calc-group">
+                <label>🎮 Games (approx 80 GB each):</label>
+                <input type="number" id="gameCount" placeholder="Number of games" value="10">
+            </div>
+
+            <div class="calc-group">
+                <label>📄 Documents (approx 0.5 MB each):</label>
+                <input type="number" id="docCount" placeholder="Number of documents" value="5000">
+            </div>
+
+            <button class="calc-button" onclick="planStorage()">Calculate Total Storage Needed</button>
+
+            <div id="plannerResult" style="display: none;" class="result-box">
+                <h3>📊 Storage Breakdown:</h3>
+                <div id="breakdownDetails"></div>
+                <div class="storage-visual">
+                    <div class="storage-bar">
+                        <div id="storageUsedBar" class="storage-used">0%</div>
+                    </div>
+                    <div class="storage-legend">
+                        <span>Used: <span id="usedStorage">0 GB</span></span>
+                        <span>Total Needed: <span id="totalNeeded">0 GB</span></span>
+                    </div>
+                </div>
+                <div class="result-detail" id="recommendation"></div>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 3rem;">
+            <strong>💡 Pro Tips:</strong><br>
+            • Always get 20-30% more storage than you think you need<br>
+            • SSDs slow down when 90%+ full - keep 10-15% free<br>
+            • 4K videos take 4-5x more space than 1080p<br>
+            • RAW photos are 5-8x larger than JPEG<br>
+            • Modern games (2024-2025) average 80-120 GB each<br>
+            • Plan for future: your storage needs grow ~20-30% per year
+        </div>
+
+        <!-- SEO Content Section -->
+        <div style="max-width: 800px; margin: 4rem auto 0; padding: 0 1rem;">
+            <article>
+                <h2 style="color: #1e40af; font-size: 2rem; margin-bottom: 1.5rem;">How to Choose the Right Storage Capacity</h2>
+                
+                <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">Choosing the right storage capacity can save you money and frustration. Too little storage means constant file management and running out of space. Too much storage wastes money on capacity you'll never use. This guide helps you calculate exactly what you need based on your actual usage patterns.</p>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem;">Storage Needs by User Type</h3>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid #3b82f6;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.75rem;">👔 Office Worker / Student</h4>
+                    <p style="margin-bottom: 0.75rem;"><strong>Recommended:</strong> 256-512 GB SSD</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>What you'll store:</strong> Windows/macOS (40GB), Microsoft Office (3GB), Chrome/Firefox (2GB), email cache (5-10GB), documents and PDFs (20-50GB), some photos (20GB), miscellaneous software (30GB)</p>
+                    <p style="margin: 0;"><strong>Why this works:</strong> Basic productivity tasks don't require massive storage. 256GB is the absolute minimum in 2025, but 512GB gives comfortable breathing room without paying for unused space. You're not storing large media files or games, so you don't need 1TB+.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid #8b5cf6;">
+                    <h4 style="color: #6d28d9; margin-bottom: 0.75rem;">🎮 Gamer</h4>
+                    <p style="margin-bottom: 0.75rem;"><strong>Recommended:</strong> 1-2 TB SSD primary + optional 2-4TB HDD secondary</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>What you'll store:</strong> Modern games average 80-120GB each. Call of Duty: Warzone (150GB), Cyberpunk 2077 (100GB), Red Dead Redemption 2 (150GB). With 8-10 games installed, you're looking at 800GB-1.2TB just for games. Add Windows (40GB), game launchers (20GB), recordings/screenshots (50GB).</p>
+                    <p style="margin: 0;"><strong>Why this works:</strong> 1TB lets you keep 8-10 AAA games installed. 2TB is ideal for large game libraries. Use fast SSD for games you play frequently, move older games to cheaper HDD storage. Game load times on SSD are 3-5x faster than HDD.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid #ec4899;">
+                    <h4 style="color: #be185d; margin-bottom: 0.75rem;">🎬 Content Creator / Video Editor</h4>
+                    <p style="margin-bottom: 0.75rem;"><strong>Recommended:</strong> 1-2TB NVMe SSD (active projects) + 4-8TB HDD (archive)</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>What you'll store:</strong> 4K video editing is storage-intensive. 1 hour of 4K footage = 100-300GB (depending on bitrate). Current project files (200-500GB), Adobe Creative Suite (20GB), working files and renders (300GB), RAW photos if photographer (100GB per 1000 photos).</p>
+                    <p style="margin: 0;"><strong>Why this works:</strong> Fast NVMe SSD (3500+ MB/s) prevents bottlenecks when scrubbing 4K timelines. Keep active projects on SSD for smooth editing. Move completed projects to large HDD for cheap archival storage. This two-drive setup balances performance and cost.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid #10b981;">
+                    <h4 style="color: #065f46; margin-bottom: 0.75rem;">📁 Media Hoarder / Home Server</h4>
+                    <p style="margin-bottom: 0.75rem;"><strong>Recommended:</strong> 256GB SSD (OS) + 8-20TB HDD (storage)</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>What you'll store:</strong> Large movie collection (500 movies @ 4GB each = 2TB), TV shows (50 seasons @ 10GB = 500GB), music library (10,000 songs = 40GB), family photos/videos (200GB), backups (1TB).</p>
+                    <p style="margin: 0;"><strong>Why this works:</strong> Media files don't benefit from SSD speed once loaded. HDD offers 3-4x more storage per dollar. Small SSD for operating system keeps interface snappy, massive HDD stores your media collection cheaply. Perfect for Plex/Jellyfin media servers.</p>
+                </div>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem;">Understanding Storage Units</h3>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;">Storage capacity can be confusing because manufacturers and operating systems count differently. Here's what you need to know:</p>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>The 1000 vs 1024 confusion:</strong> Hard drive manufacturers use decimal (1000) while computers use binary (1024). This is why a "500GB" drive shows as 465GB in Windows. It's not a scam - it's two different counting systems.</p>
+
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                    <li style="margin-bottom: 0.75rem;"><strong>1 KB</strong> = 1,024 Bytes (not 1,000)</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>1 MB</strong> = 1,024 KB = 1,048,576 Bytes</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>1 GB</strong> = 1,024 MB = about 1 billion bytes</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>1 TB</strong> = 1,024 GB = about 1 trillion bytes</li>
+                </ul>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>Usable capacity:</strong> When you buy a drive, some space is used by file system formatting. Expect to lose 5-7% to overhead. So a 1TB drive gives you roughly 930GB usable space. Factor this into your calculations.</p>
+
+                <div class="info-box" style="margin: 2rem 0;">
+                    <strong>💡 Real capacity examples:</strong><br>
+                    • 256GB drive = 238GB usable<br>
+                    • 512GB drive = 476GB usable<br>
+                    • 1TB drive = 931GB usable<br>
+                    • 2TB drive = 1,863GB usable<br>
+                    This is normal and expected, not defective drives.
+                </div>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem;">Storage Planning Guide</h3>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>The 30% rule:</strong> Always buy 30% more storage than you think you need. Your storage needs grow over time. Apps get bigger with updates. You take more photos. You download more games. What seems like plenty today will feel cramped in 2 years.</p>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>Example:</strong> If your calculator shows you need 350GB, buy 500GB (1.4x = 40% buffer). If you need 700GB, buy 1TB (1.4x buffer). This breathing room prevents constant file juggling.</p>
+
+                <h4 style="color: #1e40af; margin-top: 2rem; margin-bottom: 1rem;">SSD vs HDD: When to Use Each</h4>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>Use SSD for:</strong></p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                    <li style="margin-bottom: 0.75rem;">Operating system (Windows/macOS/Linux) - 10 second boot instead of 60</li>
+                    <li style="margin-bottom: 0.75rem;">Programs and applications - instant launch instead of waiting</li>
+                    <li style="margin-bottom: 0.75rem;">Games you play frequently - 5-20 second load times instead of 45-120 seconds</li>
+                    <li style="margin-bottom: 0.75rem;">Active work projects (video editing, photo editing) - smooth scrubbing and rendering</li>
+                    <li style="margin-bottom: 0.75rem;">Any files you access daily - dramatically faster file operations</li>
+                </ul>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>Use HDD for:</strong></p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                    <li style="margin-bottom: 0.75rem;">Backup storage - cheap capacity matters more than speed</li>
+                    <li style="margin-bottom: 0.75rem;">Media collections (movies, TV shows, music) - once loaded, speed doesn't matter</li>
+                    <li style="margin-bottom: 0.75rem;">Old games you rarely play - can wait 45 seconds to load</li>
+                    <li style="margin-bottom: 0.75rem;">Archive storage (old documents, photos) - accessed infrequently</li>
+                    <li style="margin-bottom: 0.75rem;">Mass storage when budget matters - HDD gives 4TB for price of 1TB SSD</li>
+                </ul>
+
+                <div style="background: #d1fae5; border-left: 4px solid #10b981; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
+                    <strong style="color: #065f46;">✓ Optimal setup for most users:</strong>
+                    <p style="margin: 0.5rem 0 0 0; color: #047857;">Primary: 500GB-1TB NVMe SSD for OS, programs, active files<br>
+                    Secondary: 2-4TB HDD for bulk storage, backups, media<br>
+                    This gives you speed where it matters and cheap capacity where it doesn't.</p>
+                </div>
+
+                <h4 style="color: #1e40af; margin-top: 2rem; margin-bottom: 1rem;">Future-Proofing Your Storage</h4>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;">Storage needs increase 20-30% per year on average. Apps get bigger. Games get bigger. Cameras take higher resolution photos. Videos move from 1080p to 4K to 8K. Plan ahead:</p>
+
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                    <li style="margin-bottom: 0.75rem;"><strong>2025 minimum:</strong> 512GB for main drive (256GB already feels cramped)</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Sweet spot:</strong> 1TB SSD - comfortable for 3-5 years</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Enthusiast:</strong> 2TB SSD - never worry about space</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Upgrade path:</strong> Buy M.2 NVMe - easier to upgrade later than SATA</li>
+                </ul>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem;">Frequently Asked Questions</h3>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">How much storage do I need for 10,000 photos?</h4>
+                    <p style="margin: 0; line-height: 1.7;">JPEG photos average 4-5MB each, so 10,000 photos = 40-50GB. RAW photos from DSLR/mirrorless cameras are 20-30MB each, so 10,000 RAW = 200-300GB. If you shoot RAW+JPEG, double that. For phone photos (typically 2-3MB), 10,000 photos = 20-30GB.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">Is 512GB enough in 2025?</h4>
+                    <p style="margin: 0; line-height: 1.7;">For office work, web browsing, and light media use: yes, 512GB is enough. For gaming: marginal - you can only keep 4-5 modern games installed. For video editing or large media collections: no, you'll run out quickly. 512GB is the minimum acceptable in 2025, but 1TB is the new sweet spot for most users.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">How many games fit on 1TB?</h4>
+                    <p style="margin: 0; line-height: 1.7;">Modern AAA games (2024-2025) average 80-120GB. On 1TB (931GB usable), minus Windows (40GB) and programs (50GB), you have 840GB for games. That's 8-10 large games, or 15-20 smaller indie games (10-30GB each). If you play many games simultaneously, consider 2TB.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">Should I get 1TB or 2TB SSD?</h4>
+                    <p style="margin: 0; line-height: 1.7;">Get 1TB if: you're on a budget, you're a casual user, you have secondary HDD for bulk storage. Get 2TB if: you're a gamer with large library, content creator with active projects, you want to avoid storage management for 5+ years. Price difference is usually $60-80, which is worth it for heavy users.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">How much storage for 4K video editing?</h4>
+                    <p style="margin: 0; line-height: 1.7;">1 hour of 4K 30fps footage (100 Mbps bitrate) = 45GB. 4K 60fps (200 Mbps) = 90GB per hour. Add project files, renders, and cache (2-3x the raw footage size), and you need 150-300GB per hour of finished video. Minimum: 1TB SSD for active projects. Ideal: 2TB SSD + 8TB HDD (archive completed projects to HDD).</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">What happens when SSD is full?</h4>
+                    <p style="margin: 0; line-height: 1.7;">SSDs slow down dramatically when 90%+ full. Windows needs 15-20GB free for updates and temp files. Performance degrades because SSD needs empty blocks for wear leveling and garbage collection. Keep at least 10% free (50GB on 500GB drive, 100GB on 1TB drive) for optimal performance. When full, Windows will show "low disk space" warnings.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">How to check how much storage I'm using?</h4>
+                    <p style="margin: 0; line-height: 1.7;"><strong>Windows:</strong> Open File Explorer > This PC > right-click drive > Properties. Or Settings > System > Storage. <strong>Mac:</strong> Apple menu > About This Mac > Storage. Shows breakdown by file type (Apps, Documents, Photos, etc.) so you can see what's using space.</p>
+                </div>
+
+                <div class="info-box" style="margin: 2.5rem 0;">
+                    <strong>📊 Use our calculator above to:</strong><br>
+                    • Convert between storage units (GB to TB, MB to GB)<br>
+                    • Calculate how many files fit on your drive<br>
+                    • Plan exactly how much storage you need<br>
+                    • Get personalized recommendations based on your usage<br><br>
+                    Start by entering your storage size or file counts to get instant results!
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tech Fix Guide. All rights reserved.</p>
+        <p><a href="/">Home</a> | <a href="/contact.html">Contact</a></p>
+    </footer>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all sections
+            document.querySelectorAll('.calculator-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected section and activate tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function convertUnits() {
+            const value = parseFloat(document.getElementById('convertValue').value);
+            const fromUnit = document.getElementById('convertFrom').value;
+            
+            if (isNaN(value) || value < 0) {
+                alert('Please enter a valid positive number');
+                return;
+            }
+
+            // Convert to bytes first
+            let bytes;
+            switch(fromUnit) {
+                case 'byte': bytes = value; break;
+                case 'kb': bytes = value * 1024; break;
+                case 'mb': bytes = value * 1024 * 1024; break;
+                case 'gb': bytes = value * 1024 * 1024 * 1024; break;
+                case 'tb': bytes = value * 1024 * 1024 * 1024 * 1024; break;
+            }
+
+            // Convert to all units
+            const results = {
+                'Bytes': bytes.toLocaleString(),
+                'Kilobytes (KB)': (bytes / 1024).toFixed(2).toLocaleString(),
+                'Megabytes (MB)': (bytes / (1024 * 1024)).toFixed(2).toLocaleString(),
+                'Gigabytes (GB)': (bytes / (1024 * 1024 * 1024)).toFixed(2).toLocaleString(),
+                'Terabytes (TB)': (bytes / (1024 * 1024 * 1024 * 1024)).toFixed(4).toLocaleString()
+            };
+
+            let html = '';
+            for (let [unit, val] of Object.entries(results)) {
+                html += `<div style="padding: 0.75rem; background: white; border-radius: 8px; margin-bottom: 0.5rem;">
+                    <strong style="color: #1e40af;">${unit}:</strong> <span style="font-size: 1.25rem; color: #065f46;">${val}</span>
+                </div>`;
+            }
+
+            document.getElementById('conversionResults').innerHTML = html;
+            document.getElementById('converterResult').style.display = 'block';
+        }
+
+        function calculateCapacity() {
+            const size = parseFloat(document.getElementById('storageSize').value);
+            const unit = document.getElementById('storageUnit').value;
+            
+            if (isNaN(size) || size <= 0) {
+                alert('Please enter a valid storage size');
+                return;
+            }
+
+            // Convert to MB
+            let totalMB;
+            switch(unit) {
+                case 'mb': totalMB = size; break;
+                case 'gb': totalMB = size * 1024; break;
+                case 'tb': totalMB = size * 1024 * 1024; break;
+            }
+
+            const files = [
+                { icon: '📸', type: 'JPEG Photos', size: 4, unit: 'MB' },
+                { icon: '📸', type: 'RAW Photos', size: 25, unit: 'MB' },
+                { icon: '🎵', type: 'MP3 Songs', size: 4, unit: 'MB' },
+                { icon: '🎵', type: 'FLAC Songs', size: 40, unit: 'MB' },
+                { icon: '🎬', type: '1080p Movies', size: 3072, unit: 'MB' },
+                { icon: '🎬', type: '4K Movies', size: 12288, unit: 'MB' },
+                { icon: '🎮', type: 'Games (avg)', size: 81920, unit: 'MB' },
+                { icon: '📄', type: 'Documents', size: 0.5, unit: 'MB' }
+            ];
+
+            let html = '';
+            files.forEach(file => {
+                const count = Math.floor(totalMB / file.size);
+                html += `
+                    <div class="file-item">
+                        <div class="file-item-icon">${file.icon}</div>
+                        <div class="file-item-type">${file.type}</div>
+                        <div class="file-item-count">${count.toLocaleString()}</div>
+                    </div>
+                `;
+            });
+
+            document.querySelector('#capacityResult h3').textContent = `Your ${size} ${unit.toUpperCase()} can hold:`;
+            document.getElementById('fileBreakdown').innerHTML = html;
+            document.getElementById('capacityResult').style.display = 'block';
+        }
+
+        function planStorage() {
+            const photos = parseInt(document.getElementById('photoCount').value) || 0;
+            const music = parseInt(document.getElementById('musicCount').value) || 0;
+            const movies = parseInt(document.getElementById('movieCount').value) || 0;
+            const movies4k = parseInt(document.getElementById('movie4kCount').value) || 0;
+            const games = parseInt(document.getElementById('gameCount').value) || 0;
+            const docs = parseInt(document.getElementById('docCount').value) || 0;
+
+            // Calculate in MB
+            const photosMB = photos * 4;
+            const musicMB = music * 4;
+            const moviesMB = movies * 3 * 1024;
+            const movies4kMB = movies4k * 12 * 1024;
+            const gamesMB = games * 80 * 1024;
+            const docsMB = docs * 0.5;
+
+            const totalMB = photosMB + musicMB + moviesMB + movies4kMB + gamesMB + docsMB;
+            const totalGB = totalMB / 1024;
+            const totalTB = totalGB / 1024;
+
+            const breakdown = [
+                { name: 'Photos', mb: photosMB, color: '#3b82f6' },
+                { name: 'Music', mb: musicMB, color: '#8b5cf6' },
+                { name: '1080p Movies', mb: moviesMB, color: '#ec4899' },
+                { name: '4K Movies', mb: movies4kMB, color: '#ef4444' },
+                { name: 'Games', mb: gamesMB, color: '#f59e0b' },
+                { name: 'Documents', mb: docsMB, color: '#10b981' }
+            ];
+
+            let html = '<div style="display: grid; gap: 0.75rem;">';
+            breakdown.forEach(item => {
+                const gb = (item.mb / 1024).toFixed(2);
+                const percent = ((item.mb / totalMB) * 100).toFixed(1);
+                if (item.mb > 0) {
+                    html += `
+                        <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid ${item.color};">
+                            <strong style="color: ${item.color};">${item.name}:</strong> 
+                            <span style="font-size: 1.125rem; color: #065f46;">${gb} GB</span>
+                            <span style="color: #6b7280; margin-left: 0.5rem;">(${percent}%)</span>
+                        </div>
+                    `;
+                }
+            });
+            html += '</div>';
+
+            document.getElementById('breakdownDetails').innerHTML = html;
+            document.getElementById('usedStorage').textContent = totalGB.toFixed(2) + ' GB';
+            document.getElementById('totalNeeded').textContent = totalGB.toFixed(2) + ' GB';
+            document.getElementById('storageUsedBar').style.width = '100%';
+            document.getElementById('storageUsedBar').textContent = '100%';
+
+            // Recommendation
+            let recommendation = '';
+            if (totalGB < 128) {
+                recommendation = '✅ <strong>Recommended:</strong> 256 GB SSD is perfect for your needs';
+            } else if (totalGB < 256) {
+                recommendation = '✅ <strong>Recommended:</strong> 512 GB SSD with room to grow';
+            } else if (totalGB < 512) {
+                recommendation = '✅ <strong>Recommended:</strong> 1 TB SSD for comfortable space';
+            } else if (totalGB < 1024) {
+                recommendation = '✅ <strong>Recommended:</strong> 2 TB SSD or 1TB SSD + 2TB HDD combo';
+            } else if (totalTB < 2) {
+                recommendation = '✅ <strong>Recommended:</strong> 2 TB SSD or 1TB SSD + 4TB HDD combo';
+            } else if (totalTB < 4) {
+                recommendation = '✅ <strong>Recommended:</strong> 2TB SSD + 4-8TB HDD combo';
+            } else {
+                recommendation = '✅ <strong>Recommended:</strong> 2TB SSD + ' + Math.ceil(totalTB) + 'TB HDD for bulk storage';
+            }
+
+            recommendation += `<br><br>💡 <strong>With 30% buffer:</strong> Get ${(totalGB * 1.3).toFixed(0)} GB (${(totalTB * 1.3).toFixed(2)} TB) total storage`;
+
+            document.getElementById('recommendation').innerHTML = recommendation;
+            document.getElementById('plannerResult').style.display = 'block';
+        }
+
+        // Initialize with default conversion on page load
+        window.addEventListener('load', () => {
+            convertUnits();
+        });
+    </script>
+</body>
+</html>
