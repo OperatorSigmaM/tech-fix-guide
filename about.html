@@ -47,8 +47,18 @@
         .stat-item p { color: #6b7280; }
         
         .cta-box { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 2rem; border-radius: 12px; margin: 3rem 0; text-align: center; }
-        .cta-box h2 { margin-bottom: 1rem; }
-        .cta-box p { margin-bottom: 1.5rem; opacity: 0.95; }
+        /* ДОБАВЛЕНЫ НОВЫЕ ПРАВИЛА ЗДЕСЬ, ЧТОБЫ УБЕДИТЬСЯ, ЧТО ТЕКСТ БЕЛЫЙ */
+        .cta-box h2 {
+            color: white; /* Явно устанавливаем белый для заголовка */
+            margin-bottom: 1rem;
+        }
+        .cta-box p {
+            color: white; /* Явно устанавливаем белый для параграфа */
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        /* КОНЕЦ НОВЫХ ПРАВИЛ */
+
         .cta-button { background: white; color: #3b82f6; padding: 1rem 2rem; border-radius: 8px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: transform 0.2s; }
         .cta-button:hover { transform: translateY(-2px); }
         
