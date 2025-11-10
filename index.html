@@ -397,37 +397,37 @@
         </div>
         
         <div class="cards-grid">
-            <a href="#problems" class="card">
+            <a href="/problems.html#smartphones" class="card">
                 <div class="card-icon">📱</div>
                 <h3>Smartphones</h3>
                 <p>Fix iPhone, Android, and mobile device issues. Charging problems, screen issues, connectivity, and more.</p>
             </a>
             
-            <a href="#problems" class="card">
+            <a href="/problems.html#laptops" class="card">
                 <div class="card-icon">💻</div>
                 <h3>Laptops & Computers</h3>
                 <p>Troubleshoot Mac, Windows, and Linux problems. Performance issues, errors, hardware failures.</p>
             </a>
             
-            <a href="#problems" class="card">
+            <a href="/problems.html#gaming" class="card">
                 <div class="card-icon">🎮</div>
                 <h3>Gaming Consoles</h3>
                 <p>PlayStation, Xbox, Nintendo Switch fixes. Disc reading, connectivity, controller issues.</p>
             </a>
             
-            <a href="#problems" class="card">
+            <a href="/problems.html#tablets" class="card">
                 <div class="card-icon">📲</div>
                 <h3>Tablets & iPads</h3>
                 <p>Solve tablet problems. Touch screen issues, battery drain, app crashes, storage problems.</p>
             </a>
             
-            <a href="#problems" class="card">
+            <a href="/problems.html#wearables" class="card">
                 <div class="card-icon">⌚</div>
                 <h3>Wearables</h3>
                 <p>Apple Watch, Fitbit, smartwatch troubleshooting. Syncing, battery, sensor issues.</p>
             </a>
             
-            <a href="#problems" class="card">
+            <a href="/problems.html#accessories" class="card">
                 <div class="card-icon">🎧</div>
                 <h3>Accessories</h3>
                 <p>Headphones, speakers, keyboards, mice. Connection problems, audio issues, pairing.</p>
@@ -548,7 +548,7 @@
         <div class="cta">
             <h2>Can't Find Your Problem?</h2>
             <p>Browse our complete library of troubleshooting guides and tech explanations</p>
-            <a href="#problems" class="cta-button">View All Guides</a>
+            <a href="/problems.html" class="cta-button">View All Guides</a>
         </div>
     </section>
 
@@ -605,12 +605,14 @@
     </footer>
 
     <script>
-        // Simple search functionality (will be enhanced later)
+        // Working search functionality
         document.querySelector('.search-box input').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
-                const query = this.value.toLowerCase();
-                alert('Search functionality coming soon! You searched for: ' + query);
-                // TODO: Implement actual search
+                const query = this.value.trim();
+                if (query) {
+                    // Redirect to problems page with search
+                    window.location.href = `/problems.html?search=${encodeURIComponent(query)}`;
+                }
             }
         });
     </script>
