@@ -6,68 +6,195 @@
     <meta name="description" content="Thank you for contacting Tech Fix Guide. We've received your message and will respond shortly.">
     <title>Thank You - Tech Fix Guide</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); min-height: 100vh; display: flex; flex-direction: column; }
+        /* === ГЛОБАЛЬНЫЕ НАСТРОЙКИ === */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
         
-        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            line-height: 1.7; 
+            color: #1f2937; 
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+        }
         
-        .thank-you-container { max-width: 700px; margin: auto; padding: 2rem; flex: 1; display: flex; align-items: center; }
+        /* === ЛОКАЛЬНЫЕ СТИЛИ THANK YOU PAGE === */
+        .thank-you-container { 
+            max-width: 700px; 
+            margin: auto; 
+            padding: 2rem; 
+            flex: 1; 
+            display: flex; 
+            align-items: center; 
+        }
         
-        .thank-you-content { background: white; padding: 3rem; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); text-align: center; width: 100%; }
+        .thank-you-content { 
+            background: white; 
+            padding: 3rem; 
+            border-radius: 16px; 
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1); 
+            text-align: center; 
+            width: 100%; 
+        }
         
-        .success-icon { font-size: 5rem; margin-bottom: 1.5rem; animation: bounce 1s ease-in-out; }
+        .success-icon { 
+            font-size: 5rem; 
+            margin-bottom: 1.5rem; 
+            animation: bounce 1s ease-in-out; 
+        }
         
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-20px); }
         }
         
-        .thank-you-content h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
-        .thank-you-content p { font-size: 1.125rem; color: #6b7280; margin-bottom: 2rem; line-height: 1.8; }
+        .thank-you-content h1 { 
+            font-size: 2.5rem; 
+            color: #1e40af; 
+            margin-bottom: 1rem; 
+        }
         
-        .info-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.5rem; margin: 2rem 0; border-radius: 8px; text-align: left; }
-        .info-box strong { color: #065f46; display: block; margin-bottom: 0.5rem; }
-        .info-box p { color: #047857; margin: 0; font-size: 1rem; }
+        .thank-you-content p { 
+            font-size: 1.125rem; 
+            color: #6b7280; 
+            margin-bottom: 2rem; 
+            line-height: 1.8; 
+        }
         
-        .action-buttons { display: grid; gap: 1rem; margin-top: 2rem; }
+        .info-box { 
+            background: #d1fae5; 
+            border-left: 4px solid #10b981; 
+            padding: 1.5rem; 
+            margin: 2rem 0; 
+            border-radius: 8px; 
+            text-align: left; 
+        }
         
-        .btn { padding: 1rem 2rem; border-radius: 8px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: transform 0.2s, box-shadow 0.2s; text-align: center; }
+        .info-box strong { 
+            color: #065f46; 
+            display: block; 
+            margin-bottom: 0.5rem; 
+        }
         
-        .btn-primary { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4); }
+        .info-box p { 
+            color: #047857; 
+            margin: 0; 
+            font-size: 1rem; 
+        }
         
-        .btn-secondary { background: white; color: #3b82f6; border: 2px solid #3b82f6; }
-        .btn-secondary:hover { background: #eff6ff; transform: translateY(-2px); }
+        .action-buttons { 
+            display: grid; 
+            gap: 1rem; 
+            margin-top: 2rem; 
+        }
         
-        .quick-links { margin-top: 2rem; padding-top: 2rem; border-top: 2px solid #e5e7eb; }
-        .quick-links h3 { color: #1e40af; margin-bottom: 1rem; font-size: 1.25rem; }
-        .quick-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center; }
-        .quick-link { background: #f8fafc; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.3s; }
-        .quick-link:hover { background: #eff6ff; }
-        .quick-link-icon { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
-        .quick-link-text { color: #1e40af; font-weight: 600; font-size: 0.9rem; }
+        .btn { 
+            padding: 1rem 2rem; 
+            border-radius: 8px; 
+            font-size: 1rem; 
+            font-weight: 600; 
+            text-decoration: none; 
+            display: inline-block; 
+            transition: transform 0.2s, box-shadow 0.2s; 
+            text-align: center; 
+        }
         
-        .countdown { color: #6b7280; font-size: 0.9rem; margin-top: 2rem; }
+        .btn-primary { 
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); 
+            color: white; 
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); 
+        }
         
-        footer { background: #1f2937; color: white; padding: 2rem; text-align: center; }
-        footer a { color: #3b82f6; text-decoration: none; }
+        .btn-primary:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4); 
+        }
+        
+        .btn-secondary { 
+            background: white; 
+            color: #3b82f6; 
+            border: 2px solid #3b82f6; 
+        }
+        
+        .btn-secondary:hover { 
+            background: #eff6ff; 
+            transform: translateY(-2px); 
+        }
+        
+        .quick-links { 
+            margin-top: 2rem; 
+            padding-top: 2rem; 
+            border-top: 2px solid #e5e7eb; 
+        }
+        
+        .quick-links h3 { 
+            color: #1e40af; 
+            margin-bottom: 1rem; 
+            font-size: 1.25rem; 
+        }
+        
+        .quick-links-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+            gap: 1rem; 
+            text-align: center; 
+        }
+        
+        .quick-link { 
+            background: #f8fafc; 
+            padding: 1rem; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            color: inherit; 
+            transition: background 0.3s; 
+        }
+        
+        .quick-link:hover { 
+            background: #eff6ff; 
+        }
+        
+        .quick-link-icon { 
+            font-size: 2rem; 
+            display: block; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .quick-link-text { 
+            color: #1e40af; 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+        }
+        
+        .countdown { 
+            color: #6b7280; 
+            font-size: 0.9rem; 
+            margin-top: 2rem; 
+        }
         
         @media (max-width: 768px) { 
-            .thank-you-content { padding: 2rem 1.5rem; }
-            .thank-you-content h1 { font-size: 1.75rem; }
-            .success-icon { font-size: 3.5rem; }
-            .quick-links-grid { grid-template-columns: 1fr; }
+            .thank-you-content { 
+                padding: 2rem 1.5rem; 
+            }
+            .thank-you-content h1 { 
+                font-size: 1.75rem; 
+            }
+            .success-icon { 
+                font-size: 3.5rem; 
+            }
+            .quick-links-grid { 
+                grid-template-columns: 1fr; 
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">🔧 Tech Fix Guide</a>
-        </nav>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
     
     <div class="thank-you-container">
         <div class="thank-you-content">
@@ -109,17 +236,11 @@
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Tech Fix Guide. All rights reserved.</p>
-        <p>
-            <a href="/">Home</a> | 
-            <a href="/about.html">About</a> | 
-            <a href="/contact.html">Contact</a> | 
-            <a href="/privacy.html">Privacy Policy</a> | 
-            <a href="/terms.html">Terms of Service</a> | 
-            <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
-        </p>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load Components -->
+    <script src="/js/components.js"></script>
 
     <script>
         // Auto redirect to homepage after 10 seconds

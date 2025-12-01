@@ -8,360 +8,59 @@
     <title>Laptop Overheating? 10 Ways to Cool It Down Fast (2025)</title>
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.7;
-            color: #1f2937;
-            background: #ffffff;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: white;
-        }
-        
-        .breadcrumb {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            font-size: 0.9rem;
-            color: #6b7280;
-        }
-        
-        .breadcrumb a {
-            color: #3b82f6;
-            text-decoration: none;
-        }
-        
-        .article-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .article-header h1 {
-            font-size: 2.5rem;
-            color: #1e40af;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        
-        .article-meta {
-            display: flex;
-            gap: 1.5rem;
-            color: #6b7280;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .difficulty {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: #d1fae5;
-            color: #065f46;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.85rem;
-        }
-        
-        .quick-summary {
-            background: #eff6ff;
-            border-left: 4px solid #3b82f6;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-        }
-        
-        .quick-summary h3 {
-            color: #1e40af;
-            margin-bottom: 1rem;
-        }
-        
-        .quick-summary p {
-            margin-bottom: 0.75rem;
-        }
-        
-        .toc {
-            background: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
-        
-        .toc h3 {
-            color: #1e40af;
-            margin-bottom: 1rem;
-        }
-        
-        .toc ul {
-            list-style: none;
-        }
-        
-        .toc li {
-            margin-bottom: 0.75rem;
-        }
-        
-        .toc a {
-            color: #3b82f6;
-            text-decoration: none;
-        }
-        
-        .toc a:hover {
-            text-decoration: underline;
-        }
-        
-        .content h2 {
-            color: #1e40af;
-            font-size: 2rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .content h3 {
-            color: #1f2937;
-            font-size: 1.5rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .content p {
-            margin-bottom: 1.25rem;
-            line-height: 1.8;
-        }
-        
-        .content ul, .content ol {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .content li {
-            margin-bottom: 0.75rem;
-        }
-        
-        .solution-box {
-            background: white;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        
-        .solution-box h3 {
-            color: #1e40af;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .solution-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            background: #3b82f6;
-            color: white;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-        
-        .success-rate {
-            display: inline-block;
-            background: #d1fae5;
-            color: #065f46;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-left: auto;
-        }
-        
-        .warning-box {
-            background: #fef3c7;
-            border-left: 4px solid #f59e0b;
-            padding: 1.25rem;
-            margin: 1.5rem 0;
-            border-radius: 8px;
-        }
-        
-        .warning-box strong {
-            color: #92400e;
-        }
-        
-        .info-box {
-            background: #dbeafe;
-            border-left: 4px solid #3b82f6;
-            padding: 1.25rem;
-            margin: 1.5rem 0;
-            border-radius: 8px;
-        }
-        
-        .info-box strong {
-            color: #1e40af;
-        }
-        
-        .success-box {
-            background: #d1fae5;
-            border-left: 4px solid #10b981;
-            padding: 1.25rem;
-            margin: 1.5rem 0;
-            border-radius: 8px;
-        }
-        
-        .success-box strong {
-            color: #065f46;
-        }
-        
-        .product-box {
-            background: #f8fafc;
-            border: 2px solid #3b82f6;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .product-box h4 {
-            color: #1e40af;
-            margin-bottom: 1rem;
-        }
-        
-        .product-link {
-            display: inline-block;
-            background: #3b82f6;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-            margin-top: 0.5rem;
-        }
-        
-        .product-link:hover {
-            background: #2563eb;
-        }
-        
-        .related-problems {
-            background: #f8fafc;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-top: 3rem;
-        }
-        
-        .related-problems h3 {
-            color: #1e40af;
-            margin-bottom: 1rem;
-        }
-        
-        .related-list {
-            display: grid;
-            gap: 1rem;
-        }
-        
-        .related-item {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: transform 0.3s;
-            border-left: 4px solid #3b82f6;
-        }
-        
-        .related-item:hover {
-            transform: translateX(4px);
-        }
-        
-        .related-item h4 {
-            color: #1e40af;
-            margin-bottom: 0.25rem;
-        }
-        
-        .related-item p {
-            color: #6b7280;
-            font-size: 0.9rem;
-            margin: 0;
-        }
-        
-        footer {
-            background: #1f2937;
-            color: white;
-            padding: 2rem;
-            margin-top: 4rem;
-            text-align: center;
-        }
-        
-        footer a {
-            color: #3b82f6;
-            text-decoration: none;
-        }
-        
-        @media (max-width: 768px) {
-            .article-header h1 {
-                font-size: 1.75rem;
-            }
-            
-            .article-container {
-                padding: 1rem;
-            }
-            
-            .content h2 {
-                font-size: 1.5rem;
-            }
-            
-            .solution-box h3 {
-                font-size: 1.25rem;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.7; color: #1f2937; background: #ffffff; display: flex; flex-direction: column; min-height: 100vh; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; line-height: 1.2; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        .difficulty { display: inline-block; padding: 0.25rem 0.75rem; background: #d1fae5; color: #065f46; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .quick-summary p { margin-bottom: 0.75rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content h3 { color: #1f2937; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+        .success-rate { display: inline-block; background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box strong { color: #92400e; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .info-box strong { color: #1e40af; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box strong { color: #065f46; }
+        .product-box { background: #f8fafc; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+        .product-box h4 { color: #1e40af; margin-bottom: 1rem; }
+        .product-link { display: inline-block; background: #3b82f6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.3s; margin-top: 0.5rem; }
+        .product-link:hover { background: #2563eb; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-problems h3 { color: #1e40af; margin-bottom: 1rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; transition: transform 0.3s; border-left: 4px solid #3b82f6; }
+        .related-item:hover { transform: translateX(4px); }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { .article-header h1 { font-size: 1.75rem; } .article-container { padding: 1rem; } .content h2 { font-size: 1.5rem; } .solution-box h3 { font-size: 1.25rem; } }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">🔧 Tech Fix Guide</a>
-        </nav>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
     <div class="breadcrumb">
-        <a href="/">Home</a> / <a href="/#problems">Problems</a> / Laptop Overheating
+        <a href="/">Home</a> / <a href="/problems.html">Problems</a> / Laptop Overheating
     </div>
 
     <article class="article-container">
@@ -678,16 +377,10 @@
         </div>
     </article>
 
-    <footer>
-    <p>&copy; 2025 Tech Fix Guide. All rights reserved.</p>
-    <p>
-        <a href="/">Home</a> | 
-        <a href="/about.html">About</a> | 
-        <a href="/contact.html">Contact</a> | 
-        <a href="/privacy.html">Privacy Policy</a> | 
-        <a href="/terms.html">Terms of Service</a> | 
-        <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
-    </p>
-</footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load Components -->
+    <script src="/js/components.js"></script>
 </body>
 </html>

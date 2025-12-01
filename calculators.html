@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Tech Calculators - Tech Fix Guide</title>
+    <meta name="description" content="Calculate storage needs, RAM requirements, and bandwidth speed.">
+
+    <style>
+        /* === ГЛОБАЛЬНЫЕ НАСТРОЙКИ === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* Контейнер */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            width: 100%;
+        }
+        
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h1 {
+            font-size: 2.5rem;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-header p {
+            font-size: 1.125rem;
+            color: #6b7280;
+        }
+        
+        /* === ЛОКАЛЬНЫЕ СТИЛИ ДЛЯ КАЛЬКУЛЯТОРОВ === */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .calc-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .calc-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
+        }
+
+        .calc-header {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .calc-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .calc-body {
+            padding: 2rem;
+            flex: 1;
+        }
+
+        .calc-body h2 {
+            font-size: 1.5rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .calc-body p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .calc-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 0.75rem;
+            background: #f3f4f6;
+            color: #1f2937;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .calc-card:hover .calc-btn {
+            background: #1e40af;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <div class="section-header">
+            <h1>Tech Calculators</h1>
+            <p>Make smart decisions with our free estimation tools.</p>
+        </div>
+
+        <div class="calc-grid">
+            <a href="/calculators/storage.html" class="calc-card">
+                <div class="calc-header">
+                    <span class="calc-icon">💾</span>
+                </div>
+                <div class="calc-body">
+                    <h2>Storage Calculator</h2>
+                    <p>Stop guessing what size iPhone or SSD you need. Input your photos and apps to see the perfect size.</p>
+                    <span class="calc-btn">Calculate Storage &rarr;</span>
+                </div>
+            </a>
+
+            <a href="/calculators/ram.html" class="calc-card">
+                <div class="calc-header">
+                    <span class="calc-icon">🎯</span>
+                </div>
+                <div class="calc-body">
+                    <h2>RAM Calculator</h2>
+                    <p>8GB, 16GB, or 32GB? Tell us what apps and games you run, and we'll tell you how much memory you need.</p>
+                    <span class="calc-btn">Check Memory Needs &rarr;</span>
+                </div>
+            </a>
+
+            <a href="/calculators/bandwidth.html" class="calc-card">
+                <div class="calc-header">
+                    <span class="calc-icon">📡</span>
+                </div>
+                <div class="calc-body">
+                    <h2>Internet Speed Calculator</h2>
+                    <p>Streaming 4K? Gaming? Working from home? Find out what internet speed plan is right for your household.</p>
+                    <span class="calc-btn">Check Speed &rarr;</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load Components -->
+    <script src="/js/components.js"></script>
+</body>
+</html>

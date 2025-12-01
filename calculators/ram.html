@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free RAM calculator. Find out how much RAM you need for gaming, video editing, programming. Check if 8GB, 16GB, or 32GB RAM is right for you.">
+    <meta name="keywords" content="RAM calculator, memory requirements, how much RAM, RAM upgrade, 8GB vs 16GB vs 32GB">
     <title>RAM Calculator - How Much RAM Do You Need? (2025)</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; background: #fff; }
-        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; background: #fff; display: flex; flex-direction: column; min-height: 100vh; }
         .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
         .breadcrumb a { color: #3b82f6; text-decoration: none; }
         .calculator-container { max-width: 900px; margin: 0 auto; padding: 2rem; }
@@ -42,7 +40,6 @@
         
         .calc-button { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1.125rem; font-weight: 600; cursor: pointer; width: 100%; transition: transform 0.2s; margin-top: 1rem; }
         .calc-button:hover { transform: translateY(-2px); }
-        .calc-button:active { transform: translateY(0); }
         
         .result-box { background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-left: 4px solid #10b981; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
         .result-box h3 { color: #065f46; margin-bottom: 1rem; font-size: 1.5rem; }
@@ -50,23 +47,20 @@
         .result-detail { color: #047857; font-size: 1.125rem; margin-top: 0.5rem; line-height: 1.6; }
         
         .ram-visual { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
-        .ram-bar { background: #e5e7eb; height: 60px; border-radius: 30px; overflow: hidden; position: relative; margin-bottom: 1rem; }
+        .ram-bar { background: #e5e7eb; height: 60px; border-radius: 30px; overflow: hidden; margin-bottom: 1rem; }
         .ram-used { background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; transition: width 0.5s ease; }
         .ram-legend { display: flex; justify-content: space-between; color: #6b7280; font-size: 0.9rem; margin-top: 0.5rem; }
         
-        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
-        .warning-box strong { color: #92400e; }
-        
         .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
         .info-box strong { color: #1e40af; }
+        
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box strong { color: #92400e; }
         
         .comparison-table { width: 100%; border-collapse: collapse; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
         .comparison-table th { background: #1e40af; color: white; padding: 1rem; text-align: left; font-weight: 600; }
         .comparison-table td { padding: 1rem; border-bottom: 1px solid #e5e7eb; background: white; }
         .comparison-table tbody tr:hover { background: #f9fafb; }
-        
-        footer { background: #1f2937; color: white; padding: 2rem; margin-top: 4rem; text-align: center; }
-        footer a { color: #3b82f6; text-decoration: none; }
         
         @media (max-width: 768px) { 
             .page-header h1 { font-size: 1.75rem; }
@@ -79,14 +73,11 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">🔧 Tech Fix Guide</a>
-        </nav>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
     
     <div class="breadcrumb">
-        <a href="/">Home</a> / <a href="/#calculators">Calculators</a> / RAM Calculator
+        <a href="/">Home</a> / <a href="/calculators.html">Calculators</a> / RAM Calculator
     </div>
     
     <div class="calculator-container">
@@ -255,40 +246,27 @@
             </div>
 
             <div style="margin-bottom: 2rem;">
-                <label style="display: block; color: #1e40af; font-weight: 600; margin-bottom: 0.5rem;">Typical RAM Usage (when doing your normal tasks):</label>
+                <label style="display: block; color: #1e40af; font-weight: 600; margin-bottom: 0.5rem;">Typical RAM Usage:</label>
                 <select id="ramUsage" style="width: 100%; padding: 0.75rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
-                    <option value="50">50% or less (green in Task Manager)</option>
+                    <option value="50">50% or less (green)</option>
                     <option value="70">60-75% (yellow)</option>
                     <option value="85">75-90% (orange)</option>
                     <option value="95">90%+ (red/maxed out)</option>
                 </select>
             </div>
 
-            <div style="margin-bottom: 2rem;">
-                <label style="display: block; color: #1e40af; font-weight: 600; margin-bottom: 1rem;">Experiencing these issues?</label>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="slow">
-                        <label for="slow">Computer slows down when multiple apps open</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="freeze">
-                        <label for="freeze">Programs freeze or become unresponsive</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="disk">
-                        <label for="disk">High disk usage in Task Manager</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="crash">
-                        <label for="crash">Programs crash with "out of memory" errors</label>
-                    </div>
-                </div>
-            </div>
-
             <button class="calc-button" onclick="checkUpgrade()">Check If You Need Upgrade</button>
 
             <div id="upgradeResult" style="display: none;" class="result-box"></div>
+        </div>
+
+        <div class="info-box" style="margin-top: 3rem;">
+            <strong>💡 Quick RAM Guide:</strong><br>
+            • 8GB = Minimum for 2025, light use only<br>
+            • 16GB = Sweet spot for most users (gaming, work)<br>
+            • 32GB = Content creators, heavy multitasking<br>
+            • 64GB+ = Professional workstations, 4K editing<br>
+            • Always buy RAM in pairs (2x8GB not 1x16GB) for dual channel
         </div>
 
         <!-- SEO Content Section -->
@@ -591,100 +569,52 @@
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Tech Fix Guide. All rights reserved.</p>
-        <p>
-            <a href="/">Home</a> | 
-            <a href="/about.html">About</a> | 
-            <a href="/contact.html">Contact</a> | 
-            <a href="/privacy.html">Privacy Policy</a> | 
-            <a href="/terms.html">Terms of Service</a> | 
-            <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
-        </p>
-    </footer>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load Components -->
+    <script src="/js/components.js"></script>
 
     <script>
         let currentUsageType = null;
 
         function switchTab(tabName) {
-            document.querySelectorAll('.calculator-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
+            document.querySelectorAll('.calculator-section').forEach(section => section.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
             document.getElementById(tabName).classList.add('active');
             event.target.classList.add('active');
         }
 
         function selectUsage(type, element) {
-            document.querySelectorAll('.usage-card').forEach(card => {
-                card.classList.remove('selected');
-            });
+            document.querySelectorAll('.usage-card').forEach(card => card.classList.remove('selected'));
             element.classList.add('selected');
             currentUsageType = type;
             
             const recommendations = {
-                office: {
-                    min: '8 GB',
-                    rec: '16 GB',
-                    ideal: '16 GB',
-                    desc: 'For office work, web browsing, video calls, and multitasking, 16GB is the sweet spot. 8GB works but feels constrained with many tabs/apps open. 32GB is overkill unless you run tons of browser tabs simultaneously.',
-                    usage: 'Typical usage: Windows (4GB) + Chrome 30 tabs (3GB) + Office apps (2GB) + Zoom (1GB) + background apps (2GB) = 12GB total'
-                },
-                gaming: {
-                    min: '16 GB',
-                    rec: '16 GB',
-                    ideal: '32 GB',
-                    desc: 'Modern AAA games in 2025 recommend 16GB. This covers the game (8-10GB) + Windows (4GB) + Discord/browser (2-3GB). 32GB prevents any stuttering and allows streaming/recording while gaming.',
-                    usage: 'Typical usage: Windows (4GB) + Modern game (10GB) + Chrome (2GB) + Discord (0.5GB) = 16.5GB total'
-                },
-                content: {
-                    min: '16 GB',
-                    rec: '32 GB',
-                    ideal: '64 GB',
-                    desc: 'Photo editing works on 16GB. 1080p video editing comfortable at 32GB. 4K video editing needs 64GB. 3D work and heavy effects benefit greatly from 64GB+. More RAM = smoother timeline scrubbing and faster renders.',
-                    usage: '1080p editing: Premiere (16GB) + Windows (4GB) + Chrome (2GB) = 22GB. 4K editing: Premiere (24GB) + After Effects (12GB) + Windows (4GB) = 40GB+'
-                },
-                programming: {
-                    min: '16 GB',
-                    rec: '32 GB',
-                    ideal: '32-64 GB',
-                    desc: 'Basic coding fine on 16GB. Running Docker containers, VMs, or large databases needs 32GB+. Android Studio + emulator + Chrome = 20GB easily. Each VM uses 4-8GB. Multiple VMs or large compilations benefit from 64GB.',
-                    usage: 'Typical dev: Windows (4GB) + VS Code (2GB) + Chrome 50 tabs (4GB) + Docker (8GB) + Database (4GB) + Node servers (2GB) = 24GB total'
-                },
-                multitask: {
-                    min: '16 GB',
-                    rec: '32 GB',
-                    ideal: '32-64 GB',
-                    desc: 'If you keep 100+ browser tabs open, run many apps simultaneously, or never close anything, 32GB prevents slowdowns. 16GB works but you\'ll hit limits. 64GB for extreme multitaskers (200+ tabs, dozens of apps).',
-                    usage: '100 Chrome tabs (8GB) + Windows (4GB) + Multiple Office docs (3GB) + Photoshop (4GB) + Music/Video (2GB) + Messaging apps (2GB) = 23GB+'
-                },
-                workstation: {
-                    min: '32 GB',
-                    rec: '64 GB',
-                    ideal: '128 GB',
-                    desc: 'Professional workstations for 3D rendering, scientific simulations, large dataset analysis, or multiple VMs need 64GB minimum. 128GB for intensive professional work. Don\'t cheap out - time is money and RAM prevents bottlenecks.',
-                    usage: '3D rendering: Cinema 4D (20GB) + Photoshop (8GB) + Chrome (4GB) + Windows (4GB) = 36GB. Add VMs (8GB each) and easily hit 50-60GB.'
-                }
+                office: { min: '8 GB', rec: '16 GB', ideal: '16 GB', desc: 'For office work, 16GB is the sweet spot. 8GB works but feels constrained.', usage: 'Windows (4GB) + Chrome 30 tabs (3GB) + Office (2GB) + Zoom (1GB) = 12GB' },
+                gaming: { min: '16 GB', rec: '16 GB', ideal: '32 GB', desc: 'Modern games recommend 16GB. 32GB prevents stuttering.', usage: 'Windows (4GB) + Game (10GB) + Chrome (2GB) + Discord (0.5GB) = 16.5GB' },
+                content: { min: '16 GB', rec: '32 GB', ideal: '64 GB', desc: '1080p at 32GB. 4K needs 64GB.', usage: '4K: Premiere (24GB) + After Effects (12GB) + Windows (4GB) = 40GB+' },
+                programming: { min: '16 GB', rec: '32 GB', ideal: '32-64 GB', desc: 'Docker, VMs need 32GB+.', usage: 'Windows (4GB) + VS Code (2GB) + Chrome (4GB) + Docker (8GB) = 24GB' },
+                multitask: { min: '16 GB', rec: '32 GB', ideal: '32-64 GB', desc: '100+ tabs = 32GB.', usage: '100 tabs (8GB) + Windows (4GB) + Office (3GB) + Photoshop (4GB) = 23GB+' },
+                workstation: { min: '32 GB', rec: '64 GB', ideal: '128 GB', desc: '3D rendering needs 64GB minimum.', usage: 'Cinema 4D (20GB) + Photoshop (8GB) + Windows (4GB) = 36GB' }
             };
 
             const rec = recommendations[type];
-            const resultHTML = `
+            document.getElementById('usageResult').innerHTML = `
                 <h3>RAM Recommendation for ${element.querySelector('.usage-card-title').textContent}:</h3>
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0;">
                     <div style="text-align: center;">
-                        <div style="color: #6b7280; font-size: 0.9rem; margin-bottom: 0.25rem;">Minimum</div>
+                        <div style="color: #6b7280; font-size: 0.9rem;">Minimum</div>
                         <div style="font-size: 1.5rem; font-weight: 700; color: #ef4444;">${rec.min}</div>
                     </div>
                     <div style="text-align: center;">
-                        <div style="color: #6b7280; font-size: 0.9rem; margin-bottom: 0.25rem;">Recommended</div>
+                        <div style="color: #6b7280; font-size: 0.9rem;">Recommended</div>
                         <div style="font-size: 1.5rem; font-weight: 700; color: #f59e0b;">${rec.rec}</div>
                     </div>
                     <div style="text-align: center;">
-                        <div style="color: #6b7280; font-size: 0.9rem; margin-bottom: 0.25rem;">Ideal</div>
+                        <div style="color: #6b7280; font-size: 0.9rem;">Ideal</div>
                         <div style="font-size: 1.5rem; font-weight: 700; color: #10b981;">${rec.ideal}</div>
                     </div>
                 </div>
@@ -693,109 +623,49 @@
                     <strong style="color: #1e40af;">💡 ${rec.usage}</strong>
                 </div>
             `;
-            
-            document.getElementById('usageResult').innerHTML = resultHTML;
             document.getElementById('usageResult').style.display = 'block';
         }
 
         function calculateActivities() {
             const checkboxes = document.querySelectorAll('#activities input[type="checkbox"]:checked');
-            let totalRAM = 4; // OS baseline
-            
-            checkboxes.forEach(cb => {
-                totalRAM += parseInt(cb.value);
-            });
+            let totalRAM = 4;
+            checkboxes.forEach(cb => totalRAM += parseInt(cb.value));
 
             if (checkboxes.length === 0) {
                 document.getElementById('activitiesResult').style.display = 'none';
                 return;
             }
 
-            let recommendation = '';
-            let recommendedRAM = 0;
-            
-            if (totalRAM <= 8) {
-                recommendedRAM = 8;
-                recommendation = '✅ <strong>8 GB RAM</strong> is sufficient for your usage. However, 16GB recommended for comfort and future-proofing.';
-            } else if (totalRAM <= 16) {
-                recommendedRAM = 16;
-                recommendation = '✅ <strong>16 GB RAM</strong> is perfect for your needs. This is the sweet spot for most users in 2025.';
-            } else if (totalRAM <= 24) {
-                recommendedRAM = 32;
-                recommendation = '✅ <strong>32 GB RAM</strong> recommended. Your usage requires substantial memory. 32GB prevents any slowdowns.';
-            } else if (totalRAM <= 40) {
-                recommendedRAM = 64;
-                recommendation = '✅ <strong>64 GB RAM</strong> necessary for your workload. Professional tasks demand this much memory for smooth performance.';
-            } else {
-                recommendedRAM = 128;
-                recommendation = '✅ <strong>128 GB RAM</strong> recommended. Your extreme workload (multiple VMs, 4K editing, rendering) benefits from maximum RAM.';
-            }
-
+            let recommendedRAM = totalRAM <= 8 ? 8 : totalRAM <= 16 ? 16 : totalRAM <= 24 ? 32 : totalRAM <= 40 ? 64 : 128;
+            let recommendation = `✅ <strong>${recommendedRAM} GB RAM</strong> recommended`;
             const percentage = Math.min((totalRAM / recommendedRAM) * 100, 100);
             
             document.getElementById('totalRAM').textContent = recommendedRAM + ' GB';
             document.getElementById('ramRecommendation').innerHTML = recommendation;
             document.getElementById('ramUsedBar').style.width = percentage + '%';
             document.getElementById('ramUsedBar').textContent = Math.round(percentage) + '%';
-            document.getElementById('osRAM').textContent = '4 GB';
             document.getElementById('appsRAM').textContent = (totalRAM - 4) + ' GB';
             document.getElementById('totalCalc').textContent = totalRAM + ' GB';
-            
             document.getElementById('activitiesResult').style.display = 'block';
         }
 
         function checkUpgrade() {
             const currentRAM = parseInt(document.getElementById('currentRAM').value);
             const usage = parseInt(document.getElementById('ramUsage').value);
-            const hasIssues = document.querySelectorAll('#upgrade input[type="checkbox"]:checked').length > 0;
             
             let result = '';
-            let needsUpgrade = false;
-            
-            if (usage >= 90 || hasIssues) {
-                needsUpgrade = true;
-                result = `
-                    <h3 style="color: #ef4444;">⚠️ Yes, You Need More RAM!</h3>
+            if (usage >= 90) {
+                result = `<h3 style="color: #ef4444;">⚠️ Yes, Upgrade Needed!</h3>
                     <div class="result-value" style="color: #ef4444;">${usage}% Usage</div>
-                    <div class="result-detail" style="color: #dc2626;">
-                        <strong>Your RAM is maxed out.</strong> This causes slowdowns, freezing, and disk thrashing (high disk usage). 
-                        ${currentRAM === 4 ? 'Upgrade to minimum 8GB, ideally 16GB.' : ''}
-                        ${currentRAM === 8 ? 'Upgrade to 16GB for comfortable performance.' : ''}
-                        ${currentRAM === 12 ? 'Upgrade to 16GB or 32GB depending on usage.' : ''}
-                        ${currentRAM === 16 ? 'Upgrade to 32GB if you do content creation or heavy multitasking.' : ''}
-                        ${currentRAM >= 24 ? 'You have substantial RAM. Check if specific programs are memory leaks or consider upgrading to ' + (currentRAM * 2) + 'GB for professional work.' : ''}
-                    </div>
-                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                        <strong style="color: #1e40af;">💡 Why you're experiencing issues:</strong><br>
-                        When RAM is full, Windows uses your hard drive as "virtual memory" (page file). Hard drives are 100x slower than RAM, causing everything to crawl. More RAM eliminates this bottleneck.
-                    </div>
-                `;
+                    <div class="result-detail" style="color: #dc2626;">Your RAM is maxed out. Upgrade recommended.</div>`;
             } else if (usage >= 75) {
-                result = `
-                    <h3 style="color: #f59e0b;">⚠️ Consider Upgrading</h3>
+                result = `<h3 style="color: #f59e0b;">⚠️ Consider Upgrading</h3>
                     <div class="result-value" style="color: #f59e0b;">${usage}% Usage</div>
-                    <div class="result-detail" style="color: #d97706;">
-                        You're approaching RAM limits. Not critical yet, but you'll notice slowdowns when opening more apps. 
-                        ${currentRAM === 8 ? 'Upgrading to 16GB gives substantial headroom.' : ''}
-                        ${currentRAM === 16 ? 'Upgrading to 32GB if you do content creation or heavy multitasking.' : ''}
-                        ${currentRAM >= 24 ? 'You have good RAM. Upgrade only if you plan to increase workload significantly.' : ''}
-                    </div>
-                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                        <strong style="color: #1e40af;">💡 When to upgrade:</strong> If you find yourself constantly closing apps to free memory, or if you're planning to keep this computer for 2+ more years, upgrade now while it's cheap.
-                    </div>
-                `;
+                    <div class="result-detail" style="color: #d97706;">Approaching limits. Upgrade gives headroom.</div>`;
             } else {
-                result = `
-                    <h3 style="color: #10b981;">✅ Your RAM is Fine!</h3>
+                result = `<h3 style="color: #10b981;">✅ Your RAM is Fine!</h3>
                     <div class="result-value" style="color: #10b981;">${usage}% Usage</div>
-                    <div class="result-detail" style="color: #059669;">
-                        Your current ${currentRAM}GB RAM is sufficient for your usage. No upgrade needed. 
-                        ${usage < 50 ? 'You have plenty of headroom.' : 'You\'re using it efficiently without hitting limits.'}
-                    </div>
-                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                        <strong style="color: #1e40af;">💡 When to revisit:</strong> If you start doing more demanding tasks (gaming, video editing, running VMs), or if your usage pattern changes significantly, re-check your RAM needs.
-                    </div>
-                `;
+                    <div class="result-detail" style="color: #059669;">Your ${currentRAM}GB RAM is sufficient.</div>`;
             }
             
             document.getElementById('upgradeResult').innerHTML = result;

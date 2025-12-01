@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free bandwidth calculator. Calculate internet speed needed for streaming, gaming, work. Convert Mbps to MB/s. Find out if your internet is fast enough.">
+    <meta name="keywords" content="bandwidth calculator, internet speed calculator, Mbps to MB/s converter, download time calculator, internet speed requirements">
     <title>Bandwidth Calculator - How Fast Internet Do You Need? (2025)</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; background: #fff; }
-        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; background: #fff; display: flex; flex-direction: column; min-height: 100vh; }
         .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
         .breadcrumb a { color: #3b82f6; text-decoration: none; }
         .calculator-container { max-width: 900px; margin: 0 auto; padding: 2rem; }
@@ -40,7 +38,6 @@
         
         .calc-button { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1.125rem; font-weight: 600; cursor: pointer; width: 100%; transition: transform 0.2s; margin-top: 1rem; }
         .calc-button:hover { transform: translateY(-2px); }
-        .calc-button:active { transform: translateY(0); }
         
         .result-box { background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-left: 4px solid #10b981; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
         .result-box h3 { color: #065f46; margin-bottom: 1rem; font-size: 1.5rem; }
@@ -48,30 +45,16 @@
         .result-detail { color: #047857; font-size: 1.125rem; margin-top: 0.5rem; line-height: 1.6; }
         
         .speed-visual { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
-        .speed-bar { background: #e5e7eb; height: 60px; border-radius: 30px; overflow: hidden; position: relative; margin-bottom: 1rem; }
+        .speed-bar { background: #e5e7eb; height: 60px; border-radius: 30px; overflow: hidden; margin-bottom: 1rem; }
         .speed-fill { background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; transition: width 0.5s ease; }
         .speed-legend { display: flex; justify-content: space-between; color: #6b7280; font-size: 0.9rem; margin-top: 0.5rem; }
-        
-        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
-        .warning-box strong { color: #92400e; }
         
         .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
         .info-box strong { color: #1e40af; }
         
-        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
-        .success-box strong { color: #065f46; }
-        
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .comparison-table th { background: #1e40af; color: white; padding: 1rem; text-align: left; font-weight: 600; }
-        .comparison-table td { padding: 1rem; border-bottom: 1px solid #e5e7eb; background: white; }
-        .comparison-table tbody tr:hover { background: #f9fafb; }
-        
         .download-time { background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #3b82f6; margin-top: 1rem; }
         .download-time-item { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #f3f4f6; }
         .download-time-item:last-child { border-bottom: none; }
-        
-        footer { background: #1f2937; color: white; padding: 2rem; margin-top: 4rem; text-align: center; }
-        footer a { color: #3b82f6; text-decoration: none; }
         
         @media (max-width: 768px) { 
             .page-header h1 { font-size: 1.75rem; }
@@ -82,17 +65,25 @@
             .input-row { grid-template-columns: 1fr; }
             .activity-controls { grid-template-columns: 1fr; }
         }
+/* SEO Content Styles */
+.comparison-table { width: 100%; border-collapse: collapse; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.comparison-table th { background: #1e40af; color: white; padding: 1rem; text-align: left; font-weight: 600; }
+.comparison-table td { padding: 1rem; border-bottom: 1px solid #e5e7eb; background: white; }
+.comparison-table tbody tr:hover { background: #f9fafb; }
+
+.warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+.warning-box strong { color: #92400e; }
+
+.success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+.success-box strong { color: #065f46; }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">🔧 Tech Fix Guide</a>
-        </nav>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
     
     <div class="breadcrumb">
-        <a href="/">Home</a> / <a href="/#calculators">Calculators</a> / Bandwidth Calculator
+        <a href="/">Home</a> / <a href="/calculators.html">Calculators</a> / Bandwidth Calculator
     </div>
     
     <div class="calculator-container">
@@ -143,7 +134,7 @@
             <h2 style="color: #1e40af; margin-bottom: 1.5rem;">Calculate Your Household Internet Needs</h2>
             
             <div class="info-box">
-                <strong>💡 How to use:</strong> Enter number of people/devices doing each activity simultaneously. For example, if 2 people stream 4K Netflix at the same time, enter 2 for "4K Streaming".
+                <strong>💡 How to use:</strong> Enter number of people/devices doing each activity simultaneously.
             </div>
 
             <div class="activity-item">
@@ -275,7 +266,7 @@
             </div>
 
             <div class="info-box">
-                <strong>💡 Real-world note:</strong> Actual download speeds are usually 70-90% of advertised speed due to network overhead, server limits, and congestion. This calculator shows theoretical maximum speeds.
+                <strong>💡 Real-world note:</strong> Actual download speeds are usually 70-90% of advertised speed.
             </div>
         </div>
 
@@ -681,41 +672,30 @@
             </article>
         </div>
     </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Tech Fix Guide. All rights reserved.</p>
-        <p>
-            <a href="/">Home</a> | 
-            <a href="/about.html">About</a> | 
-            <a href="/contact.html">Contact</a> | 
-            <a href="/privacy.html">Privacy Policy</a> | 
-            <a href="/terms.html">Terms of Service</a> | 
-            <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
-        </p>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load Components -->
+    <script src="/js/components.js"></script>
 
     <script>
         function switchTab(tabName) {
             document.querySelectorAll('.calculator-section').forEach(section => {
                 section.classList.remove('active');
             });
-            
             document.querySelectorAll('.tab').forEach(tab => {
                 tab.classList.remove('active');
             });
-            
             document.getElementById(tabName).classList.add('active');
             event.target.classList.add('active');
         }
 
         function convertSpeed() {
             const value = parseFloat(document.getElementById('speedValue').value);
-            const unit = document.getElementById('speedUnit').value;
-            
-            if (isNaN(value) || value < 0) {
-                return;
-            }
-
+            const unit = document.getElementById('speedUnit').value);
+            if (isNaN(value) || value < 0) return;
             let mbps;
             switch(unit) {
                 case 'mbps': mbps = value; break;
@@ -723,174 +703,102 @@
                 case 'gbps': mbps = value * 1000; break;
                 case 'kbps': mbps = value / 1000; break;
             }
-
-            const mbs = mbps / 8;
-            const gbps = mbps / 1000;
-            const kbps = mbps * 1000;
-
             const html = `
                 <div style="display: grid; gap: 0.75rem;">
                     <div style="padding: 0.75rem; background: white; border-radius: 8px;">
-                        <strong style="color: #1e40af;">Mbps (ISP advertised):</strong> 
-                        <span style="font-size: 1.25rem; color: #065f46;">${mbps.toFixed(2)}</span>
+                        <strong style="color: #1e40af;">Mbps:</strong> <span style="font-size: 1.25rem; color: #065f46;">${mbps.toFixed(2)}</span>
                     </div>
                     <div style="padding: 0.75rem; background: white; border-radius: 8px;">
-                        <strong style="color: #1e40af;">MB/s (Download speed):</strong> 
-                        <span style="font-size: 1.25rem; color: #065f46;">${mbs.toFixed(2)}</span>
+                        <strong style="color: #1e40af;">MB/s:</strong> <span style="font-size: 1.25rem; color: #065f46;">${(mbps/8).toFixed(2)}</span>
                     </div>
                     <div style="padding: 0.75rem; background: white; border-radius: 8px;">
-                        <strong style="color: #1e40af;">Gbps (Gigabits/sec):</strong> 
-                        <span style="font-size: 1.25rem; color: #065f46;">${gbps.toFixed(4)}</span>
-                    </div>
-                    <div style="padding: 0.75rem; background: white; border-radius: 8px;">
-                        <strong style="color: #1e40af;">Kbps (Kilobits/sec):</strong> 
-                        <span style="font-size: 1.25rem; color: #065f46;">${kbps.toFixed(0)}</span>
+                        <strong style="color: #1e40af;">Gbps:</strong> <span style="font-size: 1.25rem; color: #065f46;">${(mbps/1000).toFixed(4)}</span>
                     </div>
                 </div>
             `;
-
             document.getElementById('conversionResults').innerHTML = html;
-            document.getElementById('converterResult').style.display = 'block';
         }
 
         function calculateHousehold() {
-            const hdStreams = parseInt(document.getElementById('hdStreaming').value) || 0;
-            const fourKStreams = parseInt(document.getElementById('4kStreaming').value) || 0;
-            const gamers = parseInt(document.getElementById('gaming').value) || 0;
-            const videoCalls = parseInt(document.getElementById('videoCalls').value) || 0;
-            const browsers = parseInt(document.getElementById('browsing').value) || 0;
-            const smartDevices = parseInt(document.getElementById('smartHome').value) || 0;
+            const hd = parseInt(document.getElementById('hdStreaming').value) || 0;
+            const fourK = parseInt(document.getElementById('4kStreaming').value) || 0;
+            const gaming = parseInt(document.getElementById('gaming').value) || 0;
+            const calls = parseInt(document.getElementById('videoCalls').value) || 0;
+            const browsing = parseInt(document.getElementById('browsing').value) || 0;
+            const smart = parseInt(document.getElementById('smartHome').value) || 0;
 
-            const hdSpeed = hdStreams * 5;
-            const fourKSpeed = fourKStreams * 25;
-            const gamingSpeed = gamers * 10;
-            const callSpeed = videoCalls * 3;
-            const browsingSpeed = browsers * 2;
-            const smartSpeed = Math.ceil(smartDevices / 10);
-
-            const totalSpeed = hdSpeed + fourKSpeed + gamingSpeed + callSpeed + browsingSpeed + smartSpeed;
-
-            if (totalSpeed === 0) {
+            const total = (hd*5) + (fourK*25) + (gaming*10) + (calls*3) + (browsing*2) + Math.ceil(smart/10);
+            
+            if (total === 0) {
                 document.getElementById('householdResult').style.display = 'none';
                 return;
             }
 
-            let recommendedSpeed = 0;
-            let recommendation = '';
-
-            if (totalSpeed <= 25) {
-                recommendedSpeed = 50;
-                recommendation = '✅ <strong>50 Mbps</strong> is sufficient. Light usage with buffer for smooth experience.';
-            } else if (totalSpeed <= 50) {
-                recommendedSpeed = 100;
-                recommendation = '✅ <strong>100 Mbps</strong> recommended. Perfect for your household needs with comfortable margin.';
-            } else if (totalSpeed <= 100) {
-                recommendedSpeed = 200;
-                recommendation = '✅ <strong>200 Mbps</strong> recommended. Moderate-heavy usage. Prevents slowdowns during peak times.';
-            } else if (totalSpeed <= 200) {
-                recommendedSpeed = 300;
-                recommendation = '✅ <strong>300 Mbps</strong> recommended. Heavy usage household. Ensures smooth experience for everyone.';
-            } else if (totalSpeed <= 300) {
-                recommendedSpeed = 500;
-                recommendation = '✅ <strong>500 Mbps</strong> recommended. Very heavy usage. Consider gigabit if available at good price.';
-            } else {
-                recommendedSpeed = 1000;
-                recommendation = '✅ <strong>Gigabit (1000 Mbps)</strong> necessary. Extreme usage household with multiple 4K streams and gaming.';
-            }
+            let rec = 50;
+            let msg = '';
+            if (total <= 25) { rec = 50; msg = '50 Mbps sufficient'; }
+            else if (total <= 50) { rec = 100; msg = '100 Mbps recommended'; }
+            else if (total <= 100) { rec = 200; msg = '200 Mbps recommended'; }
+            else if (total <= 200) { rec = 300; msg = '300 Mbps recommended'; }
+            else if (total <= 300) { rec = 500; msg = '500 Mbps recommended'; }
+            else { rec = 1000; msg = 'Gigabit necessary'; }
 
             const breakdown = `
-                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
-                    <h4 style="color: #1e40af; margin-bottom: 1rem;">📊 Your Usage Breakdown:</h4>
-                    ${hdSpeed > 0 ? `<div style="margin-bottom: 0.5rem;">📺 HD Streaming: <strong>${hdSpeed} Mbps</strong> (${hdStreams} streams)</div>` : ''}
-                    ${fourKSpeed > 0 ? `<div style="margin-bottom: 0.5rem;">📺 4K Streaming: <strong>${fourKSpeed} Mbps</strong> (${fourKStreams} streams)</div>` : ''}
-                    ${gamingSpeed > 0 ? `<div style="margin-bottom: 0.5rem;">🎮 Gaming: <strong>${gamingSpeed} Mbps</strong> (${gamers} gamers)</div>` : ''}
-                    ${callSpeed > 0 ? `<div style="margin-bottom: 0.5rem;">💼 Video Calls: <strong>${callSpeed} Mbps</strong> (${videoCalls} calls)</div>` : ''}
-                    ${browsingSpeed > 0 ? `<div style="margin-bottom: 0.5rem;">🌐 Browsing: <strong>${browsingSpeed} Mbps</strong> (${browsers} users)</div>` : ''}
-                    ${smartSpeed > 0 ? `<div style="margin-bottom: 0.5rem;">📱 Smart Devices: <strong>${smartSpeed} Mbps</strong> (${smartDevices} devices)</div>` : ''}
+                <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="color: #1e40af; margin-bottom: 1rem;">Usage Breakdown:</h4>
+                    ${hd > 0 ? `<div>HD Streaming: ${hd*5} Mbps</div>` : ''}
+                    ${fourK > 0 ? `<div>4K Streaming: ${fourK*25} Mbps</div>` : ''}
+                    ${gaming > 0 ? `<div>Gaming: ${gaming*10} Mbps</div>` : ''}
+                    ${calls > 0 ? `<div>Video Calls: ${calls*3} Mbps</div>` : ''}
+                    ${browsing > 0 ? `<div>Browsing: ${browsing*2} Mbps</div>` : ''}
                     <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #e5e7eb;">
-                        <strong style="color: #1e40af;">Total Needed: ${totalSpeed} Mbps</strong>
+                        <strong>Total: ${total} Mbps</strong>
                     </div>
                 </div>
             `;
 
-            document.getElementById('requiredSpeed').textContent = recommendedSpeed + ' Mbps';
-            document.getElementById('speedRecommendation').innerHTML = recommendation + '<br><br>💡 Recommended speed includes 30-50% buffer above your calculated needs to account for peak usage times and future growth.';
+            document.getElementById('requiredSpeed').textContent = rec + ' Mbps';
+            document.getElementById('speedRecommendation').innerHTML = `✅ <strong>${msg}</strong>`;
             document.getElementById('breakdownDetails').innerHTML = breakdown;
             document.getElementById('householdResult').style.display = 'block';
         }
 
         function calculateDownloadTime() {
-            const fileSize = parseFloat(document.getElementById('fileSize').value);
-            const fileSizeUnit = document.getElementById('fileSizeUnit').value;
+            const size = parseFloat(document.getElementById('fileSize').value);
+            const unit = document.getElementById('fileSizeUnit').value;
             const speed = parseFloat(document.getElementById('downloadSpeed').value);
             const speedUnit = document.getElementById('downloadSpeedUnit').value;
 
-            if (isNaN(fileSize) || isNaN(speed) || fileSize <= 0 || speed <= 0) {
+            if (isNaN(size) || isNaN(speed) || size <= 0 || speed <= 0) {
                 alert('Please enter valid values');
                 return;
             }
 
-            let fileSizeMB;
-            switch(fileSizeUnit) {
-                case 'mb': fileSizeMB = fileSize; break;
-                case 'gb': fileSizeMB = fileSize * 1024; break;
-                case 'tb': fileSizeMB = fileSize * 1024 * 1024; break;
-            }
-
-            let speedMBs;
-            if (speedUnit === 'mbps') {
-                speedMBs = speed / 8;
-            } else {
-                speedMBs = speed;
-            }
-
-            const timeSeconds = fileSizeMB / speedMBs;
-            const timeMinutes = timeSeconds / 60;
-            const timeHours = timeMinutes / 60;
-
-            let displayTime = '';
-            if (timeSeconds < 60) {
-                displayTime = Math.round(timeSeconds) + ' seconds';
-            } else if (timeMinutes < 60) {
-                displayTime = Math.round(timeMinutes) + ' minutes';
-            } else {
-                const hours = Math.floor(timeHours);
-                const mins = Math.round((timeHours - hours) * 60);
-                displayTime = hours + ' hour' + (hours > 1 ? 's' : '') + (mins > 0 ? ' ' + mins + ' min' : '');
-            }
+            let sizeMB = unit === 'mb' ? size : unit === 'gb' ? size*1024 : size*1024*1024;
+            let speedMBs = speedUnit === 'mbps' ? speed/8 : speed;
+            let seconds = sizeMB / speedMBs;
+            
+            let display = seconds < 60 ? Math.round(seconds) + ' sec' : 
+                         seconds < 3600 ? Math.round(seconds/60) + ' min' :
+                         Math.floor(seconds/3600) + 'h ' + Math.round((seconds%3600)/60) + 'm';
 
             const speeds = [25, 50, 100, 200, 500, 1000];
-            let comparisonHTML = '';
+            let comp = '';
             speeds.forEach(s => {
-                const t = fileSizeMB / (s / 8);
-                let dt = '';
-                if (t < 60) {
-                    dt = Math.round(t) + ' sec';
-                } else if (t < 3600) {
-                    dt = Math.round(t / 60) + ' min';
-                } else {
-                    const h = Math.floor(t / 3600);
-                    const m = Math.round((t % 3600) / 60);
-                    dt = h + 'h' + (m > 0 ? ' ' + m + 'm' : '');
-                }
-                comparisonHTML += `
-                    <div class="download-time-item">
-                        <span>${s} Mbps:</span>
-                        <strong style="color: #1e40af;">${dt}</strong>
-                    </div>
-                `;
+                const t = sizeMB / (s/8);
+                const dt = t < 60 ? Math.round(t) + ' sec' : 
+                          t < 3600 ? Math.round(t/60) + ' min' :
+                          Math.floor(t/3600) + 'h ' + Math.round((t%3600)/60) + 'm';
+                comp += `<div class="download-time-item"><span>${s} Mbps:</span><strong>${dt}</strong></div>`;
             });
 
-            document.getElementById('downloadTimeResult').textContent = displayTime;
-            document.getElementById('downloadDetail').innerHTML = `At ${speed} ${speedUnit === 'mbps' ? 'Mbps' : 'MB/s'}, your ${fileSize} ${fileSizeUnit.toUpperCase()} file will download in approximately <strong>${displayTime}</strong>.<br><br>💡 Actual download time may vary based on server speed, network congestion, and other factors. This is the theoretical maximum speed.`;
-            document.getElementById('speedComparison').innerHTML = comparisonHTML;
+            document.getElementById('downloadTimeResult').textContent = display;
+            document.getElementById('downloadDetail').innerHTML = `At ${speed} ${speedUnit === 'mbps' ? 'Mbps' : 'MB/s'}, download completes in <strong>${display}</strong>`;
+            document.getElementById('speedComparison').innerHTML = comp;
             document.getElementById('downloadResult').style.display = 'block';
         }
 
-        // Initialize converter on page load
-        window.addEventListener('load', () => {
-            convertSpeed();
-        });
+        window.addEventListener('load', () => convertSpeed());
     </script>
 </body>
 </html>

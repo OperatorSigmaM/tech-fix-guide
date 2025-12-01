@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Fix your tech problems fast with our step-by-step troubleshooting guides, tech glossary, and free calculators. Expert solutions for devices, software, and hardware issues.">
@@ -8,6 +10,7 @@
     <title>Tech Fix Guide - Troubleshooting & Solutions for All Your Devices</title>
     
     <style>
+        /* === ГЛОБАЛЬНЫЕ НАСТРОЙКИ === */
         * {
             margin: 0;
             padding: 0;
@@ -19,51 +22,20 @@
             line-height: 1.6;
             color: #1f2937;
             background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
+        /* Контейнер */
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
+            padding: 3rem 2rem;
+            width: 100%;
         }
         
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: white;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
-        
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
+        /* === УНИКАЛЬНЫЕ СТИЛИ ГЛАВНОЙ СТРАНИЦЫ === */
         
         /* Hero Section */
         .hero {
@@ -106,13 +78,6 @@
         .search-box input:focus {
             outline: none;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
         }
         
         /* Section Headers */
@@ -296,54 +261,7 @@
             transform: scale(1.05);
         }
         
-        /* Footer */
-        footer {
-            background: #1f2937;
-            color: white;
-            padding: 3rem 2rem 1rem;
-            margin-top: 4rem;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: #3b82f6;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-section a {
-            color: #d1d5db;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-section a:hover {
-            color: #3b82f6;
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #374151;
-            color: #9ca3af;
-        }
-        
-        /* Responsive */
+        /* Responsive tweaks specific to home page */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -351,10 +269,6 @@
             
             .hero p {
                 font-size: 1rem;
-            }
-            
-            .nav-links {
-                display: none;
             }
             
             .cards-grid {
@@ -368,19 +282,9 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <a href="/" class="logo">🔧 Tech Fix Guide</a>
-            <ul class="nav-links">
-                <li><a href="#problems">Problems</a></li>
-                <li><a href="#glossary">Glossary</a></li>
-                <li><a href="#calculators">Calculators</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
-    <!-- Hero Section -->
     <section class="hero">
         <h1>Fix Your Tech Problems Fast</h1>
         <p>Step-by-step troubleshooting guides, tech glossary, and calculators to solve any device issue</p>
@@ -389,7 +293,6 @@
         </div>
     </section>
 
-    <!-- Main Categories -->
     <section class="container">
         <div class="section-header">
             <h2>What Do You Need Help With?</h2>
@@ -435,7 +338,6 @@
         </div>
     </section>
 
-    <!-- Popular Problems -->
     <section class="container" id="problems" style="background: #f8fafc; padding: 3rem 2rem; border-radius: 12px;">
         <div class="section-header">
             <h2>🔥 Most Popular Problems</h2>
@@ -475,7 +377,6 @@
         </div>
     </section>
 
-    <!-- Tech Glossary Preview -->
     <section class="container" id="glossary">
         <div class="section-header">
             <h2>📚 Tech Glossary</h2>
@@ -491,7 +392,6 @@
         </div>
     </section>
 
-    <!-- Calculators Section -->
     <section class="container" id="calculators">
         <div class="section-header">
             <h2>🧮 Free Tech Calculators</h2>
@@ -519,7 +419,6 @@
         </div>
     </section>
 
-    <!-- Stats -->
     <section class="container">
         <div class="stats">
             <div class="stats-grid">
@@ -543,7 +442,6 @@
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="container">
         <div class="cta">
             <h2>Can't Find Your Problem?</h2>
@@ -552,65 +450,18 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Popular Guides</h3>
-                <ul>
-                    <li><a href="/problems/iphone-not-charging.html">iPhone Not Charging</a></li>
-                    <li><a href="/problems/laptop-overheating.html">Laptop Overheating</a></li>
-                    <li><a href="/problems/wifi-not-connecting.html">WiFi Problems</a></li>
-                    <li><a href="/problems/blue-screen-windows.html">Blue Screen Fix</a></li>
-                    <li><a href="/problems/phone-battery-drain.html">Battery Drain</a></li>
-                    <li><a href="/problems/slow-computer.html">Slow Computer</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Tech Glossary</h3>
-                <ul>
-                    <li><a href="/glossary/ram.html">What is RAM?</a></li>
-                    <li><a href="/glossary/cpu.html">What is CPU?</a></li>
-                    <li><a href="/glossary/gpu.html">What is GPU?</a></li>
-                    <li><a href="/glossary/vpn.html">What is VPN?</a></li>
-                    <li><a href="/glossary/ssd.html">SSD vs HDD</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Calculators</h3>
-                <ul>
-                    <li><a href="/calculators/storage.html">Storage Calculator</a></li>
-                    <li><a href="/calculators/ram.html">RAM Calculator</a></li>
-                    <li><a href="/calculators/bandwidth.html">Bandwidth Calculator</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/terms.html">Terms of Service</a></li>
-                    <li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
-        </div>
-    </footer>
-
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load Components -->
+    <script src="/js/components.js"></script>
+    
     <script>
         // Working search functionality
         document.querySelector('.search-box input').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 const query = this.value.trim();
                 if (query) {
-                    // Redirect to problems page with search
                     window.location.href = `/problems.html?search=${encodeURIComponent(query)}`;
                 }
             }

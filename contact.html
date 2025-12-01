@@ -6,72 +6,244 @@
     <meta name="description" content="Contact Tech Fix Guide. Send us your questions, feedback, or suggestions. We're here to help with your tech problems.">
     <title>Contact Us - Tech Fix Guide</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; background: #f8fafc; }
+        /* === ГЛОБАЛЬНЫЕ НАСТРОЙКИ === */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
         
-        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            line-height: 1.7; 
+            color: #1f2937; 
+            background: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
         
-        .breadcrumb { max-width: 800px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
-        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        /* === ЛОКАЛЬНЫЕ СТИЛИ КОНТАКТНОЙ СТРАНИЦЫ === */
+        .breadcrumb { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 1rem 2rem; 
+            font-size: 0.9rem; 
+            color: #6b7280; 
+        }
         
-        .contact-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .breadcrumb a { 
+            color: #3b82f6; 
+            text-decoration: none; 
+        }
         
-        .page-header { text-align: center; margin-bottom: 3rem; }
-        .page-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
-        .page-header p { font-size: 1.125rem; color: #6b7280; max-width: 600px; margin: 0 auto; }
+        .contact-container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 2rem; 
+        }
         
-        .contact-info { background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .contact-info h2 { color: #1e40af; margin-bottom: 1rem; font-size: 1.5rem; }
-        .info-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; padding: 1rem; background: #f8fafc; border-radius: 8px; }
-        .info-icon { font-size: 1.5rem; }
-        .info-text { flex: 1; }
-        .info-text strong { color: #1e40af; display: block; margin-bottom: 0.25rem; }
-        .info-text span { color: #6b7280; }
+        .page-header { 
+            text-align: center; 
+            margin-bottom: 3rem; 
+        }
         
-        .contact-form { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .contact-form h2 { color: #1e40af; margin-bottom: 1.5rem; font-size: 1.5rem; }
+        .page-header h1 { 
+            font-size: 2.5rem; 
+            color: #1e40af; 
+            margin-bottom: 1rem; 
+        }
         
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; color: #1e40af; font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.75rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; font-family: inherit; transition: border 0.3s; }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: #3b82f6; }
-        .form-group textarea { resize: vertical; min-height: 150px; }
+        .page-header p { 
+            font-size: 1.125rem; 
+            color: #6b7280; 
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
         
-        .required { color: #ef4444; }
+        .contact-info { 
+            background: white; 
+            padding: 2rem; 
+            border-radius: 12px; 
+            margin-bottom: 2rem; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+        }
         
-        .submit-btn { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1.125rem; font-weight: 600; cursor: pointer; width: 100%; transition: transform 0.2s; }
-        .submit-btn:hover { transform: translateY(-2px); }
-        .submit-btn:active { transform: translateY(0); }
+        .contact-info h2 { 
+            color: #1e40af; 
+            margin-bottom: 1rem; 
+            font-size: 1.5rem; 
+        }
         
-        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
-        .info-box strong { color: #1e40af; }
+        .info-item { 
+            display: flex; 
+            align-items: center; 
+            gap: 1rem; 
+            margin-bottom: 1rem; 
+            padding: 1rem; 
+            background: #f8fafc; 
+            border-radius: 8px; 
+        }
         
-        .faq { background: white; padding: 2rem; border-radius: 12px; margin-top: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .faq h2 { color: #1e40af; margin-bottom: 1.5rem; font-size: 1.5rem; }
-        .faq-item { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #e5e7eb; }
-        .faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-        .faq-item h4 { color: #1e40af; margin-bottom: 0.5rem; font-size: 1.125rem; }
-        .faq-item p { color: #6b7280; line-height: 1.6; }
+        .info-icon { 
+            font-size: 1.5rem; 
+        }
         
-        footer { background: #1f2937; color: white; padding: 2rem; margin-top: 4rem; text-align: center; }
-        footer a { color: #3b82f6; text-decoration: none; }
+        .info-text { 
+            flex: 1; 
+        }
         
-        .honeypot { position: absolute; left: -9999px; }
+        .info-text strong { 
+            color: #1e40af; 
+            display: block; 
+            margin-bottom: 0.25rem; 
+        }
+        
+        .info-text span { 
+            color: #6b7280; 
+        }
+        
+        .contact-form { 
+            background: white; 
+            padding: 2rem; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+        }
+        
+        .contact-form h2 { 
+            color: #1e40af; 
+            margin-bottom: 1.5rem; 
+            font-size: 1.5rem; 
+        }
+        
+        .form-group { 
+            margin-bottom: 1.5rem; 
+        }
+        
+        .form-group label { 
+            display: block; 
+            color: #1e40af; 
+            font-weight: 600; 
+            margin-bottom: 0.5rem; 
+            font-size: 1rem; 
+        }
+        
+        .form-group input, 
+        .form-group textarea, 
+        .form-group select { 
+            width: 100%; 
+            padding: 0.75rem; 
+            border: 2px solid #e5e7eb; 
+            border-radius: 8px; 
+            font-size: 1rem; 
+            font-family: inherit; 
+            transition: border 0.3s; 
+        }
+        
+        .form-group input:focus, 
+        .form-group textarea:focus, 
+        .form-group select:focus { 
+            outline: none; 
+            border-color: #3b82f6; 
+        }
+        
+        .form-group textarea { 
+            resize: vertical; 
+            min-height: 150px; 
+        }
+        
+        .required { 
+            color: #ef4444; 
+        }
+        
+        .submit-btn { 
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); 
+            color: white; 
+            padding: 1rem 2rem; 
+            border: none; 
+            border-radius: 8px; 
+            font-size: 1.125rem; 
+            font-weight: 600; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: transform 0.2s; 
+        }
+        
+        .submit-btn:hover { 
+            transform: translateY(-2px); 
+        }
+        
+        .submit-btn:active { 
+            transform: translateY(0); 
+        }
+        
+        .info-box { 
+            background: #dbeafe; 
+            border-left: 4px solid #3b82f6; 
+            padding: 1.25rem; 
+            margin: 1.5rem 0; 
+            border-radius: 8px; 
+        }
+        
+        .info-box strong { 
+            color: #1e40af; 
+        }
+        
+        .faq { 
+            background: white; 
+            padding: 2rem; 
+            border-radius: 12px; 
+            margin-top: 2rem; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+        }
+        
+        .faq h2 { 
+            color: #1e40af; 
+            margin-bottom: 1.5rem; 
+            font-size: 1.5rem; 
+        }
+        
+        .faq-item { 
+            margin-bottom: 1.5rem; 
+            padding-bottom: 1.5rem; 
+            border-bottom: 1px solid #e5e7eb; 
+        }
+        
+        .faq-item:last-child { 
+            border-bottom: none; 
+            margin-bottom: 0; 
+            padding-bottom: 0; 
+        }
+        
+        .faq-item h4 { 
+            color: #1e40af; 
+            margin-bottom: 0.5rem; 
+            font-size: 1.125rem; 
+        }
+        
+        .faq-item p { 
+            color: #6b7280; 
+            line-height: 1.6; 
+        }
+        
+        .honeypot { 
+            position: absolute; 
+            left: -9999px; 
+        }
         
         @media (max-width: 768px) { 
-            .page-header h1 { font-size: 1.75rem; } 
-            .contact-container { padding: 1rem; }
+            .page-header h1 { 
+                font-size: 1.75rem; 
+            } 
+            .contact-container { 
+                padding: 1rem; 
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">🔧 Tech Fix Guide</a>
-        </nav>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
     
     <div class="breadcrumb">
         <a href="/">Home</a> / Contact Us
@@ -190,16 +362,10 @@
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Tech Fix Guide. All rights reserved.</p>
-        <p>
-            <a href="/">Home</a> | 
-            <a href="/about.html">About</a> | 
-            <a href="/contact.html">Contact</a> | 
-            <a href="/privacy.html">Privacy Policy</a> | 
-            <a href="/terms.html">Terms of Service</a> | 
-            <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
-        </p>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load Components -->
+    <script src="/js/components.js"></script>
 </body>
 </html>

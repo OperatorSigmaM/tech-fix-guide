@@ -6,78 +6,237 @@
     <meta name="description" content="About Tech Fix Guide - your trusted source for tech troubleshooting, guides, and solutions. Learn about our mission and team.">
     <title>About Us - Tech Fix Guide</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; background: #ffffff; }
+        /* === ГЛОБАЛЬНЫЕ НАСТРОЙКИ === */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
         
-        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            line-height: 1.7; 
+            color: #1f2937; 
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
         
-        .breadcrumb { max-width: 900px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
-        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        /* === ЛОКАЛЬНЫЕ СТИЛИ ABOUT PAGE === */
+        .breadcrumb { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 1rem 2rem; 
+            font-size: 0.9rem; 
+            color: #6b7280; 
+        }
         
-        .about-container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        .breadcrumb a { 
+            color: #3b82f6; 
+            text-decoration: none; 
+        }
         
-        .page-header { text-align: center; margin-bottom: 3rem; }
-        .page-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
-        .page-header p { font-size: 1.25rem; color: #6b7280; max-width: 700px; margin: 0 auto; }
+        .about-container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 2rem; 
+        }
         
-        .about-content h2 { color: #1e40af; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 1rem; }
-        .about-content h3 { color: #1f2937; font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; }
-        .about-content p { margin-bottom: 1.25rem; line-height: 1.8; color: #374151; }
-        .about-content ul { margin-left: 2rem; margin-bottom: 1.5rem; }
-        .about-content li { margin-bottom: 0.75rem; color: #374151; }
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
         
-        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
-        .info-box strong { color: #1e40af; }
+        .page-header h1 { 
+            font-size: 2.5rem; 
+            color: #1e40af; 
+            margin-bottom: 1rem; 
+        }
         
-        .mission-box { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; }
-        .mission-box h2 { color: #1e40af; margin-bottom: 1rem; }
-        .mission-box p { font-size: 1.125rem; color: #1f2937; max-width: 700px; margin: 0 auto; }
+        .page-header p { 
+            font-size: 1.25rem; 
+            color: #6b7280; 
+            max-width: 700px; 
+            margin: 0 auto; 
+        }
         
-        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
-        .value-item { background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #3b82f6; }
-        .value-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        .value-item h4 { color: #1e40af; margin-bottom: 0.5rem; }
-        .value-item p { color: #6b7280; margin: 0; }
+        .about-content h2 { 
+            color: #1e40af; 
+            font-size: 1.75rem; 
+            margin-top: 2.5rem; 
+            margin-bottom: 1rem; 
+        }
         
-        .stats { background: #f8fafc; padding: 2rem; border-radius: 12px; margin: 2rem 0; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; text-align: center; }
-        .stat-item h3 { font-size: 2.5rem; color: #3b82f6; margin-bottom: 0.5rem; }
-        .stat-item p { color: #6b7280; }
+        .about-content h3 { 
+            color: #1f2937; 
+            font-size: 1.25rem; 
+            margin-top: 2rem; 
+            margin-bottom: 0.75rem; 
+        }
         
-        .cta-box { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 2rem; border-radius: 12px; margin: 3rem 0; text-align: center; }
-        /* ДОБАВЛЕНЫ НОВЫЕ ПРАВИЛА ЗДЕСЬ, ЧТОБЫ УБЕДИТЬСЯ, ЧТО ТЕКСТ БЕЛЫЙ */
+        .about-content p { 
+            margin-bottom: 1.25rem; 
+            line-height: 1.8; 
+            color: #374151; 
+        }
+        
+        .about-content ul { 
+            margin-left: 2rem; 
+            margin-bottom: 1.5rem; 
+        }
+        
+        .about-content li { 
+            margin-bottom: 0.75rem; 
+            color: #374151; 
+        }
+        
+        .about-content a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .about-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .info-box { 
+            background: #dbeafe; 
+            border-left: 4px solid #3b82f6; 
+            padding: 1.25rem; 
+            margin: 1.5rem 0; 
+            border-radius: 8px; 
+        }
+        
+        .info-box strong { 
+            color: #1e40af; 
+        }
+        
+        .mission-box { 
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); 
+            padding: 2rem; 
+            border-radius: 12px; 
+            margin: 2rem 0; 
+            text-align: center; 
+        }
+        
+        .mission-box h2 { 
+            color: #1e40af; 
+            margin-bottom: 1rem; 
+        }
+        
+        .mission-box p { 
+            font-size: 1.125rem; 
+            color: #1f2937; 
+            max-width: 700px; 
+            margin: 0 auto; 
+        }
+        
+        .values-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 1.5rem; 
+            margin: 2rem 0; 
+        }
+        
+        .value-item { 
+            background: #f8fafc; 
+            padding: 1.5rem; 
+            border-radius: 8px; 
+            border-left: 4px solid #3b82f6; 
+        }
+        
+        .value-icon { 
+            font-size: 2.5rem; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .value-item h4 { 
+            color: #1e40af; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .value-item p { 
+            color: #6b7280; 
+            margin: 0; 
+        }
+        
+        .stats { 
+            background: #f8fafc; 
+            padding: 2rem; 
+            border-radius: 12px; 
+            margin: 2rem 0; 
+        }
+        
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+            gap: 2rem; 
+            text-align: center; 
+        }
+        
+        .stat-item h3 { 
+            font-size: 2.5rem; 
+            color: #3b82f6; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .stat-item p { 
+            color: #6b7280; 
+        }
+        
+        .cta-box { 
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); 
+            color: white; 
+            padding: 2rem; 
+            border-radius: 12px; 
+            margin: 3rem 0; 
+            text-align: center; 
+        }
+        
         .cta-box h2 {
-            color: white; /* Явно устанавливаем белый для заголовка */
+            color: white;
             margin-bottom: 1rem;
         }
+        
         .cta-box p {
-            color: white; /* Явно устанавливаем белый для параграфа */
+            color: white;
             margin-bottom: 1.5rem;
             opacity: 0.95;
         }
-        /* КОНЕЦ НОВЫХ ПРАВИЛ */
-
-        .cta-button { background: white; color: #3b82f6; padding: 1rem 2rem; border-radius: 8px; font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-block; transition: transform 0.2s; }
-        .cta-button:hover { transform: translateY(-2px); }
         
-        footer { background: #1f2937; color: white; padding: 2rem; margin-top: 4rem; text-align: center; }
-        footer a { color: #3b82f6; text-decoration: none; }
+        .cta-button { 
+            background: white; 
+            color: #3b82f6; 
+            padding: 1rem 2rem; 
+            border-radius: 8px; 
+            font-size: 1rem; 
+            font-weight: 600; 
+            text-decoration: none; 
+            display: inline-block; 
+            transition: transform 0.2s; 
+        }
         
-        @media (max-width: 768px) { 
-            .page-header h1 { font-size: 1.75rem; }
-            .about-container { padding: 1rem; }
-            .values-grid { grid-template-columns: 1fr; }
+        .cta-button:hover { 
+            transform: translateY(-2px); 
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 { 
+                font-size: 1.75rem; 
+            }
+            .about-container { 
+                padding: 1rem; 
+            }
+            .values-grid { 
+                grid-template-columns: 1fr; 
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">🔧 Tech Fix Guide</a>
-        </nav>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
     
     <div class="breadcrumb">
         <a href="/">Home</a> / About Us
@@ -244,16 +403,10 @@
         </div>
     </div>
 
-    <footer>
-    <p>&copy; 2025 Tech Fix Guide. All rights reserved.</p>
-    <p>
-        <a href="/">Home</a> | 
-        <a href="/about.html">About</a> | 
-        <a href="/contact.html">Contact</a> | 
-        <a href="/privacy.html">Privacy Policy</a> | 
-        <a href="/terms.html">Terms of Service</a> | 
-        <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
-    </p>
-</footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load Components -->
+    <script src="/js/components.js"></script>
 </body>
 </html>
