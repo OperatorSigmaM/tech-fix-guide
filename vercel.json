@@ -1,0 +1,35 @@
+{
+  "redirects": [
+    // === Корневые страницы (Хабы) ===
+    { "source": "/about.html", "destination": "/about/", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact/", "permanent": true },
+    { "source": "/privacy.html", "destination": "/privacy/", "permanent": true },
+    { "source": "/terms.html", "destination": "/terms/", "permanent": true },
+    { "source": "/affiliate-disclosure.html", "destination": "/affiliate-disclosure/", "permanent": true },
+    
+    // Хабы (Списки категорий)
+    { "source": "/problems.html", "destination": "/problems/", "permanent": true },
+    { "source": "/calculators.html", "destination": "/calculators/", "permanent": true },
+    { "source": "/glossary.html", "destination": "/glossary/", "permanent": true },
+
+    // === Гайды (Проблемы) -> Идут в /all-problems/ ===
+    { "source": "/problems/iphone-not-charging.html", "destination": "/all-problems/iphone-not-charging/", "permanent": true },
+    { "source": "/problems/laptop-overheating.html", "destination": "/all-problems/laptop-overheating/", "permanent": true },
+    { "source": "/problems/wifi-not-connecting.html", "destination": "/all-problems/wifi-not-connecting/", "permanent": true },
+    { "source": "/problems/blue-screen-windows.html", "destination": "/all-problems/blue-screen-windows/", "permanent": true },
+    { "source": "/problems/phone-battery-drain.html", "destination": "/all-problems/phone-battery-drain/", "permanent": true },
+    { "source": "/problems/slow-computer.html", "destination": "/all-problems/slow-computer/", "permanent": true },
+
+    // === Калькуляторы -> Идут в /all-calculators/ ===
+    { "source": "/calculators/storage.html", "destination": "/all-calculators/storage/", "permanent": true },
+    { "source": "/calculators/ram.html", "destination": "/all-calculators/ram/", "permanent": true },
+    { "source": "/calculators/bandwidth.html", "destination": "/all-calculators/bandwidth/", "permanent": true },
+
+    // === Глоссарий -> Идут в /all-glossary/ ===
+    { "source": "/glossary/cpu.html", "destination": "/all-glossary/cpu/", "permanent": true },
+    { "source": "/glossary/gpu.html", "destination": "/all-glossary/gpu/", "permanent": true },
+    { "source": "/glossary/ram.html", "destination": "/all-glossary/ram/", "permanent": true },
+    { "source": "/glossary/ssd.html", "destination": "/all-glossary/ssd/", "permanent": true },
+    { "source": "/glossary/vpn.html", "destination": "/all-glossary/vpn/", "permanent": true }
+  ]
+}

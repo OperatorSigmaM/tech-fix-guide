@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Affiliate Disclosure for Tech Fix Guide. Learn how we use affiliate links and earn commissions.">
+    <title>Affiliate Disclosure - Tech Fix Guide</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        /* === ГЛОБАЛЬНЫЕ НАСТРОЙКИ === */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            line-height: 1.7; 
+            color: #1f2937; 
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* === HEADER STYLES === */
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* === FOOTER STYLES === */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3b82f6;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #3b82f6;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        /* === ЛОКАЛЬНЫЕ СТИЛИ AFFILIATE DISCLOSURE === */
+        .breadcrumb { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 1rem 2rem; 
+            font-size: 0.9rem; 
+            color: #6b7280; 
+        }
+        
+        .breadcrumb a { 
+            color: #3b82f6; 
+            text-decoration: none; 
+        }
+        
+        .disclosure-container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 2rem; 
+        }
+        
+        .page-header { 
+            margin-bottom: 3rem; 
+        }
+        
+        .page-header h1 { 
+            font-size: 2.5rem; 
+            color: #1e40af; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .page-header .last-updated { 
+            color: #6b7280; 
+            font-size: 0.9rem; 
+        }
+        
+        .disclosure-content h2 { 
+            color: #1e40af; 
+            font-size: 1.75rem; 
+            margin-top: 2.5rem; 
+            margin-bottom: 1rem; 
+        }
+        
+        .disclosure-content h3 { 
+            color: #1f2937; 
+            font-size: 1.25rem; 
+            margin-top: 2rem; 
+            margin-bottom: 0.75rem; 
+        }
+        
+        .disclosure-content p { 
+            margin-bottom: 1.25rem; 
+            line-height: 1.8; 
+            color: #374151; 
+        }
+        
+        .disclosure-content ul, 
+        .disclosure-content ol { 
+            margin-left: 2rem; 
+            margin-bottom: 1.5rem; 
+        }
+        
+        .disclosure-content li { 
+            margin-bottom: 0.75rem; 
+            color: #374151; 
+        }
+        
+        .disclosure-content a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .disclosure-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .info-box { 
+            background: #dbeafe; 
+            border-left: 4px solid #3b82f6; 
+            padding: 1.25rem; 
+            margin: 1.5rem 0; 
+            border-radius: 8px; 
+        }
+        
+        .info-box strong { 
+            color: #1e40af; 
+        }
+        
+        .warning-box { 
+            background: #fef3c7; 
+            border-left: 4px solid #f59e0b; 
+            padding: 1.25rem; 
+            margin: 1.5rem 0; 
+            border-radius: 8px; 
+        }
+        
+        .warning-box strong { 
+            color: #92400e; 
+        }
+        
+        .highlight { 
+            background: #fef3c7; 
+            padding: 0.25rem 0.5rem; 
+            border-radius: 4px; 
+            font-weight: 600; 
+        }
+        
+        /* Адаптив для шапки (мобилка) */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header h1 { 
+                font-size: 1.75rem; 
+            }
+            .disclosure-container { 
+                padding: 1rem; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb">
+        <a href="/">Home</a> / Affiliate Disclosure
+    </div>
+    
+    <div class="disclosure-container">
+        <div class="page-header">
+            <h1>Affiliate Disclosure</h1>
+            <p class="last-updated">Last Updated: November 10, 2025</p>
+        </div>
+
+        <div class="disclosure-content">
+            <div class="warning-box">
+                <strong>⚠️ IMPORTANT DISCLOSURE:</strong>
+                <p style="margin: 0.5rem 0 0 0;"><span class="highlight">Tech Fix Guide participates in affiliate marketing programs.</span> This means we earn commissions when you click certain links on our website and make purchases. This disclosure is required by the Federal Trade Commission (FTC) and explains our affiliate relationships.</p>
+            </div>
+
+            <h2>What Are Affiliate Links?</h2>
+            
+            <p>Affiliate links are special tracking links that allow us to earn a commission when you purchase products through them. Here's how it works:</p>
+            
+            <ol>
+                <li><strong>You click an affiliate link</strong> on our website (e.g., a product recommendation)</li>
+                <li><strong>You're redirected</strong> to the merchant's website (Amazon, Newegg, etc.)</li>
+                <li><strong>You make a purchase</strong> (the price is the same - you don't pay extra)</li>
+                <li><strong>We earn a commission</strong> from the merchant (typically 1-10% of sale price)</li>
+            </ol>
+
+            <div class="info-box">
+                <strong>💡 Important:</strong> Affiliate commissions do NOT increase the price you pay. Prices are identical whether you use our link or not. We simply receive a small percentage from the seller as a referral fee.
+            </div>
+
+            <h2>Affiliate Programs We Participate In</h2>
+            
+            <p>Tech Fix Guide is a participant in the following affiliate programs:</p>
+
+            <h3>1. Awin Network</h3>
+            <ul>
+                <li><strong>Merchants:</strong> Newegg, various electronics retailers</li>
+                <li><strong>Commission:</strong> 1-5% per sale</li>
+                <li><strong>Used for:</strong> Computer components, hardware, peripherals</li>
+            </ul>
+
+            <h3>2. ShareASale</h3>
+            <ul>
+                <li><strong>Merchants:</strong> Malwarebytes, iolo, System Mechanic, and others</li>
+                <li><strong>Commission:</strong> 15-30% per sale or subscription</li>
+                <li><strong>Used for:</strong> Software, antivirus, system utilities</li>
+            </ul>
+
+            <h3>3. Impact Partnership Cloud</h3>
+            <ul>
+                <li><strong>Merchants:</strong> Lenovo, various tech brands</li>
+                <li><strong>Commission:</strong> 3-10% per sale</li>
+                <li><strong>Used for:</strong> Laptops, computers, electronics</li>
+            </ul>
+
+            <h3>4. VPN Affiliate Programs</h3>
+            <ul>
+                <li><strong>Partners:</strong> NordVPN, Surfshark, ExpressVPN, and others</li>
+                <li><strong>Commission:</strong> 30-40% per subscription (recurring in some cases)</li>
+                <li><strong>Used for:</strong> VPN service recommendations</li>
+            </ul>
+
+            <h3>5. Direct Partnerships</h3>
+            <p>We may have direct affiliate relationships with individual brands and merchants not listed above. All follow the same disclosure principles.</p>
+
+            <h2>Our Affiliate Policy</h2>
+
+            <h3>Editorial Independence</h3>
+            <p><span class="highlight">Affiliate relationships do NOT influence our content, opinions, or recommendations.</span></p>
+            
+            <p>We maintain strict editorial independence:</p>
+            <ul>
+                <li>We only recommend products we genuinely believe are worth your money</li>
+                <li>Negative reviews are published if deserved, even for affiliate products</li>
+                <li>Content decisions are made based on user value, not commission rates</li>
+                <li>We research and test products before recommending them</li>
+                <li>Higher commission rates do not influence product rankings</li>
+            </ul>
+
+            <h3>Honest Recommendations</h3>
+            <p>When we recommend products, we consider:</p>
+            <ul>
+                <li><strong>Value for money:</strong> Is it worth the price?</li>
+                <li><strong>Quality and reliability:</strong> Will it last?</li>
+                <li><strong>User reviews:</strong> What do real customers say?</li>
+                <li><strong>Real-world performance:</strong> Does it actually work well?</li>
+                <li><strong>Alternatives:</strong> Are there better options?</li>
+            </ul>
+
+            <h3>Clear Identification</h3>
+            <p>We clearly identify affiliate content:</p>
+            <ul>
+                <li>Product recommendation sections contain affiliate links</li>
+                <li>Some links are marked with "→" or specific styling</li>
+                <li>This disclosure page is linked in our footer</li>
+                <li>Individual articles may contain inline disclosures</li>
+            </ul>
+
+            <h2>How Affiliate Commissions Support Us</h2>
+            
+            <p>Affiliate commissions allow us to:</p>
+            <ul>
+                <li><strong>Keep content free:</strong> All guides, calculators, and tools remain 100% free</li>
+                <li><strong>Maintain the website:</strong> Hosting, domain, technical infrastructure</li>
+                <li><strong>Create more content:</strong> Research, write, and publish new guides</li>
+                <li><strong>Update existing content:</strong> Keep information current and accurate</li>
+                <li><strong>Improve user experience:</strong> Better design, faster loading, new features</li>
+                <li><strong>Stay independent:</strong> No intrusive ads or paywalls</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💰 Transparency:</strong> A typical affiliate commission is 2-5% of the purchase price for electronics, and 30-40% for software/services. For a $100 product, we might earn $2-5. This small percentage adds up when many readers make purchases, allowing us to sustain operations.
+            </div>
+
+            <h2>What Happens When You Click Affiliate Links</h2>
+
+            <h3>Cookie Tracking</h3>
+            <p>When you click an affiliate link, a cookie is stored on your device. This cookie:</p>
+            <ul>
+                <li><strong>Tracks referrals:</strong> Tells the merchant you came from our website</li>
+                <li><strong>Has limited duration:</strong> Usually 24 hours to 90 days depending on merchant</li>
+                <li><strong>Attributes commissions:</strong> Ensures we receive credit for your purchase</li>
+                <li><strong>Doesn't identify you personally:</strong> Anonymous tracking only</li>
+            </ul>
+
+            <h3>Your Privacy</h3>
+            <p>Affiliate tracking is anonymous. Merchants know someone clicked from our site, but NOT:</p>
+            <ul>
+                <li>Your name or personal information</li>
+                <li>What else you do on our website</li>
+                <li>Your browsing history outside the purchase</li>
+            </ul>
+            <p>See our <a href="/privacy/">Privacy Policy</a> for complete information on data collection.</p>
+
+            <h2>No Extra Cost to You</h2>
+            
+            <div class="info-box">
+                <strong>✅ Price Guarantee:</strong> You pay the EXACT SAME PRICE whether you use our affiliate link or go directly to the merchant. Affiliate commissions are paid by the merchant from their profit margin, not added to your cost.
+            </div>
+
+            <p><strong>Example:</strong></p>
+            <ul>
+                <li>Product costs $100 on Amazon</li>
+                <li>You click our affiliate link → still $100</li>
+                <li>You go directly to Amazon → still $100</li>
+                <li>Same price, but our link helps support our website</li>
+            </ul>
+
+            <h2>When We DON'T Use Affiliate Links</h2>
+            
+            <p>Not all product mentions are affiliate links. We link to products without affiliate tracking when:</p>
+            <ul>
+                <li>No affiliate program exists for that merchant</li>
+                <li>The link provides context or reference (not a recommendation)</li>
+                <li>We're comparing alternatives objectively</li>
+                <li>The product is mentioned informally in content</li>
+            </ul>
+
+            <h2>Products We Won't Recommend</h2>
+            
+            <p>Regardless of commission rates, we will NOT recommend:</p>
+            <ul>
+                <li>Products we haven't researched thoroughly</li>
+                <li>Low-quality products with poor reviews</li>
+                <li>Overpriced items with better alternatives</li>
+                <li>Products from untrustworthy sellers</li>
+                <li>Items that don't solve the stated problem</li>
+            </ul>
+
+            <h2>FTC Compliance</h2>
+            
+            <p>This disclosure complies with the Federal Trade Commission's guidelines on endorsements and testimonials (16 CFR Part 255). The FTC requires websites to disclose material connections between content creators and merchants.</p>
+
+            <p>Our affiliate relationships constitute "material connections" under FTC guidelines, and we disclose them clearly to maintain transparency with our readers.</p>
+
+            <h2>Your Support Helps</h2>
+            
+            <p>When you use our affiliate links, you're supporting Tech Fix Guide at no cost to yourself. This allows us to:</p>
+            <ul>
+                <li>Continue providing free, high-quality content</li>
+                <li>Expand our library of troubleshooting guides</li>
+                <li>Build better tools and calculators</li>
+                <li>Stay independent without intrusive advertising</li>
+            </ul>
+
+            <p>Thank you for supporting Tech Fix Guide! Your trust means everything to us.</p>
+
+            <h2>Questions About Affiliates?</h2>
+            
+            <p>If you have questions about our affiliate practices or want to report concerns, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> supportseogrowthlab@protonmail.com</li>
+                <li><strong>Contact Form:</strong> <a href="/contact/">tech-fix-guide.vercel.app/contact</a></li>
+            </ul>
+
+            <div class="info-box">
+                <strong>📧 Feedback Welcome:</strong> We value transparency and take your concerns seriously. If you feel any content is biased or influenced improperly by affiliate relationships, please let us know immediately.
+            </div>
+
+            <h2>Related Policies</h2>
+            
+            <p>For more information about how we operate, please read:</p>
+            <ul>
+                <li><a href="/privacy/">Privacy Policy</a> - How we collect and use your data</li>
+                <li><a href="/terms/">Terms of Service</a> - Rules for using our website</li>
+                <li><a href="/about/">About Us</a> - Our mission and values</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

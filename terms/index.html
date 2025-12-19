@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for Tech Fix Guide. Read our terms and conditions for using our website.">
+    <title>Terms of Service - Tech Fix Guide</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            line-height: 1.7; 
+            color: #1f2937; 
+            background: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* === HEADER === */
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* === FOOTER === */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3b82f6;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #3b82f6;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        /* === MAIN CONTENT === */
+        .breadcrumb { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 1rem 2rem; 
+            font-size: 0.9rem; 
+            color: #6b7280; 
+        }
+        
+        .breadcrumb a { 
+            color: #3b82f6; 
+            text-decoration: none; 
+        }
+        
+        .terms-container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 2rem; 
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .page-header { 
+            margin-bottom: 3rem; 
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 2rem;
+        }
+        
+        .page-header h1 { 
+            font-size: 2.5rem; 
+            color: #1e40af; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .page-header .last-updated { 
+            color: #6b7280; 
+            font-size: 0.9rem; 
+        }
+        
+        .terms-content h2 { 
+            color: #1e40af; 
+            font-size: 1.75rem; 
+            margin-top: 2.5rem; 
+            margin-bottom: 1rem; 
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        
+        .terms-content h3 { 
+            color: #1f2937; 
+            font-size: 1.25rem; 
+            margin-top: 2rem; 
+            margin-bottom: 0.75rem; 
+            font-weight: 700;
+        }
+        
+        .terms-content p { 
+            margin-bottom: 1.25rem; 
+            line-height: 1.8; 
+            color: #374151; 
+        }
+        
+        .terms-content ul, 
+        .terms-content ol { 
+            margin-left: 2rem; 
+            margin-bottom: 1.5rem; 
+        }
+        
+        .terms-content li { 
+            margin-bottom: 0.75rem; 
+            color: #374151; 
+        }
+        
+        .terms-content a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .terms-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .warning-box { 
+            background: #fef3c7; 
+            border-left: 4px solid #f59e0b; 
+            padding: 1.25rem; 
+            margin: 1.5rem 0; 
+            border-radius: 8px; 
+        }
+        
+        .warning-box strong { 
+            color: #92400e; 
+        }
+        
+        .info-box { 
+            background: #dbeafe; 
+            border-left: 4px solid #3b82f6; 
+            padding: 1.25rem; 
+            margin: 1.5rem 0; 
+            border-radius: 8px; 
+        }
+        
+        .info-box strong { 
+            color: #1e40af; 
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header h1 { 
+                font-size: 1.75rem; 
+            }
+            
+            .terms-container { 
+                padding: 1rem; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb">
+        <a href="/">Home</a> / Terms of Service
+    </div>
+    
+    <div class="terms-container">
+        <div class="page-header">
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last Updated: November 10, 2025</p>
+        </div>
+
+        <div class="terms-content">
+            <div class="info-box">
+                <strong>📋 Agreement:</strong> By accessing and using Tech Fix Guide ("the Website"), you agree to be bound by these Terms of Service. If you do not agree with these terms, please do not use our website.
+            </div>
+
+            <h2>1. Acceptance of Terms</h2>
+            
+            <p>These Terms of Service ("Terms") govern your use of tech-fix-guide.vercel.app and all related services provided by Tech Fix Guide ("we", "us", "our"). By accessing or using our Website, you acknowledge that you have read, understood, and agree to be bound by these Terms.</p>
+
+            <h2>2. Description of Service</h2>
+            
+            <p>Tech Fix Guide provides:</p>
+            <ul>
+                <li>Troubleshooting guides for technology problems</li>
+                <li>Tech glossary and educational content</li>
+                <li>Free calculators and tools</li>
+                <li>Product recommendations and affiliate links</li>
+            </ul>
+            <p>Our content is provided for informational and educational purposes only.</p>
+
+            <h2>3. Use of Website</h2>
+            
+            <h3>3.1 Permitted Use</h3>
+            <p>You may use our Website for personal, non-commercial purposes. You agree to:</p>
+            <ul>
+                <li>Use the Website in compliance with all applicable laws</li>
+                <li>Respect intellectual property rights</li>
+                <li>Not interfere with Website functionality</li>
+                <li>Not attempt unauthorized access to our systems</li>
+            </ul>
+
+            <h3>3.2 Prohibited Use</h3>
+            <p>You may NOT:</p>
+            <ul>
+                <li>Copy, reproduce, or distribute content without permission</li>
+                <li>Use automated systems (bots, scrapers) to access the Website</li>
+                <li>Attempt to hack, disrupt, or damage the Website</li>
+                <li>Upload malicious code, viruses, or harmful content</li>
+                <li>Impersonate Tech Fix Guide or misrepresent affiliation</li>
+                <li>Use the Website for illegal purposes</li>
+                <li>Collect user information without consent</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>⚠️ Violation of Terms:</strong> We reserve the right to terminate or restrict access to our Website for users who violate these Terms, without prior notice.
+            </div>
+
+            <h2>4. Intellectual Property</h2>
+            
+            <p>All content on Tech Fix Guide, including but not limited to text, graphics, logos, images, code, and software, is the property of Tech Fix Guide or its content suppliers and is protected by copyright, trademark, and other intellectual property laws.</p>
+
+            <h3>4.1 Copyright</h3>
+            <p>You may not reproduce, distribute, modify, create derivative works, publicly display, or exploit any content from our Website without explicit written permission, except for:</p>
+            <ul>
+                <li>Personal, non-commercial use</li>
+                <li>Brief quotations with proper attribution and link back</li>
+                <li>Sharing links to our articles on social media</li>
+            </ul>
+
+            <h3>4.2 Trademarks</h3>
+            <p>"Tech Fix Guide" and our logo are trademarks. Unauthorized use of our trademarks is prohibited.</p>
+
+            <h2>5. User-Generated Content</h2>
+            
+            <p>If you submit content to us (through contact forms, comments, or other means), you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and display that content for operating and improving our Website.</p>
+            <p>You represent that you own or have rights to any content you submit and that it does not violate third-party rights or applicable laws.</p>
+
+            <h2>6. Disclaimer of Warranties</h2>
+            
+            <div class="warning-box">
+                <strong>⚠️ IMPORTANT DISCLAIMER:</strong>
+                <p style="margin: 0.5rem 0 0 0;">THE WEBSITE AND ALL CONTENT ARE PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE MAKE NO WARRANTIES REGARDING:</p>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li>Accuracy, completeness, or reliability of information</li>
+                    <li>Fitness for a particular purpose</li>
+                    <li>Non-infringement of third-party rights</li>
+                    <li>Uninterrupted or error-free operation</li>
+                </ul>
+            </div>
+
+            <h3>6.1 Troubleshooting Guides</h3>
+            <p>Our troubleshooting guides are provided for informational purposes. We do not guarantee that following our guides will resolve your technical problems. Tech repairs and modifications carry inherent risks.</p>
+
+            <h3>6.2 Product Recommendations</h3>
+            <p>Product recommendations and reviews reflect our opinions. We are not responsible for product quality, performance, or vendor actions. Always research products independently before purchasing.</p>
+
+            <h2>7. Limitation of Liability</h2>
+            
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, TECH FIX GUIDE SHALL NOT BE LIABLE FOR ANY:</p>
+            <ul>
+                <li><strong>Direct, indirect, incidental, or consequential damages</strong> arising from use or inability to use the Website</li>
+                <li><strong>Data loss</strong> or damage to devices resulting from following our guides</li>
+                <li><strong>Third-party actions</strong> including but not limited to affiliate partners or linked websites</li>
+                <li><strong>Financial losses</strong> from purchases made through affiliate links</li>
+                <li><strong>Interruptions or errors</strong> in Website availability or functionality</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>⚠️ Risk Acknowledgment:</strong> Technical troubleshooting carries risks including data loss, hardware damage, and voiding warranties. Proceed at your own risk. We recommend backing up data and consulting professionals for complex issues.
+            </div>
+
+            <h2>8. Affiliate Disclosure</h2>
+            
+            <p>Tech Fix Guide participates in affiliate marketing programs. We may earn commissions when you click affiliate links and make purchases. This does not increase your cost. Affiliate relationships do not influence our content or recommendations.</p>
+            <p>See our full <a href="/affiliate-disclosure/">Affiliate Disclosure</a> for details.</p>
+
+            <h2>9. Third-Party Links</h2>
+            
+            <p>Our Website contains links to third-party websites. We are not responsible for:</p>
+            <ul>
+                <li>Content, accuracy, or practices of third-party websites</li>
+                <li>Privacy policies of external sites</li>
+                <li>Transactions conducted with third parties</li>
+            </ul>
+            <p>Visiting third-party websites is at your own risk. Review their terms and privacy policies before providing information.</p>
+
+            <h2>10. Privacy</h2>
+            
+            <p>Your use of the Website is also governed by our <a href="/privacy/">Privacy Policy</a>, which describes how we collect, use, and protect your personal information. By using the Website, you consent to our privacy practices.</p>
+
+            <h2>11. Indemnification</h2>
+            
+            <p>You agree to indemnify and hold harmless Tech Fix Guide, its affiliates, and their respective officers, directors, employees, and agents from any claims, liabilities, damages, losses, costs, or expenses (including attorney fees) arising from:</p>
+            <ul>
+                <li>Your use or misuse of the Website</li>
+                <li>Your violation of these Terms</li>
+                <li>Your violation of any third-party rights</li>
+                <li>Any content you submit to the Website</li>
+            </ul>
+
+            <h2>12. Modifications to Terms</h2>
+            
+            <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting the updated Terms with a new "Last Updated" date. Your continued use of the Website after changes constitutes acceptance of the modified Terms.</p>
+            <p>We recommend reviewing these Terms periodically for updates.</p>
+
+            <h2>13. Modifications to Website</h2>
+            
+            <p>We reserve the right to:</p>
+            <ul>
+                <li>Modify, suspend, or discontinue any part of the Website without notice</li>
+                <li>Update, remove, or change content at any time</li>
+                <li>Refuse service to anyone for any reason</li>
+            </ul>
+            <p>We are not liable for any modifications, suspensions, or discontinuations of the Website.</p>
+
+            <h2>14. Termination</h2>
+            
+            <p>We may terminate or suspend your access to the Website immediately, without notice, for:</p>
+            <ul>
+                <li>Violation of these Terms</li>
+                <li>Fraudulent, abusive, or illegal activity</li>
+                <li>Any reason at our sole discretion</li>
+            </ul>
+            <p>Upon termination, your right to use the Website ceases immediately.</p>
+
+            <h2>15. Governing Law</h2>
+            
+            <p>These Terms shall be governed by and construed in accordance with the laws of Moldova, without regard to conflict of law provisions. Any disputes arising from these Terms or use of the Website shall be resolved in the courts of Moldova.</p>
+
+            <h2>16. Dispute Resolution</h2>
+            
+            <p>In the event of a dispute, you agree to first contact us at supportseogrowthlab@protonmail.com to attempt informal resolution before pursuing formal legal action.</p>
+
+            <h2>17. Severability</h2>
+            
+            <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+
+            <h2>18. Entire Agreement</h2>
+            
+            <p>These Terms, together with our Privacy Policy and Affiliate Disclosure, constitute the entire agreement between you and Tech Fix Guide regarding use of the Website and supersede all prior agreements.</p>
+
+            <h2>19. No Waiver</h2>
+            
+            <p>Our failure to enforce any right or provision of these Terms shall not constitute a waiver of such right or provision.</p>
+
+            <h2>20. Contact Information</h2>
+            
+            <p>For questions about these Terms, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> supportseogrowthlab@protonmail.com</li>
+                <li><strong>Contact Form:</strong> <a href="/contact/">tech-fix-guide.vercel.app/contact</a></li>
+            </ul>
+
+            <div class="info-box">
+                <strong>📧 Legal Inquiries:</strong> For legal matters, copyright concerns, or formal notices, please email us with "Legal Notice" in the subject line.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

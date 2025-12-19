@@ -3,161 +3,161 @@
 	
 	<url>
 		<loc>https://tech-fix-guide.vercel.app/</loc>
-		<lastmod>2025-12-04</lastmod>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/about.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/about/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/contact.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/contact/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/privacy.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/privacy/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/terms.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/terms/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/affiliate-disclosure.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/affiliate-disclosure/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/problems.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/problems/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/calculators.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/calculators/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/glossary.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/glossary/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/problems/iphone-not-charging.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-problems/iphone-not-charging/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/problems/laptop-overheating.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-problems/laptop-overheating/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/problems/wifi-not-connecting.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-problems/wifi-not-connecting/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/problems/blue-screen-windows.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-problems/blue-screen-windows/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/problems/phone-battery-drain.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-problems/phone-battery-drain/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/problems/slow-computer.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-problems/slow-computer/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/calculators/storage.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-calculators/storage/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/calculators/ram.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-calculators/ram/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/calculators/bandwidth.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-calculators/bandwidth/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/glossary/cpu.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-glossary/cpu/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/glossary/gpu.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-glossary/gpu/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/glossary/ram.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-glossary/ram/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/glossary/ssd.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-glossary/ssd/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	
 	<url>
-		<loc>https://tech-fix-guide.vercel.app/glossary/vpn.html</loc>
-		<lastmod>2025-12-04</lastmod>
+		<loc>https://tech-fix-guide.vercel.app/all-glossary/vpn/</loc>
+		<lastmod>2025-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free bandwidth calculator. Calculate internet speed needed for streaming, gaming, work. Convert Mbps to MB/s. Find out if your internet is fast enough.">
+    <meta name="keywords" content="bandwidth calculator, internet speed calculator, Mbps to MB/s converter, download time calculator, internet speed requirements">
+    <title>Bandwidth Calculator - How Fast Internet Do You Need? (2025)</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; background: #fff; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        /* === HEADER STYLES === */
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* === FOOTER STYLES === */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3b82f6;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #3b82f6;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .calculator-container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        .page-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; line-height: 1.2; }
+        .page-header p { font-size: 1.125rem; color: #6b7280; margin-bottom: 2rem; }
+        
+        .calculator-tabs { display: flex; gap: 1rem; margin-bottom: 2rem; border-bottom: 2px solid #e5e7eb; }
+        .tab { padding: 1rem 1.5rem; background: none; border: none; color: #6b7280; font-size: 1rem; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.3s; }
+        .tab:hover { color: #3b82f6; }
+        .tab.active { color: #1e40af; border-bottom-color: #3b82f6; }
+        
+        .calculator-section { display: none; background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
+        .calculator-section.active { display: block; }
+        
+        .calc-group { margin-bottom: 2rem; }
+        .calc-group label { display: block; color: #1e40af; font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem; }
+        .calc-group input, .calc-group select { width: 100%; padding: 0.75rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; transition: border 0.3s; }
+        .calc-group input:focus, .calc-group select:focus { outline: none; border-color: #3b82f6; }
+        
+        .input-row { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; align-items: end; }
+        
+        .activity-item { background: #f8fafc; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+        .activity-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+        .activity-name { color: #1f2937; font-weight: 600; }
+        .activity-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .activity-controls select, .activity-controls input { padding: 0.5rem; border: 2px solid #e5e7eb; border-radius: 6px; font-size: 0.9rem; }
+        
+        .calc-button { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1.125rem; font-weight: 600; cursor: pointer; width: 100%; transition: transform 0.2s; margin-top: 1rem; }
+        .calc-button:hover { transform: translateY(-2px); }
+        
+        .result-box { background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-left: 4px solid #10b981; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
+        .result-box h3 { color: #065f46; margin-bottom: 1rem; font-size: 1.5rem; }
+        .result-value { font-size: 3rem; font-weight: 700; color: #065f46; margin: 1rem 0; }
+        .result-detail { color: #047857; font-size: 1.125rem; margin-top: 0.5rem; line-height: 1.6; }
+        
+        .speed-visual { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
+        .speed-bar { background: #e5e7eb; height: 60px; border-radius: 30px; overflow: hidden; margin-bottom: 1rem; }
+        .speed-fill { background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; transition: width 0.5s ease; }
+        .speed-legend { display: flex; justify-content: space-between; color: #6b7280; font-size: 0.9rem; margin-top: 0.5rem; }
+        
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .info-box strong { color: #1e40af; }
+        
+        .download-time { background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #3b82f6; margin-top: 1rem; }
+        .download-time-item { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #f3f4f6; }
+        .download-time-item:last-child { border-bottom: none; }
+        
+        /* SEO Content Styles */
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .comparison-table th { background: #1e40af; color: white; padding: 1rem; text-align: left; font-weight: 600; }
+        .comparison-table td { padding: 1rem; border-bottom: 1px solid #e5e7eb; background: white; }
+        .comparison-table tbody tr:hover { background: #f9fafb; }
+
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box strong { color: #92400e; }
+
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box strong { color: #065f46; }
+        
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .page-header h1 { font-size: 1.75rem; }
+            .calculator-container { padding: 1rem; }
+            .result-value { font-size: 2rem; }
+            .calculator-tabs { flex-wrap: wrap; }
+            .tab { flex: 1; min-width: 120px; padding: 0.75rem; font-size: 0.9rem; }
+            .input-row { grid-template-columns: 1fr; }
+            .activity-controls { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb">
+        <a href="/">Home</a> / <a href="/calculators/">Calculators</a> / Bandwidth Calculator
+    </div>
+    
+    <div class="calculator-container">
+        <div class="page-header">
+            <h1>🌐 Bandwidth Calculator</h1>
+            <p>Calculate internet speed needed and convert between Mbps/MB/s</p>
+        </div>
+
+        <div class="calculator-tabs">
+            <button class="tab active" onclick="switchTab('converter')">Speed Converter</button>
+            <button class="tab" onclick="switchTab('household')">Household Need</button>
+            <button class="tab" onclick="switchTab('download')">Download Time</button>
+        </div>
+
+        <!-- Speed Converter -->
+        <div id="converter" class="calculator-section active">
+            <h2 style="color: #1e40af; margin-bottom: 1.5rem;">Internet Speed Converter</h2>
+            
+            <div class="calc-group">
+                <label>Enter Speed:</label>
+                <div class="input-row">
+                    <input type="number" id="speedValue" placeholder="Enter speed" value="100" oninput="convertSpeed()">
+                    <select id="speedUnit" onchange="convertSpeed()">
+                        <option value="mbps" selected>Mbps (Megabits/sec)</option>
+                        <option value="mbs">MB/s (Megabytes/sec)</option>
+                        <option value="gbps">Gbps (Gigabits/sec)</option>
+                        <option value="kbps">Kbps (Kilobits/sec)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="converterResult" class="result-box">
+                <h3>Speed Conversions:</h3>
+                <div id="conversionResults"></div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Understanding the difference:</strong><br>
+                <strong>Mbps (Megabits per second)</strong> - How ISPs advertise speed (100 Mbps internet)<br>
+                <strong>MB/s (Megabytes per second)</strong> - How downloads show speed (12.5 MB/s download)<br>
+                <strong>Formula:</strong> Mbps ÷ 8 = MB/s  |  MB/s × 8 = Mbps<br>
+                <strong>Example:</strong> 100 Mbps internet = 12.5 MB/s download speed
+            </div>
+        </div>
+
+        <!-- Household Calculator -->
+        <div id="household" class="calculator-section">
+            <h2 style="color: #1e40af; margin-bottom: 1.5rem;">Calculate Your Household Internet Needs</h2>
+            
+            <div class="info-box">
+                <strong>💡 How to use:</strong> Enter number of people/devices doing each activity simultaneously.
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-header">
+                    <span class="activity-name">📺 HD Streaming (1080p)</span>
+                    <span style="color: #6b7280; font-size: 0.9rem;">5 Mbps each</span>
+                </div>
+                <div class="activity-controls">
+                    <div>
+                        <label style="font-size: 0.9rem; color: #6b7280;">Number of streams:</label>
+                        <input type="number" id="hdStreaming" value="0" min="0" onchange="calculateHousehold()">
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-header">
+                    <span class="activity-name">📺 4K Streaming (UHD)</span>
+                    <span style="color: #6b7280; font-size: 0.9rem;">25 Mbps each</span>
+                </div>
+                <div class="activity-controls">
+                    <div>
+                        <label style="font-size: 0.9rem; color: #6b7280;">Number of streams:</label>
+                        <input type="number" id="4kStreaming" value="0" min="0" onchange="calculateHousehold()">
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-header">
+                    <span class="activity-name">🎮 Gaming</span>
+                    <span style="color: #6b7280; font-size: 0.9rem;">3-10 Mbps each</span>
+                </div>
+                <div class="activity-controls">
+                    <div>
+                        <label style="font-size: 0.9rem; color: #6b7280;">Number of gamers:</label>
+                        <input type="number" id="gaming" value="0" min="0" onchange="calculateHousehold()">
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-header">
+                    <span class="activity-name">💼 Video Calls (Zoom, Teams)</span>
+                    <span style="color: #6b7280; font-size: 0.9rem;">3 Mbps each</span>
+                </div>
+                <div class="activity-controls">
+                    <div>
+                        <label style="font-size: 0.9rem; color: #6b7280;">Number of calls:</label>
+                        <input type="number" id="videoCalls" value="0" min="0" onchange="calculateHousehold()">
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-header">
+                    <span class="activity-name">🌐 Web Browsing / Social Media</span>
+                    <span style="color: #6b7280; font-size: 0.9rem;">2 Mbps each</span>
+                </div>
+                <div class="activity-controls">
+                    <div>
+                        <label style="font-size: 0.9rem; color: #6b7280;">Number of users:</label>
+                        <input type="number" id="browsing" value="0" min="0" onchange="calculateHousehold()">
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-header">
+                    <span class="activity-name">📱 Smart Home Devices</span>
+                    <span style="color: #6b7280; font-size: 0.9rem;">1 Mbps total</span>
+                </div>
+                <div class="activity-controls">
+                    <div>
+                        <label style="font-size: 0.9rem; color: #6b7280;">Number of devices:</label>
+                        <input type="number" id="smartHome" value="0" min="0" onchange="calculateHousehold()">
+                    </div>
+                </div>
+            </div>
+
+            <div id="householdResult" style="display: none;" class="result-box">
+                <h3>Your Required Internet Speed:</h3>
+                <div class="result-value" id="requiredSpeed">0 Mbps</div>
+                <div class="result-detail" id="speedRecommendation"></div>
+                <div class="speed-visual">
+                    <div id="breakdownDetails"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Time Calculator -->
+        <div id="download" class="calculator-section">
+            <h2 style="color: #1e40af; margin-bottom: 1.5rem;">Download Time Calculator</h2>
+            
+            <div class="calc-group">
+                <label>File Size:</label>
+                <div class="input-row">
+                    <input type="number" id="fileSize" placeholder="Enter file size" value="10">
+                    <select id="fileSizeUnit">
+                        <option value="mb">MB</option>
+                        <option value="gb" selected>GB</option>
+                        <option value="tb">TB</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="calc-group">
+                <label>Your Internet Speed:</label>
+                <div class="input-row">
+                    <input type="number" id="downloadSpeed" placeholder="Enter your speed" value="100">
+                    <select id="downloadSpeedUnit">
+                        <option value="mbps" selected>Mbps</option>
+                        <option value="mbs">MB/s</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="calc-button" onclick="calculateDownloadTime()">Calculate Download Time</button>
+
+            <div id="downloadResult" style="display: none;" class="result-box">
+                <h3>Download Time:</h3>
+                <div class="result-value" id="downloadTimeResult">0 seconds</div>
+                <div class="result-detail" id="downloadDetail"></div>
+                
+                <div class="download-time">
+                    <h4 style="color: #1e40af; margin-bottom: 1rem;">⚡ Speed Comparison:</h4>
+                    <div id="speedComparison"></div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Real-world note:</strong> Actual download speeds are usually 70-90% of advertised speed.
+            </div>
+        </div>
+
+        <!-- SEO Content Section -->
+        <div style="max-width: 800px; margin: 4rem auto 0; padding: 0 1rem;">
+            <article>
+                <h2 style="color: #1e40af; font-size: 2rem; margin-bottom: 1.5rem;">How Much Internet Speed Do You Actually Need?</h2>
+                
+                <p style="margin-bottom: 1.25rem; font-size: 1.05rem; line-height: 1.8;">Internet speed determines how quickly you can download files, stream videos, and browse websites. ISPs advertise speeds in Mbps (megabits per second), but what speed do you actually need? This guide breaks down requirements for every use case, from basic browsing to 4K streaming and work-from-home setups.</p>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem;">Internet Speed Requirements by Activity</h3>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Activity</th>
+                            <th>Minimum Speed</th>
+                            <th>Recommended Speed</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Web Browsing</strong></td>
+                            <td>1-3 Mbps</td>
+                            <td>5-10 Mbps</td>
+                            <td>Social media, news, shopping</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email & Messaging</strong></td>
+                            <td>1 Mbps</td>
+                            <td>3 Mbps</td>
+                            <td>Text, images, basic attachments</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SD Streaming (480p)</strong></td>
+                            <td>3 Mbps</td>
+                            <td>5 Mbps</td>
+                            <td>Netflix, YouTube SD quality</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HD Streaming (1080p)</strong></td>
+                            <td>5 Mbps</td>
+                            <td>8-10 Mbps</td>
+                            <td>Netflix, YouTube, Hulu HD</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4K Streaming (UHD)</strong></td>
+                            <td>25 Mbps</td>
+                            <td>35-50 Mbps</td>
+                            <td>4K Netflix, YouTube 4K</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Video Calls (Zoom, Teams)</strong></td>
+                            <td>1.5 Mbps</td>
+                            <td>3-5 Mbps</td>
+                            <td>1080p video call</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Online Gaming</strong></td>
+                            <td>3 Mbps</td>
+                            <td>10-25 Mbps</td>
+                            <td>Latency matters more than speed</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Game Downloads</strong></td>
+                            <td>25 Mbps</td>
+                            <td>100+ Mbps</td>
+                            <td>Modern games are 50-150GB</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Large File Downloads</strong></td>
+                            <td>25 Mbps</td>
+                            <td>100+ Mbps</td>
+                            <td>Software, videos, backups</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Working from Home</strong></td>
+                            <td>10 Mbps</td>
+                            <td>25-50 Mbps</td>
+                            <td>Video calls, cloud apps, uploads</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Smart Home Devices</strong></td>
+                            <td>1-2 Mbps</td>
+                            <td>5 Mbps</td>
+                            <td>Per 10-15 devices</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box" style="margin: 2rem 0;">
+                    <strong>💡 Household rule of thumb:</strong> Add up all simultaneous activities. If 3 people stream HD (5 Mbps each) + 1 gamer (10 Mbps) + browsing (5 Mbps) = 30 Mbps minimum. Recommended: 50-100 Mbps for comfortable buffer.
+                </div>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem;">Internet Speed Recommendations by Household Size</h3>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.75rem;">👤 1-2 People (Light Use)</h4>
+                    <p style="margin-bottom: 0.75rem;"><strong>Minimum:</strong> 25-50 Mbps</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>Recommended:</strong> 100 Mbps</p>
+                    <p style="margin: 0;"><strong>What you can do:</strong> Stream HD on 1-2 devices, browse, video calls, light gaming. 25 Mbps works but 100 Mbps gives comfortable buffer for simultaneous use and faster downloads.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.75rem;">👥 3-4 People (Moderate Use)</h4>
+                    <p style="margin-bottom: 0.75rem;"><strong>Minimum:</strong> 100 Mbps</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>Recommended:</strong> 200-300 Mbps</p>
+                    <p style="margin: 0;"><strong>What you can do:</strong> Multiple HD/4K streams, gaming, video calls, work from home. 100 Mbps is baseline but gets congested during peak use. 200-300 Mbps prevents slowdowns when everyone's online.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.75rem;">👨‍👩‍👧‍👦 5+ People (Heavy Use)</h4>
+                    <p style="margin-bottom: 0.75rem;"><strong>Minimum:</strong> 200 Mbps</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>Recommended:</strong> 500-1000 Mbps (Gigabit)</p>
+                    <p style="margin: 0;"><strong>What you can do:</strong> Multiple 4K streams, gaming, video calls, large downloads all simultaneously. Gigabit (1000 Mbps) is ideal for large households or power users. Never worry about bandwidth again.</p>
+                </div>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem;">Understanding Mbps vs MB/s</h3>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;">This confuses everyone. ISPs advertise in <strong>Mbps (Megabits per second)</strong>. Downloads show <strong>MB/s (Megabytes per second)</strong>. They're different units.</p>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>The conversion:</strong> 1 Byte = 8 bits. Therefore, Mbps ÷ 8 = MB/s.</p>
+
+                <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin: 1.5rem 0; border-radius: 8px;">
+                    <strong style="color: #1e40af;">Real examples:</strong>
+                    <ul style="margin: 0.75rem 0 0 2rem; line-height: 1.7;">
+                        <li><strong>100 Mbps internet</strong> = 12.5 MB/s download speed</li>
+                        <li><strong>500 Mbps internet</strong> = 62.5 MB/s download speed</li>
+                        <li><strong>1 Gbps (1000 Mbps)</strong> = 125 MB/s download speed</li>
+                    </ul>
+                </div>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>Why the difference matters:</strong> When you see "100 Mbps internet" and download at "12 MB/s", your internet isn't slow - that's correct! Many people think they're getting ripped off when they're actually getting full speed.</p>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem;">Download Speed vs Upload Speed</h3>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;">Most ISPs advertise <strong>download speed</strong> prominently but hide <strong>upload speed</strong> in fine print. Both matter.</p>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>Download speed:</strong> How fast you receive data. Affects streaming, web browsing, downloads.</p>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>Upload speed:</strong> How fast you send data. Affects video calls, cloud backups, livestreaming, sending files.</p>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>Typical ratios:</strong></p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                    <li><strong>Cable internet:</strong> Asymmetric (100 Mbps down / 10 Mbps up) - 10:1 ratio</li>
+                    <li><strong>Fiber internet:</strong> Symmetric (1000 Mbps down / 1000 Mbps up) - 1:1 ratio</li>
+                    <li><strong>DSL:</strong> Highly asymmetric (25 Mbps down / 1-3 Mbps up)</li>
+                </ul>
+
+                <div class="warning-box" style="margin: 1.5rem 0;">
+                    <strong>⚠️ Upload speed matters for:</strong>
+                    <ul style="margin: 0.75rem 0 0 2rem; line-height: 1.7;">
+                        <li><strong>Video calls:</strong> Zoom/Teams need 3-5 Mbps upload for HD video</li>
+                        <li><strong>Cloud backups:</strong> Uploading 100GB to cloud takes 2 hours at 100 Mbps, but 22 hours at 10 Mbps</li>
+                        <li><strong>Livestreaming:</strong> Twitch 1080p needs 6 Mbps upload minimum</li>
+                        <li><strong>Sharing large files:</strong> Sending 1GB video takes 13 minutes at 10 Mbps upload</li>
+                        <li><strong>Working from home:</strong> Uploading documents, presentations to cloud</li>
+                    </ul>
+                </div>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>If you work from home or do video calls regularly:</strong> Minimum 10 Mbps upload. Ideal: 25+ Mbps upload. Fiber internet with symmetric speeds is best.</p>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem;">Internet Speed vs Latency (Ping)</h3>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;">Speed isn't everything. <strong>Latency (ping)</strong> measures how long data takes to travel to server and back. Measured in milliseconds (ms).</p>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>Why latency matters:</strong> High speed + high latency = laggy experience. Like having a wide highway (bandwidth) but long distance to destination (latency).</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Latency (Ping)</th>
+                            <th>Rating</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>0-20 ms</strong></td>
+                            <td style="color: #10b981; font-weight: 600;">Excellent</td>
+                            <td>Perfect for competitive gaming, video calls feel natural</td>
+                        </tr>
+                        <tr>
+                            <td><strong>20-50 ms</strong></td>
+                            <td style="color: #10b981; font-weight: 600;">Good</td>
+                            <td>Great for gaming, smooth video calls, no noticeable delay</td>
+                        </tr>
+                        <tr>
+                            <td><strong>50-100 ms</strong></td>
+                            <td style="color: #f59e0b; font-weight: 600;">Fair</td>
+                            <td>Acceptable for casual gaming, slight delay in video calls</td>
+                        </tr>
+                        <tr>
+                            <td><strong>100-200 ms</strong></td>
+                            <td style="color: #ef4444; font-weight: 600;">Poor</td>
+                            <td>Noticeable lag in games, awkward video call delays</td>
+                        </tr>
+                        <tr>
+                            <td><strong>200+ ms</strong></td>
+                            <td style="color: #ef4444; font-weight: 600;">Very Poor</td>
+                            <td>Unplayable for gaming, frustrating video calls</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>For gaming:</strong> Latency is MORE important than speed. 50 Mbps internet with 20ms ping beats 500 Mbps with 100ms ping. Fiber and cable have low latency (10-30ms). Satellite internet has high latency (500-700ms) - terrible for gaming.</p>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem;">How Long to Download Common Files?</h3>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;">Here's how long it takes to download files at different internet speeds:</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>File</th>
+                            <th>25 Mbps</th>
+                            <th>100 Mbps</th>
+                            <th>500 Mbps</th>
+                            <th>1 Gbps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>HD Movie (5 GB)</strong></td>
+                            <td>27 minutes</td>
+                            <td>7 minutes</td>
+                            <td>1.5 minutes</td>
+                            <td>40 seconds</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4K Movie (25 GB)</strong></td>
+                            <td>2.2 hours</td>
+                            <td>33 minutes</td>
+                            <td>7 minutes</td>
+                            <td>3.5 minutes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Game (50 GB)</strong></td>
+                            <td>4.4 hours</td>
+                            <td>1.1 hours</td>
+                            <td>13 minutes</td>
+                            <td>7 minutes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Large Game (100 GB)</strong></td>
+                            <td>8.9 hours</td>
+                            <td>2.2 hours</td>
+                            <td>27 minutes</td>
+                            <td>13 minutes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Full OS (10 GB)</strong></td>
+                            <td>53 minutes</td>
+                            <td>13 minutes</td>
+                            <td>3 minutes</td>
+                            <td>1.5 minutes</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box" style="margin: 2rem 0;">
+                    <strong>💡 Real-world speeds:</strong> These are theoretical maximums. Actual downloads are 70-90% of these speeds due to server limitations, network congestion, and overhead. A 100 Mbps connection typically downloads at 8-11 MB/s in practice, not the theoretical 12.5 MB/s.
+                </div>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem;">Types of Internet Connections Compared</h3>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Speed Range</th>
+                            <th>Latency</th>
+                            <th>Pros & Cons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fiber (FTTH)</strong></td>
+                            <td>100-10,000 Mbps</td>
+                            <td>10-30 ms</td>
+                            <td>✅ Fastest, symmetric upload/download, lowest latency<br>❌ Limited availability, higher cost</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cable</strong></td>
+                            <td>50-1000 Mbps</td>
+                            <td>15-50 ms</td>
+                            <td>✅ Widely available, fast download<br>❌ Slow upload (10-50 Mbps), speeds vary by area congestion</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DSL</strong></td>
+                            <td>5-100 Mbps</td>
+                            <td>30-70 ms</td>
+                            <td>✅ Widely available, cheap<br>❌ Slower speeds, distance-dependent (far from station = slower)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5G Home</strong></td>
+                            <td>50-1000 Mbps</td>
+                            <td>20-50 ms</td>
+                            <td>✅ No cables needed, fast where available<br>❌ Limited coverage, weather-dependent, congestion issues</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Satellite</strong></td>
+                            <td>25-220 Mbps</td>
+                            <td>500-700 ms</td>
+                            <td>✅ Available anywhere (rural areas)<br>❌ Very high latency (terrible for gaming), weather-dependent, expensive</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>Best choice by priority:</strong></p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                    <li><strong>Speed + gaming:</strong> Fiber > Cable > 5G > DSL > Satellite</li>
+                    <li><strong>Rural areas:</strong> 5G Home > Satellite (Starlink) > DSL</li>
+                    <li><strong>Work from home:</strong> Fiber (symmetric speeds) > Cable > DSL</li>
+                    <li><strong>Budget:</strong> DSL > Cable > Fiber</li>
+                </ul>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem;">Is Your Internet Speed Slow? How to Test</h3>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>How to test internet speed:</strong></p>
+                <ol style="margin-left: 2rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                    <li>Close all programs and browser tabs (except speed test)</li>
+                    <li>Connect via Ethernet cable if possible (WiFi is slower than wired)</li>
+                    <li>Visit speedtest.net or fast.com</li>
+                    <li>Run test 2-3 times at different times of day</li>
+                    <li>Compare results to your plan's advertised speed</li>
+                </ol>
+
+                <p style="margin-bottom: 1.25rem; line-height: 1.8;"><strong>What's acceptable:</strong></p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                    <li><strong>Wired (Ethernet):</strong> Should get 90-100% of advertised speed</li>
+                    <li><strong>WiFi (same room as router):</strong> 70-90% of advertised speed</li>
+                    <li><strong>WiFi (different floor/room):</strong> 40-70% of advertised speed</li>
+                </ul>
+
+                <div class="warning-box" style="margin: 1.5rem 0;">
+                    <strong>⚠️ Common causes of slow internet:</strong>
+                    <ul style="margin: 0.75rem 0 0 2rem; line-height: 1.7;">
+                        <li><strong>WiFi issues:</strong> Old router (WiFi 4/5), too far from router, walls/interference. Solution: Upgrade to WiFi 6 router, move closer, use Ethernet.</li>
+                        <li><strong>Network congestion:</strong> Everyone in house using internet simultaneously. Solution: Upgrade to faster plan or schedule heavy use.</li>
+                        <li><strong>ISP throttling:</strong> ISP intentionally slows certain activities (streaming, torrents). Solution: VPN can sometimes bypass this.</li>
+                        <li><strong>Old devices:</strong> 10-year-old laptop has slow WiFi chip. Solution: Upgrade device or use USB WiFi adapter.</li>
+                        <li><strong>Background downloads:</strong> Windows updates, cloud backups running in background. Solution: Pause during important tasks.</li>
+                    </ul>
+                </div>
+
+                <h3 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem;">Frequently Asked Questions</h3>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">Is 100 Mbps fast enough in 2025?</h4>
+                    <p style="margin: 0; line-height: 1.7;">Yes, 100 Mbps is sufficient for most households. It handles 2-3 simultaneous HD streams, gaming, video calls, and browsing comfortably. 4K streaming needs 25 Mbps per stream, so 100 Mbps supports 3-4 4K streams. Only upgrade if you have 5+ people, do large downloads frequently, or stream multiple 4K videos simultaneously.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">Do I need gigabit internet (1000 Mbps)?</h4>
+                    <p style="margin: 0; line-height: 1.7;">Most households don't need gigabit, but it's nice to have. Benefits: Download 100GB game in 13 minutes vs 2 hours on 100 Mbps. Multiple 4K streams with zero buffering. Future-proof for 8K streaming. Worth it if: large household (5+ people), frequent large downloads, work from home with large file uploads, price difference is small ($10-20/month more).</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">Why is my download showing MB/s not Mbps?</h4>
+                    <p style="margin: 0; line-height: 1.7;">Downloads show speed in MB/s (Megabytes per second), while ISPs advertise in Mbps (Megabits per second). To convert: divide Mbps by 8. So 100 Mbps internet = 12.5 MB/s download speed. If you see "12 MB/s" when downloading on "100 Mbps" internet, that's correct! You're getting full speed.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">How much internet speed for 4K streaming?</h4>
+                    <p style="margin: 0; line-height: 1.7;">Netflix 4K requires 25 Mbps. YouTube 4K needs 20 Mbps. But these are per stream. If 2 people watch 4K Netflix simultaneously, you need 50 Mbps minimum. Recommended: 100 Mbps for household with 2-3 4K streams plus other internet use (browsing, gaming, smart home devices).</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">Does gaming require fast internet?</h4>
+                    <p style="margin: 0; line-height: 1.7;">Gaming needs LOW LATENCY more than high speed. 10-25 Mbps is sufficient for online gaming itself. However, downloading modern games (50-150GB) benefits from faster internet (500+ Mbps downloads game in 15 minutes vs 2+ hours on 50 Mbps). For smooth gaming: prioritize low ping (under 50ms) over raw speed.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">Why is my internet slow only sometimes?</h4>
+                    <p style="margin: 0; line-height: 1.7;">Common causes: (1) Peak hours (6-10pm) - everyone in neighborhood online causes congestion. (2) Someone in house is downloading large files. (3) Background updates (Windows, games) eating bandwidth. (4) WiFi interference from neighbors' routers. (5) ISP throttling during heavy use. Check Task Manager (Windows) or Activity Monitor (Mac) to see what's using bandwidth.</p>
+                </div>
+
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">Ethernet vs WiFi speed difference?</h4>
+                    <p style="margin: 0; line-height: 1.7;">Ethernet (wired) always faster and more stable than WiFi. WiFi 6 can theoretically match Ethernet speeds, but in practice: Ethernet gives 100% of speed, WiFi 6 gives 70-90%, WiFi 5 gives 50-70%, older WiFi gives 30-50%. For gaming, video calls, or work from home, use Ethernet cable whenever possible. WiFi is convenient but compromises speed and stability.</p>
+                </div>
+
+                <div class="success-box" style="margin: 2.5rem 0;">
+                    <strong>✓ Bottom Line: How Much Speed Do You Need?</strong>
+                    <p style="margin: 0.5rem 0 0 0; line-height: 1.7;">
+                    <strong>Minimum in 2025:</strong> 50 Mbps (basic use, 1-2 people)<br>
+                    <strong>Recommended for most:</strong> 100-200 Mbps (comfortable for 3-4 people)<br>
+                    <strong>Future-proof:</strong> 500-1000 Mbps (large households, power users)<br><br>
+                    Don't overpay for speed you won't use, but don't cheap out either. Slow internet is frustrating. Calculate your household needs, add 30% buffer, and choose that plan.
+                    </p>
+                </div>
+
+                <div class="info-box" style="margin: 2.5rem 0;">
+                    <strong>📊 Use our calculators above to:</strong><br>
+                    • Convert between Mbps and MB/s instantly<br>
+                    • Calculate exact internet speed for your household<br>
+                    • Find out how long downloads take at your speed<br>
+                    • Compare different internet speeds side-by-side<br><br>
+                    Start calculating to find your perfect internet speed!
+                </div>
+            </article>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(tabName) {
+            document.querySelectorAll('.calculator-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function convertSpeed() {
+            const value = parseFloat(document.getElementById('speedValue').value);
+            const unit = document.getElementById('speedUnit').value;
+            if (isNaN(value) || value < 0) return;
+            let mbps;
+            switch(unit) {
+                case 'mbps': mbps = value; break;
+                case 'mbs': mbps = value * 8; break;
+                case 'gbps': mbps = value * 1000; break;
+                case 'kbps': mbps = value / 1000; break;
+            }
+            const html = `
+                <div style="display: grid; gap: 0.75rem;">
+                    <div style="padding: 0.75rem; background: white; border-radius: 8px;">
+                        <strong style="color: #1e40af;">Mbps:</strong> <span style="font-size: 1.25rem; color: #065f46;">${mbps.toFixed(2)}</span>
+                    </div>
+                    <div style="padding: 0.75rem; background: white; border-radius: 8px;">
+                        <strong style="color: #1e40af;">MB/s:</strong> <span style="font-size: 1.25rem; color: #065f46;">${(mbps/8).toFixed(2)}</span>
+                    </div>
+                    <div style="padding: 0.75rem; background: white; border-radius: 8px;">
+                        <strong style="color: #1e40af;">Gbps:</strong> <span style="font-size: 1.25rem; color: #065f46;">${(mbps/1000).toFixed(4)}</span>
+                    </div>
+                </div>
+            `;
+            document.getElementById('conversionResults').innerHTML = html;
+        }
+
+        function calculateHousehold() {
+            const hd = parseInt(document.getElementById('hdStreaming').value) || 0;
+            const fourK = parseInt(document.getElementById('4kStreaming').value) || 0;
+            const gaming = parseInt(document.getElementById('gaming').value) || 0;
+            const calls = parseInt(document.getElementById('videoCalls').value) || 0;
+            const browsing = parseInt(document.getElementById('browsing').value) || 0;
+            const smart = parseInt(document.getElementById('smartHome').value) || 0;
+
+            const total = (hd*5) + (fourK*25) + (gaming*10) + (calls*3) + (browsing*2) + Math.ceil(smart/10);
+            
+            if (total === 0) {
+                document.getElementById('householdResult').style.display = 'none';
+                return;
+            }
+
+            let rec = 50;
+            let msg = '';
+            if (total <= 25) { rec = 50; msg = '50 Mbps sufficient'; }
+            else if (total <= 50) { rec = 100; msg = '100 Mbps recommended'; }
+            else if (total <= 100) { rec = 200; msg = '200 Mbps recommended'; }
+            else if (total <= 200) { rec = 300; msg = '300 Mbps recommended'; }
+            else if (total <= 300) { rec = 500; msg = '500 Mbps recommended'; }
+            else { rec = 1000; msg = 'Gigabit necessary'; }
+
+            const breakdown = `
+                <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="color: #1e40af; margin-bottom: 1rem;">Usage Breakdown:</h4>
+                    ${hd > 0 ? `<div>HD Streaming: ${hd*5} Mbps</div>` : ''}
+                    ${fourK > 0 ? `<div>4K Streaming: ${fourK*25} Mbps</div>` : ''}
+                    ${gaming > 0 ? `<div>Gaming: ${gaming*10} Mbps</div>` : ''}
+                    ${calls > 0 ? `<div>Video Calls: ${calls*3} Mbps</div>` : ''}
+                    ${browsing > 0 ? `<div>Browsing: ${browsing*2} Mbps</div>` : ''}
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #e5e7eb;">
+                        <strong>Total: ${total} Mbps</strong>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('requiredSpeed').textContent = rec + ' Mbps';
+            document.getElementById('speedRecommendation').innerHTML = `✅ <strong>${msg}</strong>`;
+            document.getElementById('breakdownDetails').innerHTML = breakdown;
+            document.getElementById('householdResult').style.display = 'block';
+        }
+
+        function calculateDownloadTime() {
+            const size = parseFloat(document.getElementById('fileSize').value);
+            const unit = document.getElementById('fileSizeUnit').value;
+            const speed = parseFloat(document.getElementById('downloadSpeed').value);
+            const speedUnit = document.getElementById('downloadSpeedUnit').value;
+
+            if (isNaN(size) || isNaN(speed) || size <= 0 || speed <= 0) {
+                alert('Please enter valid values');
+                return;
+            }
+
+            let sizeMB = unit === 'mb' ? size : unit === 'gb' ? size*1024 : size*1024*1024;
+            let speedMBs = speedUnit === 'mbps' ? speed/8 : speed;
+            let seconds = sizeMB / speedMBs;
+            
+            let display = seconds < 60 ? Math.round(seconds) + ' sec' : 
+                         seconds < 3600 ? Math.round(seconds/60) + ' min' :
+                         Math.floor(seconds/3600) + 'h ' + Math.round((seconds%3600)/60) + 'm';
+
+            const speeds = [25, 50, 100, 200, 500, 1000];
+            let comp = '';
+            speeds.forEach(s => {
+                const t = sizeMB / (s/8);
+                const dt = t < 60 ? Math.round(t) + ' sec' : 
+                          t < 3600 ? Math.round(t/60) + ' min' :
+                          Math.floor(t/3600) + 'h ' + Math.round((t%3600)/60) + 'm';
+                comp += `<div class="download-time-item"><span>${s} Mbps:</span><strong>${dt}</strong></div>`;
+            });
+
+            document.getElementById('downloadTimeResult').textContent = display;
+            document.getElementById('downloadDetail').innerHTML = `At ${speed} ${speedUnit === 'mbps' ? 'Mbps' : 'MB/s'}, download completes in <strong>${display}</strong>`;
+            document.getElementById('speedComparison').innerHTML = comp;
+            document.getElementById('downloadResult').style.display = 'block';
+        }
+
+        window.addEventListener('load', () => convertSpeed());
+    </script>
+</body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Tech Fix Guide. Learn how we collect, use, and protect your personal information.">
+    <title>Privacy Policy - Tech Fix Guide</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* === HEADER === */
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* === FOOTER === */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3b82f6;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #3b82f6;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        /* === MAIN CONTENT === */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            width: 100%;
+            background: white;
+        }
+
+        .policy-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb { 
+            font-size: 0.9rem; 
+            color: #6b7280; 
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb a { 
+            color: #3b82f6; 
+            text-decoration: none; 
+        }
+        
+        .page-header { 
+            margin-bottom: 3rem; 
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 2rem;
+        }
+        
+        .page-header h1 { 
+            font-size: 2.5rem; 
+            color: #1e40af; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .page-header .last-updated { 
+            color: #6b7280; 
+            font-size: 0.9rem; 
+        }
+        
+        .policy-content h2 { 
+            color: #1e40af; 
+            font-size: 1.75rem; 
+            margin-top: 2.5rem; 
+            margin-bottom: 1rem; 
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        
+        .policy-content h3 { 
+            color: #1f2937; 
+            font-size: 1.25rem; 
+            margin-top: 2rem; 
+            margin-bottom: 0.75rem; 
+            font-weight: 700;
+        }
+        
+        .policy-content p { 
+            margin-bottom: 1.25rem; 
+            line-height: 1.8; 
+            color: #374151; 
+        }
+        
+        .policy-content ul, 
+        .policy-content ol { 
+            margin-left: 2rem; 
+            margin-bottom: 1.5rem; 
+        }
+        
+        .policy-content li { 
+            margin-bottom: 0.75rem; 
+            color: #374151; 
+        }
+        
+        .policy-content a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .policy-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .info-box { 
+            background: #dbeafe; 
+            border-left: 4px solid #3b82f6; 
+            padding: 1.5rem; 
+            margin: 2rem 0; 
+            border-radius: 8px; 
+        }
+        
+        .info-box strong { 
+            color: #1e40af; 
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight { 
+            background: #fef3c7; 
+            padding: 0.25rem 0.5rem; 
+            border-radius: 4px; 
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header h1 { 
+                font-size: 1.75rem; 
+            }
+            
+            .container {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="policy-wrapper">
+            <div class="breadcrumb">
+                <a href="/">Home</a> / Privacy Policy
+            </div>
+
+            <div class="page-header">
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last Updated: November 10, 2025</p>
+            </div>
+
+            <div class="policy-content">
+                <div class="info-box">
+                    <strong>📋 Summary:</strong> 
+                    Tech Fix Guide ("we", "us", "our") respects your privacy. This policy explains what information we collect, how we use it, and your rights regarding your personal data.
+                </div>
+
+                <h2>1. Information We Collect</h2>
+                
+                <h3>1.1 Information You Provide</h3>
+                <p>When you contact us through our contact form, we collect:</p>
+                <ul>
+                    <li><strong>Name:</strong> To address you in our response</li>
+                    <li><strong>Email Address:</strong> To reply to your inquiry</li>
+                    <li><strong>Message Content:</strong> The information you choose to share with us</li>
+                </ul>
+
+                <h3>1.2 Automatically Collected Information</h3>
+                <p>When you visit our website, we may automatically collect certain information through cookies and similar technologies:</p>
+                <ul>
+                    <li><strong>Device Information:</strong> Browser type, operating system, device type</li>
+                    <li><strong>Usage Data:</strong> Pages visited, time spent on pages, links clicked</li>
+                    <li><strong>IP Address:</strong> For analytics and security purposes (anonymized)</li>
+                    <li><strong>Referral Source:</strong> The website that referred you to us</li>
+                </ul>
+
+                <h3>1.3 Cookies</h3>
+                <p>We use cookies to improve your experience on our website. Cookies are small text files stored on your device. We use:</p>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>
+                    <li><strong>Analytics Cookies:</strong> To understand how visitors use our site (Google Analytics)</li>
+                    <li><strong>Affiliate Cookies:</strong> To track referrals to partner websites (see Affiliate Disclosure)</li>
+                </ul>
+                <p>You can control cookies through your browser settings. Disabling cookies may affect website functionality.</p>
+
+                <h2>2. How We Use Your Information</h2>
+                
+                <p>We use the collected information for the following purposes:</p>
+                <ul>
+                    <li><strong>Respond to Inquiries:</strong> To answer questions submitted through our contact form</li>
+                    <li><strong>Improve Our Website:</strong> To understand user behavior and improve content</li>
+                    <li><strong>Analytics:</strong> To measure website traffic and performance</li>
+                    <li><strong>Security:</strong> To protect against spam, fraud, and abuse</li>
+                    <li><strong>Legal Compliance:</strong> To comply with applicable laws and regulations</li>
+                </ul>
+
+                <div class="info-box" style="background: #fee2e2; border-color: #ef4444;">
+                    <strong style="color: #b91c1c;">🚫 We DO NOT:</strong>
+                    <ul style="margin: 0.5rem 0 0 1.5rem;">
+                        <li>Sell your personal information to third parties</li>
+                        <li>Send unsolicited marketing emails (we don't have a newsletter)</li>
+                        <li>Share your data except as described in this policy</li>
+                    </ul>
+                </div>
+
+                <h2>3. Third-Party Services</h2>
+
+                <h3>3.1 Analytics</h3>
+                <p>We use <strong>Google Analytics</strong> to analyze website traffic. Google Analytics collects information anonymously and reports website trends without identifying individual visitors. Learn more: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+
+                <h3>3.2 Contact Form</h3>
+                <p>Our contact form is processed by <strong>FormSubmit</strong>, a third-party service. Messages are sent directly to our email. FormSubmit does not store your messages. Learn more: <a href="https://formsubmit.co/privacy" target="_blank" rel="noopener">FormSubmit Privacy</a></p>
+
+                <h3>3.3 Affiliate Programs</h3>
+                <p>We participate in affiliate marketing programs including Awin, ShareASale, Impact, and others. When you click affiliate links and make purchases, these partners may use cookies to track referrals. We earn a commission at no extra cost to you. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a> for details.</p>
+
+                <h3>3.4 Hosting</h3>
+                <p>Our website is hosted on <strong>Vercel</strong>. Server logs may include IP addresses, browser information, and access times. Learn more: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel Privacy Policy</a></p>
+
+                <h2>4. Data Retention</h2>
+                
+                <p>We retain your personal information only as long as necessary for the purposes outlined in this policy:</p>
+                <ul>
+                    <li><strong>Contact Form Submissions:</strong> Retained for 2 years or until you request deletion</li>
+                    <li><strong>Analytics Data:</strong> Retained according to Google Analytics settings (26 months by default)</li>
+                    <li><strong>Cookies:</strong> Duration varies by type (from session cookies to 2 years)</li>
+                </ul>
+
+                <h2>5. Your Rights</h2>
+                
+                <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+                <ul>
+                    <li><strong>Access:</strong> Request a copy of personal information we hold about you</li>
+                    <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data</li>
+                    <li><strong>Deletion:</strong> Request deletion of your personal information</li>
+                    <li><strong>Opt-Out:</strong> Opt-out of analytics cookies (use browser settings)</li>
+                    <li><strong>Portability:</strong> Request your data in a portable format</li>
+                </ul>
+                <p>To exercise these rights, contact us at: <strong>supportseogrowthlab@protonmail.com</strong></p>
+
+                <h2>6. Children's Privacy</h2>
+                
+                <p>Our website is not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us to request deletion.</p>
+
+                <h2>7. International Data Transfers</h2>
+                
+                <p>Our website is accessible worldwide. If you access our site from outside the country where our servers are located, your information may be transferred across international borders. By using our website, you consent to such transfers.</p>
+
+                <h2>8. Security</h2>
+                
+                <p>We implement reasonable security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no internet transmission is 100% secure. We cannot guarantee absolute security.</p>
+
+                <h2>9. Do Not Track (DNT)</h2>
+                
+                <p>Our website does not currently respond to Do Not Track (DNT) browser signals. You can control tracking through your browser settings and by declining cookies.</p>
+
+                <h2>10. Links to Other Websites</h2>
+                
+                <p>Our website contains links to third-party websites (including affiliate links). We are not responsible for the privacy practices of these external sites. We encourage you to review their privacy policies before providing personal information.</p>
+
+                <h2>11. Changes to This Privacy Policy</h2>
+                
+                <p>We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. The "Last Updated" date at the top indicates when the policy was last revised. Continued use of our website after changes constitutes acceptance of the updated policy.</p>
+
+                <h2>12. GDPR Compliance (EU Users)</h2>
+                
+                <p>If you are located in the European Economic Area (EEA), we process your personal data under the following legal bases:</p>
+                <ul>
+                    <li><strong>Consent:</strong> For analytics and non-essential cookies</li>
+                    <li><strong>Legitimate Interests:</strong> To operate and improve our website, prevent fraud</li>
+                    <li><strong>Legal Obligation:</strong> To comply with applicable laws</li>
+                </ul>
+                <p>You have the right to withdraw consent at any time and to lodge a complaint with your local data protection authority.</p>
+
+                <h2>13. CCPA Compliance (California Users)</h2>
+                
+                <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA):</p>
+                <ul>
+                    <li>Right to know what personal information is collected</li>
+                    <li>Right to know if personal information is sold or shared</li>
+                    <li>Right to opt-out of sale of personal information</li>
+                    <li>Right to non-discrimination for exercising CCPA rights</li>
+                </ul>
+                <p><span class="highlight">We do not sell personal information.</span></p>
+
+                <h2>14. Contact Us</h2>
+                
+                <p>If you have questions about this Privacy Policy or our privacy practices, please contact us:</p>
+                <ul>
+                    <li><strong>Email:</strong> supportseogrowthlab@protonmail.com</li>
+                    <li><strong>Contact Form:</strong> <a href="/contact/">tech-fix-guide.vercel.app/contact</a></li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>📧 Privacy Requests:</strong> For data access, correction, or deletion requests, please email us with "Privacy Request" in the subject line. We will respond within 30 days.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>
