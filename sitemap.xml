@@ -161,5 +161,12 @@
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
+
+	<url>
+   		<loc>https://tech-fix-guide.vercel.app/all-glossary/ip-address/</loc>
+  		<lastmod>2025-12-29</lastmod>
+  		<changefreq>monthly</changefreq>
+  		<priority>0.7</priority>
+	</url>
 	
 </urlset>

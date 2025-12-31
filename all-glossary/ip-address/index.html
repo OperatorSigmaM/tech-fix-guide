@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What is an IP Address? Learn about IPv4, IPv6, public vs private IPs, how to find your IP address, and why it matters for internet security.">
+    <meta name="keywords" content="IP address, IPv4, IPv6, what is IP, find my IP, public IP, private IP, network address">
+    <title>What is an IP Address? Types, Security & How to Find Yours</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* === HEADER === */
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* === FOOTER === */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3b82f6;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #3b82f6;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        /* === MAIN CONTENT === */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .content h2 {
+            color: #1e40af;
+            font-size: 2rem;
+            margin: 2.5rem 0 1rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        
+        .content h3 {
+            color: #1f2937;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+        
+        .content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+            color: #374151;
+        }
+        
+        .content ul, .content ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .content li {
+            margin-bottom: 0.75rem;
+            color: #374151;
+        }
+        
+        .info-box {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .info-box strong {
+            color: #1e40af;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box strong {
+            color: #92400e;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .example-box {
+            background: #f8fafc;
+            border: 2px solid #e5e7eb;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            margin: 2rem 0;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table th {
+            background: #3b82f6;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .faq {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .faq h2 {
+            color: #1e40af;
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-item h4 {
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .faq-item p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb">
+        <a href="/">Home</a> / <a href="/glossary/">Glossary</a> / IP Address
+    </div>
+    
+    <div class="container">
+        <div class="content">
+            <h1 style="font-size: 3rem; color: #1e40af; margin-bottom: 1rem; text-align: center;">🌐 What is an IP Address?</h1>
+            <p style="font-size: 1.125rem; color: #6b7280; text-align: center; margin-bottom: 2rem;">Your device's unique identifier on the internet. Learn about types, privacy, and how IP addresses work.</p>
+            
+            <div class="info-box">
+                <strong>📌 Quick Definition:</strong>
+                An IP (Internet Protocol) address is a unique numerical label assigned to every device connected to a network. It serves as your device's "home address" on the internet, allowing data to find its way to and from your device.
+            </div>
+            
+            <h2>How IP Addresses Work</h2>
+            <p>Think of an IP address like a postal address for your home. Just as mail needs your street address to reach you, internet data needs your IP address to reach your device. When you visit a website, your device sends a request from your IP address, and the website sends data back to that same address.</p>
+            
+            <p>Every device connected to the internet has an IP address, including your smartphone, laptop, smart TV, and even your refrigerator if it's connected to WiFi. These addresses allow billions of devices worldwide to communicate with each other seamlessly.</p>
+            
+            <h2>Types of IP Addresses</h2>
+            
+            <h3>IPv4 vs IPv6</h3>
+            <p>There are two main versions of IP addresses currently in use:</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>IPv4</th>
+                        <th>IPv6</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Format</strong></td>
+                        <td>Four numbers (0-255) separated by periods</td>
+                        <td>Eight groups of hexadecimal numbers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Example</strong></td>
+                        <td>192.168.1.1</td>
+                        <td>2001:0db8:85a3:0000:0000:8a2e:0370:7334</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Addresses</strong></td>
+                        <td>~4.3 billion</td>
+                        <td>340 undecillion (practically unlimited)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Status</strong></td>
+                        <td>Running out of addresses</td>
+                        <td>Future standard, gradually replacing IPv4</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="example-box">
+                <strong>IPv4 Example:</strong> 142.250.185.46 (Google's server)<br>
+                <strong>IPv6 Example:</strong> 2607:f8b0:4004:c07::66 (Google's server)
+            </div>
+            
+            <h3>Public vs Private IP Addresses</h3>
+            
+            <p><strong>Public IP Address:</strong></p>
+            <ul>
+                <li>Assigned by your Internet Service Provider (ISP)</li>
+                <li>Unique across the entire internet</li>
+                <li>Visible to websites and services you connect to</li>
+                <li>Can reveal your approximate geographic location</li>
+                <li>Changes periodically or when you restart your router (usually)</li>
+            </ul>
+            
+            <p><strong>Private IP Address:</strong></p>
+            <ul>
+                <li>Assigned by your home router to devices on your local network</li>
+                <li>Not visible to the outside internet</li>
+                <li>Commonly starts with 192.168.x.x or 10.x.x.x</li>
+                <li>Multiple devices worldwide can share the same private IP</li>
+                <li>Used for communication between devices in your home</li>
+            </ul>
+            
+            <div class="info-box">
+                <strong>💡 How It Works Together:</strong>
+                Your router has one public IP address that the internet sees. Inside your home, each device (phone, laptop, TV) gets its own private IP address. Your router acts as a translator, managing traffic between your devices and the internet.
+            </div>
+            
+            <h2>How to Find Your IP Address</h2>
+            
+            <h3>Find Your Public IP Address</h3>
+            <p>Your public IP is what websites see when you connect to them. The easiest ways to find it:</p>
+            <ul>
+                <li>Google "what is my IP" - Google will display it immediately</li>
+                <li>Visit websites like whatismyipaddress.com or ipinfo.io</li>
+                <li>Check your router's admin panel (usually shows WAN IP)</li>
+            </ul>
+            
+            <h3>Find Your Private IP Address</h3>
+            
+            <p><strong>On Windows:</strong></p>
+            <ol>
+                <li>Open Command Prompt (search for "cmd")</li>
+                <li>Type: <code>ipconfig</code></li>
+                <li>Look for "IPv4 Address" under your active connection</li>
+            </ol>
+            
+            <p><strong>On Mac:</strong></p>
+            <ol>
+                <li>Open System Preferences → Network</li>
+                <li>Select your active connection (WiFi or Ethernet)</li>
+                <li>Your IP address is displayed on the right</li>
+            </ol>
+            
+            <p><strong>On iPhone/iPad:</strong></p>
+            <ol>
+                <li>Settings → WiFi</li>
+                <li>Tap the (i) icon next to your connected network</li>
+                <li>Look for "IP Address"</li>
+            </ol>
+            
+            <p><strong>On Android:</strong></p>
+            <ol>
+                <li>Settings → WiFi</li>
+                <li>Tap your connected network</li>
+                <li>Look for "IP address" in the network details</li>
+            </ol>
+            
+            <h2>Static vs Dynamic IP Addresses</h2>
+            
+            <p><strong>Dynamic IP (Most Common):</strong></p>
+            <ul>
+                <li>Changes periodically (when you restart router or after certain time)</li>
+                <li>Automatically assigned by your ISP</li>
+                <li>Standard for home internet connections</li>
+                <li>No extra cost</li>
+                <li>Slightly better for privacy (address changes regularly)</li>
+            </ul>
+            
+            <p><strong>Static IP:</strong></p>
+            <ul>
+                <li>Never changes - stays the same permanently</li>
+                <li>Must be requested from ISP (usually costs extra)</li>
+                <li>Needed for hosting servers or remote access</li>
+                <li>Better for businesses running websites or services</li>
+                <li>Easier to track if privacy is a concern</li>
+            </ul>
+            
+            <h2>IP Address and Privacy</h2>
+            
+            <div class="warning-box">
+                <strong>⚠️ What Your IP Address Reveals:</strong>
+                Your IP address can reveal your approximate location (city/region), your ISP, and can be used to track your online activity across websites. However, it does NOT reveal your exact street address or personal identity without additional information.
+            </div>
+            
+            <h3>How Websites Use Your IP</h3>
+            <ul>
+                <li><strong>Location-based content:</strong> Show content relevant to your region</li>
+                <li><strong>Security:</strong> Block suspicious traffic or detect fraud</li>
+                <li><strong>Analytics:</strong> Track visitor demographics and behavior</li>
+                <li><strong>Rate limiting:</strong> Prevent abuse by limiting requests per IP</li>
+                <li><strong>Personalization:</strong> Remember preferences or shopping carts</li>
+            </ul>
+            
+            <h3>Protecting Your Privacy</h3>
+            <p>If you're concerned about IP privacy, you have several options:</p>
+            
+            <ul>
+                <li><strong>VPN (Virtual Private Network):</strong> Masks your real IP by routing traffic through VPN servers. Your IP appears as the VPN server's IP instead.</li>
+                <li><strong>Proxy Servers:</strong> Similar to VPN but typically less secure and only works for specific apps/browsers.</li>
+                <li><strong>Tor Browser:</strong> Routes traffic through multiple encrypted nodes, providing strong anonymity but slower speeds.</li>
+                <li><strong>Mobile Data:</strong> Using cellular instead of WiFi gives you a different IP that changes more frequently.</li>
+            </ul>
+            
+            <div class="info-box">
+                <strong>🔒 Remember:</strong>
+                Using a VPN or proxy doesn't make you completely anonymous. Websites can still identify you through cookies, browser fingerprinting, and login credentials. Think of it as one layer of privacy protection, not a complete invisibility cloak.
+            </div>
+            
+            <h2>Common IP Address Ranges</h2>
+            
+            <p>Certain IP address ranges are reserved for special purposes:</p>
+            
+            <ul>
+                <li><strong>192.168.x.x:</strong> Most common private network range (home routers)</li>
+                <li><strong>10.x.x.x:</strong> Large private networks (businesses, organizations)</li>
+                <li><strong>172.16.x.x to 172.31.x.x:</strong> Medium private networks</li>
+                <li><strong>127.0.0.1:</strong> Localhost (your own computer)</li>
+                <li><strong>0.0.0.0:</strong> Default route or "no address"</li>
+            </ul>
+            
+            <h2>Why IP Addresses Matter</h2>
+            
+            <p>IP addresses are fundamental to how the internet works:</p>
+            
+            <ul>
+                <li><strong>Communication:</strong> Enable devices to find and talk to each other</li>
+                <li><strong>Routing:</strong> Help data packets find the fastest path to their destination</li>
+                <li><strong>Identification:</strong> Distinguish billions of devices on the network</li>
+                <li><strong>Network Management:</strong> Allow administrators to troubleshoot and secure networks</li>
+                <li><strong>Geolocation:</strong> Provide location-specific services and content</li>
+            </ul>
+            
+            <div class="faq">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <h4>Can two devices have the same IP address?</h4>
+                    <p>Not on the same network. Each device on a network must have a unique IP address. However, devices on different networks (like different homes) can have the same private IP address, since private IPs are only unique within their local network.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Is my IP address permanent?</h4>
+                    <p>For most home users, no. ISPs typically assign dynamic IPs that change periodically. You can request a static IP from your ISP (usually for a fee) if you need a permanent address for hosting services or remote access.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can someone hack me with my IP address?</h4>
+                    <p>Your IP address alone isn't enough to hack your device. However, it can be used for DDoS attacks, tracking your location, or as a starting point for more sophisticated attacks. Using a firewall and keeping software updated provides good protection.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Why does my IP address keep changing?</h4>
+                    <p>Most ISPs use DHCP (Dynamic Host Configuration Protocol) to automatically assign IP addresses. Your IP might change when you restart your router, after a certain lease time expires, or when your ISP's system reassigns addresses. This is normal for home internet connections.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What's the difference between IP address and MAC address?</h4>
+                    <p>An IP address is a logical address that can change and is used for internet communication. A MAC address is a physical address burned into your device's network hardware that never changes. MAC addresses are only used on local networks, while IP addresses work across the internet.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Do I have the same IP on WiFi and mobile data?</h4>
+                    <p>No. When you switch from WiFi to mobile data (4G/5G), you get a completely different IP address from your cellular provider. This is why switching networks can sometimes help with connectivity issues or accessing region-restricted content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>
