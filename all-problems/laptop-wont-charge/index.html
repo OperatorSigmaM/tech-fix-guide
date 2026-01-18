@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laptop won't charge? Fix plugged in not charging issue on Windows and Mac. 14 solutions for battery charging problems, adapter issues.">
+    <title>Laptop Won't Charge? 14 Ways to Fix "Plugged In Not Charging"</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        footer { background: #1f2937; color: white; padding: 3rem 2rem 1rem; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #3b82f6; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #d1d5db; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: #3b82f6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #fef3c7; color: #92400e; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .impact { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / Laptop Won't Charge</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>Laptop Won't Charge? 14 Ways to Fix "Plugged In Not Charging"</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 17 min read</span>
+                <span class="difficulty">Easy to Medium</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>Main causes:</strong> Faulty adapter/cable (35%), charging port damaged (25%), battery dead (20%), BIOS settings (10%), software issue (10%)</p>
+            <p><strong>Quick fixes:</strong> Try different outlet, check cable for damage, power cycle laptop, update BIOS, replace adapter</p>
+            <p><strong>Success rate:</strong> 70% fixable at home, 20% need adapter replacement, 10% require professional repair</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#diagnosis">Diagnose the Problem</a></li>
+                <li><a href="#quick-fixes">Quick Fixes (Try First)</a></li>
+                <li><a href="#software">Software Solutions</a></li>
+                <li><a href="#hardware">Hardware Fixes</a></li>
+                <li><a href="#prevention">Prevention Tips</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2 id="diagnosis">First: Diagnose the Type of Problem</h2>
+            
+            <p><strong>Different symptoms = different causes:</strong></p>
+
+            <p><strong>🔴 "Plugged in, not charging" message:</strong></p>
+            <ul>
+                <li>Battery detected but not accepting charge</li>
+                <li>Most common on Windows laptops (especially Dell, HP, Lenovo)</li>
+                <li><strong>Causes:</strong> BIOS settings, battery driver issue, battery health poor</li>
+            </ul>
+
+            <p><strong>🔴 No charging indicator at all:</strong></p>
+            <ul>
+                <li>Adapter LED not lighting up</li>
+                <li>No charging light on laptop</li>
+                <li><strong>Causes:</strong> Dead adapter, damaged cable, bad outlet, charging port broken</li>
+            </ul>
+
+            <p><strong>🔴 Charges very slowly:</strong></p>
+            <ul>
+                <li>Battery percentage increases but takes hours</li>
+                <li><strong>Causes:</strong> Wrong wattage adapter, USB-C charging issue, battery degradation</li>
+            </ul>
+
+            <p><strong>🔴 Charges only when powered off:</strong></p>
+            <ul>
+                <li>Won't charge while laptop is on</li>
+                <li><strong>Causes:</strong> Power-hungry software, insufficient adapter wattage, overheating</li>
+            </ul>
+
+            <p><strong>🔴 Charges intermittently:</strong></p>
+            <ul>
+                <li>Stops and starts charging randomly</li>
+                <li><strong>Causes:</strong> Loose charging port, damaged cable, connection issue</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Quick check - Is it adapter or battery?</strong><br>
+                • If laptop runs on AC power without battery installed = adapter works, battery is problem<br>
+                • If laptop won't run on AC power alone = adapter or charging port issue<br>
+                • Check adapter LED - if no light = adapter dead or not getting power
+            </div>
+
+            <h2 id="quick-fixes">Quick Fixes to Try First</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">1</span> Try Different Power Outlet <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Outlet might be dead, switched off, or have loose connection.</p>
+                
+                <p><strong>Check:</strong></p>
+                <ol>
+                    <li>Try different outlet in same room</li>
+                    <li>Try different room entirely</li>
+                    <li>Avoid power strips - plug directly into wall outlet</li>
+                    <li>If using power strip, test another device in it to confirm strip works</li>
+                    <li>Check if outlet has a switch (some do)</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Quick outlet test:</strong> Plug in phone charger or lamp to verify outlet has power before troubleshooting laptop further.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">2</span> Inspect Adapter and Cable <span class="impact">Success: 30%</span></h3>
+                <p><strong>Why it works:</strong> Adapters and cables fail more often than people think. Physical damage is common.</p>
+                
+                <p><strong>Check adapter brick:</strong></p>
+                <ul>
+                    <li><strong>LED indicator:</strong> Should be lit when plugged in. If dark = adapter dead</li>
+                    <li><strong>Temperature:</strong> Should be warm when working. If cold after 10 min = not working</li>
+                    <li><strong>Smell:</strong> Burning smell = internal failure</li>
+                    <li><strong>Physical damage:</strong> Cracks, dents, or warping</li>
+                </ul>
+
+                <p><strong>Check cable:</strong></p>
+                <ul>
+                    <li><strong>Fraying:</strong> Especially near connectors (most common failure point)</li>
+                    <li><strong>Kinks/bends:</strong> Sharp bends damage internal wires</li>
+                    <li><strong>Exposed wires:</strong> Obvious sign of damage</li>
+                    <li><strong>Connector damage:</strong> Bent pins, corrosion, loose fit</li>
+                </ul>
+
+                <p><strong>Test cable continuity:</strong></p>
+                <ol>
+                    <li>Wiggle cable at both ends while plugged in</li>
+                    <li>If charging light flickers = cable damaged internally</li>
+                    <li>Bend cable gently at different points</li>
+                    <li>If charging starts when bent = broken wire inside</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Do NOT use damaged cables:</strong> Exposed wires can cause electric shock, fire, or damage laptop. Replace immediately.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">3</span> Power Cycle Laptop <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it works:</strong> Clears residual charge, resets charging circuit, fixes software glitches.</p>
+                
+                <p><strong>Proper power cycle method:</strong></p>
+                <ol>
+                    <li>Shut down laptop completely (not sleep/hibernate)</li>
+                    <li>Unplug AC adapter from laptop</li>
+                    <li>Remove battery (if removable)</li>
+                    <li>Hold power button for 30 seconds (drains residual power)</li>
+                    <li>Plug adapter back in (leave battery out)</li>
+                    <li>Turn on laptop</li>
+                    <li>If boots = adapter works. Shut down and reinstall battery</li>
+                    <li>Plug adapter in again and test charging</li>
+                </ol>
+
+                <p><strong>For non-removable battery laptops:</strong></p>
+                <ol>
+                    <li>Shut down completely</li>
+                    <li>Unplug adapter</li>
+                    <li>Hold power button 60 seconds</li>
+                    <li>Plug adapter back in</li>
+                    <li>Power on and check charging</li>
+                </ol>
+
+                <div class="success-box">
+                    <strong>✓ Expected result:</strong> Charging resumes normally. If not, continue to next fixes.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">4</span> Check Charging Port for Damage/Debris <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Dust, lint, or physical damage prevents proper connection.</p>
+                
+                <p><strong>Inspect charging port:</strong></p>
+                <ul>
+                    <li><strong>Look inside with flashlight:</strong> Check for debris, bent pins, corrosion</li>
+                    <li><strong>Loose connection:</strong> Plug wiggles excessively = worn port</li>
+                    <li><strong>Broken plastic:</strong> Housing cracked or separated</li>
+                    <li><strong>Push feeling:</strong> Should click firmly into place, not feel mushy</li>
+                </ul>
+
+                <p><strong>Safe cleaning method:</strong></p>
+                <ol>
+                    <li>Power off laptop and unplug</li>
+                    <li>Use wooden toothpick or plastic dental pick</li>
+                    <li>Gently remove visible debris</li>
+                    <li>Use compressed air (short bursts, can upright)</li>
+                    <li>Do NOT use metal objects (can short circuit or bend pins)</li>
+                    <li>Do NOT use vacuum (creates static)</li>
+                </ol>
+
+                <p><strong>Test fit:</strong></p>
+                <ol>
+                    <li>Plug adapter in carefully</li>
+                    <li>Should slide in smoothly and feel secure</li>
+                    <li>Gently wiggle - should not move excessively</li>
+                    <li>If very loose or falls out = port damaged, needs repair</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">5</span> Cool Down Overheated Laptop <span class="impact">Success: 10%</span></h3>
+                <p><strong>Why it works:</strong> Some laptops stop charging when overheated as safety mechanism.</p>
+                
+                <p><strong>Signs laptop is overheated:</strong></p>
+                <ul>
+                    <li>Bottom is very hot to touch</li>
+                    <li>Fans running at maximum speed constantly</li>
+                    <li>Performance is sluggish</li>
+                    <li>Started after gaming or video editing</li>
+                </ul>
+
+                <p><strong>Cool down method:</strong></p>
+                <ol>
+                    <li>Shut down laptop (not sleep)</li>
+                    <li>Unplug adapter</li>
+                    <li>Place on hard, flat surface in cool room</li>
+                    <li>Wait 30 minutes minimum</li>
+                    <li>Clean vents with compressed air</li>
+                    <li>Plug adapter back in and test</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">6</span> Verify Adapter Wattage <span class="impact">Success: 10%</span></h3>
+                <p><strong>Why it matters:</strong> Using wrong wattage adapter causes slow charging or no charging.</p>
+                
+                <p><strong>Check your adapter:</strong></p>
+                <ol>
+                    <li>Look at adapter label for "Output" or "Power"</li>
+                    <li>Should say something like "65W", "90W", "130W"</li>
+                    <li>Compare to laptop's requirements (check bottom sticker or manual)</li>
+                </ol>
+
+                <p><strong>Common wattage by laptop type:</strong></p>
+                <ul>
+                    <li><strong>Ultrabooks/13" laptops:</strong> 45-65W</li>
+                    <li><strong>15" standard laptops:</strong> 65-90W</li>
+                    <li><strong>Gaming laptops:</strong> 120-240W</li>
+                    <li><strong>MacBook Air:</strong> 30-45W</li>
+                    <li><strong>MacBook Pro 16":</strong> 96-140W</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Using lower wattage adapter:</strong><br>
+                    • Laptop may charge slowly or not at all while in use<br>
+                    • Might only charge when laptop is off<br>
+                    • Can damage battery over time<br>
+                    • Find correct wattage adapter for your model
+                </div>
+
+                <p><strong>USB-C charging special case:</strong></p>
+                <ul>
+                    <li>Not all USB-C chargers support laptop charging</li>
+                    <li>Need USB-C with "Power Delivery" (PD)</li>
+                    <li>Minimum 45W for most laptops (check specs)</li>
+                    <li>Phone chargers (5-20W) won't charge laptop</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">7</span> Update Battery Drivers (Windows) <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Corrupted battery driver causes "plugged in, not charging" error.</p>
+                
+                <p><strong>Method 1 - Uninstall and reinstall:</strong></p>
+                <ol>
+                    <li>Right-click Start menu → Device Manager</li>
+                    <li>Expand "Batteries"</li>
+                    <li>Right-click "Microsoft ACPI-Compliant Control Method Battery"</li>
+                    <li>Select "Uninstall device"</li>
+                    <li>Check "Delete the driver software" if option appears</li>
+                    <li>Click Uninstall</li>
+                    <li>Repeat for "Microsoft AC Adapter" if present</li>
+                    <li>Restart laptop</li>
+                    <li>Windows will reinstall drivers automatically</li>
+                </ol>
+
+                <p><strong>Method 2 - Update driver:</strong></p>
+                <ol>
+                    <li>Device Manager → Batteries</li>
+                    <li>Right-click battery driver</li>
+                    <li>Update driver</li>
+                    <li>Search automatically for drivers</li>
+                    <li>Restart after update</li>
+                </ol>
+            </div>
+
+            <h2 id="software">Software Solutions</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">8</span> Reset/Update BIOS <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it works:</strong> BIOS controls charging circuitry. Corrupted settings or outdated BIOS can prevent charging.</p>
+                
+                <p><strong>Method 1 - Reset BIOS to defaults:</strong></p>
+                <ol>
+                    <li>Restart laptop</li>
+                    <li>Press BIOS key repeatedly during boot (usually F2, F10, Del, or Esc)</li>
+                    <li>Look for "Load Defaults", "Load Setup Defaults", or "Reset to Default"</li>
+                    <li>Confirm and save</li>
+                    <li>Exit BIOS (laptop will restart)</li>
+                    <li>Check if charging works</li>
+                </ol>
+
+                <p><strong>Method 2 - Update BIOS:</strong></p>
+                <ol>
+                    <li>Go to laptop manufacturer's support website</li>
+                    <li>Enter your model number</li>
+                    <li>Download latest BIOS update</li>
+                    <li>Follow manufacturer's instructions carefully</li>
+                    <li><strong>IMPORTANT:</strong> Keep laptop plugged in during BIOS update</li>
+                    <li><strong>CRITICAL:</strong> Do NOT interrupt update (can brick laptop)</li>
+                </ol>
+
+                <div class="danger-box">
+                    <strong>🚨 BIOS update warning:</strong> If update fails or is interrupted, laptop may not boot. Only update BIOS if you're comfortable or have tried everything else first.
+                </div>
+
+                <p><strong>Common BIOS keys by manufacturer:</strong></p>
+                <ul>
+                    <li><strong>Dell:</strong> F2 or F12</li>
+                    <li><strong>HP:</strong> F10 or Esc</li>
+                    <li><strong>Lenovo:</strong> F2, F1, or Fn+F2</li>
+                    <li><strong>ASUS:</strong> F2 or Del</li>
+                    <li><strong>Acer:</strong> F2 or Del</li>
+                    <li><strong>MSI:</strong> Del</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">9</span> Run Windows Battery Report <span class="impact">Diagnostic</span></h3>
+                <p><strong>Why it helps:</strong> Shows battery health and identifies if battery is the problem.</p>
+                
+                <p><strong>Generate battery report:</strong></p>
+                <ol>
+                    <li>Right-click Start menu → Windows Terminal (Admin) or Command Prompt (Admin)</li>
+                    <li>Type: <code>powercfg /batteryreport</code></li>
+                    <li>Press Enter</li>
+                    <li>Report saved to: <code>C:\Windows\System32\battery-report.html</code></li>
+                    <li>Open File Explorer, navigate to that location</li>
+                    <li>Double-click file to open in browser</li>
+                </ol>
+
+                <p><strong>Key things to check in report:</strong></p>
+                <ul>
+                    <li><strong>Design Capacity vs Full Charge Capacity:</strong> If Full Charge is under 40% of Design = battery worn out</li>
+                    <li><strong>Cycle Count:</strong> Most batteries last 300-500 cycles. Over 500 = likely time for replacement</li>
+                    <li><strong>Recent Usage:</strong> Shows if battery is charging at all</li>
+                    <li><strong>Battery Usage:</strong> Abnormal discharge rate indicates problem</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Example:</strong> Design Capacity: 50,000 mWh, Full Charge Capacity: 15,000 mWh = Battery only holds 30% of original capacity. Needs replacement.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">10</span> Disable Battery Charge Threshold (If Enabled) <span class="impact">Success: 10%</span></h3>
+                <p><strong>Why it works:</strong> Some laptops have settings that stop charging at 80% to extend battery life. Might be enabled without you knowing.</p>
+                
+                <p><strong>Check manufacturer software:</strong></p>
+                <ul>
+                    <li><strong>Dell:</strong> Dell Power Manager → "Battery" → Check if charging threshold enabled</li>
+                    <li><strong>HP:</strong> HP Support Assistant → Battery Health Manager</li>
+                    <li><strong>Lenovo:</strong> Lenovo Vantage → Power → Battery Charge Threshold</li>
+                    <li><strong>ASUS:</strong> MyASUS → Battery Health Charging</li>
+                    <li><strong>MSI:</strong> Dragon Center → Battery Master</li>
+                </ul>
+
+                <p><strong>What to do:</strong></p>
+                <ol>
+                    <li>Open manufacturer's utility app</li>
+                    <li>Find battery or power settings</li>
+                    <li>Look for "Conservation Mode", "Battery Lifespan", "Charge Threshold"</li>
+                    <li>Disable or set to 100%</li>
+                    <li>Restart and test charging</li>
+                </ol>
+
+                <p><strong>In BIOS:</strong></p>
+                <ol>
+                    <li>Some laptops have this setting in BIOS</li>
+                    <li>Look for "Battery Care", "Battery Conservation", or "Charge Control"</li>
+                    <li>Set to "Fully Charged" or "100%"</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">11</span> Reset SMC (Mac) <span class="impact">Success: 25%</span></h3>
+                <p><strong>Why it works:</strong> SMC (System Management Controller) controls charging on Mac. Resetting fixes many charging issues.</p>
+                
+                <p><strong>MacBook with T2 chip (2018-2020):</strong></p>
+                <ol>
+                    <li>Shut down Mac</li>
+                    <li>Hold Shift + Control + Option (left side) + Power button for 10 seconds</li>
+                    <li>Release all keys</li>
+                    <li>Power on normally</li>
+                </ol>
+
+                <p><strong>MacBook with Apple Silicon (M1/M2/M3):</strong></p>
+                <ol>
+                    <li>Shut down Mac</li>
+                    <li>Wait 30 seconds</li>
+                    <li>Power on (SMC resets automatically on Apple Silicon)</li>
+                </ol>
+
+                <p><strong>Older MacBook (pre-2018):</strong></p>
+                <ol>
+                    <li>Shut down Mac</li>
+                    <li>Hold Shift + Control + Option + Power button for 10 seconds</li>
+                    <li>Release all keys</li>
+                    <li>Power on</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 After SMC reset:</strong> Fan behavior, battery charging, display brightness may behave differently for a few minutes as system recalibrates.
+                </div>
+            </div>
+
+            <h2 id="hardware">Hardware Fixes & Replacements</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">12</span> Replace Adapter/Cable <span class="impact">Cost: $20-80</span></h3>
+                <p><strong>When to replace:</strong> Adapter LED doesn't light, cable frayed, wiggling cable makes charging work intermittently.</p>
+                
+                <p><strong>Buying replacement adapter:</strong></p>
+                <ul>
+                    <li><strong>Best option:</strong> OEM (original manufacturer) adapter from official store</li>
+                    <li><strong>Good alternative:</strong> Certified third-party (look for UL/CE certification)</li>
+                    <li><strong>Avoid:</strong> Cheap generic Amazon/eBay adapters (fire hazard, can damage laptop)</li>
+                </ul>
+
+                <p><strong>What to check before buying:</strong></p>
+                <ol>
+                    <li><strong>Wattage:</strong> Match or exceed original (check laptop bottom sticker)</li>
+                    <li><strong>Voltage:</strong> Must match exactly (usually 19V or 20V)</li>
+                    <li><strong>Connector type:</strong> Barrel plug size or USB-C</li>
+                    <li><strong>Polarity:</strong> Should match (usually center positive)</li>
+                </ol>
+
+                <p><strong>Where to buy:</strong></p>
+                <ul>
+                    <li><strong>Dell:</strong> Dell.com official parts store, $40-80</li>
+                    <li><strong>HP:</strong> HP Parts Store, $40-70</li>
+                    <li><strong>Lenovo:</strong> Lenovo Parts, $40-70</li>
+                    <li><strong>Apple:</strong> Apple Store, $79 (USB-C), $99 (MagSafe)</li>
+                    <li><strong>Third-party:</strong> Anker, Nekteck (quality brands), $30-60</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ USB-C charging:</strong> Not all USB-C chargers work with all laptops. Must support "USB Power Delivery" and have sufficient wattage (usually 45W minimum).
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">13</span> Replace Battery <span class="impact">Cost: $40-150</span></h3>
+                <p><strong>When to replace battery:</strong></p>
+                <ul>
+                    <li>Battery report shows under 50% capacity remaining</li>
+                    <li>Battery drains very quickly (under 2 hours)</li>
+                    <li>Battery is 3+ years old</li>
+                    <li>Windows shows "Consider replacing battery" message</li>
+                    <li>Laptop works fine on AC power but battery doesn't charge</li>
+                </ul>
+
+                <p><strong>Battery replacement options:</strong></p>
+
+                <p><strong>User-replaceable batteries (older laptops):</strong></p>
+                <ol>
+                    <li>Buy replacement battery for your model</li>
+                    <li>Power off laptop and unplug</li>
+                    <li>Flip laptop over</li>
+                    <li>Slide battery release latch</li>
+                    <li>Remove old battery</li>
+                    <li>Insert new battery (align contacts)</li>
+                    <li>Should click into place</li>
+                    <li>Power on and charge to 100%</li>
+                </ol>
+
+                <p><strong>Internal batteries (most modern laptops):</strong></p>
+                <ul>
+                    <li><strong>DIY replacement:</strong> Requires opening laptop, disconnecting battery connector. Difficulty: Medium. Cost: $40-80 for battery</li>
+                    <li><strong>Professional replacement:</strong> Best option for beginners. Cost: $80-150 including labor</li>
+                    <li><strong>Manufacturer service:</strong> Most expensive but guaranteed. Cost: $150-250</li>
+                </ul>
+
+                <p><strong>Where to buy batteries:</strong></p>
+                <ul>
+                    <li><strong>OEM (best):</strong> Manufacturer's parts store</li>
+                    <li><strong>iFixit (good):</strong> Quality third-party batteries with tools and guides</li>
+                    <li><strong>Amazon (careful):</strong> Check reviews, avoid no-name brands</li>
+                    <li><strong>eBay (risky):</strong> Often counterfeit or used batteries</li>
+                </ul>
+
+                <div class="danger-box">
+                    <strong>🚨 Swollen battery warning:</strong> If battery is swollen (laptop won't sit flat, trackpad lifted, bulging), STOP USING IMMEDIATELY. Don't charge. Take to professional. Fire/explosion risk.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">14</span> Repair/Replace Charging Port <span class="impact">Cost: $80-200</span></h3>
+                <p><strong>When charging port needs repair:</strong></p>
+                <ul>
+                    <li>Plug falls out easily or feels very loose</li>
+                    <li>Have to hold plug at specific angle to charge</li>
+                    <li>Charging stops when you move laptop</li>
+                    <li>Physical damage visible (cracked housing, bent pins)</li>
+                    <li>Tried multiple adapters and all have same issue</li>
+                </ul>
+
+                <p><strong>Repair options:</strong></p>
+                <ul>
+                    <li><strong>Professional repair:</strong> $80-150 for most laptops</li>
+                    <li><strong>Manufacturer service:</strong> $150-250</li>
+                    <li><strong>DIY repair:</strong> Very difficult, requires soldering. Only for experienced. Parts: $10-30</li>
+                </ul>
+
+                <p><strong>Temporary workaround (until repair):</strong></p>
+                <ul>
+                    <li>Find angle that works and secure with tape</li>
+                    <li>Prop laptop against something to maintain angle</li>
+                    <li>Don't move laptop while charging</li>
+                    <li>Charge when laptop is off (less stress on port)</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 USB-C laptops:</strong> If your laptop has multiple USB-C ports, try charging from different port. One port might be damaged while others work.
+                </div>
+            </div>
+
+            <h2 id="prevention">How to Prevent Charging Problems</h2>
+
+            <h3>1. Proper Adapter Care</h3>
+            <ul>
+                <li><strong>Don't wrap cable tightly around adapter:</strong> Creates kinks that break internal wires</li>
+                <li><strong>Leave slack near connectors:</strong> Most stress happens within 2 inches of plug</li>
+                <li><strong>Store properly:</strong> Loose coil, not tight wrap</li>
+                <li><strong>Keep adapter cool:</strong> Don't cover with blankets or bury under pillows</li>
+                <li><strong>Avoid pulling by cable:</strong> Always pull plug, not cable</li>
+            </ul>
+
+            <h3>2. Charging Port Protection</h3>
+            <ul>
+                <li><strong>Insert gently:</strong> Don't force if it doesn't slide in smoothly</li>
+                <li><strong>Remove straight out:</strong> Don't wiggle or angle while removing</li>
+                <li><strong>Support cable:</strong> Don't let cable hang freely pulling on port</li>
+                <li><strong>Keep clean:</strong> Blow out dust monthly with compressed air</li>
+                <li><strong>Avoid side pressure:</strong> Don't step on cable or let it get pulled sideways</li>
+            </ul>
+
+            <h3>3. Battery Health Maintenance</h3>
+            <ul>
+                <li><strong>Avoid extreme temperatures:</strong> Don't use laptop in hot car or freezing cold</li>
+                <li><strong>Partial charges are better:</strong> 20-80% range is healthier than 0-100% repeatedly</li>
+                <li><strong>Don't leave plugged in 24/7:</strong> Use battery occasionally (once a week minimum)</li>
+                <li><strong>Store at 50% if unused:</strong> Long-term storage at full or empty damages battery</li>
+                <li><strong>Update BIOS:</strong> Newer BIOS versions have better battery management</li>
+            </ul>
+
+            <h3>4. Use Manufacturer Tools</h3>
+            <ul>
+                <li><strong>Enable battery conservation mode:</strong> If laptop mostly stays plugged in</li>
+                <li><strong>Use adaptive charging:</strong> MacOS has optimized battery charging</li>
+                <li><strong>Check battery health regularly:</strong> Monthly via battery report or system tools</li>
+            </ul>
+
+            <h2>When to Replace vs Repair</h2>
+
+            <div class="success-box">
+                <h3>✓ Worth repairing if:</h3>
+                <ul>
+                    <li>Laptop is under 3 years old</li>
+                    <li>High-end or gaming laptop ($1000+)</li>
+                    <li>Only issue is charging (everything else works great)</li>
+                    <li>Repair cost under $200</li>
+                    <li>Has warranty or insurance</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ Consider replacing laptop if:</h3>
+                <ul>
+                    <li>Laptop is 5+ years old</li>
+                    <li>Budget laptop (under $500 original price)</li>
+                    <li>Multiple problems (slow, overheating, damaged screen)</li>
+                    <li>Repair cost exceeds 50% of replacement cost</li>
+                    <li>Battery + charging port both need replacement ($200-300)</li>
+                </ul>
+            </div>
+
+            <h2>Cost Summary</h2>
+
+            <p><strong>Typical repair costs:</strong></p>
+            <ul>
+                <li><strong>New adapter (OEM):</strong> $40-80</li>
+                <li><strong>New adapter (third-party):</strong> $20-50</li>
+                <li><strong>Battery replacement (DIY):</strong> $40-80</li>
+                <li><strong>Battery replacement (professional):</strong> $100-150</li>
+                <li><strong>Charging port repair:</strong> $80-200</li>
+                <li><strong>BIOS update:</strong> Free</li>
+                <li><strong>Driver reinstall:</strong> Free</li>
+            </ul>
+
+            <h2>Common Questions</h2>
+
+            <p><strong>Q: Laptop says "plugged in, not charging." What does this mean?</strong></p>
+            <p>A: Adapter is working (laptop recognizes it) but battery isn't accepting charge. Usually: battery driver issue (try reinstall), BIOS setting, or battery worn out (check battery report).</p>
+
+            <p><strong>Q: Can I use any USB-C charger to charge my laptop?</strong></p>
+            <p>A: No. Must support "USB Power Delivery" (PD) and have sufficient wattage. Phone chargers (5-20W) won't work. Need minimum 45W for most laptops, 65W+ for larger laptops.</p>
+
+            <p><strong>Q: My adapter works fine with laptop powered off but not when it's on. Why?</strong></p>
+            <p>A: Adapter wattage is insufficient for your laptop's power draw when running. Get correct wattage adapter for your model.</p>
+
+            <p><strong>Q: How do I know if my adapter or battery is the problem?</strong></p>
+            <p>A: Remove battery (if removable). If laptop runs on AC power alone = adapter works, battery is problem. If doesn't run on AC alone = adapter or charging port issue.</p>
+
+            <p><strong>Q: Is it safe to use laptop with dead battery on AC power only?</strong></p>
+            <p>A: Yes, perfectly safe. Many people do this. Just means instant shutdown if power is interrupted (no battery backup).</p>
+
+            <p><strong>Q: Can I replace laptop battery myself?</strong></p>
+            <p>A: Depends on model. Older laptops have user-replaceable batteries (easy). Modern laptops require opening case (medium difficulty). MacBooks are difficult (professional recommended).</p>
+
+            <div class="success-box">
+                <h3>✓ Success Rates Summary:</h3>
+                <ul>
+                    <li><strong>Power cycle + driver reinstall:</strong> 35% success</li>
+                    <li><strong>Adapter replacement:</strong> 40% of all charging issues</li>
+                    <li><strong>Battery replacement:</strong> 25% of cases</li>
+                    <li><strong>BIOS reset:</strong> 15% success</li>
+                    <li><strong>Charging port repair:</strong> 10% of cases need this</li>
+                </ul>
+                <p><strong>Overall:</strong> 70% of charging issues fixable at home without professional repair!</p>
+            </div>
+
+        </div>
+
+        <div class="related-problems">
+            <h3>🔗 Related Problems</h3>
+            <div class="related-list">
+                <a href="/all-problems/laptop-overheating/" class="related-item">
+                    <h4>Laptop Overheating</h4>
+                    <p>Cool down your laptop and prevent thermal throttling</p>
+                </a>
+                <a href="/all-problems/slow-computer/" class="related-item">
+                    <h4>Computer Running Slow</h4>
+                    <p>Speed up your PC or Mac with proven methods</p>
+                </a>
+                <a href="/all-problems/black-screen-on-startup/" class="related-item">
+                    <h4>Black Screen on Startup</h4>
+                    <p>Fix boot issues and display problems</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

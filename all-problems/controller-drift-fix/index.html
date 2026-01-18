@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fix controller stick drift on PS5, Xbox, Switch. 10 proven solutions to stop joystick drift permanently. Works for DualSense, Joy-Con, Elite controllers.">
+    <title>Controller Drift? 10 Ways to Fix Stick Drift (PS5/Xbox/Switch)</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3b82f6;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #3b82f6;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #fef3c7; color: #92400e; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .impact { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .product-box { background: #f8fafc; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+        .product-box h4 { color: #1e40af; margin-bottom: 1rem; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / Controller Drift</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>Controller Drift? 10 Proven Fixes for Stick Drift</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 12 min read</span>
+                <span class="difficulty">Easy to Medium</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>What is drift:</strong> Controller joystick moves on its own, causing unwanted character/camera movement in games</p>
+            <p><strong>Main causes:</strong> Dust/debris (40%), worn potentiometers (30%), calibration issues (20%), physical damage (10%)</p>
+            <p><strong>Quick fixes:</strong> Recalibrate controller, clean with compressed air, update firmware, replace joystick module</p>
+            <p><strong>Success rate:</strong> 60-70% fixed without replacement, 95% fixed with module replacement</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#what-is-drift">What is Controller Drift?</a></li>
+                <li><a href="#test">How to Test for Drift</a></li>
+                <li><a href="#solutions">10 Solutions to Fix Drift</a></li>
+                <li><a href="#prevention">Prevention Tips</a></li>
+                <li><a href="#replacement">When to Replace</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2 id="what-is-drift">What is Controller Drift?</h2>
+            
+            <p><strong>Controller drift</strong> happens when your joystick registers movement even when you're not touching it. Your character walks forward, camera spins, or cursor moves on its own.</p>
+
+            <p><strong>Most affected controllers:</strong></p>
+            <ul>
+                <li><strong>Nintendo Switch Joy-Con:</strong> Notorious for drift, class-action lawsuit filed</li>
+                <li><strong>PS5 DualSense:</strong> Common after 6-12 months of use</li>
+                <li><strong>Xbox Series X/S:</strong> Less common but still happens</li>
+                <li><strong>Xbox Elite Controller:</strong> Expensive but not immune</li>
+                <li><strong>PS4 DualShock 4:</strong> Develops drift over time</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>⚠️ Fun fact:</strong> All modern controllers use the same basic Alps RKJXV joystick mechanism, which wears out with use. It's a design flaw, not user error.
+            </div>
+
+            <h2 id="test">How to Test for Controller Drift</h2>
+
+            <p><strong>Quick test methods:</strong></p>
+
+            <p><strong>Method 1 - In-Game Test:</strong></p>
+            <ol>
+                <li>Launch any game</li>
+                <li>Put controller on flat surface, don't touch it</li>
+                <li>Watch character/camera for 30 seconds</li>
+                <li>If it moves without input = drift confirmed</li>
+            </ol>
+
+            <p><strong>Method 2 - Console Calibration Screen:</strong></p>
+            <ul>
+                <li><strong>PS5:</strong> Settings → Accessories → Controllers → Test → Watch joystick indicator</li>
+                <li><strong>Xbox:</strong> Settings → Devices & Connections → Accessories → Configure → Watch crosshair</li>
+                <li><strong>Switch:</strong> System Settings → Controllers → Test Input Devices → Check stick position</li>
+                <li><strong>PC:</strong> Steam → Settings → Controller → Calibration OR joy.cpl (Windows)</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Drift severity levels:</strong><br>
+                • <strong>Mild:</strong> Slight movement in menus, rare in gameplay<br>
+                • <strong>Moderate:</strong> Noticeable in gameplay, character drifts slowly<br>
+                • <strong>Severe:</strong> Constant movement, game unplayable
+            </div>
+
+            <h2 id="solutions">10 Solutions to Fix Controller Drift</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">1</span> Recalibrate the Controller <span class="impact">Success Rate: 20%</span></h3>
+                <p><strong>Why it works:</strong> Software can lose track of stick's center position. Recalibration resets this.</p>
+                
+                <p><strong>PS5 DualSense:</strong></p>
+                <ol>
+                    <li>Settings → Accessories → Controllers → Calibrate Control Sticks</li>
+                    <li>Follow on-screen instructions</li>
+                    <li>Restart console after calibration</li>
+                </ol>
+
+                <p><strong>Xbox Series X/S:</strong></p>
+                <ol>
+                    <li>Settings → Devices & Connections → Accessories</li>
+                    <li>Select controller → Configure → Calibration</li>
+                    <li>Follow calibration wizard</li>
+                </ol>
+
+                <p><strong>Nintendo Switch:</strong></p>
+                <ol>
+                    <li>System Settings → Controllers and Sensors</li>
+                    <li>Calibrate Control Sticks</li>
+                    <li>Follow prompts for each Joy-Con</li>
+                </ol>
+
+                <p><strong>PC (Steam):</strong></p>
+                <ol>
+                    <li>Steam → Settings → Controller</li>
+                    <li>General Controller Settings → Calibrate</li>
+                    <li>Windows: Control Panel → Devices → Game Controllers → Properties → Settings → Calibrate</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">2</span> Clean with Compressed Air <span class="impact">Success Rate: 40%</span></h3>
+                <p><strong>Why it works:</strong> Dust/debris under the rubber cap interferes with sensors.</p>
+                
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Turn off controller</li>
+                    <li>Lift rubber cap on joystick gently (don't remove completely)</li>
+                    <li>Spray compressed air in short bursts around stick base</li>
+                    <li>Rotate stick fully while spraying</li>
+                    <li>Do this for 30 seconds per stick</li>
+                    <li>Let dry 5 minutes, test again</li>
+                </ol>
+
+                <div class="success-box">
+                    <strong>✓ Pro tip:</strong> Hold can upright, use straw attachment for precision. Don't shake can before use.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">3</span> Isopropyl Alcohol Cleaning <span class="impact">Success Rate: 50%</span></h3>
+                <p><strong>Why it works:</strong> Alcohol dissolves sticky residue and grime that compressed air can't remove.</p>
+                
+                <p><strong>What you need:</strong></p>
+                <ul>
+                    <li>90%+ isopropyl alcohol (higher % = better)</li>
+                    <li>Cotton swabs</li>
+                    <li>Paper towels</li>
+                </ul>
+
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Power off controller completely</li>
+                    <li>Dip cotton swab in alcohol (not dripping wet)</li>
+                    <li>Lift rubber cap, apply alcohol around stick base</li>
+                    <li>Rotate stick fully 20-30 times</li>
+                    <li>Let alcohol work its way inside for 2 minutes</li>
+                    <li>Repeat 2-3 times</li>
+                    <li>Let dry completely (10-15 minutes)</li>
+                    <li>Test</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Important:</strong> Use 90%+ alcohol only. Lower concentrations have too much water and can damage electronics.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">4</span> Update Controller Firmware <span class="impact">Success Rate: 15%</span></h3>
+                <p><strong>Why it works:</strong> Firmware updates can improve deadzone handling and fix calibration bugs.</p>
+                
+                <p><strong>PS5:</strong></p>
+                <ol>
+                    <li>Settings → Accessories → Controllers</li>
+                    <li>Connect controller via USB</li>
+                    <li>Update if available</li>
+                </ol>
+
+                <p><strong>Xbox:</strong></p>
+                <ol>
+                    <li>Settings → Devices & Connections → Accessories</li>
+                    <li>Select controller → Firmware version</li>
+                    <li>Update Now (if available)</li>
+                </ol>
+
+                <p><strong>Switch Joy-Con:</strong></p>
+                <ol>
+                    <li>Attach Joy-Con to console</li>
+                    <li>System Settings → Controllers and Sensors</li>
+                    <li>Update Controllers</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">5</span> Increase Deadzone (Temporary Fix) <span class="impact">Success Rate: 90%*</span></h3>
+                <p><strong>*Not a real fix, just a workaround that reduces drift symptoms.</strong></p>
+                
+                <p><strong>What is deadzone:</strong> The amount the stick must move before game registers input. Larger deadzone = drift less noticeable.</p>
+
+                <p><strong>How to adjust:</strong></p>
+                <ul>
+                    <li><strong>In-game:</strong> Most games have deadzone slider in controller settings (look for "Stick Deadzone" or "Input Threshold")</li>
+                    <li><strong>Steam:</strong> Controller settings → Additional Settings → Deadzone</li>
+                    <li><strong>Xbox Accessories App:</strong> Available for advanced controllers</li>
+                </ul>
+
+                <p><strong>Trade-off:</strong> Reduces drift but also makes controls less responsive. Not ideal for competitive games.</p>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">6</span> Contact Paper Fix (Advanced) <span class="impact">Success Rate: 60%</span></h3>
+                <p><strong>Why it works:</strong> Worn graphite pads inside joystick cause drift. Adding contact paper restores electrical contact.</p>
+                
+                <p><strong>What you need:</strong></p>
+                <ul>
+                    <li>Small piece of cardstock or business card</li>
+                    <li>Scissors</li>
+                    <li>Screwdriver set (Torx T6 for Joy-Con, T8 for Xbox/PS)</li>
+                </ul>
+
+                <p><strong>Steps (Joy-Con example):</strong></p>
+                <ol>
+                    <li>Open controller (YouTube has guides for your model)</li>
+                    <li>Remove joystick module</li>
+                    <li>Cut tiny square of cardstock (2mm x 2mm)</li>
+                    <li>Place on graphite pad inside joystick housing</li>
+                    <li>Reassemble</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Risk:</strong> Opening controller voids warranty. Only try if warranty expired or you're comfortable with electronics.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">7</span> Replace Joystick Module <span class="impact">Success Rate: 95%</span></h3>
+                <p><strong>The most reliable fix.</strong> Worn potentiometers can't be cleaned, only replaced.</p>
+                
+                <p><strong>Replacement modules cost:</strong></p>
+                <ul>
+                    <li>Joy-Con: $8-12 per stick</li>
+                    <li>PS5/PS4: $10-15 per stick</li>
+                    <li>Xbox: $12-18 per stick</li>
+                </ul>
+
+                <p><strong>DIY difficulty:</strong></p>
+                <ul>
+                    <li><strong>Easy:</strong> Xbox controllers (snap-in modules)</li>
+                    <li><strong>Medium:</strong> PS4/PS5 (soldering not required for most)</li>
+                    <li><strong>Hard:</strong> Joy-Con (tiny ribbon cables, easy to break)</li>
+                </ul>
+
+                <p><strong>Where to buy:</strong> Amazon, iFixit, AliExpress</p>
+                <p><strong>Search terms:</strong> "PS5 analog stick replacement" or "Joy-Con joystick module"</p>
+
+                <div class="info-box">
+                    <strong>💡 Pro tip:</strong> Watch full tutorial video for your specific controller model BEFORE buying parts. iFixit has excellent guides.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">8</span> Use Warranty/Free Repair <span class="impact">Cost: Free</span></h3>
+                <p><strong>Check if you qualify for free repair first!</strong></p>
+                
+                <p><strong>Nintendo Joy-Con:</strong></p>
+                <ul>
+                    <li>Free repair even out of warranty (due to lawsuit settlement)</li>
+                    <li>Submit request at support.nintendo.com</li>
+                    <li>Takes 2-3 weeks</li>
+                </ul>
+
+                <p><strong>Sony PS5:</strong></p>
+                <ul>
+                    <li>1-year warranty from purchase</li>
+                    <li>Submit via PlayStation.com/support</li>
+                    <li>Keep proof of purchase</li>
+                </ul>
+
+                <p><strong>Xbox:</strong></p>
+                <ul>
+                    <li>90-day standard warranty (1 year for Elite controllers)</li>
+                    <li>File claim at support.xbox.com</li>
+                </ul>
+
+                <div class="success-box">
+                    <strong>✓ Worth trying:</strong> Even if slightly out of warranty, companies sometimes honor repairs for known issues.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">9</span> Reset Controller to Factory Settings <span class="impact">Success Rate: 10%</span></h3>
+                <p><strong>Why it works:</strong> Corrupted settings can cause phantom inputs.</p>
+                
+                <p><strong>PS5 DualSense:</strong></p>
+                <ol>
+                    <li>Turn off controller</li>
+                    <li>Find small hole on back (near L2 button)</li>
+                    <li>Insert paperclip, hold 5 seconds</li>
+                    <li>Re-pair with console</li>
+                </ol>
+
+                <p><strong>Xbox:</strong></p>
+                <ol>
+                    <li>Hold Xbox button + Share button + Y simultaneously for 5 seconds</li>
+                    <li>Re-pair controller</li>
+                </ol>
+
+                <p><strong>Joy-Con:</strong></p>
+                <ol>
+                    <li>System Settings → Controllers → Disconnect Controllers</li>
+                    <li>Re-attach to console to re-pair</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">10</span> Professional Repair Service <span class="impact">Cost: $40-80</span></h3>
+                <p><strong>When to consider:</strong> Drift persists, warranty expired, not comfortable with DIY.</p>
+                
+                <p><strong>Options:</strong></p>
+                <ul>
+                    <li><strong>Local repair shops:</strong> Search "controller repair near me"</li>
+                    <li><strong>Mail-in services:</strong> TronicsFix, CPR (Cell Phone Repair)</li>
+                    <li><strong>GameStop:</strong> In-store repairs at some locations</li>
+                </ul>
+
+                <p><strong>Average prices:</strong></p>
+                <ul>
+                    <li>Joy-Con: $40-50</li>
+                    <li>Xbox/PS4: $50-60</li>
+                    <li>PS5/Elite: $60-80</li>
+                </ul>
+            </div>
+
+            <h2 id="prevention">How to Prevent Controller Drift</h2>
+
+            <p><strong>Unfortunately, drift is largely inevitable with current controller designs, but you can delay it:</strong></p>
+
+            <ul>
+                <li><strong>Gentle on sticks:</strong> Don't slam them to edges repeatedly</li>
+                <li><strong>Clean regularly:</strong> Compressed air once a month</li>
+                <li><strong>Avoid food/drinks:</strong> Sticky residue accelerates wear</li>
+                <li><strong>Store properly:</strong> Don't leave controller with stick pressed (like in tight bag)</li>
+                <li><strong>Use dust covers:</strong> When not in use</li>
+                <li><strong>Rotate controllers:</strong> If you have multiple, switch between them</li>
+                <li><strong>Adjust grip:</strong> Don't grip sticks too hard during intense moments</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Reality check:</strong> All modern controllers use the same cheap Alps joystick mechanism rated for only 400 hours of use. Drift is a when, not if.
+            </div>
+
+            <h2 id="replacement">When to Just Buy a New Controller</h2>
+
+            <p><strong>Consider replacement if:</strong></p>
+            <ul>
+                <li>Multiple sticks drifting severely</li>
+                <li>Other issues present (sticky buttons, connectivity problems)</li>
+                <li>Controller is 3+ years old</li>
+                <li>Repair cost approaches new controller price</li>
+                <li>You've already replaced modules once (they'll wear out again)</li>
+            </ul>
+
+            <p><strong>Better alternatives to consider:</strong></p>
+            <ul>
+                <li><strong>8BitDo Pro 2:</strong> Excellent build quality, Hall effect sticks (drift-proof), $50</li>
+                <li><strong>GuliKit KingKong 2 Pro:</strong> Hall effect sticks, no drift, $80</li>
+                <li><strong>Xbox Elite Core:</strong> Replaceable sticks, better build, $130</li>
+                <li><strong>SCUF Reflex Pro:</strong> Modular sticks, high-end, $230</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>✓ Future-proof option:</strong> Controllers with Hall effect sensors (magnetic) instead of potentiometers don't drift. Worth the investment if you game heavily.
+            </div>
+
+            <h2>Summary: Fix Order to Try</h2>
+
+            <ol>
+                <li><strong>Recalibrate</strong> (free, 5 minutes)</li>
+                <li><strong>Compressed air</strong> (free if you have it, 5 minutes)</li>
+                <li><strong>Alcohol cleaning</strong> ($3, 15 minutes)</li>
+                <li><strong>Firmware update</strong> (free, 10 minutes)</li>
+                <li><strong>Increase deadzone</strong> (free, temporary fix)</li>
+                <li><strong>Check warranty</strong> (free if eligible, 2-3 weeks)</li>
+                <li><strong>Replace joystick module</strong> ($10-15, 1-2 hours, permanent fix)</li>
+                <li><strong>Professional repair</strong> ($40-80, guaranteed fix)</li>
+                <li><strong>Buy new controller</strong> ($50-80, permanent solution)</li>
+            </ol>
+
+            <div class="success-box">
+                <strong>✓ Expected outcome:</strong> 70% of drift cases fixed with cleaning/calibration. Remaining 30% need module replacement or new controller.
+            </div>
+        </div>
+
+        <div class="related-problems">
+            <h3>🔗 Related Problems</h3>
+            <div class="related-list">
+                <a href="/all-problems/ps5-controller-not-charging/" class="related-item">
+                    <h4>PS5 Controller Not Charging</h4>
+                    <p>Fix DualSense charging issues and battery problems</p>
+                </a>
+                <a href="/all-problems/xbox-controller-not-connecting/" class="related-item">
+                    <h4>Xbox Controller Not Connecting</h4>
+                    <p>Fix wireless sync and pairing issues</p>
+                </a>
+                <a href="/all-problems/low-fps-in-games/" class="related-item">
+                    <h4>Low FPS in Games</h4>
+                    <p>Boost gaming performance and frame rates</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>
