@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nintendo Switch not charging? Fix charging port issues, dead battery, dock problems. 13 solutions for Switch/OLED/Lite charging failures.">
+    <title>Nintendo Switch Not Charging? 13 Ways to Fix Charging Issues</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        footer { background: #1f2937; color: white; padding: 3rem 2rem 1rem; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #3b82f6; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #d1d5db; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: #3b82f6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #d1fae5; color: #065f46; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .impact { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / Nintendo Switch Not Charging</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>Nintendo Switch Not Charging? 13 Ways to Fix Charging Issues</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 14 min read</span>
+                <span class="difficulty">Easy to Medium</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>Main causes:</strong> Dirty charging port (30%), faulty USB-C cable (25%), dock malfunction (20%), battery degradation (15%), software glitch (5%), hardware failure (5%)</p>
+            <p><strong>Quick fixes:</strong> Clean charging port, try different cable, hard reset, update system software, test direct charging (bypass dock)</p>
+            <p><strong>Success rate:</strong> 80% fixable at home, 15% need Nintendo repair, 5% require replacement</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#diagnosis">Identify Your Charging Issue</a></li>
+                <li><a href="#immediate">Immediate Fixes</a></li>
+                <li><a href="#dock-issues">Dock Problems</a></li>
+                <li><a href="#hardware">Hardware Solutions</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2 id="diagnosis">First: Identify Your Switch Charging Problem</h2>
+            
+            <p><strong>Different symptoms require different solutions:</strong></p>
+
+            <p><strong>🔴 Not charging at all (no battery icon):</strong></p>
+            <ul>
+                <li>Plugged in but no charging indicator</li>
+                <li>Battery icon doesn't show lightning bolt</li>
+                <li><strong>Likely cause:</strong> Dead battery, faulty cable, damaged charging port</li>
+            </ul>
+
+            <p><strong>🔴 Charges very slowly or intermittently:</strong></p>
+            <ul>
+                <li>Takes 6+ hours to charge fully (should be 3 hours)</li>
+                <li>Percentage goes up 1% every 15-20 minutes</li>
+                <li>Charging stops and starts randomly</li>
+                <li><strong>Likely cause:</strong> Dirty port, weak power adapter, battery degradation</li>
+            </ul>
+
+            <p><strong>🔴 Charges in handheld mode but not in dock:</strong></p>
+            <ul>
+                <li>Direct USB-C charging works</li>
+                <li>Dock doesn't charge or display video</li>
+                <li><strong>Likely cause:</strong> Dock power issue, HDMI interference, dock USB-C connector problem</li>
+            </ul>
+
+            <p><strong>🔴 Won't charge when completely dead:</strong></p>
+            <ul>
+                <li>Screen completely black</li>
+                <li>No Nintendo logo appears</li>
+                <li>Battery drained to 0%</li>
+                <li><strong>Likely cause:</strong> Deep discharge requires 30+ minute wait before showing life</li>
+            </ul>
+
+            <p><strong>🔴 Battery drains faster than it charges:</strong></p>
+            <ul>
+                <li>Plugged in but percentage decreases during gameplay</li>
+                <li>Can't maintain charge while playing</li>
+                <li><strong>Likely cause:</strong> Using non-official charger, battery worn out, intensive game</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Switch Battery Capacity:</strong><br>
+                • <strong>Original Switch:</strong> 4310mAh battery, 2.5-6.5 hour playtime<br>
+                • <strong>Switch OLED:</strong> 4310mAh battery, 4.5-9 hour playtime<br>
+                • <strong>Switch Lite:</strong> 3570mAh battery, 3-7 hour playtime<br>
+                • <strong>Charging time:</strong> 3 hours (0-100% when console off)
+            </div>
+
+            <h2 id="immediate">Immediate Fixes to Try First</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">1</span> Hard Reset Switch <span class="impact">Success: 35%</span></h3>
+                <p><strong>Why it works:</strong> Clears software glitches preventing charge detection, resets power management.</p>
+                
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Press and hold POWER button for 12-15 seconds</li>
+                    <li>Switch will force shutdown (screen goes black)</li>
+                    <li>Wait 30 seconds</li>
+                    <li>Press POWER button once to turn back on</li>
+                    <li>Plug in charger</li>
+                    <li>Check for charging icon (lightning bolt on battery)</li>
+                </ol>
+
+                <div class="success-box">
+                    <strong>✓ Expected result:</strong> Battery icon shows charging indicator in top-right corner. This fixes most temporary charging glitches.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">2</span> Clean Charging Port <span class="impact">Success: 40%</span></h3>
+                <p><strong>Why it works:</strong> Lint, dust, and debris prevent proper USB-C connection. Most common cause of charging failures.</p>
+                
+                <p><strong>What you need:</strong></p>
+                <ul>
+                    <li>Wooden toothpick or plastic dental pick (NOT metal!)</li>
+                    <li>Compressed air can</li>
+                    <li>Flashlight or phone light</li>
+                    <li>70% isopropyl alcohol (optional)</li>
+                </ul>
+
+                <p><strong>Cleaning method:</strong></p>
+                <ol>
+                    <li>Power off Switch completely</li>
+                    <li>Shine light into USB-C port on bottom of Switch</li>
+                    <li>Look for visible lint, dust, or debris</li>
+                    <li>Use wooden toothpick to GENTLY scrape bottom of port</li>
+                    <li>Pull out compacted lint (often dark gray/black)</li>
+                    <li>Blow compressed air in short bursts into port</li>
+                    <li>Repeat until port looks clean and shiny</li>
+                    <li>Dip toothpick in isopropyl alcohol, gently clean contacts</li>
+                    <li>Let dry 10 minutes</li>
+                    <li>Test charging</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Important:</strong> Never use metal objects (paper clips, needles) - can bend or damage pins inside port. USB-C has 24 tiny pins that break easily.
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Prevention:</strong> Clean port every 3 months if you carry Switch in pocket/bag. Use port cover plug ($5 on Amazon) to prevent lint buildup.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">3</span> Try Different USB-C Cable & Charger <span class="impact">Success: 30%</span></h3>
+                <p><strong>Why it works:</strong> Faulty cables and weak chargers are second most common cause after dirty ports.</p>
+                
+                <p><strong>Official Nintendo charger specs:</strong></p>
+                <ul>
+                    <li><strong>Output:</strong> 15V / 2.6A (39W) or 5V / 1.5A (7.5W)</li>
+                    <li><strong>Standard Switch AC Adapter:</strong> Model HAC-002</li>
+                    <li><strong>Cable type:</strong> USB-C to USB-C</li>
+                </ul>
+
+                <p><strong>Test different chargers:</strong></p>
+                <ol>
+                    <li><strong>Use official Nintendo charger if available</strong> (best option)</li>
+                    <li>Try phone USB-C charger (18W+ recommended)
+                        <ul>
+                            <li>Samsung 25W charger: Works well</li>
+                            <li>iPhone USB-C charger: Works but slower</li>
+                            <li>Any USB-C PD (Power Delivery) charger 18W+</li>
+                        </ul>
+                    </li>
+                    <li>Test multiple USB-C cables (cable often fails before charger)</li>
+                    <li>Avoid cheap gas station cables - poor quality</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Third-party chargers that work:</strong><br>
+                    • Anker PowerPort Atom PD (30W+)<br>
+                    • UGREEN USB-C Charger (45W)<br>
+                    • Any USB-C PD charger 18W or higher<br>
+                    <br>
+                    Avoid chargers under 15W - Switch will charge extremely slowly or not at all during gameplay.
+                </div>
+
+                <p><strong>How to identify bad cable:</strong></p>
+                <ul>
+                    <li>Cable feels loose in Switch port</li>
+                    <li>Needs wiggling to start charging</li>
+                    <li>Visible damage: fraying, bent connector, exposed wires</li>
+                    <li>Works with phone but not Switch</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">4</span> Charge with Console Completely Off <span class="impact">Success: 25%</span></h3>
+                <p><strong>Why it works:</strong> Eliminates software interference, allows full power to battery, speeds up charging.</p>
+                
+                <p><strong>Proper shutdown method:</strong></p>
+                <ol>
+                    <li>Hold POWER button for 3 seconds</li>
+                    <li>Select "Power Options"</li>
+                    <li>Choose "Turn Off" (not Sleep Mode)</li>
+                    <li>Wait until screen completely black</li>
+                    <li>Plug in charger</li>
+                    <li>Leave for at least 30 minutes</li>
+                </ol>
+
+                <p><strong>For completely dead Switch:</strong></p>
+                <ol>
+                    <li>Plug in official charger</li>
+                    <li>Leave connected for 30-60 minutes minimum</li>
+                    <li>Don't press any buttons during this time</li>
+                    <li>Battery icon may not appear immediately (normal)</li>
+                    <li>After 30+ minutes, try pressing POWER button</li>
+                    <li>Should show low battery icon then boot up</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Deep discharge recovery:</strong> If battery completely drained to 0%, Switch might need 1-2 hours on charger before showing any signs of life. This is normal - be patient!
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">5</span> Update System Software <span class="impact">Success: 10%</span></h3>
+                <p><strong>Why it works:</strong> Software bugs can interfere with charging. Updates fix power management issues.</p>
+                
+                <p><strong>Requirements:</strong></p>
+                <ul>
+                    <li>Switch has at least 10% battery (charge first if needed)</li>
+                    <li>WiFi connection</li>
+                </ul>
+
+                <p><strong>Update steps:</strong></p>
+                <ol>
+                    <li>Home Menu → System Settings (gear icon)</li>
+                    <li>Scroll down to "System"</li>
+                    <li>System Update</li>
+                    <li>If update available, select "Update"</li>
+                    <li>Wait for download and installation (5-15 minutes)</li>
+                    <li>Switch restarts automatically</li>
+                    <li>Test charging after update</li>
+                </ol>
+
+                <p><strong>Current system version (January 2025):</strong> 18.0.0+</p>
+            </div>
+
+            <h2 id="dock-issues">Fix Dock Charging Problems</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">6</span> Test Direct Charging (Bypass Dock) <span class="impact">Diagnostic</span></h3>
+                <p><strong>Why it helps:</strong> Determines if problem is Switch or dock.</p>
+                
+                <p><strong>Test method:</strong></p>
+                <ol>
+                    <li>Remove Switch from dock</li>
+                    <li>Plug AC adapter directly into Switch (bypass dock entirely)</li>
+                    <li>Check if charging icon appears</li>
+                </ol>
+
+                <p><strong>Results:</strong></p>
+                <ul>
+                    <li><strong>If charges directly:</strong> Problem is dock (continue to dock solutions)</li>
+                    <li><strong>If doesn't charge directly:</strong> Problem is Switch itself (continue to hardware solutions)</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">7</span> Reset Dock <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it works:</strong> Clears dock's power state and connection glitches.</p>
+                
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Unplug AC adapter from dock</li>
+                    <li>Unplug HDMI cable from dock</li>
+                    <li>Remove Switch from dock</li>
+                    <li>Wait 30 seconds</li>
+                    <li>Plug AC adapter back into dock (wait 5 seconds)</li>
+                    <li>Plug HDMI back into dock</li>
+                    <li>Place Switch in dock</li>
+                    <li>Green light should appear on dock</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Dock LED indicators:</strong><br>
+                    • <strong>Green light:</strong> Dock powered and ready<br>
+                    • <strong>No light:</strong> Dock not receiving power or defective<br>
+                    • Green light should appear within 2-3 seconds of AC adapter connection
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">8</span> Clean Dock USB-C Connector <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Dust on dock's USB-C connector prevents good contact with Switch.</p>
+                
+                <p><strong>Cleaning method:</strong></p>
+                <ol>
+                    <li>Unplug dock completely</li>
+                    <li>Look at USB-C connector inside dock (where Switch slides in)</li>
+                    <li>Use compressed air to blow out dust</li>
+                    <li>Use soft cloth slightly dampened with isopropyl alcohol</li>
+                    <li>Gently wipe connector</li>
+                    <li>Let dry 10 minutes</li>
+                    <li>Test with Switch</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">9</span> Check Dock Alignment <span class="impact">Success: 10%</span></h3>
+                <p><strong>Why it matters:</strong> Improper alignment prevents USB-C connection.</p>
+                
+                <p><strong>Proper docking procedure:</strong></p>
+                <ol>
+                    <li>Hold Switch screen facing same direction as dock front</li>
+                    <li>Gently lower Switch straight down into dock</li>
+                    <li>Don't force or push - should slide easily</li>
+                    <li>USB-C connector on Switch should align perfectly with dock port</li>
+                    <li>Switch screen should be visible above dock</li>
+                </ol>
+
+                <p><strong>Common alignment issues:</strong></p>
+                <ul>
+                    <li>Switch tilted forward/backward in dock</li>
+                    <li>Dock connector bent or damaged</li>
+                    <li>Screen protector too thick (adds 1-2mm)</li>
+                    <li>Third-party case interfering with fit</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Thick cases:</strong> Remove bulky cases before docking. Many third-party cases don't fit properly in dock and prevent charging/video output.
+                </div>
+            </div>
+
+            <h2 id="hardware">Hardware Troubleshooting & Repair</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">10</span> Check for Bent USB-C Port Pins <span class="impact">Critical</span></h3>
+                <p><strong>Why it matters:</strong> Bent pins prevent proper connection and charging.</p>
+                
+                <p><strong>Inspection:</strong></p>
+                <ol>
+                    <li>Power off Switch</li>
+                    <li>Shine bright light into USB-C port (bottom of Switch)</li>
+                    <li>Use magnifying glass or zoom on phone camera</li>
+                    <li>Look at the small metal pins inside</li>
+                    <li>All pins should be straight and evenly spaced</li>
+                </ol>
+
+                <p><strong>Signs of damage:</strong></p>
+                <ul>
+                    <li>One or more pins bent to side</li>
+                    <li>Pins touching each other</li>
+                    <li>Missing pins</li>
+                    <li>Burn marks or discoloration</li>
+                </ul>
+
+                <p><strong>If pins bent:</strong></p>
+                <ul>
+                    <li><strong>DIY fix (risky):</strong> Use needle to VERY gently straighten pin - high risk of breaking it</li>
+                    <li><strong>Professional repair:</strong> $60-100 for USB-C port replacement</li>
+                    <li><strong>Nintendo official repair:</strong> $100-120</li>
+                </ul>
+
+                <div class="danger-box">
+                    <strong>🚨 Attempting DIY pin repair can permanently damage port!</strong> Only try if comfortable with delicate electronics work. Otherwise, send to professional repair.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">11</span> Battery Calibration <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Recalibrates battery percentage reporting, can fix false "not charging" readings.</p>
+                
+                <p><strong>Calibration process:</strong></p>
+                <ol>
+                    <li>Let Switch battery drain completely to 0% (console shuts off)</li>
+                    <li>Leave powered off for 3-4 hours (ensures complete discharge)</li>
+                    <li>Plug in official charger</li>
+                    <li>Charge to 100% without interruption (don't use during charging)</li>
+                    <li>Leave plugged in for extra 1-2 hours after reaching 100%</li>
+                    <li>Unplug and use normally</li>
+                </ol>
+
+                <p><strong>When to calibrate:</strong></p>
+                <ul>
+                    <li>Battery percentage jumps erratically (60% → 20% suddenly)</li>
+                    <li>Shuts off while showing 15%+ battery</li>
+                    <li>Charges to 100% in 30 minutes (unrealistic)</li>
+                    <li>After major system update</li>
+                </ul>
+
+                <p><strong>How often:</strong> Every 6-12 months for battery health maintenance</p>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">12</span> Test Battery Health <span class="impact">Diagnostic</span></h3>
+                <p><strong>Why it matters:</strong> Worn batteries can't hold charge and won't charge properly.</p>
+                
+                <p><strong>Signs of battery degradation:</strong></p>
+                <ul>
+                    <li>Switch is 3+ years old with heavy use</li>
+                    <li>Battery life dropped significantly (was 6 hours, now 2 hours)</li>
+                    <li>Takes longer to charge than before</li>
+                    <li>Gets very hot during charging</li>
+                    <li>Battery swollen (screen lifting, back bulging)</li>
+                </ul>
+
+                <p><strong>Normal battery lifespan:</strong></p>
+                <ul>
+                    <li>500-800 full charge cycles before noticeable degradation</li>
+                    <li>3-5 years typical lifespan with moderate use</li>
+                    <li>Heavy gamers: 2-3 years before replacement needed</li>
+                </ul>
+
+                <p><strong>Battery replacement cost:</strong></p>
+                <ul>
+                    <li><strong>Nintendo official:</strong> $100-120 (includes labor)</li>
+                    <li><strong>Third-party repair:</strong> $60-80</li>
+                    <li><strong>DIY kit:</strong> $30-40 (requires disassembly skills)</li>
+                </ul>
+
+                <div class="danger-box">
+                    <strong>🚨 Swollen battery:</strong> If Switch back or screen is bulging, STOP USING IMMEDIATELY. Swollen battery can explode or catch fire. Don't charge it - take to repair shop or Nintendo service center.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">13</span> Contact Nintendo Support / Professional Repair <span class="impact">Cost: $100-150</span></h3>
+                <p><strong>When to seek professional help:</strong></p>
+                <ul>
+                    <li>All DIY fixes failed</li>
+                    <li>Charging port physically damaged</li>
+                    <li>Battery swollen or damaged</li>
+                    <li>Under warranty (free repair)</li>
+                    <li>Don't want to risk making it worse</li>
+                </ul>
+
+                <p><strong>Nintendo Official Repair:</strong></p>
+                <ol>
+                    <li>Go to en-americas-support.nintendo.com</li>
+                    <li>Select "Hardware & Repairs"</li>
+                    <li>Choose "Nintendo Switch"</li>
+                    <li>Set Up a Repair</li>
+                    <li>Follow prompts to describe issue</li>
+                    <li>Nintendo emails prepaid shipping label</li>
+                    <li>Ship Switch to Nintendo</li>
+                    <li>Turnaround: 2-3 weeks</li>
+                </ol>
+
+                <p><strong>Warranty coverage:</strong></p>
+                <ul>
+                    <li><strong>Standard warranty:</strong> 1 year from purchase</li>
+                    <li><strong>Covers:</strong> Manufacturing defects, hardware failure</li>
+                    <li><strong>Doesn't cover:</strong> Physical damage, liquid damage, modifications</li>
+                    <li><strong>Proof of purchase required</strong></li>
+                </ul>
+
+                <p><strong>Out-of-warranty repair costs:</strong></p>
+                <ul>
+                    <li><strong>USB-C port replacement:</strong> $100-120</li>
+                    <li><strong>Battery replacement:</strong> $100-120</li>
+                    <li><strong>General service fee:</strong> $40-60</li>
+                </ul>
+
+                <p><strong>Third-party repair shops:</strong></p>
+                <ul>
+                    <li><strong>Pros:</strong> Often cheaper (30-50% less), faster turnaround</li>
+                    <li><strong>Cons:</strong> Voids Nintendo warranty, quality varies</li>
+                    <li><strong>Check reviews:</strong> Google, Yelp before using</li>
+                    <li><strong>uBreakiFix, CPR Cell Phone Repair:</strong> National chains with good reputation</li>
+                </ul>
+            </div>
+
+            <h2>Switch Model Differences</h2>
+
+            <h3>Original Switch (2017-2019)</h3>
+            <ul>
+                <li><strong>Battery:</strong> 4310mAh (2.5-6.5 hour playtime)</li>
+                <li><strong>Common issue:</strong> Charging port wears out faster (older USB-C design)</li>
+                <li><strong>Charging time:</strong> 3 hours (0-100%)</li>
+            </ul>
+
+            <h3>Switch V2 (2019+, Red Box)</h3>
+            <ul>
+                <li><strong>Battery:</strong> 4310mAh (4.5-9 hour playtime - more efficient processor)</li>
+                <li><strong>Improvement:</strong> Better battery life same capacity</li>
+                <li><strong>Charging time:</strong> 3 hours</li>
+            </ul>
+
+            <h3>Switch OLED (2021+)</h3>
+            <ul>
+                <li><strong>Battery:</strong> 4310mAh (4.5-9 hour playtime)</li>
+                <li><strong>Improvement:</strong> Better screen, same battery as V2</li>
+                <li><strong>Charging time:</strong> 3 hours</li>
+                <li><strong>Note:</strong> OLED screen uses slightly more power but offset by efficient processor</li>
+            </ul>
+
+            <h3>Switch Lite (2019+)</h3>
+            <ul>
+                <li><strong>Battery:</strong> 3570mAh (3-7 hour playtime)</li>
+                <li><strong>No dock:</strong> Direct USB-C charging only</li>
+                <li><strong>Charging time:</strong> 3 hours</li>
+                <li><strong>Common issue:</strong> More pocket lint in port (portable-only design)</li>
+            </ul>
+
+            <h2>Prevention: Keep Switch Charging Properly</h2>
+
+            <h3>1. Port Protection</h3>
+            <ul>
+                <li><strong>Use port cover:</strong> Silicone USB-C dust plug when not charging</li>
+                <li><strong>Clean every 2-3 months:</strong> Prevents lint buildup</li>
+                <li><strong>Gentle insertion:</strong> Don't force cable at angles</li>
+                <li><strong>Remove cable carefully:</strong> Pull straight out, not at angle</li>
+            </ul>
+
+            <h3>2. Cable & Charger Care</h3>
+            <ul>
+                <li><strong>Use official charger when possible:</strong> Guaranteed compatibility</li>
+                <li><strong>Quality third-party OK:</strong> USB-C PD certified, 18W+ minimum</li>
+                <li><strong>Avoid cheap cables:</strong> Can damage Switch or charge slowly</li>
+                <li><strong>Check cables regularly:</strong> Replace if frayed or loose</li>
+                <li><strong>Coil loosely:</strong> Don't wrap tightly around charger (damages wires)</li>
+            </ul>
+
+            <h3>3. Battery Health</h3>
+            <ul>
+                <li><strong>Avoid 0% discharge:</strong> Try to charge at 20-30%</li>
+                <li><strong>Don't leave at 100% plugged in:</strong> Unplug when fully charged</li>
+                <li><strong>Optimal charge range:</strong> 20-80% for longest battery life</li>
+                <li><strong>Cool environment:</strong> Don't charge in hot car or direct sunlight</li>
+                <li><strong>Calibrate every 6 months:</strong> Full 0-100% charge cycle</li>
+            </ul>
+
+            <h3>4. Dock Maintenance</h3>
+            <ul>
+                <li><strong>Clean dock USB-C connector:</strong> Every 3 months</li>
+                <li><strong>Proper ventilation:</strong> Don't cover dock vents</li>
+                <li><strong>Cable management:</strong> Don't bend dock cables too sharply</li>
+                <li><strong>Gentle docking:</strong> Lower Switch straight down, no forcing</li>
+            </ul>
+
+            <h2>Common Questions</h2>
+
+            <p><strong>Q: How long does it take to charge Nintendo Switch fully?</strong></p>
+            <p>A: About 3 hours from 0-100% when console is powered off using official AC adapter. Longer if playing while charging (4-5 hours).</p>
+
+            <p><strong>Q: Can I use my phone charger for Nintendo Switch?</strong></p>
+            <p>A: Yes, if it's USB-C with 18W or higher output. Phone chargers under 15W will charge very slowly or not at all during gameplay. Official Nintendo charger is 39W.</p>
+
+            <p><strong>Q: Why does my Switch charge slowly when I'm playing?</strong></p>
+            <p>A: Games use power while you play. Charger must power both gameplay AND charge battery. If charger too weak (under 18W) or running demanding game, battery charges slowly or even drains despite being plugged in.</p>
+
+            <p><strong>Q: My Switch won't charge past 80%. Why?</strong></p>
+            <p>A: Unusual but can indicate battery degradation or calibration issue. Try full battery calibration (drain to 0%, charge to 100% uninterrupted). If persists, battery may need replacement.</p>
+
+            <p><strong>Q: Is it bad to leave Switch on the charger overnight?</strong></p>
+            <p>A: Generally safe - Switch stops charging at 100%. However, long-term daily overnight charging can slightly reduce battery lifespan. Better to unplug when full if possible.</p>
+
+            <p><strong>Q: Can I charge Switch with portable power bank?</strong></p>
+            <p>A: Yes! Use USB-C power bank rated 18W+ (USB-C PD recommended). 20,000mAh power bank gives ~2 full charges. Great for travel.</p>
+
+            <p><strong>Q: My Switch charges but won't turn on. What's wrong?</strong></p>
+            <p>A: Different issue - likely system crash or hardware failure. Try holding POWER button for 15 seconds (hard reset). If still won't boot, needs Nintendo repair.</p>
+
+            <p><strong>Q: Does playing while charging damage the battery?</strong></p>
+            <p>A: No! Safe to play while charging. Battery and gaming circuits are separate. Some heat generation is normal.</p>
+
+            <p><strong>Q: How do I know if my Switch battery needs replacement?</strong></p>
+            <p>A: Signs include: only 1-2 hours playtime (was 4-6 hours when new), takes 6+ hours to charge, gets very hot, or battery percentage jumps erratically. Typical battery lifespan: 3-5 years.</p>
+
+            <p><strong>Q: Can I replace Switch battery myself?</strong></p>
+            <p>A: Possible but difficult. Requires tri-wing screwdriver, spudger tools, and careful disassembly. DIY kits cost $30-40. Risk of damage if inexperienced. Professional replacement safer: $60-100.</p>
+
+            <div class="success-box">
+                <h3>✓ Success Rates Summary:</h3>
+                <ul>
+                    <li><strong>Clean port + different cable:</strong> 45% fixed</li>
+                    <li><strong>Hard reset + system update:</strong> 25% fixed</li>
+                    <li><strong>Dock reset + direct charging:</strong> 20% fixed</li>
+                    <li><strong>Battery calibration:</strong> 15% fixed</li>
+                    <li><strong>Professional repair (damaged port):</strong> 90% success rate</li>
+                </ul>
+                <p><strong>Overall:</strong> 80% of Switch charging issues fixable at home without professional repair!</p>
+            </div>
+
+        </div>
+
+        <div class="related-problems">
+            <h3>🔗 Related Problems</h3>
+            <div class="related-list">
+                <a href="/all-problems/joy-con-drift/" class="related-item">
+                    <h4>Joy-Con Drift</h4>
+                    <p>Fix stick drift on Nintendo Switch controllers</p>
+                </a>
+                <a href="/all-problems/console-overheating/" class="related-item">
+                    <h4>Console Overheating</h4>
+                    <p>Cool down Nintendo Switch and prevent shutdowns</p>
+                </a>
+                <a href="/all-problems/phone-not-charging/" class="related-item">
+                    <h4>Phone Not Charging</h4>
+                    <p>Fix smartphone charging issues and battery problems</p>
+                </a>
+                <a href="/all-problems/ps5-controller-not-charging/" class="related-item">
+                    <h4>PS5 Controller Not Charging</h4>
+                    <p>Fix DualSense charging problems</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

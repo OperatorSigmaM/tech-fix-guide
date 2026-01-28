@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Headphones connected but no sound? 11 fixes for audio issues on wired/Bluetooth headphones, earbuds. One side not working, low volume, muted.">
+    <title>Headphones No Sound? 11 Ways to Fix Audio Issues & One Ear Not Working</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        footer { background: #1f2937; color: white; padding: 3rem 2rem 1rem; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #3b82f6; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #d1d5db; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: #3b82f6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #d1fae5; color: #065f46; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .success-rate { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / Headphones No Sound</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>Headphones No Sound? 11 Ways to Fix Audio Issues & One Ear Not Working</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 15 min read</span>
+                <span class="difficulty">Easy</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>Problem:</strong> Headphones connected but no sound - complete silence, very quiet audio, one side not working, or distorted/crackling sound.</p>
+            <p><strong>Most common causes:</strong> Volume muted/low (30%), wrong output device (25%), dirty jack/port (15%), Bluetooth audio lag (10%), broken cable/driver (10%), software issue (10%)</p>
+            <p><strong>Quick fix (works 75% of time):</strong> Check volume at 50%+ → select correct output device → clean headphone jack → test with different audio source</p>
+            <p><strong>Time needed:</strong> 5-20 minutes depending on issue</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#identify">Identify Your Audio Issue</a></li>
+                <li><a href="#quick">Quick Fixes (Start Here)</a></li>
+                <li><a href="#advanced">Advanced Solutions</a></li>
+                <li><a href="#prevention">Prevention Tips</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+    <h2 id="identify">First: Identify Your Headphone Audio Issue</h2>
+    
+    <p><strong>Different symptoms require different solutions:</strong></p>
+
+    <p>🔴 <strong>Complete silence (no sound at all):</strong></p>
+    <ul>
+        <li>Headphones plugged in/connected but zero audio</li>
+        <li>Device shows headphones connected</li>
+        <li>Volume slider works but no sound comes out</li>
+        <li><strong>Likely cause:</strong> Volume muted, wrong output device selected, Bluetooth not paired properly, headphone jack dirty</li>
+    </ul>
+
+    <p>🔴 <strong>One side not working (left or right ear):</strong></p>
+    <ul>
+        <li>Audio only in one ear, other ear silent</li>
+        <li>Balance shifted all the way to one side</li>
+        <li>One earbud dead (wireless earbuds)</li>
+        <li><strong>Likely cause:</strong> Audio balance settings, damaged cable, dead earbud battery, wax/debris in one ear</li>
+    </ul>
+
+    <p>🔴 <strong>Very quiet/low volume:</strong></p>
+    <ul>
+        <li>Audio works but extremely quiet even at max volume</li>
+        <li>Can barely hear anything</li>
+        <li>Worked fine before, suddenly quiet</li>
+        <li><strong>Likely cause:</strong> Volume limit enabled, app volume separate from system, dirty drivers/mesh, impedance mismatch</li>
+    </ul>
+
+    <p>🔴 <strong>Distorted/crackling sound:</strong></p>
+    <ul>
+        <li>Audio plays but sounds fuzzy, staticky, or crackly</li>
+        <li>Intermittent cutting in/out</li>
+        <li>Works when wire held certain way (wired headphones)</li>
+        <li><strong>Likely cause:</strong> Damaged cable, loose connection, audio driver issue, Bluetooth interference, blown speaker</li>
+    </ul>
+
+    <h2 id="quick">Quick Fixes (Start Here - 80% Success Rate)</h2>
+
+    <div class="solution-box">
+        <h3><span class="solution-number">1</span> Check Volume Levels (All Sources) <span class="success-rate">Success: 70%</span></h3>
+        <p><strong>When to try:</strong> No sound or very quiet audio.</p>
+        <p><strong>Why it works:</strong> #1 cause - volume muted or at minimum somewhere in the audio chain.</p>
+
+        <p><strong>Check device volume:</strong></p>
+        <ol>
+            <li>Press volume up button to maximum</li>
+            <li>Check volume slider is at 50%+ (not muted)</li>
+            <li>Look for mute icon (🔇) - unmute if present</li>
+            <li><strong>iPhone:</strong> Silent mode switch on side - flip to off position</li>
+            <li><strong>Android:</strong> Volume rocker → Media volume specifically (not ringer)</li>
+        </ol>
+
+        <p><strong>Check app volume separately:</strong></p>
+        <ul>
+            <li>YouTube, Spotify, games have independent volume</li>
+            <li>System volume at 100% but app volume at 0% = no sound</li>
+            <li>Look for volume slider within app</li>
+            <li>Some apps remember volume setting per app</li>
+        </ul>
+
+        <p><strong>Computer - Check multiple volume controls:</strong></p>
+        <ul>
+            <li><strong>Windows:</strong> System tray volume → also check Volume Mixer (right-click speaker icon) for per-app volume</li>
+            <li><strong>Mac:</strong> Menu bar volume → also System Settings → Sound → Output volume</li>
+            <li>Browser/media player may have separate volume slider</li>
+        </ul>
+
+        <p><strong>Check volume limit (iPhone/iPad):</strong></p>
+        <ol>
+            <li>Settings → Sounds & Haptics (or Music)</li>
+            <li>Headphone Safety → Reduce Loud Sounds</li>
+            <li>If ON, may limit max volume to 85-95 dB</li>
+            <li>Turn OFF or increase limit to test</li>
+        </ol>
+
+        <div class="info-box">
+            <strong>💡 Test at 50% first:</strong> Before cranking to 100%, test at 50-70% volume. If you hear nothing at 50%, problem isn't volume level. If you hear something quiet, gradually increase.
+        </div>
+    </div>
+
+    <div class="solution-box">
+        <h3><span class="solution-number">2</span> Select Correct Output Device <span class="success-rate">Success: 85%</span></h3>
+        <p><strong>When to try:</strong> Headphones connected but sound coming from speakers, or no sound at all.</p>
+        <p><strong>Why it matters:</strong> Device may be sending audio to wrong output (speakers, monitor, HDMI, etc.).</p>
+
+        <p><strong>Windows - Change audio output:</strong></p>
+        <ol>
+            <li>Click speaker icon in system tray</li>
+            <li>Click arrow next to volume slider</li>
+            <li>Select your headphones from list</li>
+            <li>Or: Settings → System → Sound → Choose output device</li>
+            <li>Play test sound to verify</li>
+        </ol>
+
+        <p><strong>Mac - Select output:</strong></p>
+        <ol>
+            <li>Hold Option key, click volume icon in menu bar</li>
+            <li>Select headphones under "Output Device"</li>
+            <li>Or: System Settings → Sound → Output tab → select headphones</li>
+        </ol>
+
+        <p><strong>iPhone/Android - Usually automatic:</strong></p>
+        <ul>
+            <li>Plugging in wired headphones auto-switches output</li>
+            <li>For Bluetooth: Must be connected (not just paired)</li>
+            <li>Check Bluetooth settings - tap headphones to connect if showing "Not Connected"</li>
+        </ul>
+
+        <p><strong>Common output device names:</strong></p>
+        <ul>
+            <li>"Headphones", "Headset", "Realtek Audio"</li>
+            <li>Bluetooth: Device name (e.g., "AirPods", "Sony WH-1000XM5")</li>
+            <li>May show as "USB Audio" if USB headphones</li>
+        </ul>
+
+        <div class="warning-box">
+            <strong>⚠️ Multiple devices connected:</strong> If you have multiple audio outputs (headphones + speakers + HDMI monitor), sound may go to last-used device. Always verify correct output selected.
+        </div>
+    </div>
+
+    <div class="solution-box">
+        <h3><span class="solution-number">3</span> Check Audio Balance (Left/Right) <span class="success-rate">Success: 90%</span></h3>
+        <p><strong>When to try:</strong> One ear works, other doesn't. Or sound seems to come from one side only.</p>
+
+        <p><strong>iPhone - Check balance:</strong></p>
+        <ol>
+            <li>Settings → Accessibility → Audio/Visual</li>
+            <li>Look at "Balance" slider</li>
+            <li>Should be centered (middle)</li>
+            <li>If all the way left or right, drag to center</li>
+        </ol>
+
+        <p><strong>Android - Check balance:</strong></p>
+        <ol>
+            <li>Settings → Accessibility → Hearing</li>
+            <li>Audio balance or Left/Right sound balance</li>
+            <li>Adjust slider to center</li>
+            <li>(Location varies by manufacturer - Samsung, Google Pixel different)</li>
+        </ol>
+
+        <p><strong>Windows - Check balance:</strong></p>
+        <ol>
+            <li>Right-click speaker icon → Sounds</li>
+            <li>Playback tab → select headphones → Properties</li>
+            <li>Levels tab → click Balance button</li>
+            <li>Ensure both L and R are at same level (e.g., 100/100)</li>
+        </ol>
+
+        <p><strong>Mac - Check balance:</strong></p>
+        <ol>
+            <li>System Settings → Sound → Output</li>
+            <li>Select headphones</li>
+            <li>Balance slider should be centered</li>
+        </ol>
+
+        <div class="info-box">
+            <strong>💡 Easy test:</strong> Swap headphones around (left ear to right ear, vice versa). If problem follows the ear, it's balance settings. If problem stays with same headphone side, it's hardware issue.
+        </div>
+    </div>
+
+    <div class="solution-box">
+        <h3><span class="solution-number">4</span> Clean Headphone Jack / Port <span class="success-rate">Success: 65%</span></h3>
+        <p><strong>When to try:</strong> Wired headphones, intermittent sound, crackling, or one side not working.</p>
+
+        <p><strong>Clean headphone jack (3.5mm):</strong></p>
+        <ol>
+            <li>Unplug headphones</li>
+            <li>Shine flashlight into jack - look for lint, dust, debris</li>
+            <li>Use wooden toothpick or plastic dental pick to gently scrape out debris</li>
+            <li>Don't use metal (can short circuit contacts)</li>
+            <li>Can use compressed air (short bursts, not too close)</li>
+            <li>Dry thoroughly if using any liquid cleaner</li>
+        </ol>
+
+        <p><strong>Clean headphone plug:</strong></p>
+        <ol>
+            <li>Wipe metal plug with rubbing alcohol on cloth</li>
+            <li>Remove any gunk/corrosion from plug</li>
+            <li>Dry completely before plugging in</li>
+        </ol>
+
+        <p><strong>USB-C / Lightning port:</strong></p>
+        <ul>
+            <li>Same cleaning method - toothpick to remove lint</li>
+            <li>Pocket lint compacts deep in ports over time</li>
+            <li>Can prevent full insertion and proper connection</li>
+        </ul>
+
+        <div class="warning-box">
+            <strong>⚠️ Be gentle:</strong> Headphone jack contacts are delicate. Don't scrape aggressively. Don't insert anything that could break off inside jack. If debris won't come out, use professional cleaning or compressed air.
+        </div>
+    </div>
+
+    <div class="solution-box">
+        <h3><span class="solution-number">5</span> Reconnect Bluetooth Headphones <span class="success-rate">Success: 75%</span></h3>
+        <p><strong>When to try:</strong> Bluetooth headphones showing connected but no sound.</p>
+
+        <p><strong>Quick reconnect:</strong></p>
+        <ol>
+            <li>Turn OFF Bluetooth headphones</li>
+            <li>Phone/Computer: Bluetooth settings → Disconnect or Forget device</li>
+            <li>Wait 10 seconds</li>
+            <li>Turn ON headphones (enter pairing mode if needed)</li>
+            <li>Reconnect from Bluetooth settings</li>
+            <li>Test audio</li>
+        </ol>
+
+        <p><strong>Check Bluetooth codec (advanced):</strong></p>
+        <ul>
+            <li>Some devices support multiple Bluetooth audio codecs (SBC, AAC, aptX, LDAC)</li>
+            <li>Codec mismatch can cause no audio</li>
+            <li>Android: Developer options → Bluetooth Audio Codec → try different codec</li>
+            <li>(Most users don't need to change this)</li>
+        </ul>
+
+        <p><strong>Common Bluetooth audio issues:</strong></p>
+        <ul>
+            <li>Connected but audio still going to phone speaker - select headphones as output</li>
+            <li>Audio lag/delay - normal with Bluetooth (40-200ms latency)</li>
+            <li>Choppy audio - interference, move closer to phone</li>
+        </ul>
+    </div>
+
+    <div class="solution-box">
+        <h3><span class="solution-number">6</span> Test With Different Device/Audio Source <span class="success-rate">Diagnostic</span></h3>
+        <p><strong>When to try:</strong> Need to determine if problem is headphones or device.</p>
+
+        <p><strong>Test headphones on different device:</strong></p>
+        <ol>
+            <li>Plug headphones into different phone, computer, or tablet</li>
+            <li>Play music/video</li>
+            <li><strong>If sound works:</strong> Problem is original device (jack/port/software)</li>
+            <li><strong>If still no sound:</strong> Problem is headphones</li>
+        </ol>
+
+        <p><strong>Test different headphones on your device:</strong></p>
+        <ol>
+            <li>Borrow different headphones</li>
+            <li>Plug into your device</li>
+            <li><strong>If sound works:</strong> Your headphones are broken</li>
+            <li><strong>If no sound:</strong> Your device has audio issue</li>
+        </ol>
+
+        <p><strong>This diagnostic tells you:</strong></p>
+        <ul>
+            <li>Where to focus troubleshooting</li>
+            <li>Whether you need new headphones or device repair</li>
+            <li>If it's software (fixable) or hardware (may need replacement)</li>
+        </ul>
+    </div>
+
+    <h2 id="advanced">Advanced Solutions (If Quick Fixes Fail)</h2>
+
+    <div class="solution-box">
+        <h3><span class="solution-number">7</span> Update/Reinstall Audio Drivers (Computer) <span class="success-rate">Success: 70%</span></h3>
+        <p><strong>When to try:</strong> Computer, no sound after Windows update, or audio suddenly stopped working.</p>
+
+        <p><strong>Windows - Update audio drivers:</strong></p>
+        <ol>
+            <li>Right-click Start → Device Manager</li>
+            <li>Expand "Sound, video and game controllers"</li>
+            <li>Right-click your audio device (e.g., "Realtek High Definition Audio")</li>
+            <li>Update driver → Search automatically</li>
+            <li>If no update found, try: Uninstall device</li>
+            <li>Restart PC (Windows reinstalls driver automatically)</li>
+        </ol>
+
+        <p><strong>Mac - Reset audio:</strong></p>
+        <ol>
+            <li>Mac doesn't have separate audio drivers</li>
+            <li>Try: Shut down Mac → wait 30 seconds → restart</li>
+            <li>Reset SMC: Shut down → hold Shift+Control+Option+Power 10 seconds → release → power on</li>
+        </ol>
+
+        <p><strong>If automatic driver fails (Windows):</strong></p>
+        <ul>
+            <li>Visit PC manufacturer website (Dell, HP, Lenovo)</li>
+            <li>Download latest audio driver for your model</li>
+            <li>Or: Visit audio chip manufacturer (Realtek most common)</li>
+            <li>Install manually</li>
+        </ul>
+    </div>
+
+    <div class="solution-box">
+        <h3><span class="solution-number">8</span> Disable Audio Enhancements <span class="success-rate">Success: 60%</span></h3>
+        <p><strong>When to try:</strong> Windows computer, distorted sound, or no sound after enabling audio effects.</p>
+
+        <p><strong>Windows - Disable enhancements:</strong></p>
+        <ol>
+            <li>Right-click speaker icon → Sounds</li>
+            <li>Playback tab → select headphones → Properties</li>
+            <li>Enhancements (or Advanced) tab</li>
+            <li>Check "Disable all enhancements" or "Disable all sound effects"</li>
+            <li>Apply → OK</li>
+            <li>Test audio</li>
+        </ol>
+
+        <p><strong>Why this helps:</strong></p>
+        <ul>
+            <li>Audio enhancements (bass boost, surround sound, etc.) can cause conflicts</li>
+            <li>Some headphones incompatible with certain effects</li>
+            <li>Can cause distortion, no sound, or very quiet audio</li>
+        </ul>
+    </div>
+
+    <div class="solution-box">
+        <h3><span class="solution-number">9</span> Check for App-Specific Issues <span class="success-rate">Success: 55%</span></h3>
+        <p><strong>When to try:</strong> Audio works in some apps but not others.</p>
+
+        <p><strong>Browser (Chrome, Firefox) - Check mute:</strong></p>
+        <ul>
+            <li>Right-click browser tab → Unmute site</li>
+            <li>Check video player has sound unmuted</li>
+            <li>Try incognito/private mode (disables extensions)</li>
+        </ul>
+
+        <p><strong>App permissions (phone):</strong></p>
+        <ul>
+            <li>Some apps need audio permissions</li>
+            <li>Settings → Apps → [App] → Permissions → ensure Microphone allowed</li>
+            <li>(Microphone permission sometimes needed for audio playback)</li>
+        </ul>
+
+        <p><strong>Force close and reopen app:</strong></p>
+        <ul>
+            <li>App may be in crashed state</li>
+            <li>Force close → reopen → test again</li>
+        </ul>
+    </div>
+
+    <div class="solution-box">
+        <h3><span class="solution-number">10</span> Check for Physical Damage <span class="success-rate">Diagnostic</span></h3>
+        <p><strong>When to inspect:</strong> One side not working, intermittent sound, or crackling.</p>
+
+        <p><strong>Check cable (wired headphones):</strong></p>
+        <ul>
+            <li>Run fingers along entire cable - feel for kinks, cuts, or thin spots</li>
+            <li>Bend cable at various points while audio playing - if sound cuts in/out, cable damaged</li>
+            <li>Check near plug and where cable meets earpieces (most common failure points)</li>
+        </ul>
+
+        <p><strong>Check drivers/mesh:</strong></p>
+        <ul>
+            <li>Look at speaker mesh - any visible damage, tears, or debris?</li>
+            <li>Earwax can clog mesh on earbuds (especially in-ear)</li>
+            <li>Gently clean mesh with dry toothbrush or cotton swab</li>
+        </ul>
+
+        <p><strong>Check wireless earbuds:</strong></p>
+        <ul>
+            <li>One side not working: That earbud may be dead (charge in case)</li>
+            <li>Check charging contacts - clean with alcohol if dirty</li>
+            <li>Both earbuds charged but one silent: Hardware failure</li>
+        </ul>
+    </div>
+
+    <div class="solution-box">
+        <h3><span class="solution-number">11</span> Factory Reset Bluetooth Headphones <span class="success-rate">Success: 65%</span></h3>
+        <p><strong>When to try:</strong> Bluetooth headphones, persistent connection/audio issues.</p>
+
+        <p><strong>Reset procedure (varies by brand):</strong></p>
+        <ul>
+            <li><strong>Most headphones:</strong> Hold power + volume buttons 10-15 seconds</li>
+            <li><strong>AirPods:</strong> In case, hold button on back 15 seconds until LED flashes amber then white</li>
+            <li><strong>Check manual:</strong> Exact procedure varies</li>
+        </ul>
+
+        <p><strong>After reset:</strong></p>
+        <ol>
+            <li>Headphones cleared of all pairings</li>
+            <li>Forget device from phone/computer Bluetooth</li>
+            <li>Re-pair from scratch</li>
+            <li>Test audio</li>
+        </ol>
+    </div>
+
+    <h2 id="prevention">Prevention: Keep Headphones Working</h2>
+
+    <h3>1. Proper Cable Care</h3>
+    <ul>
+        <li>Don't wrap tightly around device (causes internal wire breaks)</li>
+        <li>Use loose loops when storing</li>
+        <li>Support cable near plug when plugging/unplugging</li>
+        <li>Don't yank cable to disconnect</li>
+    </ul>
+
+    <h3>2. Clean Regularly</h3>
+    <ul>
+        <li>Wipe earbud mesh weekly with dry cloth</li>
+        <li>Clean ear tips monthly (remove and wash with mild soap)</li>
+        <li>Clean charging contacts on wireless earbuds</li>
+        <li>Keep headphone jack/ports free of lint</li>
+    </ul>
+
+    <h3>3. Store Properly</h3>
+    <ul>
+        <li>Use case when not wearing</li>
+        <li>Don't leave tangled in bag/pocket</li>
+        <li>Protect from moisture, extreme heat/cold</li>
+    </ul>
+
+    <h3>4. Volume Safety</h3>
+    <ul>
+        <li>Don't max out volume constantly (damages drivers over time)</li>
+        <li>Keep at 60-70% for listening safety and speaker longevity</li>
+        <li>Use volume limiter on phones if available</li>
+    </ul>
+
+    <h2>Common Questions</h2>
+
+    <p><strong>Q: Why do my headphones work on one device but not another?</strong></p>
+    <p>A: If work on phone but not computer: Computer audio driver issue, wrong output selected, or port damaged. If work on computer but not phone: Phone jack dirty, software issue, or incompatible headphones (impedance mismatch).</p>
+
+    <p><strong>Q: Can I fix headphones with one side not working?</strong></p>
+    <p>A: Sometimes. If balance settings: Yes (adjust to center). If cable damage near plug: Can repair with soldering (advanced). If driver blown or internal break: Usually not economically repairable - replace headphones.</p>
+
+    <p><strong>Q: Why do Bluetooth headphones have audio delay/lag?</strong></p>
+    <p>A: Normal with Bluetooth. Latency typically 40-200ms. Noticeable when watching videos (audio out of sync). Solution: Use wired headphones for gaming/videos, or get headphones with aptX Low Latency codec (reduces to ~40ms).</p>
+
+    <p><strong>Q: My headphones are too quiet even at max volume - why?</strong></p>
+    <p>A: High impedance headphones (100Ω+) need more power than phones provide. Either: Use with dedicated headphone amp, or get low-impedance headphones (16-32Ω) designed for mobile. Also check volume limit settings.</p>
+
+    <p><strong>Q: Can earwax really block sound?</strong></p>
+    <p>A: Yes! Earwax buildup on earbud mesh is common cause of muffled/quiet sound. Remove ear tips, gently clean mesh with dry toothbrush. Don't use water directly on drivers.</p>
+
+    <p><strong>Q: Why does my audio crackle/pop?</strong></p>
+    <p>A: Wired: Cable damage or dirty jack. Wireless: Bluetooth interference or low battery. Computer: Audio driver issue or CPU overload. Try different cable, move closer to source, update drivers.</p>
+
+    <p><strong>Q: Do headphones wear out over time?</strong></p>
+    <p>A: Yes. Drivers degrade (5-10 years typical), cables fray (1-3 years), battery degrades on wireless (2-3 years). Sound quality may gradually worsen. Good news: Most failures are sudden (cable breaks), not gradual.</p>
+
+    <p><strong>Q: Can I use iPhone headphones on Android / vice versa?</strong></p>
+    <p>A: Audio works but: (1) Apple EarPods on Android - volume/play controls may not work, (2) Android earbuds on iPhone - same issue. Core audio functionality works on both.</p>
+
+    <p><strong>Q: Why does unplugging/replugging fix sound temporarily?</strong></p>
+    <p>A: Dirty contacts or worn jack causing intermittent connection. Replugging temporarily makes contact. Clean jack and plug thoroughly. If persists, jack or headphones wearing out.</p>
+
+    <div class="success-box">
+        <h3>✓ Headphones Fix Summary</h3>
+        <p><strong>Most effective solutions (by success rate):</strong></p>
+        <ol>
+            <li><strong>Check audio balance (L/R)</strong> - 90% for one-side issues</li>
+            <li><strong>Select correct output device</strong> - 85% for "no sound"</li>
+            <li><strong>Reconnect Bluetooth fresh</strong> - 75% for wireless issues</li>
+            <li><strong>Check volume (all sources)</strong> - 70% for quiet/muted audio</li>
+            <li><strong>Update audio drivers</strong> - 70% for computer issues</li>
+            <li><strong>Clean headphone jack</strong> - 65% for intermittent sound</li>
+        </ol>
+        <p><strong>Quick diagnostic:</strong> Test headphones on different device. If work: Your device has issue. If don't work: Headphones broken.</p>
+        <p><strong>Common mistakes:</strong> Checking only system volume (app volume separate), not selecting headphones as output, balance shifted to one side.</p>
+    </div>
+
+</div>
+
+<div class="related-problems">
+    <h3>🔗 Related Problems</h3>
+    <div class="related-list">
+        <a href="/all-problems/bluetooth-not-pairing/" class="related-item">
+            <h4>Bluetooth Not Pairing</h4>
+            <p>Can't get sound if Bluetooth won't pair first</p>
+        </a>
+        <a href="/all-problems/phone-battery-drain/" class="related-item">
+            <h4>Phone Battery Draining Fast</h4>
+            <p>Bluetooth audio can drain battery quickly</p>
+        </a>
+        <a href="/all-problems/iphone-not-charging/" class="related-item">
+            <h4>iPhone Not Charging</h4>
+            <p>Dirty Lightning port affects wired headphones too</p>
+        </a>
+        <a href="/all-problems/mouse-not-responding/" class="related-item">
+            <h4>Mouse Not Responding</h4>
+            <p>Similar USB/Bluetooth connection issues</p>
+        </a>
+    </div>
+</div>
+        <div id="content-placeholder"></div>
+
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

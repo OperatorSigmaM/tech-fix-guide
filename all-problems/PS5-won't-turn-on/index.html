@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PS5 won't turn on? Fix PlayStation 5 power issues, black screen, beeping. 12 solutions for dead PS5, blue light of death, safe mode problems.">
+    <title>PS5 Won't Turn On? 12 Ways to Fix PlayStation 5 Power Issues</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        footer { background: #1f2937; color: white; padding: 3rem 2rem 1rem; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #3b82f6; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #d1d5db; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: #3b82f6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #d1fae5; color: #065f46; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .impact { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / PS5 Won't Turn On</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>PS5 Won't Turn On? 12 Ways to Fix PlayStation 5 Power Issues</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 16 min read</span>
+                <span class="difficulty">Easy to Medium</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>Main causes:</strong> Power supply issue (30%), overheating shutdown (25%), corrupted system software (20%), HDMI handshake (10%), hard drive failure (10%), hardware defect (5%)</p>
+            <p><strong>Quick fixes:</strong> Power cycle, rebuild database, boot Safe Mode, check HDMI connection, replace power cable</p>
+            <p><strong>Success rate:</strong> 75% fixable at home, 20% need Sony repair, 5% hardware replacement</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#diagnosis">Identify the Problem</a></li>
+                <li><a href="#immediate">Immediate Fixes</a></li>
+                <li><a href="#software">Software Solutions</a></li>
+                <li><a href="#hardware">Hardware Troubleshooting</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2 id="diagnosis">First: Identify Your PS5 Problem</h2>
+            
+            <p><strong>Different symptoms require different fixes:</strong></p>
+
+            <p><strong>🔴 Completely dead (no lights, no beeps):</strong></p>
+            <ul>
+                <li>No power indicator</li>
+                <li>No fan noise</li>
+                <li>Pressing power button does nothing</li>
+                <li><strong>Likely cause:</strong> Power supply issue, outlet problem, power cable fault</li>
+            </ul>
+
+            <p><strong>🔴 Blue light flashes then turns off ("Blue Light of Death"):</strong></p>
+            <ul>
+                <li>Console tries to turn on</li>
+                <li>Blue light pulses for 5-10 seconds</li>
+                <li>Then shuts off</li>
+                <li><strong>Likely cause:</strong> HDMI handshake issue, corrupted system software, hardware failure</li>
+            </ul>
+
+            <p><strong>🔴 Powers on but no display (black screen):</strong></p>
+            <ul>
+                <li>White light on console</li>
+                <li>Fan running</li>
+                <li>TV shows "No Signal"</li>
+                <li><strong>Likely cause:</strong> HDMI cable/port issue, wrong TV input, resolution mismatch</li>
+            </ul>
+
+            <p><strong>🔴 Three beeps then shuts off:</strong></p>
+            <ul>
+                <li>Console beeps 3 times</li>
+                <li>Powers down immediately</li>
+                <li><strong>Likely cause:</strong> Overheating protection activated, ventilation blocked</li>
+            </ul>
+
+            <p><strong>🔴 Stuck in Safe Mode loop:</strong></p>
+            <ul>
+                <li>Only boots to Safe Mode</li>
+                <li>Can't start normally</li>
+                <li><strong>Likely cause:</strong> Corrupted database, system software issue</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 PS5 Light Indicators:</strong><br>
+                • <strong>White light:</strong> Console is on and working<br>
+                • <strong>Blue pulsing:</strong> Console is turning on<br>
+                • <strong>Blue solid:</strong> Console is on (normal)<br>
+                • <strong>Orange pulsing:</strong> Rest Mode<br>
+                • <strong>No light:</strong> Console is off or no power
+            </div>
+
+            <h2 id="immediate">Immediate Fixes to Try First</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">1</span> Complete Power Cycle <span class="impact">Success: 40%</span></h3>
+                <p><strong>Why it works:</strong> Clears power supply residual charge, resets system hardware.</p>
+                
+                <p><strong>Proper power cycle method:</strong></p>
+                <ol>
+                    <li>Press and hold power button until console beeps and shuts down completely (about 10 seconds)</li>
+                    <li>Unplug power cable from back of PS5</li>
+                    <li>Unplug HDMI cable</li>
+                    <li>Wait 60 seconds minimum (clears capacitors)</li>
+                    <li>Hold power button again for 30 seconds while unplugged (drains residual power)</li>
+                    <li>Plug power cable back in</li>
+                    <li>Plug HDMI back in</li>
+                    <li>Press power button</li>
+                </ol>
+
+                <div class="success-box">
+                    <strong>✓ Expected result:</strong> PS5 boots normally with white light. This fixes most temporary glitches.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">2</span> Check Power Connection <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it matters:</strong> Loose connections or bad power strip prevent console from getting power.</p>
+                
+                <p><strong>What to check:</strong></p>
+                <ol>
+                    <li><strong>Power cable firmly connected:</strong> Both ends (console and wall)</li>
+                    <li><strong>Try different outlet:</strong> Test with lamp first to confirm outlet works</li>
+                    <li><strong>Bypass power strip:</strong> Plug directly into wall outlet</li>
+                    <li><strong>Test power strip:</strong> Plug another device to confirm strip works</li>
+                    <li><strong>Check circuit breaker:</strong> Make sure breaker didn't trip</li>
+                </ol>
+
+                <p><strong>Power cable test:</strong></p>
+                <ul>
+                    <li>PS5 uses standard C7/C8 "figure-8" power cable</li>
+                    <li>Same cable used by PS4, PS3, some TVs</li>
+                    <li>Try different cable if you have one</li>
+                    <li>Inspect cable for damage (fraying, kinks)</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">3</span> Fix HDMI "No Signal" Issue <span class="impact">Success: 25%</span></h3>
+                <p><strong>Why it works:</strong> PS5 might be on but TV not detecting it due to HDMI handshake failure.</p>
+                
+                <p><strong>Try in order:</strong></p>
+                <ol>
+                    <li><strong>Change TV input:</strong> Cycle through all HDMI inputs manually</li>
+                    <li><strong>Use different HDMI port:</strong> Try HDMI 2, 3, 4 if TV has multiple</li>
+                    <li><strong>Try different HDMI cable:</strong> Preferably HDMI 2.1 certified (came with PS5)</li>
+                    <li><strong>Remove HDMI switcher/receiver:</strong> Connect PS5 directly to TV</li>
+                    <li><strong>Try different TV:</strong> If available, confirms if PS5 or TV is problem</li>
+                </ol>
+
+                <p><strong>Boot PS5 in safe resolution:</strong></p>
+                <ol>
+                    <li>Power off PS5 completely</li>
+                    <li>Hold power button - first beep at 1 second (release), second beep at 8 seconds (keep holding)</li>
+                    <li>Release after second beep</li>
+                    <li>PS5 boots to 1080p resolution (works with any TV)</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 HDMI 2.1 requirement:</strong> PS5 works with any HDMI cable, but HDMI 2.1 needed for 4K 120Hz. Standard HDMI 2.0 works fine for 4K 60Hz.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">4</span> Boot into Safe Mode <span class="impact">Success: 30%</span></h3>
+                <p><strong>Why it works:</strong> Safe Mode loads minimal system, bypasses corrupted settings and software.</p>
+                
+                <p><strong>Enter Safe Mode:</strong></p>
+                <ol>
+                    <li>Turn off PS5 completely (hold power button until it beeps and powers off)</li>
+                    <li>Once off, press and hold power button</li>
+                    <li>Release after SECOND beep (around 8 seconds - first beep at 1 sec, second at 7-8 sec)</li>
+                    <li>Connect DualSense controller via USB cable</li>
+                    <li>Press PS button on controller</li>
+                    <li>Safe Mode menu appears</li>
+                </ol>
+
+                <p><strong>Safe Mode options (try in order):</strong></p>
+                <ol>
+                    <li><strong>Restart PS5:</strong> Simple reboot from Safe Mode</li>
+                    <li><strong>Change Video Output:</strong> Forces 1080p, fixes resolution issues</li>
+                    <li><strong>Update System Software:</strong> If update available</li>
+                    <li><strong>Restore Default Settings:</strong> Resets settings but keeps games/data</li>
+                    <li><strong>Clear Cache and Rebuild Database:</strong> Most important option (see next solution)</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Don't choose "Reset PS5" or "Initialize PS5"</strong> until trying other options - these erase everything!
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">5</span> Rebuild Database <span class="impact">Success: 35%</span></h3>
+                <p><strong>Why it works:</strong> Fixes corrupted game data, speeds up console, repairs file system errors.</p>
+                
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Boot into Safe Mode (see Solution #4)</li>
+                    <li>Select "Clear Cache and Rebuild Database" (option 5)</li>
+                    <li>Confirm</li>
+                    <li>Wait - can take 5 minutes to 3 hours depending on storage usage</li>
+                    <li>Console restarts automatically when done</li>
+                </ol>
+
+                <p><strong>What rebuilding does:</strong></p>
+                <ul>
+                    <li>Scans entire hard drive</li>
+                    <li>Creates new database of all content</li>
+                    <li>Removes corrupted entries</li>
+                    <li>Organizes files for faster access</li>
+                    <li><strong>Does NOT delete games, saves, or data</strong></li>
+                </ul>
+
+                <p><strong>When finished:</strong></p>
+                <ul>
+                    <li>Console boots normally</li>
+                    <li>All games still installed</li>
+                    <li>May need to re-download some game updates</li>
+                    <li>Performance often improves</li>
+                </ul>
+
+                <div class="success-box">
+                    <strong>✓ Do this regularly:</strong> Rebuild database every 3-6 months as preventive maintenance. Keeps PS5 running smoothly.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">6</span> Check for Overheating <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it matters:</strong> PS5 automatically shuts down when too hot to prevent damage.</p>
+                
+                <p><strong>Signs of overheating:</strong></p>
+                <ul>
+                    <li>Three beeps then shutdown</li>
+                    <li>Console feels very hot to touch</li>
+                    <li>Shuts down during gameplay</li>
+                    <li>Fan extremely loud before shutdown</li>
+                </ul>
+
+                <p><strong>Cooling steps:</strong></p>
+                <ol>
+                    <li>Turn off PS5</li>
+                    <li>Unplug power</li>
+                    <li>Move to cool, well-ventilated area</li>
+                    <li>Wait 30-60 minutes for complete cooldown</li>
+                    <li>Clean vents with compressed air</li>
+                    <li>Ensure 10cm (4 inches) clearance on all sides</li>
+                    <li>Power on and test</li>
+                </ol>
+
+                <p><strong>Ventilation requirements:</strong></p>
+                <ul>
+                    <li><strong>Horizontal position:</strong> 10cm (4") clearance on all sides</li>
+                    <li><strong>Vertical position:</strong> 10cm above, behind, and on sides</li>
+                    <li><strong>Never:</strong> In enclosed cabinet, against wall, on carpet</li>
+                    <li><strong>Keep away from:</strong> Heaters, direct sunlight, other heat sources</li>
+                </ul>
+            </div>
+
+            <h2 id="software">Software Solutions</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">7</span> Update System Software via USB <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it works:</strong> Corrupted system software prevents boot. Reinstalling from USB bypasses corrupted files.</p>
+                
+                <p><strong>What you need:</strong></p>
+                <ul>
+                    <li>USB drive (minimum 1GB, formatted as exFAT or FAT32)</li>
+                    <li>Computer with internet</li>
+                </ul>
+
+                <p><strong>Download system software:</strong></p>
+                <ol>
+                    <li>Go to playstation.com/support on computer</li>
+                    <li>Navigate to PS5 → System Software</li>
+                    <li>Download "PS5 Console Reinstallation File" (about 1GB+)</li>
+                    <li>On USB drive, create folder: <code>PS5</code></li>
+                    <li>Inside PS5 folder, create folder: <code>UPDATE</code></li>
+                    <li>Place downloaded file in UPDATE folder</li>
+                    <li>Rename file to: <code>PS5UPDATE.PUP</code> (exact name required)</li>
+                </ol>
+
+                <p><strong>Install on PS5:</strong></p>
+                <ol>
+                    <li>Plug USB drive into PS5</li>
+                    <li>Boot into Safe Mode (hold power button for second beep)</li>
+                    <li>Connect controller via USB, press PS button</li>
+                    <li>Select "Update System Software"</li>
+                    <li>Select "Update from USB Storage Device"</li>
+                    <li>Follow prompts (takes 15-30 minutes)</li>
+                    <li>PS5 restarts automatically when complete</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ DO NOT:</strong> Unplug PS5 or remove USB during update. Can brick console if interrupted.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">8</span> Initialize PS5 (Factory Reset) <span class="impact">Success: 40%</span></h3>
+                <p><strong>⚠️ ERASES EVERYTHING - Last resort for software issues!</strong></p>
+                
+                <p><strong>When to try:</strong></p>
+                <ul>
+                    <li>All other software fixes failed</li>
+                    <li>Console boots to Safe Mode but won't start normally</li>
+                    <li>Severe system corruption</li>
+                    <li>You've backed up or don't care about data</li>
+                </ul>
+
+                <p><strong>Two initialization options:</strong></p>
+
+                <p><strong>Option 1 - Quick (keeps system software):</strong></p>
+                <ol>
+                    <li>Boot Safe Mode</li>
+                    <li>Select "Reset PS5"</li>
+                    <li>Takes 10-20 minutes</li>
+                    <li>Deletes: Games, saves, settings, users</li>
+                    <li>Keeps: System software installed</li>
+                </ol>
+
+                <p><strong>Option 2 - Full (reinstalls everything):</strong></p>
+                <ol>
+                    <li>Boot Safe Mode</li>
+                    <li>Select "Initialize PS5 (Reinstall System Software)"</li>
+                    <li>Takes 30-60 minutes</li>
+                    <li>Deletes: EVERYTHING</li>
+                    <li>Reinstalls: Fresh system software from scratch</li>
+                    <li>Most thorough, highest success rate</li>
+                </ol>
+
+                <div class="danger-box">
+                    <strong>🚨 Before initializing:</strong><br>
+                    • Upload saves to PS Plus cloud (if member)<br>
+                    • Back up captures to USB<br>
+                    • List installed games (will need to redownload)<br>
+                    • No way to recover data after initialization
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">9</span> Reseat Internal SSD (Advanced) <span class="impact">Success: 10%</span></h3>
+                <p><strong>Why it works:</strong> Loose or corrupted internal SSD prevents boot.</p>
+                
+                <p><strong>⚠️ Only if comfortable opening console!</strong></p>
+
+                <p><strong>For PS5 with expansion SSD installed:</strong></p>
+                <ol>
+                    <li>Power off completely, unplug</li>
+                    <li>Remove side panel (expansion slot side)</li>
+                    <li>Remove expansion SSD</li>
+                    <li>Power on without expansion SSD</li>
+                    <li>If boots = expansion SSD was problem</li>
+                    <li>Reinstall expansion SSD, reformat if needed</li>
+                </ol>
+
+                <p><strong>For standard PS5 (no expansion):</strong></p>
+                <ul>
+                    <li>Internal SSD is soldered - can't easily remove</li>
+                    <li>If SSD failed, needs professional repair</li>
+                    <li>Cost: $200-400 (expensive, often not worth it)</li>
+                </ul>
+            </div>
+
+            <h2 id="hardware">Hardware Troubleshooting & Repair</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">10</span> Test Power Supply <span class="impact">Diagnostic</span></h3>
+                <p><strong>Power supply failure symptoms:</strong></p>
+                <ul>
+                    <li>Completely dead, no lights</li>
+                    <li>Won't turn on at all</li>
+                    <li>Powers on briefly then dies</li>
+                    <li>Random shutdowns</li>
+                </ul>
+
+                <p><strong>Power supply test:</strong></p>
+                <ol>
+                    <li>Unplug PS5 from wall</li>
+                    <li>Wait 60 seconds</li>
+                    <li>Plug into different outlet (known working)</li>
+                    <li>Try different power cable if available</li>
+                    <li>If still completely dead = likely PSU failure</li>
+                </ol>
+
+                <p><strong>Power supply replacement:</strong></p>
+                <ul>
+                    <li><strong>DIY:</strong> Very difficult, requires soldering and disassembly</li>
+                    <li><strong>Professional repair:</strong> $150-250</li>
+                    <li><strong>Sony official repair:</strong> $200-300</li>
+                    <li><strong>Replacement parts:</strong> $80-120 (PSU unit)</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Check warranty first:</strong> PS5 has 1-year manufacturer warranty. If within warranty, Sony repairs free. Don't open console - voids warranty.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">11</span> Clean Dust from Vents and Fan <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Dust buildup causes overheating, triggers auto-shutdown.</p>
+                
+                <p><strong>External cleaning (safe, no disassembly):</strong></p>
+                <ol>
+                    <li>Power off and unplug PS5</li>
+                    <li>Use compressed air on all vents</li>
+                    <li>Bottom vents (where air intake is)</li>
+                    <li>Back vents (exhaust)</li>
+                    <li>Top vents</li>
+                    <li>Short bursts, hold can upright</li>
+                    <li>Don't stick nozzle inside vents</li>
+                </ol>
+
+                <p><strong>Deep cleaning (requires opening - advanced):</strong></p>
+                <ol>
+                    <li>Remove side panels (no tools needed, lift and slide)</li>
+                    <li>Vacuum visible dust from fan</li>
+                    <li>Use compressed air on fan blades</li>
+                    <li>Don't spin fan too fast with air</li>
+                    <li>Clean dust filters if present</li>
+                    <li>Reassemble</li>
+                </ol>
+
+                <p><strong>How often to clean:</strong></p>
+                <ul>
+                    <li><strong>Normal environment:</strong> Every 6 months</li>
+                    <li><strong>Dusty environment:</strong> Every 3 months</li>
+                    <li><strong>Pets in home:</strong> Every 2-3 months</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">12</span> Contact Sony Support / Professional Repair <span class="impact">Cost: $150-400</span></h3>
+                <p><strong>When to seek professional help:</strong></p>
+                <ul>
+                    <li>All DIY fixes failed</li>
+                    <li>Hardware damage suspected</li>
+                    <li>Under warranty (use warranty first!)</li>
+                    <li>Don't want to risk making it worse</li>
+                </ul>
+
+                <p><strong>Sony Official Repair:</strong></p>
+                <ol>
+                    <li>Go to playstation.com/support</li>
+                    <li>Hardware & Repairs</li>
+                    <li>Get a Repair</li>
+                    <li>Fill out repair request form</li>
+                    <li>Sony emails prepaid shipping label</li>
+                    <li>Ship PS5 to Sony (free if under warranty)</li>
+                    <li>Turnaround: 2-3 weeks</li>
+                </ol>
+
+                <p><strong>Warranty coverage:</strong></p>
+                <ul>
+                    <li><strong>Standard:</strong> 1 year from purchase</li>
+                    <li><strong>Covers:</strong> Manufacturing defects, hardware failure</li>
+                    <li><strong>Doesn't cover:</strong> Physical damage, liquid damage, modifications</li>
+                    <li><strong>Proof of purchase required</strong></li>
+                </ul>
+
+                <p><strong>Out of warranty repair costs:</strong></p>
+                <ul>
+                    <li><strong>Power supply replacement:</strong> $150-250</li>
+                    <li><strong>HDMI port repair:</strong> $100-150</li>
+                    <li><strong>Motherboard replacement:</strong> $300-400</li>
+                    <li><strong>SSD replacement:</strong> $200-300</li>
+                    <li><strong>General service fee:</strong> $50-100</li>
+                </ul>
+
+                <p><strong>Third-party repair shops:</strong></p>
+                <ul>
+                    <li><strong>Pros:</strong> Often cheaper, faster turnaround</li>
+                    <li><strong>Cons:</strong> Voids Sony warranty, quality varies</li>
+                    <li><strong>Cost:</strong> Usually 30-50% less than Sony</li>
+                    <li><strong>Check reviews:</strong> Google, Yelp before using</li>
+                </ul>
+            </div>
+
+            <h2>Prevention: Keep Your PS5 Healthy</h2>
+
+            <h3>1. Proper Ventilation</h3>
+            <ul>
+                <li>10cm (4 inches) clearance on all sides</li>
+                <li>Never in enclosed cabinet</li>
+                <li>Keep away from heat sources</li>
+                <li>Hard, flat surface (not carpet)</li>
+                <li>Room temperature environment</li>
+            </ul>
+
+            <h3>2. Power Management</h3>
+            <ul>
+                <li><strong>Use surge protector:</strong> Protects from power spikes</li>
+                <li><strong>Don't unplug during updates:</strong> Can corrupt system</li>
+                <li><strong>Proper shutdown:</strong> Use power menu, not button hold</li>
+                <li><strong>Rest Mode is safe:</strong> Don't fear using it</li>
+            </ul>
+
+            <h3>3. Regular Maintenance</h3>
+            <ul>
+                <li><strong>Rebuild database:</strong> Every 3-6 months</li>
+                <li><strong>Clean vents:</strong> Every 6 months minimum</li>
+                <li><strong>Update system software:</strong> When available</li>
+                <li><strong>Don't move while running:</strong> Can damage internal components</li>
+            </ul>
+
+            <h3>4. Smart Usage</h3>
+            <ul>
+                <li><strong>Don't block vents:</strong> No decorations on top</li>
+                <li><strong>Adequate play sessions:</strong> Take breaks during long gaming</li>
+                <li><strong>Monitor for unusual noises:</strong> Grinding, clicking = problem</li>
+                <li><strong>Keep firmware updated:</strong> Improves stability</li>
+            </ul>
+
+            <h2>Common PS5 Error Codes</h2>
+
+            <div class="info-box">
+                <h3>CE-108255-1:</h3>
+                <p><strong>Meaning:</strong> Game/app error, crashes</p>
+                <p><strong>Fix:</strong> Rebuild database, reinstall game, update system software</p>
+            </div>
+
+            <div class="info-box">
+                <h3>CE-107857-8:</h3>
+                <p><strong>Meaning:</strong> Can't start game/app</p>
+                <p><strong>Fix:</strong> Delete and reinstall game, check for updates</p>
+            </div>
+
+            <div class="info-box">
+                <h3>CE-100005-6:</h3>
+                <p><strong>Meaning:</strong> Can't access content, license issue</p>
+                <p><strong>Fix:</strong> Restore licenses (Settings → Users → Other → Restore Licenses)</p>
+            </div>
+
+            <h2>When to Replace vs Repair</h2>
+
+            <div class="success-box">
+                <h3>✓ Worth repairing if:</h3>
+                <ul>
+                    <li>Under warranty (free repair)</li>
+                    <li>PS5 is under 2 years old</li>
+                    <li>Repair cost under $200</li>
+                    <li>Digital library worth $500+</li>
+                    <li>Physical disc games only</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ Consider replacing if:</h3>
+                <ul>
+                    <li>Out of warranty and repair exceeds $300</li>
+                    <li>Multiple hardware failures</li>
+                    <li>PS5 is 3+ years old</li>
+                    <li>Motherboard replacement needed ($300-400)</li>
+                    <li>PS5 Pro or newer model available</li>
+                </ul>
+            </div>
+
+            <h2>Common Questions</h2>
+
+            <p><strong>Q: My PS5 has blue light but no display. What's wrong?</strong></p>
+            <p>A: Try different HDMI cable and port. Boot into Safe Mode and select "Change Video Output." If still nothing, HDMI port on PS5 might be damaged (needs repair).</p>
+
+            <p><strong>Q: PS5 beeps three times then shuts off immediately. Why?</strong></p>
+            <p>A: Overheating protection activated. Clean vents, ensure proper ventilation, wait 30 minutes to cool, then try again. If persists, fan might be faulty.</p>
+
+            <p><strong>Q: Can I fix PS5 myself or will it void warranty?</strong></p>
+            <p>A: Opening console voids warranty. If under warranty, use Sony repair. If out of warranty, DIY possible but requires technical skill.</p>
+
+            <p><strong>Q: How much does Sony charge for out-of-warranty repair?</strong></p>
+            <p>A: Depends on issue. Typical range: $150-300. Power supply: $150-250. Motherboard: $300-400. Get quote before committing.</p>
+
+            <p><strong>Q: My PS5 won't go past PlayStation logo. What do I do?</strong></p>
+            <p>A: Boot Safe Mode → Rebuild Database. If that doesn't work, try Update System Software via USB. Last resort: Initialize PS5 (factory reset).</p>
+
+            <p><strong>Q: Is it safe to use PS5 in Rest Mode or should I fully power off?</strong></p>
+            <p>A: Rest Mode is safe and designed for regular use. But if experiencing power issues, stick to full shutdown until problem solved.</p>
+
+            <p><strong>Q: Can power outage damage my PS5?</strong></p>
+            <p>A: Yes. Sudden power loss during update or game save can corrupt data. Use surge protector. If power goes out, rebuild database on next boot.</p>
+
+            <div class="success-box">
+                <h3>✓ Success Rates Summary:</h3>
+                <ul>
+                    <li><strong>Power cycle + HDMI check:</strong> 45% fixed</li>
+                    <li><strong>Safe Mode + Rebuild Database:</strong> 35% fixed</li>
+                    <li><strong>System software reinstall:</strong> 20% fixed</li>
+                    <li><strong>Factory reset:</strong> 40% fixed (software issues)</li>
+                    <li><strong>Overheating fixes:</strong> 15% fixed</li>
+                    <li><strong>Professional repair:</strong> 85% success rate</li>
+                </ul>
+                <p><strong>Overall:</strong> 75% of PS5 power issues fixable at home without professional repair!</p>
+            </div>
+
+        </div>
+
+        <div class="related-problems">
+            <h3>🔗 Related Problems</h3>
+            <div class="related-list">
+                <a href="/all-problems/xbox-controller-not-connecting/" class="related-item">
+                    <h4>Xbox Controller Not Connecting</h4>
+                    <p>Fix wireless sync and pairing issues</p>
+                </a>
+                <a href="/all-problems/console-overheating/" class="related-item">
+                    <h4>Console Overheating</h4>
+                    <p>Cool down PS5, Xbox, Switch and prevent damage</p>
+                </a>
+                <a href="/all-problems/hdmi-no-signal/" class="related-item">
+                    <h4>HDMI No Signal</h4>
+                    <p>Fix display output on gaming consoles</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

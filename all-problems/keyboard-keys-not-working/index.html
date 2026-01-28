@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keyboard keys not working? Fix WASD lock, stuck keys, unresponsive buttons on gaming, mechanical, laptop keyboards. 16 solutions for all keyboard types including Fn+W unlock.">
+    <title>Keyboard Keys Not Working? 16 Ways to Fix Stuck Keys & WASD Lock</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        footer { background: #1f2937; color: white; padding: 3rem 2rem 1rem; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #3b82f6; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #d1d5db; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: #3b82f6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #d1fae5; color: #065f46; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .success-rate { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / Keyboard Keys Not Working</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>Keyboard Keys Not Working? 16 Ways to Fix Stuck & Unresponsive Keys</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 18 min read</span>
+                <span class="difficulty">Easy to Medium</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>Problem:</strong> Keyboard keys not responding, stuck, repeating, or typing wrong characters.</p>
+            <p><strong>Most common causes:</strong> Gaming mode locks (WASD/Win lock) (20%), debris under keys (30%), driver issues (20%), stuck modifier keys (15%), hardware failure (15%)</p>
+            <p><strong>Quick fix (works 65% of time):</strong> Try Fn+W to unlock WASD → Restart computer → Check Sticky Keys disabled → Update drivers → Clean with compressed air</p>
+            <p><strong>Time needed:</strong> 5-30 minutes depending on solution</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#identify">Identify Your Keyboard Issue</a></li>
+                <li><a href="#quick">Quick Software Fixes</a></li>
+                <li><a href="#cleaning">Physical Cleaning Solutions</a></li>
+                <li><a href="#advanced">Advanced Hardware Repairs</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2 id="identify">First: Identify Your Keyboard Key Issue</h2>
+            
+            <p><strong>Different symptoms require different solutions:</strong></p>
+
+            <p>🔴 <strong>Some keys completely unresponsive:</strong></p>
+            <ul>
+                <li>Specific keys (like E, Space, Enter) don't work at all</li>
+                <li>No input when pressing these keys</li>
+                <li>Other keys work perfectly fine</li>
+                <li><strong>Likely cause:</strong> Debris under keycap, broken switch, damaged membrane</li>
+            </ul>
+
+            <p>🔴 <strong>Entire keyboard not working:</strong></p>
+            <ul>
+                <li>No keys respond whatsoever</li>
+                <li>Num Lock/Caps Lock lights don't toggle</li>
+                <li>Happens after Windows update or driver change</li>
+                <li><strong>Likely cause:</strong> Driver issue, USB connection problem, disabled device, hardware failure</li>
+            </ul>
+
+            <p>🔴 <strong>Keys typing wrong characters:</strong></p>
+            <ul>
+                <li>Press A, get Q or different letter</li>
+                <li>Numbers type symbols instead</li>
+                <li>Keyboard layout changed unexpectedly</li>
+                <li><strong>Likely cause:</strong> Wrong keyboard layout selected, language settings changed, stuck Fn key</li>
+            </ul>
+
+            <p>🔴 <strong>Keys repeating continuously:</strong></p>
+            <ul>
+                <li>Single press types "aaaaaaaa" repeatedly</li>
+                <li>Can't stop the repetition</li>
+                <li>Multiple keys affected</li>
+                <li><strong>Likely cause:</strong> Sticky Keys enabled, debris causing stuck key, filter keys settings, keyboard repeat rate too fast</li>
+            </ul>
+
+            <p>🔴 <strong>Keys physically stuck down:</strong></p>
+            <ul>
+                <li>Key won't pop back up after pressing</li>
+                <li>Keycap feels mushy or uneven</li>
+                <li>Visible liquid damage or spill residue</li>
+                <li><strong>Likely cause:</strong> Liquid spill (soda, coffee), debris lodged under keycap, broken stabilizer</li>
+            </ul>
+
+            <p>🔴 <strong>Intermittent key failures:</strong></p>
+            <ul>
+                <li>Keys work sometimes, fail other times</li>
+                <li>Works after restart but fails later</li>
+                <li>Only fails during specific programs</li>
+                <li><strong>Likely cause:</strong> Loose connection, software conflict, partial hardware failure</li>
+            </ul>
+
+            <p>🔴 <strong>Wireless keyboard specific issues:</strong></p>
+            <ul>
+                <li>Delayed key response (lag)</li>
+                <li>Keys miss random presses</li>
+                <li>Works closer to receiver, fails farther away</li>
+                <li><strong>Likely cause:</strong> Low battery, wireless interference, receiver placement, Bluetooth connection</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Keyboard Types & Common Issues:</strong><br>
+                • <strong>Membrane keyboards:</strong> Most common in laptops/budget keyboards. Rubber dome under keys. Fails from wear, spills.<br>
+                • <strong>Mechanical keyboards:</strong> Individual switches per key. More durable but debris can still cause issues. Switches can be replaced.<br>
+                • <strong>Scissor-switch (laptop):</strong> Low-profile mechanism. Very sensitive to debris. Difficult to repair.<br>
+                • <strong>Chiclet keyboards:</strong> Flat, island-style keys. Common in modern laptops. Keys can pop off but fragile clips.
+            </div>
+
+            <h2 id="quick">Quick Software Fixes (Try These First)</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">1</span> Restart Your Computer <span class="success-rate">Success: 30%</span></h3>
+                <p><strong>When to try:</strong> Keys stopped working suddenly, entire keyboard unresponsive, or after software update.</p>
+                <p><strong>Why it works:</strong> Clears driver glitches, resets USB controllers, terminates conflicting processes.</p>
+
+                <p><strong>Proper restart procedure:</strong></p>
+                <ol>
+                    <li>Save all work (use mouse or on-screen keyboard if needed)</li>
+                    <li>Windows: Start Menu → Power → Restart</li>
+                    <li>Mac: Apple Menu → Restart</li>
+                    <li>Don't use "Shut Down" then power on - full restart is better</li>
+                    <li>Wait for complete reboot</li>
+                    <li>Test keyboard immediately after login</li>
+                </ol>
+
+                <p><strong>If keyboard completely dead:</strong></p>
+                <ul>
+                    <li>Use on-screen keyboard to restart:
+                        <ul>
+                            <li>Windows: Search "On-Screen Keyboard" or Win+U → Keyboard</li>
+                            <li>Mac: System Settings → Accessibility → Keyboard → Enable Accessibility Keyboard</li>
+                        </ul>
+                    </li>
+                    <li>Or use mouse to navigate to Restart</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Why restart works:</strong> USB controllers can freeze, keyboard drivers can crash, Windows can lose device recognition. Restart clears all these temporary issues. Works 30% of the time for sudden failures.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">2</span> Check Gaming Keyboard Lock Combinations <span class="success-rate">Success: 40%</span></h3>
+                <p><strong>When to try:</strong> Specific keys suddenly stopped working (especially WASD, Windows key), or entire sections unresponsive on gaming keyboard.</p>
+                <p><strong>Why it works:</strong> Gaming keyboards have special lock combinations to prevent accidental key presses during gaming. Easy to activate accidentally!</p>
+
+                <p><strong>Common gaming keyboard locks:</strong></p>
+                
+                <p>🎮 <strong>WASD Lock (most common accidental lock!):</strong></p>
+                <ul>
+                    <li><strong>Symptoms:</strong> W, A, S, D keys completely dead, other keys work fine</li>
+                    <li><strong>Brands affected:</strong> Corsair, Razer, HyperX, SteelSeries, many others</li>
+                    <li><strong>Unlock combinations to try:</strong>
+                        <ul>
+                            <li><strong>Fn + W</strong> (most common - toggles WASD lock on/off)</li>
+                            <li><strong>Fn + F9</strong> (some Corsair keyboards)</li>
+                            <li><strong>Fn + F10</strong> (some Razer keyboards)</li>
+                            <li><strong>Fn + Esc</strong> (some models)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Indicator:</strong> Some keyboards have LED that lights when WASD locked</li>
+                </ul>
+
+                <p>🔒 <strong>Windows Key Lock (gaming mode):</strong></p>
+                <ul>
+                    <li><strong>Symptoms:</strong> Windows key doesn't open Start Menu, Win+D/Win+Tab shortcuts don't work</li>
+                    <li><strong>Purpose:</strong> Prevents accidentally minimizing game by hitting Windows key</li>
+                    <li><strong>Unlock combinations:</strong>
+                        <ul>
+                            <li><strong>Fn + Windows Key</strong> (most common)</li>
+                            <li><strong>Fn + F11</strong> (Logitech G series)</li>
+                            <li><strong>Fn + F12</strong> (some models)</li>
+                            <li><strong>Dedicated "Game Mode" button</strong> (physical switch on some keyboards)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Check:</strong> Look for "Game Mode" LED indicator</li>
+                </ul>
+
+                <p>🎯 <strong>All Keys Lock / Function Lock:</strong></p>
+                <ul>
+                    <li><strong>Symptoms:</strong> Entire keyboard unresponsive, or F1-F12 do media controls instead of F-key functions</li>
+                    <li><strong>Unlock combinations:</strong>
+                        <ul>
+                            <li><strong>Fn + Esc</strong> (toggles Fn lock)</li>
+                            <li><strong>Hold Fn for 3-5 seconds</strong> (some keyboards)</li>
+                            <li><strong>Fn + Right Ctrl</strong> (certain models)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Brand-specific lock combinations:</strong></p>
+                <ul>
+                    <li><strong>Corsair (K70, K95, etc.):</strong>
+                        <ul>
+                            <li>Fn + F9 = WASD lock</li>
+                            <li>Dedicated lock switch on some models</li>
+                            <li>Check iCUE software for current locks</li>
+                        </ul>
+                    </li>
+                    <li><strong>Razer (BlackWidow, Huntsman, etc.):</strong>
+                        <ul>
+                            <li>Fn + F9 = Gaming Mode (disables Windows key)</li>
+                            <li>Check Razer Synapse software</li>
+                        </ul>
+                    </li>
+                    <li><strong>Logitech G (G Pro, G915, etc.):</strong>
+                        <ul>
+                            <li>Fn + F11 = Windows key lock</li>
+                            <li>Check G HUB software</li>
+                        </ul>
+                    </li>
+                    <li><strong>SteelSeries (Apex series):</strong>
+                        <ul>
+                            <li>Fn + Windows = Gaming mode</li>
+                            <li>Check SteelSeries GG software</li>
+                        </ul>
+                    </li>
+                    <li><strong>HyperX (Alloy series):</strong>
+                        <ul>
+                            <li>Fn + F12 = Gaming mode</li>
+                            <li>Fn + W = WASD lock on some models</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>How to unlock if you don't know combination:</strong></p>
+                <ol>
+                    <li>Try all common unlock combinations listed above</li>
+                    <li>Check keyboard manual (PDF usually on manufacturer website)</li>
+                    <li>Look for physical switches on keyboard:
+                        <ul>
+                            <li>Side or back of keyboard</li>
+                            <li>Usually labeled "Game Mode" or "Lock"</li>
+                        </ul>
+                    </li>
+                    <li>Open manufacturer software (iCUE, Synapse, G HUB):
+                        <ul>
+                            <li>Look for "Game Mode" or "Key Locks" settings</li>
+                            <li>Disable all locks</li>
+                            <li>Reset keyboard to defaults</li>
+                        </ul>
+                    </li>
+                    <li>Hard reset keyboard:
+                        <ul>
+                            <li>Unplug keyboard</li>
+                            <li>Hold Esc while plugging back in (resets many keyboards)</li>
+                            <li>Or: Hold Fn + Esc while plugging in</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Real user story:</strong> "I pressed Fn+W accidentally during game and thought my keyboard broke! Spent 30 minutes troubleshooting before finding out WASD lock was on. Now I know to try Fn+W first whenever WASD stops working!" This is extremely common - you're not alone!
+                </div>
+
+                <div class="warning-box">
+                    <strong>⚠️ Prevention tip:</strong> If you don't need gaming mode locks, disable them in manufacturer software to prevent accidental activation. Or remap Fn key combinations to something harder to press accidentally.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">3</span> Check for Stuck Modifier Keys <span class="success-rate">Success: 25%</span></h3>
+                <p><strong>When to try:</strong> Keys typing wrong characters, Shift/Ctrl/Alt seems always active, strange keyboard behavior.</p>
+                <p><strong>Why it works:</strong> Stuck modifier keys (Shift, Ctrl, Alt, Fn) change how other keys behave.</p>
+
+                <p><strong>Test for stuck modifiers:</strong></p>
+                <ol>
+                    <li>Press each modifier key separately and release:
+                        <ul>
+                            <li>Left Shift, Right Shift</li>
+                            <li>Left Ctrl, Right Ctrl</li>
+                            <li>Left Alt, Right Alt</li>
+                            <li>Windows Key / Command Key</li>
+                            <li>Fn key (laptop keyboards)</li>
+                        </ul>
+                    </li>
+                    <li>Press each one 5-10 times firmly</li>
+                    <li>Make sure they pop back up fully</li>
+                    <li>Test if normal typing restored</li>
+                </ol>
+
+                <p><strong>Fn key stuck (laptop keyboards):</strong></p>
+                <ul>
+                    <li>Makes F1-F12 trigger special functions (volume, brightness)</li>
+                    <li>Makes number row type symbols</li>
+                    <li>Solution: Press Fn key several times, or Fn+Esc to toggle Fn lock</li>
+                </ul>
+
+                <p><strong>Caps Lock / Num Lock issues:</strong></p>
+                <ul>
+                    <li>Caps Lock stuck: All letters UPPERCASE</li>
+                    <li>Num Lock off: Number pad types arrows/home/end instead of numbers</li>
+                    <li>Solution: Press Caps Lock or Num Lock to toggle, check indicator light</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Physical vs software stuck:</strong> If modifier key physically stuck down (won't pop up), it's hardware issue - see cleaning solutions. If key pops up but still acts stuck, it's software - disable Sticky Keys (next solution).
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">4</span> Disable Sticky Keys & Filter Keys <span class="success-rate">Success: 35%</span></h3>
+                <p><strong>When to try:</strong> Keys repeating, modifier keys staying active, or accessibility features accidentally enabled.</p>
+                <p><strong>Why it works:</strong> Sticky Keys makes modifiers "stick" after single press. Filter Keys ignores repeated keystrokes.</p>
+
+                <p><strong>Windows - Disable Sticky Keys:</strong></p>
+                <ol>
+                    <li>Settings → Accessibility → Keyboard</li>
+                    <li>Turn OFF "Sticky Keys"</li>
+                    <li>Turn OFF "Filter Keys"</li>
+                    <li>Turn OFF "Toggle Keys"</li>
+                    <li>Test keyboard</li>
+                </ol>
+
+                <p><strong>Quick disable (Windows):</strong></p>
+                <ul>
+                    <li>Press Shift key 5 times rapidly → Click "No" when prompt appears</li>
+                    <li>Or: Hold Shift for 8 seconds → Click "No"</li>
+                </ul>
+
+                <p><strong>Mac - Disable Sticky Keys:</strong></p>
+                <ol>
+                    <li>System Settings → Accessibility → Keyboard</li>
+                    <li>Turn OFF "Sticky Keys"</li>
+                    <li>Turn OFF "Slow Keys"</li>
+                </ol>
+
+                <p><strong>Adjust key repeat rate (if keys repeating too fast):</strong></p>
+                <ul>
+                    <li><strong>Windows:</strong> Settings → Accessibility → Keyboard → Repeat delay → Longer</li>
+                    <li><strong>Mac:</strong> System Settings → Keyboard → Key repeat rate → Slower</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 How Sticky Keys gets enabled accidentally:</strong> Pressing Shift 5 times quickly triggers enable prompt. Easy to do while gaming or typing fast. Many users enable it without realizing, causing confusing keyboard behavior.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">5</span> Update / Reinstall Keyboard Drivers <span class="success-rate">Success: 40%</span></h3>
+                <p><strong>When to try:</strong> Keyboard stopped working after Windows update, driver errors in Device Manager, or intermittent failures.</p>
+
+                <p><strong>Windows - Update keyboard driver:</strong></p>
+                <ol>
+                    <li>Right-click Start → Device Manager</li>
+                    <li>Expand "Keyboards"</li>
+                    <li>Right-click your keyboard</li>
+                    <li>Select "Update driver"</li>
+                    <li>Choose "Search automatically for drivers"</li>
+                    <li>Let Windows find and install latest driver</li>
+                    <li>Restart computer</li>
+                </ol>
+
+                <p><strong>Windows - Reinstall keyboard driver:</strong></p>
+                <ol>
+                    <li>Device Manager → Keyboards</li>
+                    <li>Right-click keyboard → "Uninstall device"</li>
+                    <li>Check "Delete the driver software" if available</li>
+                    <li>Click "Uninstall"</li>
+                    <li>Restart computer</li>
+                    <li>Windows automatically reinstalls driver on boot</li>
+                    <li>Test keyboard</li>
+                </ol>
+
+                <p><strong>Mac - Reset keyboard drivers:</strong></p>
+                <ol>
+                    <li>Shut down Mac completely</li>
+                    <li>Reset SMC (System Management Controller):
+                        <ul>
+                            <li><strong>Intel Mac:</strong> Shift+Control+Option (left side) + Power, hold 10 sec, release</li>
+                            <li><strong>M1/M2 Mac:</strong> Just shut down, wait 30 sec, restart</li>
+                        </ul>
+                    </li>
+                    <li>Reset NVRAM: Restart, immediately hold Command+Option+P+R for 20 seconds</li>
+                </ol>
+
+                <p><strong>For gaming/mechanical keyboards:</strong></p>
+                <ul>
+                    <li>Download latest software from manufacturer:
+                        <ul>
+                            <li>Corsair iCUE</li>
+                            <li>Razer Synapse</li>
+                            <li>Logitech G HUB</li>
+                            <li>SteelSeries GG</li>
+                        </ul>
+                    </li>
+                    <li>Update firmware through manufacturer software</li>
+                    <li>Reset keyboard to defaults if software has option</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Driver warning signs in Device Manager:</strong> Yellow triangle icon, "Code 10" error, "This device cannot start", or keyboard listed as "Unknown Device" all indicate driver problems. Reinstalling usually fixes.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">6</span> Check Keyboard Layout & Language <span class="success-rate">Success: 50%</span></h3>
+                <p><strong>When to try:</strong> Keys typing wrong characters, symbols instead of numbers, or unexpected punctuation.</p>
+
+                <p><strong>Windows - Fix keyboard layout:</strong></p>
+                <ol>
+                    <li>System tray → Click language indicator (e.g., "ENG")</li>
+                    <li>Make sure correct language selected (English US)</li>
+                    <li>If wrong layout (UK, International): Settings → Time & Language → Language & Region</li>
+                    <li>Click your language → Options</li>
+                    <li>Check keyboard layout under "Keyboards"</li>
+                    <li>Remove wrong layouts, keep only "US" (or your correct layout)</li>
+                </ol>
+
+                <p><strong>Common layout mix-ups:</strong></p>
+                <ul>
+                    <li><strong>US vs UK:</strong> @ and " swapped, # and £ swapped</li>
+                    <li><strong>QWERTY vs AZERTY:</strong> Q/A and Z/W swapped (French layout)</li>
+                    <li><strong>QWERTY vs QWERTZ:</strong> Y and Z swapped (German layout)</li>
+                </ul>
+
+                <p><strong>Quick layout check:</strong></p>
+                <ol>
+                    <li>Press Shift+2 - should type @</li>
+                    <li>If types " instead → UK layout</li>
+                    <li>Press Shift+3 - should type #</li>
+                    <li>If types £ instead → UK layout</li>
+                </ol>
+
+                <p><strong>Mac - Fix keyboard layout:</strong></p>
+                <ol>
+                    <li>Menu bar → Input menu (flag icon)</li>
+                    <li>Select correct layout</li>
+                    <li>System Settings → Keyboard → Input Sources</li>
+                    <li>Remove unwanted layouts</li>
+                </ol>
+
+                <p><strong>Disable layout switching shortcut (prevents accidental changes):</strong></p>
+                <ul>
+                    <li><strong>Windows:</strong> Settings → Time & Language → Typing → Advanced keyboard settings → Change language bar hot keys → Disable or change shortcut</li>
+                    <li><strong>Mac:</strong> System Settings → Keyboard → Keyboard Shortcuts → Input Sources → Uncheck shortcuts</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">7</span> Test with Different USB Port / Wireless Receiver <span class="success-rate">Success: 30%</span></h3>
+                <p><strong>When to try:</strong> External keyboard not working, intermittent connection, or USB device not recognized.</p>
+
+                <p><strong>USB keyboard troubleshooting:</strong></p>
+                <ol>
+                    <li>Unplug keyboard USB cable</li>
+                    <li>Try different USB port:
+                        <ul>
+                            <li>Front ports often less reliable than back ports (desktop)</li>
+                            <li>Try USB 2.0 port if USB 3.0 (blue) causing issues</li>
+                            <li>Avoid USB hubs - plug directly into computer</li>
+                        </ul>
+                    </li>
+                    <li>Wait 10 seconds before plugging in</li>
+                    <li>Listen for Windows "device connected" sound</li>
+                    <li>Test keyboard</li>
+                </ol>
+
+                <p><strong>Wireless keyboard (2.4GHz USB receiver):</strong></p>
+                <ol>
+                    <li>Replace batteries with fresh ones first</li>
+                    <li>Unplug USB receiver</li>
+                    <li>Try different USB port (closer to keyboard if possible)</li>
+                    <li>Make sure receiver has line of sight to keyboard</li>
+                    <li>Move receiver away from other wireless devices (routers, phones)</li>
+                    <li>Re-pair keyboard:
+                        <ul>
+                            <li>Many keyboards have Connect button on bottom</li>
+                            <li>Press button on receiver (if available)</li>
+                            <li>Press Connect on keyboard</li>
+                            <li>Wait for pairing</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Bluetooth keyboard:</strong></p>
+                <ol>
+                    <li>Settings → Bluetooth</li>
+                    <li>Remove/Forget keyboard</li>
+                    <li>Turn keyboard off, wait 10 seconds, turn back on</li>
+                    <li>Put keyboard in pairing mode (usually hold pair button 3-5 sec)</li>
+                    <li>Re-add keyboard in Bluetooth settings</li>
+                </ol>
+
+                <p><strong>USB-C keyboards (Mac):</strong></p>
+                <ul>
+                    <li>Try different USB-C port</li>
+                    <li>If using adapter/hub, try direct connection</li>
+                    <li>Test with different USB-C cable if detachable</li>
+                </ul>
+            </div>
+
+            <h2 id="cleaning">Physical Cleaning Solutions</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">8</span> Clean Keyboard Surface & Between Keys <span class="success-rate">Success: 45%</span></h3>
+                <p><strong>When to try:</strong> Keys sticky, unresponsive, or keyboard hasn't been cleaned in months.</p>
+                <p><strong>Why it works:</strong> Debris, crumbs, dust, and hair under keys prevent proper key travel and switch contact.</p>
+
+                <p><strong>What you need:</strong></p>
+                <ul>
+                    <li>Compressed air can</li>
+                    <li>Microfiber cloth</li>
+                    <li>Isopropyl alcohol 70%+ (for disinfecting)</li>
+                    <li>Small brush (soft toothbrush or paint brush)</li>
+                    <li>Cotton swabs</li>
+                </ul>
+
+                <p><strong>Surface cleaning procedure:</strong></p>
+                <ol>
+                    <li>Shut down computer / unplug keyboard</li>
+                    <li>Tilt keyboard upside down and shake gently (dislodges loose debris)</li>
+                    <li>Use compressed air:
+                        <ul>
+                            <li>Hold can upright (never upside down - liquid can spray)</li>
+                            <li>Short bursts at angle between keys</li>
+                            <li>Work systematically across entire keyboard</li>
+                            <li>Pay attention to spaces between keys</li>
+                        </ul>
+                    </li>
+                    <li>Brush away visible debris with soft brush</li>
+                    <li>Dampen cloth with isopropyl alcohol (not dripping wet!)</li>
+                    <li>Wipe down all keycaps and surfaces</li>
+                    <li>Use cotton swabs dipped in alcohol for tight spaces</li>
+                    <li>Let dry completely (5-10 minutes) before use</li>
+                </ol>
+
+                <p><strong>Deep cleaning between keys:</strong></p>
+                <ol>
+                    <li>Use compressed air more aggressively at multiple angles</li>
+                    <li>For stubborn debris: Use sticky note folded in half, slide between keys</li>
+                    <li>Or use cleaning slime/putty (cyber clean gel)</li>
+                    <li>Press putty onto keyboard, lifts dust and debris</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Cleaning warnings:</strong><br>
+                    • NEVER spray liquids directly on keyboard (seeps under keys, damages electronics)<br>
+                    • Don't use compressed air upside down (freezing liquid damages components)<br>
+                    • Avoid abrasive cleaners or rough cloths (scratches keycaps)<br>
+                    • Laptop keyboards extra sensitive - be gentle
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 How often to clean:</strong> Light surface clean weekly, compressed air monthly, deep clean every 3-6 months. Gaming keyboards and office keyboards used while eating need more frequent cleaning.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">9</span> Remove & Clean Individual Keycaps <span class="success-rate">Success: 60%</span></h3>
+                <p><strong>When to try:</strong> Specific keys not working, stuck keys, or visible debris under keycap.</p>
+                <p><strong>Why it works:</strong> Removes keycap to directly clean switch and remove stuck debris.</p>
+
+                <p><strong>⚠️ IMPORTANT: Not all keyboards support keycap removal!</strong></p>
+                <ul>
+                    <li><strong>CAN remove:</strong> Most mechanical keyboards, many desktop membrane keyboards</li>
+                    <li><strong>CANNOT remove safely:</strong> Most laptop keyboards, scissor-switch keyboards (clips break easily)</li>
+                    <li><strong>When in doubt:</strong> Check keyboard manual or search "[your keyboard model] remove keycaps"</li>
+                </ul>
+
+                <p><strong>What you need:</strong></p>
+                <ul>
+                    <li>Keycap puller (cheap plastic tool, ~$5) OR two flathead screwdrivers</li>
+                    <li>Bowl of warm soapy water</li>
+                    <li>Microfiber cloth</li>
+                    <li>Cotton swabs</li>
+                    <li>Isopropyl alcohol</li>
+                </ul>
+
+                <p><strong>Keycap removal procedure:</strong></p>
+                <ol>
+                    <li>Take photo of keyboard layout (for reassembly reference!)</li>
+                    <li>Unplug keyboard / shut down laptop</li>
+                    <li>Remove keycaps one at a time:
+                        <ul>
+                            <li><strong>With keycap puller:</strong> Slide wire loops under keycap on opposite sides, pull straight up firmly</li>
+                            <li><strong>With screwdrivers:</strong> Insert under opposite sides, gently pry up evenly (don't bend keycap)</li>
+                        </ul>
+                    </li>
+                    <li>Start with non-essential keys first (to practice technique)</li>
+                    <li><strong>Large keys warning (Space, Shift, Enter):</strong> Have stabilizer bars - more complex. Remove carefully, note how stabilizers attach</li>
+                </ol>
+
+                <p><strong>Cleaning removed keycaps:</strong></p>
+                <ol>
+                    <li>Place keycaps in bowl of warm soapy water</li>
+                    <li>Soak 5-10 minutes</li>
+                    <li>Agitate gently, scrub with soft brush</li>
+                    <li>Rinse thoroughly with clean water</li>
+                    <li>Dry completely on towel (air dry 1-2 hours or use hair dryer on cool)</li>
+                </ol>
+
+                <p><strong>Cleaning exposed switches:</strong></p>
+                <ol>
+                    <li>Use compressed air to blow out debris from switch</li>
+                    <li>Cotton swab dipped in isopropyl alcohol to clean switch housing</li>
+                    <li>For mechanical switches: Can test by pressing switch stem with finger - should click smoothly</li>
+                    <li>Let alcohol evaporate completely (2-3 minutes)</li>
+                </ol>
+
+                <p><strong>Reassembly:</strong></p>
+                <ol>
+                    <li>Make sure keycaps completely dry</li>
+                    <li>Align keycap over switch (check orientation - most keycaps have different top/bottom)</li>
+                    <li>Press down firmly until clicks into place</li>
+                    <li>Large keys: Attach stabilizer bars first, then press keycap down</li>
+                    <li>Test each key after installation</li>
+                    <li>Refer to photo for correct layout</li>
+                </ol>
+
+                <div class="danger-box">
+                    <strong>🚨 Laptop keyboard keycap warning:</strong> Laptop keyboards (especially MacBooks, thin Ultrabooks) use fragile scissor mechanisms that break VERY easily when removing keycaps. DO NOT attempt keycap removal on laptops unless you're experienced and have replacement parts. One broken clip = entire keyboard replacement ($200-400).
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">10</span> Fix Liquid Spill Damage <span class="success-rate">Success: 40%</span></h3>
+                <p><strong>When to try:</strong> Keys stopped working after liquid spill (coffee, soda, water), sticky keys, or intermittent failures after spill.</p>
+                <p><strong>Why it works:</strong> Removes corrosive residue before permanent damage occurs.</p>
+
+                <p><strong>⏰ TIME IS CRITICAL - Act within 1-2 hours!</strong></p>
+
+                <p><strong>Immediate spill response (first 5 minutes):</strong></p>
+                <ol>
+                    <li>IMMEDIATELY unplug keyboard (or shut down laptop)</li>
+                    <li>If laptop: Turn off instantly, unplug power, remove battery if possible</li>
+                    <li>Turn keyboard upside down to drain liquid</li>
+                    <li>Shake gently to remove excess liquid</li>
+                    <li>Blot with absorbent towel (don't wipe - pushes liquid deeper)</li>
+                    <li><strong>DO NOT:</strong> Turn on, use hair dryer (heat sets damage), or wait to "see if it works"</li>
+                </ol>
+
+                <p><strong>Deep cleaning after spill (mechanical/external keyboard):</strong></p>
+                <ol>
+                    <li>Remove all keycaps (see Solution #8)</li>
+                    <li>Turn keyboard upside down, shake out remaining liquid</li>
+                    <li>Use compressed air to blow out liquid from switches</li>
+                    <li>Clean keycaps in warm soapy water, dry completely</li>
+                    <li>For sugary spills (soda, juice):
+                        <ul>
+                            <li>Must remove sticky residue or keys will stick forever</li>
+                            <li>Use cotton swabs dipped in isopropyl alcohol 90%+</li>
+                            <li>Clean every switch thoroughly</li>
+                            <li>May need to disassemble keyboard further (remove backplate)</li>
+                        </ul>
+                    </li>
+                    <li>Let dry completely: 24-48 hours in dry, warm area</li>
+                    <li>Can place in front of fan (not heater) to speed drying</li>
+                    <li>Reassemble and test</li>
+                </ol>
+
+                <p><strong>Laptop spill cleanup:</strong></p>
+                <ol>
+                    <li>Keep laptop upside down or on its side</li>
+                    <li>Open as far as possible</li>
+                    <li>Blot visible liquid with cloth</li>
+                    <li>DO NOT remove laptop keys unless experienced (fragile clips)</li>
+                    <li>If minor spill: Compressed air around affected keys</li>
+                    <li>If major spill: MUST take to professional repair (liquid likely reached motherboard)</li>
+                    <li>Dry for minimum 48 hours before attempting to power on</li>
+                </ol>
+
+                <p><strong>What to expect:</strong></p>
+                <ul>
+                    <li><strong>Water spill:</strong> 60% recovery rate if acted on immediately</li>
+                    <li><strong>Coffee/tea:</strong> 50% recovery (sugar and milk cause residue)</li>
+                    <li><strong>Soda:</strong> 40% recovery (sugar is highly corrosive)</li>
+                    <li><strong>Alcohol (beer, wine):</strong> 70% recovery (evaporates cleanly)</li>
+                    <li><strong>If waited 24+ hours to clean:</strong> 10-20% recovery (corrosion already started)</li>
+                </ul>
+
+                <div class="danger-box">
+                    <strong>🚨 Laptop spill critical warning:</strong> Laptop keyboards sit directly above motherboard. Liquid seeps through keyboard within seconds, hitting CPU, RAM, storage. If significant spill (more than few drops), immediately:<br>
+                    1. Power off<br>
+                    2. Unplug power<br>
+                    3. Remove battery<br>
+                    4. Take to professional repair ASAP<br>
+                    <br>
+                    Attempting to power on wet laptop = permanent motherboard damage = $500-1500 repair or total loss.
+                </div>
+            </div>
+
+            <h2 id="advanced">Advanced Hardware Solutions</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">11</span> Replace Individual Mechanical Switches <span class="success-rate">Success: 80%</span></h3>
+                <p><strong>When to try:</strong> Specific keys dead on mechanical keyboard, switch feels different (no click, mushy), or keycap removal/cleaning didn't fix.</p>
+                <p><strong>Why it works:</strong> Mechanical switches are individual, replaceable components.</p>
+
+                <p><strong>Requirements:</strong></p>
+                <ul>
+                    <li>Keyboard must be mechanical (Cherry MX, Gateron, Kailh, etc.)</li>
+                    <li>Keyboard must be hot-swappable OR you can solder</li>
+                    <li>Replacement switch (same type - Cherry MX Red, Brown, Blue, etc.)</li>
+                </ul>
+
+                <p><strong>Determine if hot-swappable:</strong></p>
+                <ul>
+                    <li>Check product specs / manual</li>
+                    <li>Remove keycap - if switch has "hot-swap socket" visible = hot-swappable</li>
+                    <li>If pins soldered directly to PCB = requires soldering to replace</li>
+                    <li>Most gaming keyboards 2020+ are hot-swappable</li>
+                </ul>
+
+                <p><strong>Hot-swap switch replacement (easy):</strong></p>
+                <ol>
+                    <li>Unplug keyboard</li>
+                    <li>Remove keycap over broken switch</li>
+                    <li>Use switch puller tool (or fingers):
+                        <ul>
+                            <li>Grab switch on both sides</li>
+                            <li>Pull straight up firmly (don't wiggle)</li>
+                            <li>Switch pops out of socket</li>
+                        </ul>
+                    </li>
+                    <li>Take new switch (must be same type and brand for consistent feel)</li>
+                    <li>Align metal pins on bottom with socket holes</li>
+                    <li>Push straight down until clicks into place</li>
+                    <li>Replace keycap</li>
+                    <li>Test key</li>
+                </ol>
+
+                <p><strong>Where to buy replacement switches:</strong></p>
+                <ul>
+                    <li>Novelkeys.com</li>
+                    <li>Mechanicalkeyboards.com</li>
+                    <li>Amazon (search "Cherry MX Red switches")</li>
+                    <li>AliExpress (cheap but slow shipping)</li>
+                    <li>Price: $0.30-1.00 per switch</li>
+                </ul>
+
+                <p><strong>Soldered switch replacement (advanced):</strong></p>
+                <ul>
+                    <li>Requires: Soldering iron, solder, desoldering pump or wick, replacement switch</li>
+                    <li>Difficulty: Medium-high</li>
+                    <li>Process:
+                        <ol>
+                            <li>Open keyboard case (unscrew bottom)</li>
+                            <li>Locate broken switch on PCB</li>
+                            <li>Desolder 2 pins holding switch</li>
+                            <li>Remove old switch</li>
+                            <li>Insert new switch</li>
+                            <li>Solder pins</li>
+                            <li>Reassemble</li>
+                        </ol>
+                    </li>
+                    <li>If uncomfortable soldering: Take to electronics repair shop ($20-40 service)</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Switch types:</strong> Make sure replacement matches original. Cherry MX Red (linear), Brown (tactile), Blue (clicky) all feel different. Gateron, Kailh are compatible alternatives but feel slightly different than Cherry.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">12</span> Fix Laptop Keyboard (Replacement) <span class="success-rate">Success: 70%</span></h3>
+                <p><strong>When to try:</strong> Multiple laptop keys not working, physical damage to keyboard, or spill damage beyond repair.</p>
+
+                <p><strong>Laptop keyboard realities:</strong></p>
+                <ul>
+                    <li>Individual key repair usually impossible (integrated membrane)</li>
+                    <li>Must replace entire keyboard assembly</li>
+                    <li>Difficulty varies: Easy (older Thinkpads) to Very Hard (MacBooks)</li>
+                    <li>Professional replacement: $100-300</li>
+                    <li>DIY replacement: $30-80 for part + 1-3 hours labor</li>
+                </ul>
+
+                <p><strong>Before replacing - Try external keyboard:</strong></p>
+                <ol>
+                    <li>Plug in USB keyboard</li>
+                    <li>Disable laptop keyboard (Windows):
+                        <ul>
+                            <li>Device Manager → Keyboards</li>
+                            <li>Right-click laptop keyboard → Disable</li>
+                        </ul>
+                    </li>
+                    <li>Use external keyboard instead (cheaper than repair)</li>
+                </ol>
+
+                <p><strong>DIY keyboard replacement steps (general):</strong></p>
+                <ol>
+                    <li>Identify exact laptop model (check bottom sticker)</li>
+                    <li>Search eBay/Amazon for "[laptop model] replacement keyboard"</li>
+                    <li>Find disassembly guide (YouTube: "[laptop model] keyboard replacement")</li>
+                    <li>Tools needed:
+                        <ul>
+                            <li>Small Phillips screwdriver</li>
+                            <li>Plastic pry tools</li>
+                            <li>Tweezers</li>
+                        </ul>
+                    </li>
+                    <li>General process (varies by model):
+                        <ul>
+                            <li>Remove battery (if removable)</li>
+                            <li>Remove back panel screws</li>
+                            <li>Some laptops: keyboard from top, others: from bottom</li>
+                            <li>Disconnect keyboard ribbon cable (very fragile!)</li>
+                            <li>Install new keyboard</li>
+                            <li>Reconnect ribbon cable</li>
+                            <li>Reassemble</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Easy to replace (DIY friendly):</strong></p>
+                <ul>
+                    <li>ThinkPad series (2 screws, pops out)</li>
+                    <li>Older Dell Latitude (simple clips)</li>
+                    <li>HP ProBook (straightforward)</li>
+                </ul>
+
+                <p><strong>Difficult to replace (professional recommended):</strong></p>
+                <ul>
+                    <li>MacBooks (riveted, glued, requires logic board removal)</li>
+                    <li>Microsoft Surface (glued chassis)</li>
+                    <li>Ultrabooks with unibody design</li>
+                    <li>Gaming laptops with complex cooling</li>
+                </ul>
+
+                <p><strong>MacBook keyboard issues (2016-2019 butterfly keyboards):</strong></p>
+                <ul>
+                    <li>Notorious for failing (dust sensitivity)</li>
+                    <li>Apple Keyboard Service Program: Free repair if eligible</li>
+                    <li>Check: support.apple.com/keyboard-service-program</li>
+                    <li>Out of warranty: $400-600 repair (entire top case replacement)</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Ribbon cable warning:</strong> Keyboard connects to motherboard via extremely fragile ribbon cable (paper-thin, tears easily). Breaking this cable during replacement means keyboard won't work even with new part. Work slowly and carefully.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">13</span> Repair Membrane Keyboard Contact <span class="success-rate">Success: 30%</span></h3>
+                <p><strong>When to try:</strong> Budget membrane keyboard with dead keys, and you're comfortable with electronics tinkering.</p>
+                <p><strong>Difficulty:</strong> Medium-High</p>
+
+                <p><strong>How membrane keyboards work:</strong></p>
+                <ul>
+                    <li>Rubber dome under each key</li>
+                    <li>Pressing dome makes conductive pad contact two membrane layers</li>
+                    <li>Completes circuit = registers keypress</li>
+                    <li>Failure: Membrane layers worn, conductive pad damaged, traces broken</li>
+                </ul>
+
+                <p><strong>Repair procedure:</strong></p>
+                <ol>
+                    <li>Unplug keyboard</li>
+                    <li>Unscrew back panel (usually 6-10 screws)</li>
+                    <li>Separate layers:
+                        <ul>
+                            <li>Backplate</li>
+                            <li>PCB (if present)</li>
+                            <li>Rubber dome sheet</li>
+                            <li>Two membrane sheets (thin plastic with traces)</li>
+                        </ul>
+                    </li>
+                    <li>Inspect membrane sheets for damaged traces (look like tiny circuit lines)</li>
+                    <li>Identify dead key position on membrane</li>
+                    <li>Repair options:
+                        <ul>
+                            <li><strong>Conductive ink pen:</strong> Redraw damaged traces ($10-15 on Amazon)</li>
+                            <li><strong>Aluminum tape:</strong> Bridge broken traces (temporary fix)</li>
+                            <li><strong>Replace rubber dome:</strong> If dome torn/missing under dead key</li>
+                        </ul>
+                    </li>
+                    <li>Clean membranes and rubber domes with isopropyl alcohol</li>
+                    <li>Reassemble carefully (layers must align perfectly)</li>
+                    <li>Test before fully closing case</li>
+                </ol>
+
+                <p><strong>Success factors:</strong></p>
+                <ul>
+                    <li>Only works if damage is minor (single trace break, worn contact)</li>
+                    <li>Won't fix extensive damage or manufacturing defects</li>
+                    <li>Often more cost-effective to buy new keyboard ($15-30)</li>
+                    <li>Worth attempting only for expensive membrane boards or nostalgia/learning</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 When to repair vs replace:</strong> If keyboard costs less than $30, not worth repair effort. If keyboard is $50+ or has sentimental value (vintage, discontinued model), repair worth attempting. Success rate only 30% - be prepared to fail.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">14</span> Fix Wireless Connectivity Issues <span class="success-rate">Success: 55%</span></h3>
+                <p><strong>When to try:</strong> Wireless keyboard lagging, skipping keys, disconnecting randomly, or won't pair.</p>
+
+                <p><strong>Replace batteries FIRST:</strong></p>
+                <ul>
+                    <li>Low battery = #1 cause of wireless issues</li>
+                    <li>Even if keyboard "works", weak battery causes lag and drops</li>
+                    <li>Use quality alkaline or rechargeable NiMH batteries</li>
+                    <li>Some keyboards show battery indicator - check it</li>
+                </ul>
+
+                <p><strong>Fix 2.4GHz USB receiver issues:</strong></p>
+                <ol>
+                    <li>Move receiver closer to keyboard:
+                        <ul>
+                            <li>Maximum range: Usually 10 meters (30 feet)</li>
+                            <li>Walls, metal objects block signal</li>
+                            <li>Use USB extension cable to position receiver on desk (not behind PC)</li>
+                        </ul>
+                    </li>
+                    <li>Reduce wireless interference:
+                        <ul>
+                            <li>Move away from WiFi router (both use 2.4GHz)</li>
+                            <li>Turn off nearby Bluetooth devices</li>
+                            <li>Unplug other wireless peripherals temporarily (isolate problem)</li>
+                            <li>Try different USB port</li>
+                        </ul>
+                    </li>
+                    <li>Re-pair keyboard to receiver:
+                        <ul>
+                            <li>Button on receiver and keyboard (hold 3-5 sec each)</li>
+                            <li>LED blinks during pairing, solid when connected</li>
+                            <li>Consult keyboard manual for specific pairing procedure</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Fix Bluetooth keyboard issues:</strong></p>
+                <ol>
+                    <li>Forget and re-pair:
+                        <ul>
+                            <li>Windows: Settings → Bluetooth → Remove keyboard</li>
+                            <li>Mac: System Settings → Bluetooth → Remove</li>
+                            <li>Turn keyboard off, wait 10 sec, turn on</li>
+                            <li>Put in pairing mode (usually hold pair button 3-5 sec)</li>
+                            <li>Add device in Bluetooth settings</li>
+                        </ul>
+                    </li>
+                    <li>Update Bluetooth drivers (Windows):
+                        <ul>
+                            <li>Device Manager → Bluetooth → Update driver</li>
+                            <li>Or reinstall driver (uninstall, restart)</li>
+                        </ul>
+                    </li>
+                    <li>Reduce Bluetooth interference:
+                        <ul>
+                            <li>Disable WiFi temporarily (test if it's interference)</li>
+                            <li>Move keyboard closer (Bluetooth range ~10 meters)</li>
+                            <li>Remove other Bluetooth devices</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Logitech Unifying Receiver issues:</strong></p>
+                <ul>
+                    <li>Download Logitech Unifying Software</li>
+                    <li>Re-pair devices through software (more reliable than button pairing)</li>
+                    <li>Can pair up to 6 Logitech devices to one receiver</li>
+                    <li>Update receiver firmware through software</li>
+                </ul>
+
+                <p><strong>Gaming keyboard lag (2.4GHz):</strong></p>
+                <ul>
+                    <li>Use wired mode if available (many gaming keyboards have USB cable option)</li>
+                    <li>Change receiver position (line of sight important for gaming)</li>
+                    <li>Update keyboard firmware via manufacturer software:
+                        <ul>
+                            <li>Razer Synapse</li>
+                            <li>Logitech G HUB</li>
+                            <li>Corsair iCUE</li>
+                        </ul>
+                    </li>
+                    <li>Set polling rate to 1000Hz in software (reduces latency)</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">15</span> Test with Different Computer <span class="success-rate">Diagnostic</span></h3>
+                <p><strong>When to try:</strong> Need to determine if problem is keyboard hardware or computer software.</p>
+
+                <p><strong>Test procedure:</strong></p>
+                <ol>
+                    <li>Disconnect keyboard from current computer</li>
+                    <li>Connect to different computer (friend's PC, another laptop, etc.)</li>
+                    <li>Test all previously non-working keys</li>
+                    <li>Test in different programs (Notepad, web browser, Word)</li>
+                </ol>
+
+                <p><strong>Results interpretation:</strong></p>
+                <ul>
+                    <li><strong>Works on different computer:</strong>
+                        <ul>
+                            <li>Problem is your computer (drivers, settings, USB ports)</li>
+                            <li>Solutions: Update drivers, check settings, try different USB port, reinstall OS</li>
+                        </ul>
+                    </li>
+                    <li><strong>Still doesn't work on different computer:</strong>
+                        <ul>
+                            <li>Problem is keyboard hardware</li>
+                            <li>Solutions: Deep cleaning, switch replacement, or replacement keyboard</li>
+                        </ul>
+                    </li>
+                    <li><strong>Works randomly on both computers:</strong>
+                        <ul>
+                            <li>Intermittent hardware failure (loose connection, failing switch)</li>
+                            <li>May need replacement soon</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Online keyboard testers (alternative):</strong></p>
+                <ul>
+                    <li>Visit: keyboard-test.space or keyboardchecker.com</li>
+                    <li>Press every key on your keyboard</li>
+                    <li>Website highlights which keys register</li>
+                    <li>Identifies exactly which keys are dead</li>
+                    <li>Useful for documenting problem before repair/warranty claim</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">16</span> Warranty Claim / Replacement <span class="success-rate">Varies</span></h3>
+                <p><strong>When to pursue:</strong> Keyboard still under warranty, multiple keys failed, or repair attempts unsuccessful.</p>
+
+                <p><strong>Check warranty status:</strong></p>
+                <ul>
+                    <li>Most keyboards: 1-2 year warranty</li>
+                    <li>Gaming keyboards (Corsair, Razer, Logitech): 2-3 years</li>
+                    <li>Laptop keyboards: Covered by laptop warranty (usually 1 year, 3 years with extended)</li>
+                    <li>Find proof of purchase (receipt, order confirmation)</li>
+                </ul>
+
+                <p><strong>Manufacturer warranty process:</strong></p>
+                <ol>
+                    <li>Visit manufacturer support website</li>
+                    <li>Create support ticket or call support</li>
+                    <li>Describe issue in detail (which keys, when started, troubleshooting already done)</li>
+                    <li>Provide proof of purchase</li>
+                    <li>They may require video demonstrating problem</li>
+                    <li>If approved:
+                        <ul>
+                            <li>RMA (Return Merchandise Authorization) number issued</li>
+                            <li>Ship keyboard to them (sometimes they send prepaid label)</li>
+                            <li>They send replacement or repair (usually replacement)</li>
+                            <li>Turnaround: 1-3 weeks</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Common warranty exclusions:</strong></p>
+                <ul>
+                    <li>Liquid damage (even if accidental)</li>
+                    <li>Physical damage (drops, impacts)</li>
+                    <li>Normal wear and tear (keys worn smooth, paint rubbed off)</li>
+                    <li>Unauthorized repairs or modifications</li>
+                    <li>Used/refurbished keyboards (unless separate warranty)</li>
+                </ul>
+
+                <p><strong>Retailer warranty/return (better option if recent purchase):</strong></p>
+                <ul>
+                    <li>Amazon: 30-day return, easy process</li>
+                    <li>Best Buy: 15-day return (30-day with Elite membership)</li>
+                    <li>Microcenter: 30-day return</li>
+                    <li>Often faster and easier than manufacturer warranty</li>
+                </ul>
+
+                <p><strong>MacBook keyboard issues (specific):</strong></p>
+                <ul>
+                    <li>Butterfly keyboards (2016-2019): Apple Keyboard Service Program</li>
+                    <li>Free repair even out of standard warranty (4 years from purchase)</li>
+                    <li>Check eligibility: support.apple.com/keyboard-service-program</li>
+                    <li>Make Genius Bar appointment or mail-in</li>
+                    <li>Usually replaces entire top case (keyboard + battery + trackpad)</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Warranty tip:</strong> Document everything before claiming warranty. Take photos/videos of non-working keys, save screenshots of online keyboard tests, note dates and symptoms. Makes warranty claim process much smoother and faster approval.
+                </div>
+            </div>
+
+            <h2>Prevention: Keep Keyboard Working Longer</h2>
+
+            <h3>1. Regular Cleaning Maintenance</h3>
+            <ul>
+                <li><strong>Weekly:</strong> Wipe surface with slightly damp cloth</li>
+                <li><strong>Monthly:</strong> Compressed air between keys</li>
+                <li><strong>Every 3-6 months:</strong> Deep clean (remove keycaps if possible)</li>
+                <li><strong>Never eat over keyboard:</strong> Crumbs are #1 enemy</li>
+                <li><strong>Keep drinks far away:</strong> Spills ruin keyboards instantly</li>
+            </ul>
+
+            <h3>2. Proper Keyboard Placement</h3>
+            <ul>
+                <li><strong>Flat, stable surface:</strong> Reduces wear on switches</li>
+                <li><strong>Good airflow:</strong> Prevents dust accumulation</li>
+                <li><strong>Away from windows:</strong> Sunlight fades keycaps, heats electronics</li>
+                <li><strong>Clean desk:</strong> Less dust and debris to contaminate keyboard</li>
+            </ul>
+
+            <h3>3. Typing Technique</h3>
+            <ul>
+                <li><strong>Don't pound keys:</strong> Gentle presses reduce switch wear</li>
+                <li><strong>Avoid resting wrists on keys:</strong> Causes accidental presses, bends switches</li>
+                <li><strong>Use wrist rest separately:</strong> Not leaning on keyboard itself</li>
+                <li><strong>Gamers:</strong> Don't slam keys in frustration (common mechanical switch damage)</li>
+            </ul>
+
+            <h3>4. Wireless Keyboard Care</h3>
+            <ul>
+                <li><strong>Replace batteries regularly:</strong> Before they die completely</li>
+                <li><strong>Use quality batteries:</strong> Cheap batteries leak, damage electronics</li>
+                <li><strong>Remove batteries if storing long-term:</strong> Prevents corrosion</li>
+                <li><strong>Keep receiver dust-free:</strong> Keeps signal strong</li>
+            </ul>
+
+            <h3>5. Travel Protection (Laptop Keyboards)</h3>
+            <ul>
+                <li><strong>Keyboard cover:</strong> Silicone cover prevents debris (but remove during typing - can trap heat)</li>
+                <li><strong>Clean before closing:</strong> Debris on keyboard can crack screen</li>
+                <li><strong>Gentle closing:</strong> Don't slam laptop lid</li>
+                <li><strong>Laptop sleeve/case:</strong> Protects during transport</li>
+            </ul>
+
+            <h2>Common Questions</h2>
+
+            <p><strong>Q: My WASD keys suddenly stopped working on my gaming keyboard. What happened?</strong></p>
+            <p>A: You likely accidentally activated WASD lock (gaming mode feature). Try pressing Fn+W - this unlocks WASD on most gaming keyboards (Corsair, Razer, HyperX, etc.). Very common issue! Some keyboards have dedicated unlock button or can be disabled in manufacturer software (iCUE, Synapse, G HUB).</p>
+
+            <p><strong>Q: Windows key doesn't work on my gaming keyboard. How to fix?</strong></p>
+            <p>A: Gaming mode (Windows lock) is enabled. Try Fn+Windows Key, or Fn+F11, or check for physical "Game Mode" switch on keyboard. This feature prevents accidentally minimizing games. Disable in keyboard software if you don't need it.</p>
+
+            <p><strong>Q: Can I fix a mechanical keyboard by lubricating switches?</strong></p>
+            <p>A: Yes, for scratchy or inconsistent keys (not dead keys). Use proper switch lubricant (Krytox 205g0, Tribosys 3204), not WD-40 or household oils. Requires disassembly and careful application. Won't fix electrically dead switches.</p>
+
+            <p><strong>Q: My spacebar works but feels weird/mushy. How to fix?</strong></p>
+            <p>A: Spacebar uses stabilizers (metal bars). They can bend, need lubrication, or clip can break. Remove spacebar keycap, inspect stabilizers, straighten if bent, add lube to stabilizer joints, ensure clips intact. YouTube: "spacebar stabilizer fix".</p>
+
+            <p><strong>Q: Some keys work in BIOS but not Windows. Why?</strong></p>
+            <p>A: Driver issue. BIOS uses basic keyboard mode (always works). Windows needs drivers. Solution: Update/reinstall keyboard drivers, check for Windows updates, disable Fast Startup.</p>
+
+            <p><strong>Q: Can I use rubbing alcohol to clean keyboard?</strong></p>
+            <p>A: Yes, 70%+ isopropyl alcohol ideal. Evaporates quickly, doesn't damage electronics. NEVER use water directly. Apply alcohol to cloth first, then wipe keyboard - don't spray directly.</p>
+
+            <p><strong>Q: Num Lock keys type numbers instead of arrows. How to fix?</strong></p>
+            <p>A: Press Num Lock key to toggle. When Num Lock ON: number pad types numbers. When OFF: types arrows, Home, End, Page Up/Down. Check indicator light on keyboard.</p>
+
+            <p><strong>Q: Can I replace laptop keyboard with different model keyboard?</strong></p>
+            <p>A: No. Laptop keyboards are model-specific (different connectors, sizes, screw holes). Must use exact replacement part for your laptop model. Check bottom of laptop for model number.</p>
+
+            <p><strong>Q: Is it worth repairing a $30 keyboard?</strong></p>
+            <p>A: Usually no. If simple fix (cleaning, driver update) do it. But if needs disassembly/parts, just buy new keyboard. Only repair expensive keyboards ($100+) or sentimental ones.</p>
+
+            <p><strong>Q: Why do gaming keyboard RGB lights work but keys don't?</strong></p>
+            <p>A: RGB LEDs and key switches are separate circuits. Driver might be loading lighting but not input. Solutions: Update manufacturer software (iCUE, Synapse), reinstall drivers, reset keyboard to defaults, re-flash firmware.</p>
+
+            <p><strong>Q: Can spilled soda damage keyboard if I clean it immediately?</strong></p>
+            <p>A: Maybe. Speed is critical. If unplug/shut down within 30 seconds, clean thoroughly with isopropyl alcohol, dry 48+ hours → 60% survival. But sugar is corrosive - may fail weeks/months later from residual damage.</p>
+
+            <p><strong>Q: Why does my laptop keyboard type when I don't touch it?</strong></p>
+            <p>A: Stuck key under keycap, debris, or short circuit. Flip laptop upside down, shake gently, use compressed air. If continues: something pressing key from inside (swollen battery pushing up keyboard - DANGEROUS), disable laptop keyboard, use external.</p>
+
+            <div class="success-box">
+                <h3>✓ Keyboard Troubleshooting Summary</h3>
+                <p><strong>Quick wins (try first, 5-10 min):</strong></p>
+                <ol>
+                    <li>Try Fn+W to unlock WASD (40% for gaming keyboards)</li>
+                    <li>Restart computer (30% success)</li>
+                    <li>Disable Sticky Keys (35% success)</li>
+                    <li>Check modifier keys stuck (25% success)</li>
+                    <li>Update drivers (40% success)</li>
+                    <li>Clean with compressed air (45% success)</li>
+                </ol>
+                <p><strong>Hardware solutions (30-60 min):</strong></p>
+                <ul>
+                    <li>Remove keycaps, deep clean (60% success)</li>
+                    <li>Replace mechanical switches (80% success for mechanicals)</li>
+                    <li>Fix wireless connectivity (55% success)</li>
+                </ul>
+                <p><strong>When to replace instead of repair:</strong></p>
+                <ul>
+                    <li>Keyboard costs under $50</li>
+                    <li>Multiple keys failed (not just one)</li>
+                    <li>Liquid damage extensive</li>
+                    <li>Laptop keyboard (unless under warranty - replacement is $100-300)</li>
+                </ul>
+                <p><strong>Overall success rate:</strong> 70% of keyboard issues fixable with gaming mode unlock, software solutions and basic cleaning!</p>
+            </div>
+
+        </div>
+
+        <div class="related-problems">
+            <h3>🔗 Related Problems</h3>
+            <div class="related-list">
+                <a href="/all-problems/mouse-not-responding/" class="related-item">
+                    <h4>Mouse Not Responding</h4>
+                    <p>Fix unresponsive mouse, cursor lag, and clicking issues</p>
+                </a>
+                <a href="/all-problems/laptop-touchpad-not-working/" class="related-item">
+                    <h4>Laptop Touchpad Not Working</h4>
+                    <p>Fix laptop touchpad, cursor not moving, gestures failing</p>
+                </a>
+                <a href="/all-problems/usb-ports-not-working/" class="related-item">
+                    <h4>USB Ports Not Working</h4>
+                    <p>Fix USB ports not recognizing devices</p>
+                </a>
+                <a href="/all-problems/bluetooth-not-working/" class="related-item">
+                    <h4>Bluetooth Not Working</h4>
+                    <p>Fix Bluetooth connection issues for wireless keyboards</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

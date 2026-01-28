@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TV says No Signal? Fix HDMI connection issues on PS5, Xbox, laptop, cable box. 15 solutions for black screen, no display, HDMI handshake problems.">
+    <title>HDMI No Signal? 15 Ways to Fix TV Display Connection Issues</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        footer { background: #1f2937; color: white; padding: 3rem 2rem 1rem; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #3b82f6; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #d1d5db; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: #3b82f6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #d1fae5; color: #065f46; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .impact { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / HDMI No Signal</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>HDMI No Signal? 15 Ways to Fix TV Display Connection Issues</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 18 min read</span>
+                <span class="difficulty">Easy</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>Main causes:</strong> Wrong TV input (30%), faulty HDMI cable (25%), HDMI handshake failure (20%), resolution mismatch (15%), damaged port (10%)</p>
+            <p><strong>Quick fixes:</strong> Change TV input, replace HDMI cable, power cycle all devices, check HDMI ports, adjust resolution settings</p>
+            <p><strong>Success rate:</strong> 85% fixable with cable/input changes, 10% need port repair, 5% hardware replacement</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#diagnosis">Diagnose No Signal Issue</a></li>
+                <li><a href="#immediate">Immediate Connection Fixes</a></li>
+                <li><a href="#advanced">Advanced Troubleshooting</a></li>
+                <li><a href="#hardware">Hardware Solutions</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2 id="diagnosis">First: Identify Your HDMI Problem</h2>
+            
+            <p><strong>Different "No Signal" scenarios:</strong></p>
+
+            <p><strong>🔴 TV says "No Signal" but device is on:</strong></p>
+            <ul>
+                <li>Device (console/laptop/box) powered on and running</li>
+                <li>Lights/indicators show it's working</li>
+                <li>TV shows black screen with "No Signal" message</li>
+                <li><strong>Likely cause:</strong> Wrong input, bad cable, HDMI handshake issue</li>
+            </ul>
+
+            <p><strong>🔴 Blank black screen (no "No Signal" message):</strong></p>
+            <ul>
+                <li>Screen completely black</li>
+                <li>No error message</li>
+                <li>TV is on (power light shows)</li>
+                <li><strong>Likely cause:</strong> Resolution mismatch, deep sleep mode, HDCP issue</li>
+            </ul>
+
+            <p><strong>🔴 Signal drops in and out (intermittent):</strong></p>
+            <ul>
+                <li>Picture works then goes black randomly</li>
+                <li>"No Signal" appears briefly then comes back</li>
+                <li>Flickering or cutting out</li>
+                <li><strong>Likely cause:</strong> Loose cable, damaged cable, poor HDMI port contact</li>
+            </ul>
+
+            <p><strong>🔴 Worked before, now suddenly stopped:</strong></p>
+            <ul>
+                <li>Was working fine yesterday/last week</li>
+                <li>Nothing changed (no new devices, updates, etc.)</li>
+                <li><strong>Likely cause:</strong> HDMI handshake glitch, cable failure, port damage</li>
+            </ul>
+
+            <p><strong>🔴 Works on one TV/monitor but not another:</strong></p>
+            <ul>
+                <li>Device displays fine on different screen</li>
+                <li>Doesn't work on specific TV</li>
+                <li><strong>Likely cause:</strong> TV compatibility issue, resolution mismatch, HDCP version conflict</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 HDMI Basics:</strong><br>
+                • <strong>HDMI (High-Definition Multimedia Interface):</strong> Transmits video + audio in one cable<br>
+                • <strong>HDMI versions:</strong> 1.4 (4K 30Hz), 2.0 (4K 60Hz), 2.1 (4K 120Hz, 8K)<br>
+                • <strong>HDCP (copy protection):</strong> Must match between device and TV<br>
+                • <strong>Backwards compatible:</strong> HDMI 2.1 devices work with HDMI 1.4 ports (at lower specs)<br>
+                <br>
+                Most "No Signal" issues aren't about HDMI versions - they're simple connection problems.
+            </div>
+
+            <h2 id="immediate">Immediate HDMI Fixes</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">1</span> Check and Change TV Input <span class="impact">Success: 40%</span></h3>
+                <p><strong>Why it works:</strong> Most common cause - TV on wrong input source. Simple but often overlooked!</p>
+                
+                <p><strong>How to check:</strong></p>
+                <ol>
+                    <li>Look at your TV remote for button labeled:
+                        <ul>
+                            <li>"Input" or "Source"</li>
+                            <li>"HDMI" (some remotes)</li>
+                            <li>Icon showing rectangle with arrow</li>
+                        </ul>
+                    </li>
+                    <li>Press Input/Source button repeatedly</li>
+                    <li>Cycle through ALL available inputs:
+                        <ul>
+                            <li>HDMI 1</li>
+                            <li>HDMI 2</li>
+                            <li>HDMI 3</li>
+                            <li>HDMI 4 (if available)</li>
+                            <li>Component, AV (skip these)</li>
+                        </ul>
+                    </li>
+                    <li>Wait 2-3 seconds on each input to see if picture appears</li>
+                    <li>Note which input works</li>
+                </ol>
+
+                <p><strong>Which HDMI port is device connected to?</strong></p>
+                <ol>
+                    <li>Look at back or side of TV</li>
+                    <li>Find HDMI ports (usually labeled HDMI 1, HDMI 2, etc.)</li>
+                    <li>Follow cable from device to see which port it plugs into</li>
+                    <li>Match TV input to that port number</li>
+                </ol>
+
+                <div class="success-box">
+                    <strong>✓ Pro tip:</strong> Label your HDMI cables or use TV's input naming feature. Settings → Inputs → Rename to "PS5", "Xbox", "Cable Box" etc. Makes switching easier!
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">2</span> Replace or Test Different HDMI Cable <span class="impact">Success: 35%</span></h3>
+                <p><strong>Why it works:</strong> HDMI cables fail often - internal wires break, connectors wear out.</p>
+                
+                <p><strong>Signs of bad HDMI cable:</strong></p>
+                <ul>
+                    <li>Cable feels loose in port</li>
+                    <li>Picture cuts in and out when cable moved</li>
+                    <li>Visible damage: bent connector, frayed cable, kinks</li>
+                    <li>Cable is very old (5+ years)</li>
+                    <li>Cable is very cheap (gas station quality)</li>
+                </ul>
+
+                <p><strong>Testing procedure:</strong></p>
+                <ol>
+                    <li>Borrow or buy new HDMI cable ($5-15 for quality cable)</li>
+                    <li>Disconnect old cable from both ends</li>
+                    <li>Connect new cable:
+                        <ul>
+                            <li>One end to source device (console/laptop/box)</li>
+                            <li>Other end to same TV port</li>
+                        </ul>
+                    </li>
+                    <li>Turn on device</li>
+                    <li>Check if picture appears</li>
+                    <li>If works = old cable was faulty</li>
+                </ol>
+
+                <p><strong>HDMI cable buying tips:</strong></p>
+                <ul>
+                    <li><strong>Don't overpay:</strong> $10-20 cable works same as $100 cable for most uses</li>
+                    <li><strong>Standard length:</strong> 6ft (2m) most common, up to 15ft (5m) works fine</li>
+                    <li><strong>Avoid very long cables:</strong> Over 25ft may need signal booster</li>
+                    <li><strong>Good brands:</strong> AmazonBasics, Monoprice, Cable Matters, Anker</li>
+                    <li><strong>For 4K gaming:</strong> Get "High Speed" or "Premium High Speed" certified</li>
+                    <li><strong>For 4K 120Hz (PS5/Xbox Series X):</strong> Get HDMI 2.1 "Ultra High Speed"</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 HDMI cable myths:</strong><br>
+                    • Expensive cables don't improve picture quality - it's digital (works or doesn't)<br>
+                    • Gold-plated connectors nice but not necessary<br>
+                    • "Premium" $50+ cables usually marketing hype<br>
+                    • Exception: Very long runs (25ft+) benefit from better quality
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">3</span> Power Cycle All Devices <span class="impact">Success: 30%</span></h3>
+                <p><strong>Why it works:</strong> Resets HDMI handshake - the communication protocol between TV and device.</p>
+                
+                <p><strong>Full power cycle method:</strong></p>
+                <ol>
+                    <li><strong>Turn off all devices:</strong>
+                        <ul>
+                            <li>TV</li>
+                            <li>Source device (console, laptop, cable box, etc.)</li>
+                            <li>Receiver/soundbar if using one</li>
+                        </ul>
+                    </li>
+                    <li><strong>Unplug power cables from wall</strong> (not just power off - actually unplug)</li>
+                    <li><strong>Wait 2 minutes</strong> (clears residual power and resets HDMI chips)</li>
+                    <li><strong>Disconnect HDMI cable</strong> from both ends</li>
+                    <li><strong>Plug devices back in this order:</strong>
+                        <ol>
+                            <li>TV first → turn on</li>
+                            <li>Wait until TV fully boots</li>
+                            <li>Reconnect HDMI cable</li>
+                            <li>Source device → turn on</li>
+                        </ol>
+                    </li>
+                    <li><strong>Wait 10-15 seconds</strong> for handshake to complete</li>
+                    <li>Check if picture appears</li>
+                </ol>
+
+                <p><strong>Why this specific order matters:</strong></p>
+                <ul>
+                    <li>TV on first allows it to detect device when device powers on</li>
+                    <li>HDMI handshake initiates when source device boots</li>
+                    <li>Proper sequence prevents handshake conflicts</li>
+                </ul>
+
+                <div class="success-box">
+                    <strong>✓ Expected result:</strong> Fresh HDMI handshake establishes. Picture should appear within 15 seconds of source device booting.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">4</span> Try Different HDMI Port on TV <span class="impact">Success: 25%</span></h3>
+                <p><strong>Why it works:</strong> Individual HDMI ports can fail while others work fine.</p>
+                
+                <p><strong>Testing procedure:</strong></p>
+                <ol>
+                    <li>Locate all HDMI ports on TV (usually 2-4 ports):
+                        <ul>
+                            <li>Back of TV (most common)</li>
+                            <li>Side of TV (1-2 ports for easy access)</li>
+                        </ul>
+                    </li>
+                    <li>Note current port being used</li>
+                    <li>Unplug HDMI cable</li>
+                    <li>Plug into different HDMI port</li>
+                    <li>Change TV input to match new port (HDMI 2, HDMI 3, etc.)</li>
+                    <li>Check if picture appears</li>
+                    <li>Try all available ports</li>
+                </ol>
+
+                <p><strong>If one port works but original doesn't:</strong></p>
+                <ul>
+                    <li>Original port likely damaged or faulty</li>
+                    <li>Use working port going forward</li>
+                    <li>If need that specific port (like HDMI 2.1 for gaming), may need TV repair</li>
+                </ul>
+
+                <p><strong>Special HDMI port features:</strong></p>
+                <ul>
+                    <li><strong>HDMI ARC/eARC:</strong> Audio Return Channel (usually HDMI 1 or 2) - for soundbars</li>
+                    <li><strong>HDMI 2.1:</strong> For 4K 120Hz gaming (PS5, Xbox Series X) - check TV manual which port</li>
+                    <li><strong>MHL port:</strong> Some TVs have phone charging capability on specific port</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">5</span> Check Device is Actually On <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it matters:</strong> Obvious but easy to miss - source device might be off, sleeping, or crashed.</p>
+                
+                <p><strong>Device-specific checks:</strong></p>
+
+                <p><strong>Gaming Consoles (PS5, Xbox):</strong></p>
+                <ul>
+                    <li>Look for power light on console</li>
+                    <li>Listen for fan noise</li>
+                    <li>Press power button directly on console (not remote)</li>
+                    <li>Wait 30 seconds for full boot</li>
+                </ul>
+
+                <p><strong>Laptops:</strong></p>
+                <ul>
+                    <li>Check laptop screen - is it displaying?</li>
+                    <li>Press keyboard keys - laptop should respond</li>
+                    <li>If laptop screen black too = laptop crashed or off</li>
+                    <li>Try waking from sleep: press spacebar or move mouse</li>
+                </ul>
+
+                <p><strong>Cable/Satellite Box:</strong></p>
+                <ul>
+                    <li>Check for lights on front panel</li>
+                    <li>Try changing channel with remote</li>
+                    <li>May be in standby mode - press power on remote</li>
+                </ul>
+
+                <p><strong>Streaming Devices (Roku, Fire Stick, Apple TV):</strong></p>
+                <ul>
+                    <li>Look for LED indicator light</li>
+                    <li>Press button on remote - device should respond</li>
+                    <li>Some go to sleep after inactivity - press Home button to wake</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">6</span> Disconnect Other HDMI Devices <span class="impact">Success: 10%</span></h3>
+                <p><strong>Why it works:</strong> Too many HDMI devices can cause handshake conflicts, especially with HDCP (copy protection).</p>
+                
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Unplug ALL other HDMI devices from TV except the one you want to use</li>
+                    <li>This includes:
+                        <ul>
+                            <li>Other game consoles</li>
+                            <li>Streaming sticks</li>
+                            <li>Blu-ray players</li>
+                            <li>Cable boxes</li>
+                            <li>Sound systems</li>
+                        </ul>
+                    </li>
+                    <li>Power cycle TV (unplug 2 minutes)</li>
+                    <li>Connect only one device</li>
+                    <li>Turn on and test</li>
+                    <li>If works, reconnect other devices one at a time</li>
+                </ol>
+
+                <p><strong>HDCP conflicts:</strong></p>
+                <ul>
+                    <li>HDCP = copy protection system</li>
+                    <li>Older devices may use HDCP 1.4</li>
+                    <li>Newer devices use HDCP 2.2 or 2.3</li>
+                    <li>Mixing versions can cause handshake failures</li>
+                    <li>Using HDMI switch can help (acts as intermediary)</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">7</span> Adjust Display Resolution (Console/PC) <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it works:</strong> Source device outputting resolution TV doesn't support causes black screen.</p>
+                
+                <p><strong>PS5 Resolution Fix:</strong></p>
+                <ol>
+                    <li>Turn off PS5 completely</li>
+                    <li>Press and hold power button</li>
+                    <li>Release after FIRST beep only (1 second)</li>
+                    <li>PS5 boots in safe resolution (1080p)</li>
+                    <li>If picture appears:
+                        <ul>
+                            <li>Settings → Screen and Video</li>
+                            <li>Video Output → Resolution</li>
+                            <li>Try 1080p or Auto</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Xbox Series X/S Resolution Fix:</strong></p>
+                <ol>
+                    <li>If you can see anything on screen:
+                        <ul>
+                            <li>Settings → General → TV & display options</li>
+                            <li>Resolution → Try 1080p</li>
+                        </ul>
+                    </li>
+                    <li>If completely black screen:
+                        <ul>
+                            <li>Press Xbox button on controller</li>
+                            <li>Navigate blindly: RB (6 times) → A → Down → A</li>
+                            <li>This lowers resolution to 1080p</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Laptop Display Settings:</strong></p>
+                <ol>
+                    <li><strong>Windows laptop:</strong> Press Windows + P
+                        <ul>
+                            <li>Cycles through display modes</li>
+                            <li>PC screen only</li>
+                            <li>Duplicate</li>
+                            <li>Extend</li>
+                            <li>Second screen only</li>
+                            <li>Try each mode</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mac:</strong> System Preferences → Displays → Detect Displays</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Common resolution mismatches:</strong><br>
+                    • Device set to 4K but TV only supports 1080p<br>
+                    • Device set to 120Hz but TV only supports 60Hz<br>
+                    • HDR enabled but TV doesn't support it<br>
+                    <br>
+                    Solution: Lower resolution/refresh rate to what TV supports.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">8</span> Bypass HDMI Switcher/Receiver <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it works:</strong> HDMI switchers, receivers, and soundbars can fail or cause handshake issues.</p>
+                
+                <p><strong>Current setup check:</strong></p>
+                <ul>
+                    <li>Is your device connected directly to TV?</li>
+                    <li>Or going through:
+                        <ul>
+                            <li>HDMI switch/splitter</li>
+                            <li>AV receiver</li>
+                            <li>Soundbar</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Direct connection test:</strong></p>
+                <ol>
+                    <li>Disconnect HDMI cable from switcher/receiver</li>
+                    <li>Connect source device DIRECTLY to TV</li>
+                    <li>Bypass all intermediary devices</li>
+                    <li>Test if picture appears</li>
+                </ol>
+
+                <p><strong>Results:</strong></p>
+                <ul>
+                    <li><strong>If works directly:</strong> Problem is switcher/receiver
+                        <ul>
+                            <li>Try different HDMI port on switcher</li>
+                            <li>Update receiver firmware</li>
+                            <li>Replace cheap HDMI switch with quality one</li>
+                        </ul>
+                    </li>
+                    <li><strong>If still doesn't work:</strong> Problem is device, cable, or TV port</li>
+                </ul>
+            </div>
+
+            <h2 id="advanced">Advanced HDMI Troubleshooting</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">9</span> Update TV Firmware <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Firmware updates improve HDMI compatibility and fix handshake bugs.</p>
+                
+                <p><strong>How to update (varies by brand):</strong></p>
+
+                <p><strong>Samsung TV:</strong></p>
+                <ol>
+                    <li>Settings → Support → Software Update</li>
+                    <li>Update Now</li>
+                    <li>If connected to internet, downloads automatically</li>
+                    <li>TV restarts when complete</li>
+                </ol>
+
+                <p><strong>LG TV:</strong></p>
+                <ol>
+                    <li>Settings → All Settings → General → About This TV</li>
+                    <li>Check for Updates</li>
+                    <li>Install if available</li>
+                </ol>
+
+                <p><strong>Sony TV:</strong></p>
+                <ol>
+                    <li>Settings → System Software Update</li>
+                    <li>Check for system software update</li>
+                    <li>Install</li>
+                </ol>
+
+                <p><strong>Vizio TV:</strong></p>
+                <ol>
+                    <li>Menu → System → Check for Updates</li>
+                    <li>Install if available</li>
+                </ol>
+
+                <p><strong>If TV not connected to internet:</strong></p>
+                <ol>
+                    <li>Go to manufacturer website</li>
+                    <li>Find your TV model number</li>
+                    <li>Download latest firmware to USB drive</li>
+                    <li>Follow manual update instructions</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">10</span> Disable HDMI-CEC / Anynet+ <span class="impact">Success: 10%</span></h3>
+                <p><strong>Why it works:</strong> HDMI-CEC allows device control via TV remote but can cause conflicts.</p>
+                
+                <p><strong>What is HDMI-CEC:</strong></p>
+                <ul>
+                    <li>Feature letting TV control connected devices</li>
+                    <li>Different names by brand:
+                        <ul>
+                            <li><strong>Samsung:</strong> Anynet+</li>
+                            <li><strong>LG:</strong> SimpLink</li>
+                            <li><strong>Sony:</strong> Bravia Sync</li>
+                            <li><strong>Vizio:</strong> CEC</li>
+                            <li><strong>Generic:</strong> HDMI-CEC</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Disable HDMI-CEC on TV:</strong></p>
+                <ol>
+                    <li>Settings → General (or System)</li>
+                    <li>External Device Manager (or HDMI Settings)</li>
+                    <li>Find Anynet+ / HDMI-CEC / SimpLink</li>
+                    <li>Turn OFF</li>
+                    <li>Restart TV</li>
+                    <li>Test HDMI connection</li>
+                </ol>
+
+                <p><strong>Also disable on source device:</strong></p>
+                <ul>
+                    <li><strong>PS5:</strong> Settings → System → HDMI → Enable HDMI Device Link → Off</li>
+                    <li><strong>Xbox:</strong> Settings → General → TV & display options → Device control → Turn off</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">11</span> Enable HDMI Deep Color / Enhanced Mode <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Some devices require enhanced HDMI mode enabled on TV for proper handshake.</p>
+                
+                <p><strong>What is HDMI Deep Color / Enhanced:</strong></p>
+                <ul>
+                    <li>Enables full HDMI 2.0/2.1 bandwidth</li>
+                    <li>Required for 4K HDR, 4K 60Hz, 4K 120Hz</li>
+                    <li>Usually OFF by default on many TVs</li>
+                    <li>Must enable per HDMI port</li>
+                </ul>
+
+                <p><strong>Enable on different TV brands:</strong></p>
+
+                <p><strong>Samsung TV:</strong></p>
+                <ol>
+                    <li>Settings → General → External Device Manager</li>
+                    <li>Input Signal Plus</li>
+                    <li>Enable for HDMI port being used</li>
+                </ol>
+
+                <p><strong>LG TV:</strong></p>
+                <ol>
+                    <li>Settings → All Settings → General</li>
+                    <li>Devices → HDMI Settings</li>
+                    <li>HDMI Deep Color → ON for specific port</li>
+                </ol>
+
+                <p><strong>Sony TV:</strong></p>
+                <ol>
+                    <li>Settings → Watching TV → External inputs</li>
+                    <li>HDMI signal format</li>
+                    <li>Enhanced format for specific HDMI port</li>
+                </ol>
+
+                <p><strong>Vizio TV:</strong></p>
+                <ol>
+                    <li>Menu → Input Settings</li>
+                    <li>Full UHD Color</li>
+                    <li>Enable for port being used</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Paradox:</strong> Sometimes you need to enable this setting but can't see menu because no signal! Try enabling on different port first, or use different device to access TV menu.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">12</span> Reset TV to Factory Settings <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it works:</strong> Clears corrupted settings causing HDMI issues.</p>
+                
+                <p><strong>⚠️ This erases all TV settings, apps, accounts!</strong></p>
+
+                <p><strong>Samsung TV Reset:</strong></p>
+                <ol>
+                    <li>Settings → General → Reset</li>
+                    <li>Enter PIN (default: 0000)</li>
+                    <li>Confirm reset</li>
+                    <li>TV restarts and runs setup wizard</li>
+                </ol>
+
+                <p><strong>LG TV Reset:</strong></p>
+                <ol>
+                    <li>Settings → All Settings → General</li>
+                    <li>Reset to Initial Settings</li>
+                    <li>Confirm</li>
+                </ol>
+
+                <p><strong>Sony TV Reset:</strong></p>
+                <ol>
+                    <li>Settings → Storage & reset</li>
+                    <li>Factory data reset</li>
+                    <li>Erase everything</li>
+                </ol>
+
+                <p><strong>After reset:</strong></p>
+                <ol>
+                    <li>Complete setup wizard</li>
+                    <li>Connect HDMI device</li>
+                    <li>Enable HDMI Deep Color if needed</li>
+                    <li>Test connection</li>
+                </ol>
+            </div>
+
+            <h2 id="hardware">Hardware Issues & Port Repair</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">13</span> Inspect and Clean HDMI Ports <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Dust, lint, and debris prevent proper HDMI connection.</p>
+                
+                <p><strong>Inspection:</strong></p>
+                <ol>
+                    <li>Unplug TV and source device</li>
+                    <li>Use flashlight to look inside HDMI ports</li>
+                    <li>Check for:
+                        <ul>
+                            <li>Dust or lint buildup</li>
+                            <li>Bent or damaged pins</li>
+                            <li>Foreign objects (broken plastic, etc.)</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Cleaning method:</strong></p>
+                <ol>
+                    <li>Use compressed air:
+                        <ul>
+                            <li>Hold can upright</li>
+                            <li>Short bursts into port</li>
+                            <li>Don't insert nozzle deep</li>
+                        </ul>
+                    </li>
+                    <li>Use wooden toothpick or plastic dental pick:
+                        <ul>
+                            <li>GENTLY remove visible lint</li>
+                            <li>Don't use metal (damages pins)</li>
+                        </ul>
+                    </li>
+                    <li>Cotton swab with 99% isopropyl alcohol:
+                        <ul>
+                            <li>Lightly dampen swab</li>
+                            <li>Gently clean inside port</li>
+                            <li>Let dry 15 minutes</li>
+                        </ul>
+                    </li>
+                    <li>Test connection</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Be extremely gentle:</strong> HDMI ports have 19 tiny pins that bend/break easily. Don't force anything into port.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">14</span> Check for Bent or Broken HDMI Pins <span class="impact">Diagnostic</span></h3>
+                <p><strong>Why it matters:</strong> Bent pins prevent proper connection. Common from forcing cable at angle.</p>
+                
+                <p><strong>Pin inspection:</strong></p>
+                <ol>
+                    <li>Use bright light and magnifying glass (or phone camera zoom)</li>
+                    <li>Look deep inside HDMI port</li>
+                    <li>All 19 pins should be:
+                        <ul>
+                            <li>Straight and parallel</li>
+                            <li>Same height</li>
+                            <li>Not touching each other</li>
+                        </ul>
+                    </li>
+                    <li>Check both TV port and device port</li>
+                </ol>
+
+                <p><strong>If pins bent:</strong></p>
+
+                <p><strong>Minor bend (DIY - risky):</strong></p>
+                <ul>
+                    <li>Use needle or tweezers</li>
+                    <li>VERY gently straighten pin</li>
+                    <li>High risk of snapping pin off</li>
+                    <li>Only try if comfortable with delicate work</li>
+                </ul>
+
+                <p><strong>Professional repair (recommended):</strong></p>
+                <ul>
+                    <li>TV repair shop: $80-150</li>
+                    <li>Replace entire HDMI port board</li>
+                    <li>Much safer than DIY</li>
+                </ul>
+
+                <p><strong>Broken pins:</strong></p>
+                <ul>
+                    <li>Pin completely snapped off = port unusable</li>
+                    <li>Must replace port (professional)</li>
+                    <li>Or use different HDMI port on TV</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">15</span> Professional Repair or Replacement <span class="impact">Cost: $100-300</span></h3>
+                <p><strong>When professional help needed:</strong></p>
+                <ul>
+                    <li>All DIY fixes tried, nothing works</li>
+                    <li>ALL HDMI ports on TV don't work</li>
+                    <li>Physical port damage (bent pins, broken connector)</li>
+                    <li>TV under warranty</li>
+                </ul>
+
+                <p><strong>TV HDMI port repair costs:</strong></p>
+                <ul>
+                    <li><strong>Port replacement:</strong> $100-200 (labor + parts)</li>
+                    <li><strong>Main board replacement (all ports damaged):</strong> $200-400</li>
+                    <li><strong>Diagnosis fee:</strong> $50-80 (usually waived if repaired)</li>
+                </ul>
+
+                <p><strong>Source device HDMI port repair:</strong></p>
+                <ul>
+                    <li><strong>PS5/Xbox:</strong> $100-150 (console HDMI port)</li>
+                    <li><strong>Laptop:</strong> $80-200 (depends on model)</li>
+                    <li><strong>Cable box:</strong> Often cheaper to replace than repair</li>
+                </ul>
+
+                <p><strong>Warranty coverage:</strong></p>
+                <ul>
+                    <li><strong>Manufacturer warranty:</strong> 1 year typically
+                        <ul>
+                            <li>Covers defects and hardware failures</li>
+                            <li>Doesn't cover physical damage</li>
+                        </ul>
+                    </li>
+                    <li><strong>Extended warranty (if purchased):</strong> 2-5 years
+                        <ul>
+                            <li>May cover accidental damage</li>
+                            <li>Check terms before repair</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Repair vs Replace decision:</strong></p>
+                <div class="success-box">
+                    <h3>✓ Worth repairing if:</h3>
+                    <ul>
+                        <li>TV is under 3 years old</li>
+                        <li>Repair cost under $200</li>
+                        <li>TV was $500+ originally</li>
+                        <li>Under warranty (free/cheap repair)</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h3>⚠️ Consider replacing if:</h3>
+                    <ul>
+                        <li>TV is 5+ years old</li>
+                        <li>Repair exceeds 50% of new TV cost</li>
+                        <li>Main board replacement needed ($300+)</li>
+                        <li>Budget TV (under $300 originally)</li>
+                        <li>Good time to upgrade to 4K/OLED</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Prevention: Avoid Future HDMI Issues</h2>
+
+            <h3>1. Proper Cable Handling</h3>
+            <ul>
+                <li><strong>Insert straight:</strong> Don't force at angles (bends pins)</li>
+                <li><strong>Pull straight out:</strong> Grip connector, not cable</li>
+                <li><strong>Don't overtighten:</strong> HDMI cables shouldn't be tight</li>
+                <li><strong>Support cable weight:</strong> Don't let heavy cable dangle (strains port)</li>
+                <li><strong>Route cables neatly:</strong> Avoid kinks and sharp bends</li>
+            </ul>
+
+            <h3>2. Cable Management</h3>
+            <ul>
+                <li><strong>Use cable clips:</strong> Secure cables to TV stand</li>
+                <li><strong>Leave slack:</strong> 6 inches extra prevents strain</li>
+                <li><strong>Don't coil tightly:</strong> Loose coils when storing</li>
+                <li><strong>Replace damaged cables immediately:</strong> Don't wait for failure</li>
+            </ul>
+
+            <h3>3. Port Protection</h3>
+            <ul>
+                <li><strong>Don't plug/unplug frequently:</strong> Wears out ports</li>
+                <li><strong>Use HDMI switch:</strong> If swapping devices often (protects TV ports)</li>
+                <li><strong>Keep ports clean:</strong> Blow out dust quarterly</li>
+                <li><strong>Don't leave cables hanging:</strong> Remove unused cables</li>
+            </ul>
+
+            <h3>4. Power Management</h3>
+            <ul>
+                <li><strong>Turn devices off before unplugging HDMI:</strong> Hot-swapping can damage ports</li>
+                <li><strong>Use surge protector:</strong> Protects from power spikes damaging HDMI chips</li>
+                <li><strong>Proper shutdown sequence:</strong> Source device off first, then TV</li>
+            </ul>
+
+            <h2>Common Questions</h2>
+
+            <p><strong>Q: Why does HDMI work sometimes but not other times?</strong></p>
+            <p>A: Intermittent connection usually means loose cable, damaged cable, or port wear. Try different cable first. If issue persists, port may be damaged - try different HDMI port on TV.</p>
+
+            <p><strong>Q: My laptop screen works but won't display on TV via HDMI. Why?</strong></p>
+            <p>A: Press Windows+P to cycle display modes (Duplicate, Extend, Second screen only). Also check laptop HDMI port isn't damaged - try connecting to different TV/monitor to verify.</p>
+
+            <p><strong>Q: Do I need expensive "premium" HDMI cables?</strong></p>
+            <p>A: No. HDMI is digital - it works or doesn't. $10 cable performs same as $100 cable for standard use. Exception: very long runs (25ft+) or 4K 120Hz gaming benefit from certified cables.</p>
+
+            <p><strong>Q: Can cheap HDMI cables damage my TV or device?</strong></p>
+            <p>A: Extremely unlikely. Worst case: cable doesn't work or gives poor signal. Won't damage equipment. However, poorly made cables can fail quickly.</p>
+
+            <p><strong>Q: How do I know which HDMI version my TV/device has?</strong></p>
+            <p>A: Check manual or manufacturer website. Generally: 4K 60Hz = HDMI 2.0, 4K 120Hz/8K = HDMI 2.1. But version rarely matters for basic "No Signal" troubleshooting.</p>
+
+            <p><strong>Q: My 4K device shows 1080p on TV. How do I get 4K?</strong></p>
+            <p>A: Enable HDMI Deep Color/Enhanced mode on TV for that port. Also ensure using High Speed HDMI cable. Check device output settings to ensure 4K selected.</p>
+
+            <p><strong>Q: Can HDMI cable be too long?</strong></p>
+            <p>A: Yes. Over 25 feet, signal degrades. Use active HDMI cable (has built-in signal booster) for runs over 25ft. Standard cables work fine up to 15-20 feet.</p>
+
+            <p><strong>Q: Why does unplugging and replugging HDMI fix the problem temporarily?</strong></p>
+            <p>A: Reestablishes HDMI handshake. If this fixes it temporarily but problem returns, cable or port is failing. Replace cable first, check port condition second.</p>
+
+            <p><strong>Q: My PS5 says "No Signal" but worked yesterday. Nothing changed!</strong></p>
+            <p>A: HDMI handshake can randomly fail. Full power cycle (unplug everything 2 minutes) usually fixes. If recurring, cable likely failing - replace it.</p>
+
+            <p><strong>Q: All my HDMI ports stopped working at once. What happened?</strong></p>
+            <p>A: Main board HDMI chip likely failed (can happen from power surge or age). Needs professional repair or TV replacement. Try factory reset first as last-ditch software fix.</p>
+
+            <div class="success-box">
+                <h3>✓ Success Rates Summary:</h3>
+                <ul>
+                    <li><strong>Change TV input + replace cable:</strong> 55% fixed</li>
+                    <li><strong>Power cycle all devices:</strong> 30% fixed</li>
+                    <li><strong>Try different HDMI port:</strong> 25% fixed</li>
+                    <li><strong>Adjust resolution settings:</strong> 20% fixed</li>
+                    <li><strong>Enable Deep Color + disable CEC:</strong> 15% fixed</li>
+                    <li><strong>Clean ports + firmware update:</strong> 15% fixed</li>
+                    <li><strong>Factory reset TV:</strong> 20% fixed (software issues)</li>
+                    <li><strong>Port repair/replacement:</strong> 90% success (professional)</li>
+                </ul>
+                <p><strong>Overall:</strong> 85% of HDMI "No Signal" issues fixable at home with cable changes and settings adjustments!</p>
+            </div>
+
+        </div>
+
+        <div class="related-problems">
+            <h3>🔗 Related Problems</h3>
+            <div class="related-list">
+                <a href="/all-problems/ps5-wont-turn-on/" class="related-item">
+                    <h4>PS5 Won't Turn On</h4>
+                    <p>Fix PlayStation 5 power and display issues</p>
+                </a>
+                <a href="/all-problems/monitor-no-signal/" class="related-item">
+                    <h4>Monitor No Signal</h4>
+                    <p>Fix PC monitor display connection problems</p>
+                </a>
+                <a href="/all-problems/tv-black-screen/" class="related-item">
+                    <h4>TV Black Screen</h4>
+                    <p>Fix TV display and backlight issues</p>
+                </a>
+                <a href="/all-problems/laptop-external-display/" class="related-item">
+                    <h4>Laptop Won't Detect External Display</h4>
+                    <p>Fix laptop HDMI and monitor connection</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

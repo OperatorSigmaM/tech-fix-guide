@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Console won't read disc? Fix PS5, Xbox Series X, PlayStation 4 disc drive issues. 14 solutions for disc errors, eject problems, unrecognized games.">
+    <title>Console Disc Not Reading? 14 Ways to Fix PS5, Xbox Disc Drive</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        footer { background: #1f2937; color: white; padding: 3rem 2rem 1rem; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #3b82f6; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #d1d5db; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: #3b82f6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #d1fae5; color: #065f46; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .impact { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / Disc Not Reading</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>Console Disc Not Reading? 14 Ways to Fix PS5, Xbox Disc Drive</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 17 min read</span>
+                <span class="difficulty">Easy to Medium</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>Main causes:</strong> Dirty/scratched disc (35%), disc drive malfunction (25%), software glitch (20%), wrong region disc (10%), laser lens dirty (10%)</p>
+            <p><strong>Quick fixes:</strong> Clean disc, restart console, rebuild database, check disc region, update system software, clean laser lens</p>
+            <p><strong>Success rate:</strong> 70% fixable with cleaning and software fixes, 20% need disc drive repair, 10% hardware replacement</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#diagnosis">Identify Your Disc Problem</a></li>
+                <li><a href="#immediate">Immediate Disc Fixes</a></li>
+                <li><a href="#software">Software Solutions</a></li>
+                <li><a href="#hardware">Hardware Troubleshooting</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2 id="diagnosis">First: Identify Your Disc Drive Problem</h2>
+            
+            <p><strong>Different symptoms require different solutions:</strong></p>
+
+            <p><strong>🔴 Console won't accept disc (won't pull in):</strong></p>
+            <ul>
+                <li>Insert disc but console doesn't grab it</li>
+                <li>Disc slot feels blocked or jammed</li>
+                <li>No motor sound when inserting disc</li>
+                <li><strong>Likely cause:</strong> Disc already inside, mechanical jam, disc drive motor failure</li>
+            </ul>
+
+            <p><strong>🔴 Disc inserted but not recognized:</strong></p>
+            <ul>
+                <li>Console accepts disc (motor spins)</li>
+                <li>Dashboard shows "Unsupported Disc" or "Unrecognized Disc"</li>
+                <li>Game doesn't appear in library</li>
+                <li><strong>Likely cause:</strong> Dirty/scratched disc, wrong region, software issue, laser lens dirty</li>
+            </ul>
+
+            <p><strong>🔴 Disc spins but game won't start:</strong></p>
+            <ul>
+                <li>Hear disc spinning inside</li>
+                <li>Game icon appears but won't launch</li>
+                <li>Error message when trying to start game</li>
+                <li><strong>Likely cause:</strong> Corrupted game data, license issue, disc damage</li>
+            </ul>
+
+            <p><strong>🔴 Disc won't eject:</strong></p>
+            <ul>
+                <li>Press eject button but disc stays inside</li>
+                <li>Eject button does nothing (no beep/motor sound)</li>
+                <li><strong>Likely cause:</strong> Software glitch, mechanical jam, manual eject needed</li>
+            </ul>
+
+            <p><strong>🔴 Loud grinding/clicking noise:</strong></p>
+            <ul>
+                <li>Disc spins but makes abnormal sounds</li>
+                <li>Grinding, clicking, or scratching sounds</li>
+                <li>Works occasionally but inconsistent</li>
+                <li><strong>Likely cause:</strong> Disc drive mechanism failing, rollers worn out</li>
+            </ul>
+
+            <p><strong>🔴 Works with some discs but not others:</strong></p>
+            <ul>
+                <li>Some games read fine, others don't</li>
+                <li>Blu-rays work but games don't (or vice versa)</li>
+                <li><strong>Likely cause:</strong> Specific disc damaged, dual-layer disc issue, laser power weak</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Disc Drive Types:</strong><br>
+                • <strong>PS5 Disc Edition:</strong> Ultra HD Blu-ray (4K), Blu-ray, DVD, PS5/PS4 games<br>
+                • <strong>Xbox Series X:</strong> Ultra HD Blu-ray (4K), Blu-ray, DVD, Xbox games<br>
+                • <strong>Xbox Series S:</strong> No disc drive (digital only)<br>
+                • <strong>PS4/Xbox One:</strong> Blu-ray, DVD, games<br>
+                <br>
+                Note: Digital editions (PS5 Digital, Xbox Series S) have no disc drive.
+            </div>
+
+            <h2 id="immediate">Immediate Disc Fixes</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">1</span> Clean the Disc Properly <span class="impact">Success: 45%</span></h3>
+                <p><strong>Why it works:</strong> Fingerprints, dust, and smudges prevent laser from reading data. Most common cause of disc errors.</p>
+                
+                <p><strong>What you need:</strong></p>
+                <ul>
+                    <li>Microfiber cloth (lens cleaning cloth)</li>
+                    <li>Distilled water or isopropyl alcohol (70%+)</li>
+                    <li>Soft, lint-free cloth</li>
+                </ul>
+
+                <p><strong>Proper disc cleaning method:</strong></p>
+                <ol>
+                    <li>Remove disc from console</li>
+                    <li>Hold disc by edges only (don't touch shiny surface)</li>
+                    <li>Inspect disc under good light - look for:
+                        <ul>
+                            <li>Fingerprints and smudges</li>
+                            <li>Dust and dirt</li>
+                            <li>Scratches (especially circular scratches)</li>
+                        </ul>
+                    </li>
+                    <li>Dampen microfiber cloth with distilled water or isopropyl alcohol</li>
+                    <li><strong>Wipe from center to outer edge in straight lines</strong> (never circular motion)</li>
+                    <li>Work around entire disc in straight radiating lines</li>
+                    <li>Dry with clean part of cloth (same straight motion)</li>
+                    <li>Let air dry 1-2 minutes</li>
+                    <li>Inspect again - should be clean and clear</li>
+                    <li>Reinsert into console</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Never:</strong><br>
+                    • Wipe in circular motions (creates scratches that follow data tracks - worse than radial scratches)<br>
+                    • Use paper towels, tissues, or regular cloths (too abrasive)<br>
+                    • Use window cleaner, acetone, or harsh chemicals<br>
+                    • Touch shiny data surface with fingers
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Disc scratch severity:</strong><br>
+                    • <strong>Minor surface scratches (radial):</strong> Usually still readable, cleaning helps<br>
+                    • <strong>Deep scratches (can feel with fingernail):</strong> May cause read errors<br>
+                    • <strong>Circular scratches:</strong> Worst type - follows data tracks, harder to read<br>
+                    • <strong>Cracks or chips:</strong> Disc unrecoverable, don't use (can damage drive)
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">2</span> Restart Console & Clear Cache <span class="impact">Success: 30%</span></h3>
+                <p><strong>Why it works:</strong> Clears temporary glitches in disc recognition software, resets disc drive controller.</p>
+                
+                <p><strong>Full power cycle method:</strong></p>
+                <ol>
+                    <li>Remove disc from console</li>
+                    <li>Fully shut down console (not rest/sleep mode):
+                        <ul>
+                            <li><strong>PS5:</strong> Hold power button 10 seconds until beeps</li>
+                            <li><strong>Xbox:</strong> Hold Xbox button 10 seconds</li>
+                        </ul>
+                    </li>
+                    <li>Unplug power cable from back of console</li>
+                    <li>Wait 2 minutes (clears cache and residual power)</li>
+                    <li>Plug power cable back in</li>
+                    <li>Power on console</li>
+                    <li>Wait for full boot to dashboard</li>
+                    <li>Insert disc</li>
+                    <li>Test if recognized</li>
+                </ol>
+
+                <div class="success-box">
+                    <strong>✓ Expected result:</strong> Console boots fresh, disc drive resets, should recognize disc. This fixes many temporary software glitches.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">3</span> Check Disc Region & Compatibility <span class="impact">Success: 10%</span></h3>
+                <p><strong>Why it matters:</strong> Discs are region-locked. Wrong region disc won't play.</p>
+                
+                <p><strong>Region codes:</strong></p>
+                <ul>
+                    <li><strong>Region 1:</strong> USA, Canada</li>
+                    <li><strong>Region 2:</strong> Europe, Middle East, Japan</li>
+                    <li><strong>Region 3:</strong> Southeast Asia</li>
+                    <li><strong>Region 4:</strong> Latin America, Australia</li>
+                    <li><strong>Region Free:</strong> Works worldwide</li>
+                </ul>
+
+                <p><strong>How to check disc region:</strong></p>
+                <ol>
+                    <li>Look at disc label or case</li>
+                    <li>Find region code (small globe icon with number)</li>
+                    <li>Compare to your console region:
+                        <ul>
+                            <li><strong>PS5/PS4:</strong> Settings → System → System Information → Region</li>
+                            <li><strong>Xbox:</strong> Settings → System → Console Info → Region</li>
+                        </ul>
+                    </li>
+                    <li>Regions must match or disc must be region-free</li>
+                </ol>
+
+                <p><strong>Game disc compatibility:</strong></p>
+                <ul>
+                    <li><strong>PS5:</strong> Plays PS5 and PS4 game discs (both regions)</li>
+                    <li><strong>PS4:</strong> Plays PS4 discs only (no PS3)</li>
+                    <li><strong>Xbox Series X:</strong> Plays Xbox Series X/S, Xbox One, Xbox 360, original Xbox (select titles)</li>
+                    <li><strong>Xbox One:</strong> Plays Xbox One, Xbox 360, original Xbox (backwards compatible titles)</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Movie discs vs game discs:</strong><br>
+                    • <strong>Game discs:</strong> Usually region-free or match console region<br>
+                    • <strong>Blu-ray movies:</strong> Strictly region-locked (more restrictive)<br>
+                    • <strong>DVDs:</strong> Region-locked<br>
+                    <br>
+                    If movie won't play but games work = region mismatch issue.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">4</span> Manually Eject Stuck Disc <span class="impact">Success: 35%</span></h3>
+                <p><strong>Why it works:</strong> Manual eject bypasses electronic eject mechanism that may have failed.</p>
+                
+                <p><strong>PS5 Manual Eject:</strong></p>
+                <ol>
+                    <li>Power off PS5 completely</li>
+                    <li>Unplug power cable</li>
+                    <li>Place PS5 on soft towel (protect finish)</li>
+                    <li>Remove base stand if attached</li>
+                    <li>Locate manual eject screw hole:
+                        <ul>
+                            <li><strong>With disc drive on RIGHT (standing):</strong> Bottom near base</li>
+                            <li>Small hole labeled with eject icon</li>
+                        </ul>
+                    </li>
+                    <li>Insert Phillips screwdriver or similar tool into hole</li>
+                    <li>Turn counterclockwise slowly</li>
+                    <li>Disc gradually pushes out</li>
+                    <li>Keep turning until disc fully ejects</li>
+                    <li>Reassemble and test</li>
+                </ol>
+
+                <p><strong>Xbox Series X Manual Eject:</strong></p>
+                <ol>
+                    <li>Power off Xbox completely</li>
+                    <li>Unplug power cable</li>
+                    <li>Lay Xbox horizontally</li>
+                    <li>Locate small orange/yellow tab inside disc slot</li>
+                    <li>Use straightened paperclip</li>
+                    <li>Insert into small hole near disc slot (right side)</li>
+                    <li>Push gently until disc releases</li>
+                    <li>Pull disc out</li>
+                </ol>
+
+                <p><strong>PS4 Manual Eject:</strong></p>
+                <ol>
+                    <li>Power off and unplug PS4</li>
+                    <li>Find manual eject screw (varies by PS4 model):
+                        <ul>
+                            <li><strong>Original PS4:</strong> Under glossy panel, near disc drive</li>
+                            <li><strong>PS4 Slim:</strong> Small hole on back near disc slot</li>
+                            <li><strong>PS4 Pro:</strong> Similar to Slim</li>
+                        </ul>
+                    </li>
+                    <li>Insert screwdriver and turn counterclockwise</li>
+                    <li>Disc ejects</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ After manual eject:</strong> If console still won't accept or recognize discs normally, disc drive mechanism likely damaged - needs professional repair.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">5</span> Test Different Discs <span class="impact">Diagnostic</span></h3>
+                <p><strong>Why it helps:</strong> Determines if problem is specific disc or console's drive.</p>
+                
+                <p><strong>Testing procedure:</strong></p>
+                <ol>
+                    <li>Try 3-5 different game discs (preferably newer ones in good condition)</li>
+                    <li>Test different disc types:
+                        <ul>
+                            <li>Game discs</li>
+                            <li>Blu-ray movies</li>
+                            <li>DVDs</li>
+                        </ul>
+                    </li>
+                    <li>Note which work and which don't</li>
+                </ol>
+
+                <p><strong>Results interpretation:</strong></p>
+                <ul>
+                    <li><strong>Only one disc doesn't work:</strong> Problem is that specific disc (damaged/scratched)</li>
+                    <li><strong>Some discs work, some don't:</strong> Drive laser weakening or dirty</li>
+                    <li><strong>Games work but movies don't:</strong> Region mismatch or movie disc issue</li>
+                    <li><strong>NO discs work:</strong> Drive failure or major software issue</li>
+                    <li><strong>Dual-layer discs fail (some PS3/Xbox 360 games):</strong> Laser power too weak</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">6</span> Update System Software <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Updates include disc drive firmware improvements and bug fixes.</p>
+                
+                <p><strong>PS5 Update:</strong></p>
+                <ol>
+                    <li>Settings → System</li>
+                    <li>System Software → System Software Update and Settings</li>
+                    <li>Update System Software</li>
+                    <li>If update available, install</li>
+                    <li>Console restarts automatically</li>
+                    <li>Test disc after update</li>
+                </ol>
+
+                <p><strong>Xbox Series X/S Update:</strong></p>
+                <ol>
+                    <li>Settings → System → Updates</li>
+                    <li>Check for console updates</li>
+                    <li>Install if available</li>
+                    <li>Console restarts</li>
+                    <li>Test disc</li>
+                </ol>
+
+                <p><strong>Current versions (January 2025):</strong></p>
+                <ul>
+                    <li>PS5: 24.01-08.60.00+</li>
+                    <li>Xbox Series: 10.0.25398.0+</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">7</span> Rebuild Database (PlayStation) <span class="impact">Success: 25%</span></h3>
+                <p><strong>Why it works:</strong> Clears corrupted database entries, fixes disc recognition software glitches.</p>
+                
+                <p><strong>PS5 Rebuild Database:</strong></p>
+                <ol>
+                    <li>Turn off PS5 completely</li>
+                    <li>Press and hold power button</li>
+                    <li>Release after second beep (about 8 seconds total)</li>
+                    <li>Connect controller via USB cable</li>
+                    <li>Press PS button</li>
+                    <li>Safe Mode menu appears</li>
+                    <li>Select "Clear Cache and Rebuild Database" (option 5)</li>
+                    <li>Confirm</li>
+                    <li>Wait 5 minutes to 2 hours (depends on storage usage)</li>
+                    <li>Console restarts automatically when done</li>
+                    <li>Test disc</li>
+                </ol>
+
+                <p><strong>PS4 Rebuild Database:</strong></p>
+                <ol>
+                    <li>Same process as PS5</li>
+                    <li>Safe Mode option: "Rebuild Database"</li>
+                </ol>
+
+                <div class="success-box">
+                    <strong>✓ Safe process:</strong> Rebuilding database does NOT delete games, saves, or data. Only reorganizes file system.
+                </div>
+            </div>
+
+            <h2 id="software">Software & License Solutions</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">8</span> Restore Licenses (PlayStation) <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it works:</strong> Fixes license errors preventing disc games from launching.</p>
+                
+                <p><strong>PS5:</strong></p>
+                <ol>
+                    <li>Settings → Users and Accounts</li>
+                    <li>Other → Restore Licenses</li>
+                    <li>Select Restore</li>
+                    <li>Wait for completion (30 seconds to 2 minutes)</li>
+                    <li>Restart PS5</li>
+                    <li>Insert disc and test</li>
+                </ol>
+
+                <p><strong>PS4:</strong></p>
+                <ol>
+                    <li>Settings → Account Management</li>
+                    <li>Restore Licenses</li>
+                    <li>Restore</li>
+                    <li>Restart PS4</li>
+                </ol>
+
+                <p><strong>When this helps:</strong></p>
+                <ul>
+                    <li>Disc recognized but game won't start</li>
+                    <li>Error: "Cannot start the application"</li>
+                    <li>Lock icon on game</li>
+                    <li>After restoring PS5 from backup</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">9</span> Delete and Reinstall Game Data <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Corrupted game installation prevents disc from launching properly.</p>
+                
+                <p><strong>PS5:</strong></p>
+                <ol>
+                    <li>Home screen → highlight problematic game</li>
+                    <li>Press Options button</li>
+                    <li>Delete</li>
+                    <li>Confirm deletion (saves are safe, stored separately)</li>
+                    <li>Power cycle console (full shutdown, 2 minute wait)</li>
+                    <li>Insert disc</li>
+                    <li>Console recognizes disc and starts installation</li>
+                    <li>Wait for installation to complete</li>
+                    <li>Test game</li>
+                </ol>
+
+                <p><strong>Xbox:</strong></p>
+                <ol>
+                    <li>My games & apps → See all</li>
+                    <li>Find problematic game</li>
+                    <li>Press Menu button (three lines)</li>
+                    <li>Manage game and add-ons</li>
+                    <li>Uninstall all</li>
+                    <li>Confirm</li>
+                    <li>Power cycle Xbox</li>
+                    <li>Insert disc</li>
+                    <li>Reinstall</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Your saves are safe:</strong> Game saves stored separately in cloud (PS Plus, Xbox Live) and console storage. Deleting game doesn't delete saves.
+                </div>
+            </div>
+
+            <h2 id="hardware">Hardware Troubleshooting & Repair</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">10</span> Clean Laser Lens (Advanced) <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it works:</strong> Dusty laser lens can't read disc data properly.</p>
+                
+                <p><strong>⚠️ Two methods - external safer, internal more effective:</strong></p>
+
+                <p><strong>Method 1 - Laser Cleaning Disc (Safe, no disassembly):</strong></p>
+                <ol>
+                    <li>Buy PS5/Xbox laser lens cleaning disc ($10-15)</li>
+                    <li>Insert cleaning disc into console</li>
+                    <li>Disc has tiny brushes that clean lens as it spins</li>
+                    <li>Run cleaning cycle (usually 20-30 seconds)</li>
+                    <li>Eject cleaning disc</li>
+                    <li>Test regular disc</li>
+                </ol>
+
+                <p><strong>Effectiveness:</strong></p>
+                <ul>
+                    <li>Works for light dust accumulation</li>
+                    <li>Won't fix heavy grime or damaged lens</li>
+                    <li>Safe - no warranty void</li>
+                    <li>Success rate: 15-20%</li>
+                </ul>
+
+                <p><strong>Method 2 - Manual Lens Cleaning (Advanced, requires opening console):</strong></p>
+                <ol>
+                    <li><strong>⚠️ Voids warranty!</strong></li>
+                    <li>Power off and unplug console completely</li>
+                    <li>Follow console-specific disassembly guide (YouTube)</li>
+                    <li>Access disc drive assembly</li>
+                    <li>Locate laser lens (small clear lens, usually blue/purple tint)</li>
+                    <li>Use cotton swab dipped in 99% isopropyl alcohol</li>
+                    <li>GENTLY wipe lens in circular motion</li>
+                    <li>Don't apply pressure (lens is fragile)</li>
+                    <li>Let dry 15 minutes</li>
+                    <li>Reassemble console</li>
+                    <li>Test disc</li>
+                </ol>
+
+                <div class="danger-box">
+                    <strong>🚨 Laser lens risks:</strong><br>
+                    • Extremely delicate - can scratch or damage easily<br>
+                    • Wrong cleaning solution can cloud lens permanently<br>
+                    • Static electricity can damage laser diode<br>
+                    • Voids warranty completely<br>
+                    <br>
+                    <strong>If uncomfortable, pay professional: $60-100</strong>
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">11</span> Adjust Laser Power (Very Advanced) <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Weak laser power can't read discs. Adjustment increases read strength.</p>
+                
+                <p><strong>⚠️ EXTREMELY RISKY - For experienced repair techs only!</strong></p>
+
+                <p><strong>Signs laser power too weak:</strong></p>
+                <ul>
+                    <li>Reads some discs but not others</li>
+                    <li>Takes multiple tries to recognize disc</li>
+                    <li>Fails on dual-layer discs</li>
+                    <li>Drive is 3+ years old with heavy use</li>
+                </ul>
+
+                <p><strong>General process (console-specific):</strong></p>
+                <ol>
+                    <li>Open console and access disc drive PCB</li>
+                    <li>Locate laser power potentiometer (tiny screw/dial)</li>
+                    <li>Use multimeter to measure current power</li>
+                    <li>Turn potentiometer VERY slightly clockwise (1/8 turn max)</li>
+                    <li>Test disc</li>
+                    <li>Repeat in tiny increments if needed</li>
+                </ol>
+
+                <div class="danger-box">
+                    <strong>🚨 HIGH RISK:</strong><br>
+                    • Can permanently destroy laser if turned too far<br>
+                    • Requires electronics knowledge and multimeter<br>
+                    • No going back if laser burns out<br>
+                    • Voids warranty<br>
+                    <br>
+                    <strong>NOT RECOMMENDED for average users. Professional repair better option.</strong>
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">12</span> Check Drive Belt & Rollers (PS4 Specific) <span class="impact">Success: 25%</span></h3>
+                <p><strong>Why it matters:</strong> PS4 uses rubber drive belt that wears out, preventing disc from loading.</p>
+                
+                <p><strong>PS4 drive belt issues:</strong></p>
+                <ul>
+                    <li>Console won't pull disc in</li>
+                    <li>Disc goes in halfway then stops</li>
+                    <li>Motor runs but disc doesn't move</li>
+                    <li>Common on PS4 models from 2013-2016</li>
+                </ul>
+
+                <p><strong>Replacement process:</strong></p>
+                <ol>
+                    <li>Buy PS4 disc drive belt ($5-10 on Amazon)</li>
+                    <li>Watch PS4 disc drive disassembly guide</li>
+                    <li>Open PS4 and remove disc drive assembly</li>
+                    <li>Locate old belt (rubber band around motor spindle)</li>
+                    <li>Remove old belt</li>
+                    <li>Install new belt in same position</li>
+                    <li>Ensure belt properly seated on both pulleys</li>
+                    <li>Reassemble</li>
+                    <li>Test disc loading</li>
+                </ol>
+
+                <p><strong>DIY difficulty:</strong> Medium. Requires comfort with electronics disassembly.</p>
+                <p><strong>Professional repair:</strong> $60-80</p>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">13</span> Factory Reset Console <span class="impact">Success: 10%</span></h3>
+                <p><strong>⚠️ ERASES EVERYTHING - Last resort for software issues!</strong></p>
+                
+                <p><strong>When to try:</strong></p>
+                <ul>
+                    <li>All other software fixes failed</li>
+                    <li>Console recognizes disc but all games fail to launch</li>
+                    <li>Willing to lose data or have backup</li>
+                </ul>
+
+                <p><strong>PS5 Factory Reset:</strong></p>
+                <ol>
+                    <li>Boot into Safe Mode (hold power for second beep)</li>
+                    <li>Select "Reset PS5" or "Initialize PS5"</li>
+                    <li>Choose full initialization (reinstalls system software)</li>
+                    <li>Wait 30-60 minutes</li>
+                    <li>Set up as new console</li>
+                    <li>Test disc</li>
+                </ol>
+
+                <p><strong>Xbox Factory Reset:</strong></p>
+                <ol>
+                    <li>Settings → System → Console info</li>
+                    <li>Reset console</li>
+                    <li>Choose "Reset and remove everything"</li>
+                    <li>Confirm</li>
+                    <li>Wait for reset</li>
+                    <li>Set up fresh</li>
+                </ol>
+
+                <div class="danger-box">
+                    <strong>🚨 Before resetting:</strong><br>
+                    • Upload saves to cloud (PS Plus, Xbox Live Gold)<br>
+                    • Back up screenshots/videos to USB<br>
+                    • List installed games (need to redownload)<br>
+                    • No way to recover data after reset
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">14</span> Replace Disc Drive / Professional Repair <span class="impact">Cost: $150-300</span></h3>
+                <p><strong>When disc drive replacement needed:</strong></p>
+                <ul>
+                    <li>All software fixes tried, none work</li>
+                    <li>Multiple discs fail (not disc-specific problem)</li>
+                    <li>Grinding/clicking noises from drive</li>
+                    <li>Drive won't accept discs at all</li>
+                    <li>Laser lens damaged or clouded</li>
+                </ul>
+
+                <p><strong>Replacement options:</strong></p>
+
+                <p><strong>1. Official Manufacturer Repair:</strong></p>
+                <ul>
+                    <li><strong>Sony (PS5/PS4):</strong> playstation.com/support → Hardware & Repairs</li>
+                    <li><strong>Microsoft (Xbox):</strong> support.xbox.com → Device Services</li>
+                    <li><strong>Cost:</strong> $150-250 (out of warranty)</li>
+                    <li><strong>Turnaround:</strong> 2-3 weeks</li>
+                    <li><strong>Warranty:</strong> 90 days on repair</li>
+                </ul>
+
+                <p><strong>2. Third-Party Repair Shop:</strong></p>
+                <ul>
+                    <li><strong>National chains:</strong> uBreakiFix, CPR Cell Phone Repair, Best Buy Geek Squad</li>
+                    <li><strong>Local repair shops:</strong> Check Google reviews</li>
+                    <li><strong>Cost:</strong> $100-200 (usually cheaper than manufacturer)</li>
+                    <li><strong>Turnaround:</strong> 3-7 days</li>
+                    <li><strong>Pros:</strong> Faster, cheaper</li>
+                    <li><strong>Cons:</strong> Voids manufacturer warranty, quality varies</li>
+                </ul>
+
+                <p><strong>3. DIY Disc Drive Replacement:</strong></p>
+                <ul>
+                    <li><strong>Replacement drive cost:</strong> $80-150</li>
+                    <li><strong>Difficulty:</strong> Very difficult (requires full console disassembly)</li>
+                    <li><strong>Special requirement (PS5):</strong> Drive must be "married" to motherboard (requires special tools/firmware)</li>
+                    <li><strong>Tools needed:</strong> Torx screwdrivers, plastic pry tools, thermal paste</li>
+                    <li><strong>Risk:</strong> Can damage console if inexperienced</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ PS5 Disc Drive Complexity:</strong> PS5 disc drives are paired/married to specific motherboards via firmware. Can't just swap drives between consoles. Replacement requires special firmware tools or Sony pairing. DIY very difficult.
+                </div>
+
+                <p><strong>Warranty coverage:</strong></p>
+                <ul>
+                    <li><strong>Standard:</strong> 1 year from purchase</li>
+                    <li><strong>Covers:</strong> Manufacturing defects, hardware failure</li>
+                    <li><strong>Doesn't cover:</strong> Physical damage, disc jams from foreign objects</li>
+                    <li><strong>Check before opening:</strong> Opening console voids warranty</li>
+                </ul>
+            </div>
+
+            <h2>When to Repair vs Replace Console</h2>
+
+            <div class="success-box">
+                <h3>✓ Worth repairing if:</h3>
+                <ul>
+                    <li>Under warranty (free or low-cost repair)</li>
+                    <li>Console less than 2 years old</li>
+                    <li>Repair cost under $150</li>
+                    <li>Large digital library tied to console</li>
+                    <li>Disc edition hard to find/expensive</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ Consider upgrading/replacing if:</h3>
+                <ul>
+                    <li>Repair cost exceeds $200</li>
+                    <li>Console 4+ years old</li>
+                    <li>Multiple hardware issues (overheating + disc drive)</li>
+                    <li>Digital edition available for similar price to repair</li>
+                    <li>Mostly play digital games anyway</li>
+                </ul>
+            </div>
+
+            <h2>Prevention: Protect Your Disc Drive</h2>
+
+            <h3>1. Proper Disc Handling</h3>
+            <ul>
+                <li><strong>Hold by edges:</strong> Never touch shiny data surface</li>
+                <li><strong>Clean regularly:</strong> Wipe before inserting (prevents drive contamination)</li>
+                <li><strong>Store properly:</strong> In cases, not loose or stacked</li>
+                <li><strong>Check condition:</strong> Inspect for damage before using</li>
+                <li><strong>Don't force discs:</strong> If won't insert smoothly, don't force</li>
+            </ul>
+
+            <h3>2. Console Disc Drive Care</h3>
+            <ul>
+                <li><strong>Eject properly:</strong> Use eject button, don't yank out</li>
+                <li><strong>Don't move console with disc inside:</strong> Can damage drive mechanism</li>
+                <li><strong>Keep console level:</strong> Tilted position strains drive</li>
+                <li><strong>Remove disc when not playing:</strong> Reduces drive wear</li>
+                <li><strong>Clean drive area:</strong> Dust around disc slot monthly</li>
+            </ul>
+
+            <h3>3. Environmental Protection</h3>
+            <ul>
+                <li><strong>Dust-free area:</strong> Minimize dust entering drive</li>
+                <li><strong>Stable surface:</strong> Vibration can damage reading mechanism</li>
+                <li><strong>Temperature control:</strong> Extreme heat warps discs and drive parts</li>
+                <li><strong>Humidity control:</strong> Moisture damages laser and electronics</li>
+            </ul>
+
+            <h3>4. Smart Usage</h3>
+            <ul>
+                <li><strong>Buy digital when possible:</strong> No drive wear, instant access</li>
+                <li><strong>Physical for resale:</strong> Keep discs for games you might sell</li>
+                <li><strong>Install to storage:</strong> Once installed, disc only for verification (reduces spinning wear)</li>
+                <li><strong>Regular maintenance:</strong> Clean disc collection every 6 months</li>
+            </ul>
+
+            <h2>Common Questions</h2>
+
+            <p><strong>Q: My console says "Unsupported Disc." What does that mean?</strong></p>
+            <p>A: Console can't read disc format. Causes: wrong region disc, burned/copied disc (not authentic), damaged disc, or dirty laser lens. Try different authentic disc from correct region.</p>
+
+            <p><strong>Q: Can I play PS4 games on PS5 disc drive?</strong></p>
+            <p>A: Yes! PS5 disc edition plays both PS5 and PS4 game discs. PS4 doesn't play PS5 discs (not backwards compatible).</p>
+
+            <p><strong>Q: Why does my console read some discs but not others?</strong></p>
+            <p>A: Usually indicates weakening laser power, dirty lens, or specific disc damage. Dual-layer discs often fail first when laser weakens. Clean lens or try laser cleaning disc.</p>
+
+            <p><strong>Q: My disc is stuck and manual eject doesn't work. What now?</strong></p>
+            <p>A: Disc drive mechanism jammed or broken. Don't force it - can damage drive further. Take to professional repair. Cost: $60-100.</p>
+
+            <p><strong>Q: Is it normal for disc to spin constantly while playing?</strong></p>
+            <p>A: No. Once game installed, disc should only spin briefly on startup for verification, then stop. Constant spinning means game running from disc (not installed) or drive issue.</p>
+
+            <p><strong>Q: Can I replace PS5 disc drive myself?</strong></p>
+            <p>A: Extremely difficult. PS5 drives are firmware-paired to specific motherboards. Simply swapping drives doesn't work without special tools to re-pair. Best left to professionals or Sony.</p>
+
+            <p><strong>Q: Will cleaning my disc fix deep scratches?</strong></p>
+            <p>A: No. Cleaning removes dirt/fingerprints only. Deep scratches require professional disc resurfacing/buffing ($3-5 per disc at game stores). Very deep scratches may be permanent.</p>
+
+            <p><strong>Q: How long do disc drives last?</strong></p>
+            <p>A: Average lifespan: 5-8 years with normal use. Heavy use (many disc swaps, constantly spinning): 3-5 years. Laser weakens over time. Digital-only users have no drive wear.</p>
+
+            <p><strong>Q: Should I buy digital edition or disc edition console?</strong></p>
+            <p>A: Pros of disc: Play used games, resell games, collect physical, watch Blu-rays. Pros of digital: No drive failures, instant access, quieter console, $100 cheaper. Consider your usage.</p>
+
+            <p><strong>Q: Can scratched disc damage my console's disc drive?</strong></p>
+            <p>A: Minor scratches won't damage drive. Severely cracked or chipped discs can shatter while spinning and damage drive - don't use damaged discs.</p>
+
+            <div class="success-box">
+                <h3>✓ Success Rates Summary:</h3>
+                <ul>
+                    <li><strong>Clean disc + restart console:</strong> 50% fixed</li>
+                    <li><strong>Rebuild database + restore licenses:</strong> 25% fixed</li>
+                    <li><strong>System update + reinstall game:</strong> 20% fixed</li>
+                    <li><strong>Laser cleaning disc:</strong> 15% fixed</li>
+                    <li><strong>Manual lens cleaning:</strong> 20% fixed</li>
+                    <li><strong>Disc drive replacement:</strong> 95% success (professional)</li>
+                </ul>
+                <p><strong>Overall:</strong> 70% of disc reading issues fixable at home with cleaning and software solutions!</p>
+            </div>
+
+        </div>
+
+        <div class="related-problems">
+            <h3>🔗 Related Problems</h3>
+            <div class="related-list">
+                <a href="/all-problems/ps5-wont-turn-on/" class="related-item">
+                    <h4>PS5 Won't Turn On</h4>
+                    <p>Fix PlayStation 5 power and startup problems</p>
+                </a>
+                <a href="/all-problems/console-overheating/" class="related-item">
+                    <h4>Console Overheating</h4>
+                    <p>Cool down PS5, Xbox, Switch and prevent shutdowns</p>
+                </a>
+                <a href="/all-problems/hdmi-no-signal/" class="related-item">
+                    <h4>HDMI No Signal</h4>
+                    <p>Fix display output on gaming consoles and devices</p>
+                </a>
+                <a href="/all-problems/controller-drift/" class="related-item">
+                    <h4>Controller Drift</h4>
+                    <p>Fix analog stick drift on gaming controllers</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

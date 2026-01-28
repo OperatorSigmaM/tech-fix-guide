@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="iPad not charging? Fix charging port issues, battery problems, cable failures. 14 solutions for iPad Pro, Air, Mini charging issues.">
+    <title>iPad Not Charging? 14 Ways to Fix Charging Port & Battery Issues</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        footer { background: #1f2937; color: white; padding: 3rem 2rem 1rem; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #3b82f6; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #d1d5db; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: #3b82f6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #d1fae5; color: #065f46; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .impact { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / iPad Not Charging</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>iPad Not Charging? 14 Ways to Fix Charging Port & Battery Issues</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 16 min read</span>
+                <span class="difficulty">Easy to Medium</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>Main causes:</strong> Dirty charging port (40%), faulty cable/adapter (30%), software glitch (15%), battery degradation (10%), damaged port (5%)</p>
+            <p><strong>Quick fixes:</strong> Clean charging port, replace cable, hard reset iPad, update iPadOS, check power adapter wattage</p>
+            <p><strong>Success rate:</strong> 80% fixable with port cleaning and cable replacement, 15% need battery replacement, 5% port repair</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#diagnosis">Identify Charging Problem</a></li>
+                <li><a href="#immediate">Immediate Fixes</a></li>
+                <li><a href="#software">Software Solutions</a></li>
+                <li><a href="#hardware">Hardware Repair</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2 id="diagnosis">First: Identify Your iPad Charging Issue</h2>
+            
+            <p><strong>Different symptoms require different solutions:</strong></p>
+
+            <p><strong>🔴 Not charging at all (no lightning bolt icon):</strong></p>
+            <ul>
+                <li>Plugged in but battery icon shows no charging indicator</li>
+                <li>No sound/vibration when plugging in cable</li>
+                <li>Screen stays dark when connecting charger</li>
+                <li><strong>Likely cause:</strong> Dirty port, dead cable, incompatible charger, software glitch</li>
+            </ul>
+
+            <p><strong>🔴 Charges very slowly:</strong></p>
+            <ul>
+                <li>Shows charging icon but takes 6+ hours for full charge (should be 2-4 hours)</li>
+                <li>Percentage increases 1% every 15-20 minutes</li>
+                <li><strong>Likely cause:</strong> Low-power charger (5W instead of 20W+), worn cable, battery degradation</li>
+            </ul>
+
+            <p><strong>🔴 Charges intermittently (on and off):</strong></p>
+            <ul>
+                <li>Charging icon appears then disappears randomly</li>
+                <li>Must wiggle cable to make it charge</li>
+                <li>Charges only at certain angles</li>
+                <li><strong>Likely cause:</strong> Loose cable connection, damaged cable, lint in port, worn charging port</li>
+            </ul>
+
+            <p><strong>🔴 Won't charge when completely dead:</strong></p>
+            <ul>
+                <li>iPad battery drained to 0%</li>
+                <li>Screen completely black, won't respond</li>
+                <li>No Apple logo appears</li>
+                <li><strong>Likely cause:</strong> Deep discharge requires 10-30 min before showing life</li>
+            </ul>
+
+            <p><strong>🔴 Shows "Not Charging" message:</strong></p>
+            <ul>
+                <li>Plugged in and battery icon shows plug</li>
+                <li>But displays "Not Charging" text</li>
+                <li><strong>Likely cause:</strong> Charger too weak, using computer USB port, temperature too hot/cold</li>
+            </ul>
+
+            <p><strong>🔴 Only charges with specific cable/charger:</strong></p>
+            <ul>
+                <li>Works with one cable but not others</li>
+                <li>Charges from wall but not computer</li>
+                <li><strong>Likely cause:</strong> Other cables damaged or low-quality, port partially damaged</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 iPad Charging Specs by Model:</strong><br>
+                • <strong>iPad Pro (12.9", 11"):</strong> 20-30W recommended (comes with USB-C)<br>
+                • <strong>iPad Air:</strong> 20W recommended (Lightning or USB-C)<br>
+                • <strong>iPad Mini:</strong> 20W recommended (Lightning or USB-C)<br>
+                • <strong>Standard iPad:</strong> 12-20W works (Lightning)<br>
+                • <strong>Charging time:</strong> 2-4 hours (0-100%) with proper wattage<br>
+                <br>
+                Using low-power charger (5W iPhone charger) makes charging take 6-8 hours.
+            </div>
+
+            <h2 id="immediate">Immediate Charging Fixes</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">1</span> Clean Charging Port Thoroughly <span class="impact">Success: 50%</span></h3>
+                <p><strong>Why it works:</strong> Lint, dust, and debris are #1 cause of charging failures. Accumulated pocket lint prevents cable from making full contact.</p>
+                
+                <p><strong>What you need:</strong></p>
+                <ul>
+                    <li>Wooden toothpick or plastic dental pick (NEVER metal!)</li>
+                    <li>Compressed air can</li>
+                    <li>Flashlight or phone light</li>
+                    <li>Magnifying glass (optional, helps see inside port)</li>
+                </ul>
+
+                <p><strong>Proper cleaning method:</strong></p>
+                <ol>
+                    <li>Power off iPad completely</li>
+                    <li>Shine bright light into charging port</li>
+                    <li>Look deep inside - you'll often see compacted gray/black lint</li>
+                    <li>Use wooden toothpick:
+                        <ul>
+                            <li>Insert gently along BOTTOM of port</li>
+                            <li>Scrape carefully to loosen lint</li>
+                            <li>Pull out - you'll be surprised how much comes out!</li>
+                            <li>Repeat until no more lint visible</li>
+                        </ul>
+                    </li>
+                    <li>Blow compressed air into port (short bursts, can upright)</li>
+                    <li>Inspect again with light - port should look clean and shiny</li>
+                    <li>Test charging</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Critical warnings:</strong><br>
+                    • NEVER use metal objects (paperclips, needles) - damages delicate contacts<br>
+                    • Lightning port has 8 contacts, USB-C has 24 pins - all very fragile<br>
+                    • Don't apply excessive pressure - gentle scraping only<br>
+                    • Don't use liquids or cleaning solutions in port
+                </div>
+
+                <div class="success-box">
+                    <strong>✓ How much lint is normal?</strong> If iPad carried in pocket/bag regularly, can accumulate surprising amount - often a large clump 5-10mm across. This is the most common fix!
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">2</span> Replace Cable and Power Adapter <span class="impact">Success: 35%</span></h3>
+                <p><strong>Why it works:</strong> Cables fail frequently - internal wires fray, Lightning connector wears out.</p>
+                
+                <p><strong>Signs of bad cable:</strong></p>
+                <ul>
+                    <li>Cable frayed, bent, or kinked</li>
+                    <li>Connector feels loose in iPad port</li>
+                    <li>Works only when held at certain angle</li>
+                    <li>Cable is very old (2+ years heavy use)</li>
+                    <li>Cheap third-party cable (non-MFi certified)</li>
+                </ul>
+
+                <p><strong>Cable testing:</strong></p>
+                <ol>
+                    <li>Try different certified cable (borrow from friend or buy new)</li>
+                    <li>Use official Apple cable if available</li>
+                    <li>Test with known-working cable</li>
+                    <li>If new cable works = old cable was faulty</li>
+                </ol>
+
+                <p><strong>Power adapter requirements:</strong></p>
+                <ul>
+                    <li><strong>iPad Pro:</strong> 20W minimum, 30W+ recommended for fast charging</li>
+                    <li><strong>iPad Air/Mini:</strong> 20W recommended</li>
+                    <li><strong>Standard iPad:</strong> 12W minimum, 20W better</li>
+                    <li><strong>iPhone 5W charger:</strong> Works but VERY slow (6-8 hours)</li>
+                </ul>
+
+                <p><strong>What to buy:</strong></p>
+                <ul>
+                    <li><strong>Apple Original:</strong>
+                        <ul>
+                            <li>Lightning to USB-C Cable ($19-29)</li>
+                            <li>20W USB-C Power Adapter ($19)</li>
+                            <li>Guaranteed compatibility</li>
+                        </ul>
+                    </li>
+                    <li><strong>Third-Party (MFi Certified):</strong>
+                        <ul>
+                            <li>Anker, Belkin, AmazonBasics</li>
+                            <li>Must say "MFi Certified" or "Made for iPad"</li>
+                            <li>$10-20 for cable, $15-25 for 20W adapter</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Avoid non-certified cables:</strong> Cheap cables from gas stations/dollar stores often fail quickly, may not charge properly, can even damage iPad in rare cases. Look for MFi (Made for iPhone/iPad) certification.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">3</span> Hard Reset iPad <span class="impact">Success: 25%</span></h3>
+                <p><strong>Why it works:</strong> Clears software glitches preventing charge detection, resets power management system.</p>
+                
+                <p><strong>iPad with Home button (older models):</strong></p>
+                <ol>
+                    <li>Press and hold Home button + Power button simultaneously</li>
+                    <li>Keep holding both for 10-15 seconds</li>
+                    <li>Release when Apple logo appears</li>
+                    <li>iPad restarts</li>
+                    <li>Plug in charger and test</li>
+                </ol>
+
+                <p><strong>iPad without Home button (Face ID models):</strong></p>
+                <ol>
+                    <li>Press and quickly release Volume Up button</li>
+                    <li>Press and quickly release Volume Down button</li>
+                    <li>Press and hold Power button (top button)</li>
+                    <li>Keep holding until Apple logo appears (about 10 seconds)</li>
+                    <li>Release</li>
+                    <li>iPad restarts</li>
+                    <li>Test charging</li>
+                </ol>
+
+                <p><strong>iPad Pro (USB-C models):</strong></p>
+                <ol>
+                    <li>Same as Face ID iPads above</li>
+                    <li>Volume Up → Volume Down → Hold Power button</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Hard reset is safe:</strong> Doesn't delete any data or settings. Just forces iPad to restart, clearing temporary software issues.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">4</span> Check Power Source <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it matters:</strong> Not all power sources provide enough power for iPad.</p>
+                
+                <p><strong>Power source hierarchy (best to worst):</strong></p>
+                <ol>
+                    <li><strong>Wall outlet with 20W+ adapter:</strong> Fastest, most reliable</li>
+                    <li><strong>Wall outlet with 12W adapter:</strong> Slower but works</li>
+                    <li><strong>Wall outlet with 5W iPhone charger:</strong> Very slow, may say "Not Charging" while using iPad</li>
+                    <li><strong>Computer USB port:</strong> Often too weak (only 2.5-5W)</li>
+                    <li><strong>Car USB port:</strong> Usually 5-10W, slow charging</li>
+                    <li><strong>Power bank:</strong> Depends on output (need 2A+ / 10W+)</li>
+                </ol>
+
+                <p><strong>Testing different power sources:</strong></p>
+                <ol>
+                    <li>Try wall outlet directly (not power strip)</li>
+                    <li>Test different wall outlets (outlet may be faulty)</li>
+                    <li>Use higher wattage adapter if available</li>
+                    <li>Avoid USB hubs and extension cords when troubleshooting</li>
+                </ol>
+
+                <p><strong>"Not Charging" while plugged in:</strong></p>
+                <ul>
+                    <li>Means power coming in but not enough to charge while iPad is on</li>
+                    <li>Solution: Use higher wattage charger (20W instead of 5W)</li>
+                    <li>Or: Turn iPad off, let it charge while powered down</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">5</span> Let Completely Dead iPad Charge <span class="impact">Success: 30%</span></h3>
+                <p><strong>Why it works:</strong> When battery fully drained to 0%, iPad needs 10-30 minutes before showing any signs of life.</p>
+                
+                <p><strong>Proper revival procedure:</strong></p>
+                <ol>
+                    <li>Connect to wall charger (20W recommended)</li>
+                    <li>Use known-working cable and adapter</li>
+                    <li>Leave connected for 15-30 minutes minimum</li>
+                    <li>Don't press any buttons during this time</li>
+                    <li>Screen stays black - this is normal!</li>
+                    <li>After 15-30 minutes, try pressing Power button</li>
+                    <li>Should see low battery icon or Apple logo</li>
+                    <li>Leave charging until 10%+ before using</li>
+                </ol>
+
+                <p><strong>What's happening:</strong></p>
+                <ul>
+                    <li>Battery so depleted it can't power display</li>
+                    <li>Must reach minimum threshold (~3-5%) before anything shows</li>
+                    <li>Charging is happening even if screen black</li>
+                    <li>Be patient - this is normal behavior</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ If nothing after 1 hour:</strong> Try different cable/charger. If still nothing after 2 hours on wall charger, battery or charging port may be damaged - needs repair.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">6</span> Check iPad Temperature <span class="impact">Success: 10%</span></h3>
+                <p><strong>Why it matters:</strong> iPad refuses to charge if too hot or too cold (safety feature).</p>
+                
+                <p><strong>Operating temperature range:</strong></p>
+                <ul>
+                    <li><strong>Normal operation:</strong> 0°C to 35°C (32°F to 95°F)</li>
+                    <li><strong>Charging:</strong> Best at room temperature (20-25°C / 68-77°F)</li>
+                    <li><strong>Too cold:</strong> Below 0°C - won't charge</li>
+                    <li><strong>Too hot:</strong> Above 35°C - stops charging, shows temperature warning</li>
+                </ul>
+
+                <p><strong>If iPad too hot:</strong></p>
+                <ol>
+                    <li>Unplug charger</li>
+                    <li>Remove case if using one</li>
+                    <li>Move to cool, well-ventilated area</li>
+                    <li>Don't use iPad while cooling</li>
+                    <li>Wait 30-60 minutes</li>
+                    <li>Try charging when cool to touch</li>
+                </ol>
+
+                <p><strong>If iPad too cold:</strong></p>
+                <ol>
+                    <li>Bring iPad to room temperature area</li>
+                    <li>Wait 30 minutes to warm up naturally</li>
+                    <li>Don't use heater/hairdryer (can damage)</li>
+                    <li>Try charging when warmed up</li>
+                </ol>
+
+                <p><strong>Common overheating causes:</strong></p>
+                <ul>
+                    <li>Left in hot car</li>
+                    <li>Direct sunlight</li>
+                    <li>Intensive gaming while charging</li>
+                    <li>Thick case preventing heat dissipation</li>
+                    <li>Charging in hot environment (summer, no AC)</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">7</span> Try Wireless Charging (if supported) <span class="impact">Diagnostic</span></h3>
+                <p><strong>Why it helps:</strong> Determines if problem is charging port or battery/system.</p>
+                
+                <p><strong>Which iPads support wireless charging:</strong></p>
+                <ul>
+                    <li><strong>iPad Pro with Magic Keyboard:</strong> Charges wirelessly through keyboard</li>
+                    <li><strong>Most iPads:</strong> Don't have built-in wireless charging</li>
+                    <li><strong>Workaround:</strong> Wireless charging receiver sticker (attaches to back, plugs into Lightning port)</li>
+                </ul>
+
+                <p><strong>If wireless charging works but wired doesn't:</strong></p>
+                <ul>
+                    <li>Problem is charging port or cable</li>
+                    <li>Clean port thoroughly</li>
+                    <li>Try different cable</li>
+                    <li>If still doesn't work, port may need repair</li>
+                </ul>
+
+                <p><strong>If wireless also doesn't work:</strong></p>
+                <ul>
+                    <li>Problem is battery, power management, or system issue</li>
+                    <li>Continue to software solutions</li>
+                </ul>
+            </div>
+
+            <h2 id="software">Software Solutions</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">8</span> Update iPadOS <span class="impact">Success: 15%</span></h3>
+                <p><strong>Why it works:</strong> Software updates include battery management improvements and charging bug fixes.</p>
+                
+                <p><strong>Requirements:</strong></p>
+                <ul>
+                    <li>iPad has at least 20% battery (charge first if needed)</li>
+                    <li>Connected to WiFi</li>
+                </ul>
+
+                <p><strong>Update steps:</strong></p>
+                <ol>
+                    <li>Settings → General → Software Update</li>
+                    <li>If update available, tap "Download and Install"</li>
+                    <li>Enter passcode if prompted</li>
+                    <li>Agree to terms</li>
+                    <li>Wait for download (5-20 minutes)</li>
+                    <li>Tap "Install Now"</li>
+                    <li>iPad restarts and installs update (15-30 minutes)</li>
+                    <li>Test charging after update completes</li>
+                </ol>
+
+                <p><strong>Current iPadOS version (January 2025):</strong> iPadOS 18.2+</p>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">9</span> Reset All Settings <span class="impact">Success: 20%</span></h3>
+                <p><strong>Why it works:</strong> Clears corrupted power management settings without deleting data.</p>
+                
+                <p><strong>What gets reset:</strong></p>
+                <ul>
+                    <li>WiFi passwords</li>
+                    <li>Bluetooth connections</li>
+                    <li>Display settings</li>
+                    <li>Privacy settings</li>
+                    <li>Keyboard dictionary</li>
+                </ul>
+
+                <p><strong>What stays:</strong></p>
+                <ul>
+                    <li>All apps</li>
+                    <li>Photos and videos</li>
+                    <li>Documents</li>
+                    <li>Messages and emails</li>
+                    <li>Apple ID and iCloud data</li>
+                </ul>
+
+                <p><strong>Reset procedure:</strong></p>
+                <ol>
+                    <li>Settings → General → Transfer or Reset iPad</li>
+                    <li>Reset</li>
+                    <li>Reset All Settings</li>
+                    <li>Enter passcode</li>
+                    <li>Confirm reset</li>
+                    <li>iPad restarts</li>
+                    <li>Reconnect to WiFi</li>
+                    <li>Test charging</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">10</span> Check Battery Health <span class="impact">Diagnostic</span></h3>
+                <p><strong>Why it matters:</strong> Degraded battery can't hold charge properly.</p>
+                
+                <p><strong>Battery health check:</strong></p>
+                <ol>
+                    <li>Settings → Battery → Battery Health (if available)</li>
+                    <li>Check "Maximum Capacity" percentage</li>
+                    <li>Check "Peak Performance Capability" status</li>
+                </ol>
+
+                <p><strong>Battery health interpretation:</strong></p>
+                <ul>
+                    <li><strong>100-95%:</strong> Excellent, like new</li>
+                    <li><strong>94-85%:</strong> Good, normal wear after 1-2 years</li>
+                    <li><strong>84-80%:</strong> Fair, noticeable battery life decrease</li>
+                    <li><strong>79% or below:</strong> Poor, battery replacement recommended</li>
+                </ul>
+
+                <p><strong>Signs of battery degradation:</strong></p>
+                <ul>
+                    <li>iPad is 3+ years old with heavy use</li>
+                    <li>Battery drains much faster than when new</li>
+                    <li>Shuts down at 20-30% battery</li>
+                    <li>Takes longer to charge than before</li>
+                    <li>iPad gets very hot during charging</li>
+                    <li>Back of iPad slightly swollen (DANGEROUS - stop using!)</li>
+                </ul>
+
+                <div class="danger-box">
+                    <strong>🚨 Swollen battery warning:</strong> If iPad back is bulging or screen lifting, battery is swollen. STOP USING IMMEDIATELY. Don't charge it. Swollen batteries can catch fire or explode. Take to Apple Store or authorized repair immediately.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">11</span> DFU Restore (Advanced) <span class="impact">Success: 25%</span></h3>
+                <p><strong>⚠️ ERASES EVERYTHING - Last software resort!</strong></p>
+                
+                <p><strong>What is DFU mode:</strong></p>
+                <ul>
+                    <li>Device Firmware Update mode</li>
+                    <li>Deepest restore possible</li>
+                    <li>Reinstalls iPadOS completely</li>
+                    <li>Fixes severe software corruption</li>
+                </ul>
+
+                <p><strong>Requirements:</strong></p>
+                <ul>
+                    <li>Mac or PC with iTunes/Finder</li>
+                    <li>Lightning to USB cable</li>
+                    <li>Backup of iPad (all data will be erased!)</li>
+                </ul>
+
+                <p><strong>DFU restore procedure (iPad with Home button):</strong></p>
+                <ol>
+                    <li>Connect iPad to computer</li>
+                    <li>Open iTunes (Windows/older Mac) or Finder (Mac with macOS Catalina+)</li>
+                    <li>Press and hold Power + Home buttons together for 8 seconds</li>
+                    <li>Release Power button but KEEP holding Home button</li>
+                    <li>Hold Home for 5 more seconds</li>
+                    <li>Screen should be completely black (if Apple logo appears, try again)</li>
+                    <li>Computer shows "iTunes has detected an iPad in recovery mode"</li>
+                    <li>Click Restore iPad</li>
+                    <li>Wait 15-30 minutes for restore</li>
+                    <li>Set up as new or restore from backup</li>
+                </ol>
+
+                <p><strong>DFU mode (iPad without Home button):</strong></p>
+                <ol>
+                    <li>Connect to computer</li>
+                    <li>Quickly press and release Volume Up</li>
+                    <li>Quickly press and release Volume Down</li>
+                    <li>Press and hold Power button</li>
+                    <li>After 10 seconds, also hold Volume Down (while still holding Power)</li>
+                    <li>After 5 seconds, release Power but keep holding Volume Down</li>
+                    <li>Hold Volume Down for 5 more seconds</li>
+                    <li>Screen should be black - DFU mode entered</li>
+                    <li>Restore via iTunes/Finder</li>
+                </ol>
+            </div>
+
+            <h2 id="hardware">Hardware Solutions & Repair</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">12</span> Inspect Charging Port for Damage <span class="impact">Diagnostic</span></h3>
+                <p><strong>Why it matters:</strong> Physical port damage prevents charging even with clean port and good cable.</p>
+                
+                <p><strong>Visual inspection:</strong></p>
+                <ol>
+                    <li>Use bright light and magnifying glass (or phone camera zoom)</li>
+                    <li>Look deep inside Lightning or USB-C port</li>
+                    <li>Check for:
+                        <ul>
+                            <li>Bent or missing pins/contacts</li>
+                            <li>Burn marks or discoloration</li>
+                            <li>Corrosion (green/white residue)</li>
+                            <li>Cracks in port housing</li>
+                            <li>Port feels loose or wiggly</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Lightning port (8 contacts on tongue):</strong></p>
+                <ul>
+                    <li>All 8 gold contacts should be visible and shiny</li>
+                    <li>None should be black, green, or missing</li>
+                    <li>Metal tongue should be centered, not bent</li>
+                </ul>
+
+                <p><strong>USB-C port (24 pins):</strong></p>
+                <ul>
+                    <li>Tiny pins should all be straight and even</li>
+                    <li>No bent pins touching each other</li>
+                    <li>No missing pins</li>
+                </ul>
+
+                <p><strong>If port damaged:</strong></p>
+                <ul>
+                    <li>Can't be fixed at home</li>
+                    <li>Needs professional port replacement</li>
+                    <li>See Solution #14 for repair options</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">13</span> Battery Replacement <span class="impact">Cost: $99-199</span></h3>
+                <p><strong>When battery replacement needed:</strong></p>
+                <ul>
+                    <li>Battery health below 80%</li>
+                    <li>iPad 3+ years old with heavy use</li>
+                    <li>Charges to 100% in 30 minutes (unrealistic - battery reporting failure)</li>
+                    <li>Shuts down randomly despite showing charge</li>
+                    <li>Won't charge past certain percentage (e.g. stuck at 60%)</li>
+                </ul>
+
+                <p><strong>Apple Official Battery Service:</strong></p>
+                <ul>
+                    <li><strong>Cost:</strong> $99-199 depending on iPad model
+                        <ul>
+                            <li>iPad Pro: $179-199</li>
+                            <li>iPad Air: $129-149</li>
+                            <li>iPad/iPad Mini: $99-119</li>
+                        </ul>
+                    </li>
+                    <li><strong>Process:</strong>
+                        <ol>
+                            <li>Make Genius Bar appointment or mail-in</li>
+                            <li>Diagnostics confirm battery issue</li>
+                            <li>Apple replaces battery + tests iPad</li>
+                            <li>Turnaround: Same day (in-store) or 5-7 days (mail)</li>
+                        </ol>
+                    </li>
+                    <li><strong>Pros:</strong> Official parts, warranty, quality guaranteed</li>
+                </ul>
+
+                <p><strong>Third-Party Repair:</strong></p>
+                <ul>
+                    <li><strong>Cost:</strong> $60-120 (cheaper than Apple)</li>
+                    <li><strong>Shops:</strong> uBreakiFix, local repair shops</li>
+                    <li><strong>Pros:</strong> Cheaper, faster (often same-day)</li>
+                    <li><strong>Cons:</strong> Voids Apple warranty, quality varies, non-OEM batteries</li>
+                    <li><strong>Check reviews carefully before using</strong></li>
+                </ul>
+
+                <p><strong>DIY Battery Replacement:</strong></p>
+                <ul>
+                    <li><strong>Difficulty:</strong> Very difficult - iPad batteries glued in</li>
+                    <li><strong>Cost:</strong> $30-50 (battery kit from iFixit)</li>
+                    <li><strong>Tools needed:</strong> Heat gun, plastic pry tools, adhesive strips</li>
+                    <li><strong>Risk:</strong> High - can crack screen, damage components</li>
+                    <li><strong>Not recommended unless experienced with electronics repair</strong></li>
+                </ul>
+
+                <p><strong>AppleCare+ coverage:</strong></p>
+                <ul>
+                    <li>Free battery replacement if capacity below 80% during coverage period</li>
+                    <li>Check if you have AppleCare+: Settings → General → About → AppleCare Services</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">14</span> Charging Port Repair <span class="impact">Cost: $79-149</span></h3>
+                <p><strong>When port replacement needed:</strong></p>
+                <ul>
+                    <li>Port physically damaged (bent pins, broken connector)</li>
+                    <li>Cable falls out or feels extremely loose</li>
+                    <li>Corrosion visible in port</li>
+                    <li>Only charges at specific angles</li>
+                    <li>All cleaning and cable replacement attempts failed</li>
+                </ul>
+
+                <p><strong>Apple Official Repair:</strong></p>
+                <ul>
+                    <li><strong>Cost:</strong> Varies by model
+                        <ul>
+                            <li>Often charged as "other damage": $299-599</li>
+                            <li>May be cheaper if under warranty or AppleCare+</li>
+                        </ul>
+                    </li>
+                    <li><strong>Process:</strong> Make Genius Bar appointment, diagnostics, repair quote</li>
+                    <li><strong>Turnaround:</strong> 5-7 days typically</li>
+                </ul>
+
+                <p><strong>Third-Party Repair:</strong></p>
+                <ul>
+                    <li><strong>Cost:</strong> $79-149 for port replacement</li>
+                    <li><strong>Shops:</strong> uBreakiFix, CPR, local shops</li>
+                    <li><strong>Turnaround:</strong> Same day to 3 days</li>
+                    <li><strong>Pros:</strong> Much cheaper than Apple for out-of-warranty</li>
+                    <li><strong>Cons:</strong> Voids warranty, quality varies</li>
+                </ul>
+
+                <p><strong>Warranty coverage:</strong></p>
+                <ul>
+                    <li><strong>Standard 1-year warranty:</strong> Covers defects, not physical damage</li>
+                    <li><strong>AppleCare+:</strong> Covers 2 accidental damage incidents ($49 deductible each)</li>
+                    <li><strong>Out of warranty:</strong> Full repair cost applies</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h3>⚠️ Repair vs Replace Decision:</h3>
+                    <p><strong>Worth repairing if:</strong></p>
+                    <ul>
+                        <li>iPad less than 3 years old</li>
+                        <li>Repair cost under $200</li>
+                        <li>iPad Pro or high-end model</li>
+                        <li>Under AppleCare+ ($49 deductible)</li>
+                    </ul>
+                    <p><strong>Consider replacing if:</strong></p>
+                    <ul>
+                        <li>iPad 4+ years old</li>
+                        <li>Repair exceeds 50% of new iPad cost</li>
+                        <li>Base model iPad (new one is $329-449)</li>
+                        <li>Multiple issues (battery + port both need replacement)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Prevention: Keep iPad Charging Smoothly</h2>
+
+            <h3>1. Port Protection</h3>
+            <ul>
+                <li><strong>Clean port every 2-3 months:</strong> Prevents lint buildup</li>
+                <li><strong>Use port cover plug:</strong> Silicone dust plug when not charging ($5)</li>
+                <li><strong>Don't carry in pocket:</strong> Major source of lint</li>
+                <li><strong>Insert cable straight:</strong> Don't force at angles</li>
+                <li><strong>Remove cable gently:</strong> Pull straight out by connector, not cable</li>
+            </ul>
+
+            <h3>2. Cable Care</h3>
+            <ul>
+                <li><strong>Avoid tight coiling:</strong> Damages internal wires</li>
+                <li><strong>Support cable weight:</strong> Don't let iPad dangle from cable</li>
+                <li><strong>Replace frayed cables immediately:</strong> Don't wait for failure</li>
+                <li><strong>Buy quality cables:</strong> Apple or MFi certified only</li>
+                <li><strong>Keep away from pets:</strong> Cable chewing is common</li>
+            </ul>
+
+            <h3>3. Battery Health Maintenance</h3>
+            <ul>
+                <li><strong>Avoid 0% discharge:</strong> Charge at 20-30%</li>
+                <li><strong>Don't leave at 100% plugged in overnight:</strong> Unplug when full</li>
+                <li><strong>Optimal charge range:</strong> Keep between 20-80% for longest battery life</li>
+                <li><strong>Cool environment:</strong> Don't charge in hot car or direct sun</li>
+                <li><strong>Remove thick case:</strong> When charging to prevent overheating</li>
+            </ul>
+
+            <h3>4. Smart Charging Practices</h3>
+            <ul>
+                <li><strong>Use appropriate wattage:</strong> 20W for iPad, not 5W iPhone charger</li>
+                <li><strong>Avoid cheap chargers:</strong> Can damage battery over time</li>
+                <li><strong>Don't use while fast charging:</strong> Generates excess heat</li>
+                <li><strong>Update iPadOS regularly:</strong> Includes battery optimizations</li>
+            </ul>
+
+            <h2>Common Questions</h2>
+
+            <p><strong>Q: My iPad says "Not Charging" even though it's plugged in. Why?</strong></p>
+            <p>A: Usually means charger too weak. iPad receiving power but not enough to charge while in use. Use 20W charger instead of 5W iPhone charger. Or turn iPad off and let it charge.</p>
+
+            <p><strong>Q: How long should iPad take to charge fully?</strong></p>
+            <p>A: 2-4 hours from 0-100% with proper 20W charger. If taking 6+ hours, charger too weak or cable damaged.</p>
+
+            <p><strong>Q: Can I use my MacBook charger to charge iPad?</strong></p>
+            <p>A: Yes! Higher wattage chargers (30W, 61W, 96W) are safe. iPad only draws power it needs. Won't damage it. Actually charges faster.</p>
+
+            <p><strong>Q: Is it bad to charge iPad overnight every night?</strong></p>
+            <p>A: Generally safe - iPad stops charging at 100%. But long-term daily overnight charging can slightly reduce battery lifespan. Better to unplug when full if possible. Use Optimized Battery Charging feature (Settings → Battery).</p>
+
+            <p><strong>Q: My iPad only charges with original Apple cable. Third-party cables don't work. Why?</strong></p>
+            <p>A: Cheap non-MFi cables often fail quickly. Buy only MFi (Made for iPad) certified cables from brands like Anker, Belkin. Or port might be slightly damaged - try cleaning thoroughly.</p>
+
+            <p><strong>Q: iPad charges to 80% then stops. What's wrong?</strong></p>
+            <p>A: Optimized Battery Charging feature limits charge to 80% to extend battery life. Disable: Settings → Battery → Battery Health → Optimized Battery Charging → Off. Or iPad might be hot - let it cool.</p>
+
+            <p><strong>Q: How do I know if my charging port is damaged or just dirty?</strong></p>
+            <p>A: Clean port thoroughly with toothpick, try different certified cable. If still doesn't charge and port looks physically damaged (bent pins, corrosion), needs repair. If clean and looks fine but still doesn't work, could be internal port damage.</p>
+
+            <p><strong>Q: Can I replace iPad battery myself?</strong></p>
+            <p>A: Very difficult - iPad batteries heavily glued. Requires heat gun, lots of patience, risk of cracking screen. Not recommended unless experienced. Professional replacement safer: Apple $99-199, third-party $60-120.</p>
+
+            <p><strong>Q: My iPad is 4 years old. Should I replace battery or buy new iPad?</strong></p>
+            <p>A: Depends on model and needs. If iPad Pro worth $800+ new, $150 battery replacement reasonable. If base iPad worth $329 new, buying new makes more sense. Also consider: Does iPad run latest iPadOS? If too old for updates, time to upgrade.</p>
+
+            <p><strong>Q: iPad gets very hot when charging. Is this normal?</strong></p>
+            <p>A: Slightly warm is normal. Very hot (can't hold comfortably) is not. Causes: Using intensive apps while charging, thick case trapping heat, charging in hot environment, battery degradation. Let it cool, remove case, avoid using while charging.</p>
+
+            <div class="success-box">
+                <h3>✓ Success Rates Summary:</h3>
+                <ul>
+                    <li><strong>Clean port + replace cable:</strong> 60% fixed</li>
+                    <li><strong>Hard reset + proper charger:</strong> 25% fixed</li>
+                    <li><strong>Let dead iPad charge 30+ min:</strong> 20% fixed</li>
+                    <li><strong>Update iPadOS + reset settings:</strong> 20% fixed</li>
+                    <li><strong>Battery replacement:</strong> 95% success (degraded battery)</li>
+                    <li><strong>Port replacement:</strong> 90% success (damaged port)</li>
+                </ul>
+                <p><strong>Overall:</strong> 80% of iPad charging issues fixable at home with port cleaning and cable replacement!</p>
+            </div>
+
+        </div>
+
+        <div class="related-problems">
+            <h3>🔗 Related Problems</h3>
+            <div class="related-list">
+                <a href="/all-problems/iphone-not-charging/" class="related-item">
+                    <h4>iPhone Not Charging</h4>
+                    <p>Fix iPhone charging port and battery issues</p>
+                </a>
+                <a href="/all-problems/tablet-screen-frozen/" class="related-item">
+                    <h4>Tablet Screen Frozen</h4>
+                    <p>Fix frozen, unresponsive iPad and Android tablets</p>
+                </a>
+                <a href="/all-problems/phone-battery-drain/" class="related-item">
+                    <h4>Phone Battery Drain</h4>
+                    <p>Fix rapid battery drain on smartphones and tablets</p>
+                </a>
+                <a href="/all-problems/touch-screen-not-working/" class="related-item">
+                    <h4>Touch Screen Not Working</h4>
+                    <p>Fix unresponsive touchscreen on tablets and phones</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

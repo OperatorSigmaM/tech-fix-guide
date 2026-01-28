@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laptop touchpad not working? Fix cursor not moving, gestures disabled, clicking issues on Windows, Mac, Dell, HP, Lenovo. 14 solutions for all touchpad problems.">
+    <title>Laptop Touchpad Not Working? 14 Ways to Fix Trackpad Issues</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        footer { background: #1f2937; color: white; padding: 3rem 2rem 1rem; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #3b82f6; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #d1d5db; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: #3b82f6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #d1fae5; color: #065f46; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .success-rate { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / Laptop Touchpad Not Working</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>Laptop Touchpad Not Working? 14 Ways to Fix Trackpad Issues</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 16 min read</span>
+                <span class="difficulty">Easy</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>Problem:</strong> Laptop touchpad cursor not moving, clicking not working, gestures disabled, or touchpad completely unresponsive.</p>
+            <p><strong>Most common causes:</strong> Touchpad disabled via keyboard shortcut (35%), driver issues (25%), external mouse disabling touchpad (20%), incorrect settings (15%), hardware failure (5%)</p>
+            <p><strong>Quick fix (works 75% of time):</strong> Press Fn+F7 (or touchpad key) → Check touchpad settings → Update drivers → Restart laptop → Unplug external mouse</p>
+            <p><strong>Time needed:</strong> 5-20 minutes depending on solution</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#identify">Identify Your Touchpad Issue</a></li>
+                <li><a href="#quick">Quick Fixes (Start Here)</a></li>
+                <li><a href="#settings">Settings & Configuration</a></li>
+                <li><a href="#advanced">Advanced Solutions</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2 id="identify">First: Identify Your Touchpad Problem</h2>
+            
+            <p><strong>Different symptoms require different solutions:</strong></p>
+
+            <p>🔴 <strong>Cursor not moving at all:</strong></p>
+            <ul>
+                <li>Touchpad completely dead, no cursor movement</li>
+                <li>Cursor visible but frozen in one spot</li>
+                <li>No response to finger movement</li>
+                <li><strong>Likely cause:</strong> Touchpad disabled (Fn key), driver issue, hardware failure</li>
+            </ul>
+
+            <p>🔴 <strong>Cursor moving but clicking not working:</strong></p>
+            <ul>
+                <li>Can move cursor around screen</li>
+                <li>Left-click, right-click doesn't respond</li>
+                <li>Tap-to-click doesn't work</li>
+                <li><strong>Likely cause:</strong> Tap-to-click disabled, touchpad buttons faulty, settings misconfigured</li>
+            </ul>
+
+            <p>🔴 <strong>Gestures not working (two-finger scroll, pinch-to-zoom):</strong></p>
+            <ul>
+                <li>Basic cursor movement works</li>
+                <li>Two-finger scrolling doesn't work</li>
+                <li>Pinch-to-zoom, three-finger swipe disabled</li>
+                <li><strong>Likely cause:</strong> Precision touchpad gestures disabled in settings</li>
+            </ul>
+
+            <p>🔴 <strong>Touchpad works but cursor jumps/erratic:</strong></p>
+            <ul>
+                <li>Cursor jumps randomly across screen</li>
+                <li>Moves by itself while typing</li>
+                <li>Very jittery, imprecise movement</li>
+                <li><strong>Likely cause:</strong> Palm detection off, touchpad sensitivity too high, driver issue</li>
+            </ul>
+
+            <p>🔴 <strong>Touchpad disabled when external mouse connected:</strong></p>
+            <ul>
+                <li>Works fine when mouse unplugged</li>
+                <li>Stops working when mouse plugged in</li>
+                <li><strong>Likely cause:</strong> "Disable touchpad when mouse connected" setting enabled</li>
+            </ul>
+
+            <p>🔴 <strong>Touchpad partially working (some areas dead):</strong></p>
+            <ul>
+                <li>Top/bottom half of touchpad doesn't respond</li>
+                <li>Clicking works but movement doesn't (or vice versa)</li>
+                <li><strong>Likely cause:</strong> Hardware damage, wear and tear, liquid damage</li>
+            </ul>
+
+            <p>🔴 <strong>Stopped working after Windows update:</strong></p>
+            <ul>
+                <li>Touchpad worked fine before update</li>
+                <li>Completely stopped after Windows Update installed</li>
+                <li><strong>Likely cause:</strong> Driver incompatibility, Windows overwriting touchpad driver</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Touchpad Types:</strong><br>
+                • <strong>Precision Touchpad (Windows 10/11):</strong> Advanced gestures, best drivers. Found in newer laptops (Dell XPS, HP Spectre, Lenovo Yoga, Surface).<br>
+                • <strong>Synaptics:</strong> Most common in older laptops. Separate driver software.<br>
+                • <strong>ELAN:</strong> Budget laptops. Basic functionality.<br>
+                • <strong>Alps:</strong> Older laptops, less common now.<br>
+                • <strong>Mac Trackpad:</strong> Best-in-class, glass surface, Force Touch. Different troubleshooting (macOS specific).<br>
+                <br>
+                Check Device Manager → Mice and other pointing devices to see your touchpad type.
+            </div>
+
+            <h2 id="quick">Quick Fixes (Start Here - 75% Success Rate)</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">1</span> Check Touchpad Function Key (Fn Key) <span class="success-rate">Success: 50%</span></h3>
+                <p><strong>When to try:</strong> Touchpad suddenly stopped working, or accidentally pressed keyboard key.</p>
+                <p><strong>Why it works:</strong> #1 cause of touchpad issues. Most laptops have keyboard shortcut to enable/disable touchpad.</p>
+
+                <p><strong>Common touchpad keyboard shortcuts:</strong></p>
+                <ul>
+                    <li><strong>Fn + F7</strong> (Dell, Lenovo)</li>
+                    <li><strong>Fn + F5</strong> (Toshiba, some Dell)</li>
+                    <li><strong>Fn + F6</strong> (Samsung)</li>
+                    <li><strong>Fn + F9</strong> (HP, Asus)</li>
+                    <li><strong>Fn + F8</strong> (Acer)</li>
+                    <li><strong>Look for touchpad icon on F-keys</strong> (rectangular pad with finger icon)</li>
+                </ul>
+
+                <p><strong>How to re-enable touchpad:</strong></p>
+                <ol>
+                    <li>Look at F1-F12 row for touchpad icon (usually looks like 📱 or two fingers)</li>
+                    <li>Press Fn + that F-key</li>
+                    <li>On-screen notification should appear: "Touchpad Enabled" or "Touchpad Disabled"</li>
+                    <li>If already enabled, press again to toggle off then on</li>
+                    <li>Test cursor movement</li>
+                </ol>
+
+                <p><strong>Some laptops have dedicated touchpad button:</strong></p>
+                <ul>
+                    <li>Small LED button on touchpad itself (top-left or top-right corner)</li>
+                    <li>Press once to toggle touchpad on/off</li>
+                    <li>LED lights up when touchpad disabled</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Why touchpad gets disabled accidentally:</strong> Easy to press Fn+F7/F9 while gaming or typing quickly. Very common! Always try this FIRST before troubleshooting drivers/settings.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">2</span> Restart Laptop <span class="success-rate">Success: 30%</span></h3>
+                <p><strong>When to try:</strong> Touchpad stopped working suddenly, or after installing software.</p>
+                <p><strong>Why it works:</strong> Clears driver glitches, resets touchpad service, reinitializes hardware.</p>
+
+                <p><strong>Proper restart procedure:</strong></p>
+                <ol>
+                    <li>Save all work</li>
+                    <li>Start Menu → Power → Restart (NOT shut down)</li>
+                    <li>Wait for complete reboot</li>
+                    <li>Test touchpad immediately after login</li>
+                </ol>
+
+                <p><strong>If touchpad completely dead (can't navigate to restart):</strong></p>
+                <ul>
+                    <li>Use keyboard navigation:
+                        <ul>
+                            <li>Press Windows key</li>
+                            <li>Arrow keys to navigate</li>
+                            <li>Enter to select</li>
+                            <li>Or: Ctrl+Alt+Delete → Tab to Restart → Enter</li>
+                        </ul>
+                    </li>
+                    <li>Or plug in external USB mouse temporarily</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Restart vs Shut Down:</strong> Full restart better than shut down → power on. Windows Fast Startup (hybrid shutdown) doesn't fully clear drivers. Restart forces complete driver reload.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">3</span> Unplug External Mouse <span class="success-rate">Success: 35%</span></h3>
+                <p><strong>When to try:</strong> Touchpad works when mouse unplugged, stops when mouse connected.</p>
+                <p><strong>Why it works:</strong> Many laptops auto-disable touchpad when external mouse detected (prevent accidental cursor movement).</p>
+
+                <p><strong>Quick test:</strong></p>
+                <ol>
+                    <li>Unplug all external mice (USB, wireless receiver)</li>
+                    <li>Wait 5 seconds</li>
+                    <li>Test touchpad</li>
+                    <li>If works → setting is disabling touchpad when mouse connected</li>
+                </ol>
+
+                <p><strong>Change this behavior (allow both touchpad + mouse):</strong></p>
+                <ul>
+                    <li><strong>Windows 11:</strong>
+                        <ul>
+                            <li>Settings → Bluetooth & devices → Touchpad</li>
+                            <li>Look for "Leave touchpad on when mouse is connected"</li>
+                            <li>Toggle ON</li>
+                        </ul>
+                    </li>
+                    <li><strong>Windows 10:</strong>
+                        <ul>
+                            <li>Settings → Devices → Touchpad</li>
+                            <li>Uncheck "Leave touchpad on when a mouse is connected"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Synaptics/ELAN software:</strong>
+                        <ul>
+                            <li>Control Panel → Mouse → Device Settings tab</li>
+                            <li>Disable "Disable internal pointing device when external USB pointing device is attached"</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">4</span> Check Touchpad Enabled in Settings <span class="success-rate">Success: 40%</span></h3>
+                <p><strong>When to try:</strong> Touchpad completely unresponsive, or disabled in Windows settings.</p>
+
+                <p><strong>Windows 11 - Enable touchpad:</strong></p>
+                <ol>
+                    <li>Settings → Bluetooth & devices → Touchpad</li>
+                    <li>Make sure main toggle at top is ON</li>
+                    <li>Check "Touchpad" switch is enabled</li>
+                    <li>Scroll down, ensure all gesture settings enabled</li>
+                </ol>
+
+                <p><strong>Windows 10 - Enable touchpad:</strong></p>
+                <ol>
+                    <li>Settings → Devices → Touchpad</li>
+                    <li>Touchpad toggle should be ON</li>
+                    <li>If toggle greyed out, see Solution #5 (driver issue)</li>
+                </ol>
+
+                <p><strong>Control Panel - Mouse Properties (classic method):</strong></p>
+                <ol>
+                    <li>Control Panel → Mouse</li>
+                    <li>Look for tabs: "Device Settings" or touchpad brand name (Synaptics, ELAN)</li>
+                    <li>Select touchpad device</li>
+                    <li>Click "Enable" button</li>
+                    <li>Apply → OK</li>
+                </ol>
+
+                <p><strong>If touchpad not listed in Settings:</strong></p>
+                <ul>
+                    <li>Driver missing or not installed</li>
+                    <li>See Solution #5 (Update drivers)</li>
+                    <li>Or Solution #6 (Device Manager)</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">5</span> Update or Reinstall Touchpad Drivers <span class="success-rate">Success: 45%</span></h3>
+                <p><strong>When to try:</strong> Touchpad stopped working after Windows update, or Device Manager shows errors.</p>
+                <p><strong>Why it works:</strong> Outdated/corrupted drivers = #1 software cause of touchpad failures.</p>
+
+                <p><strong>Windows - Update touchpad driver:</strong></p>
+                <ol>
+                    <li>Right-click Start → Device Manager</li>
+                    <li>Expand "Mice and other pointing devices"</li>
+                    <li>Look for touchpad:
+                        <ul>
+                            <li>"HID-compliant touch pad"</li>
+                            <li>"Synaptics TouchPad"</li>
+                            <li>"ELAN Touchpad"</li>
+                            <li>"Precision Touchpad"</li>
+                        </ul>
+                    </li>
+                    <li>Right-click touchpad → "Update driver"</li>
+                    <li>Choose "Search automatically for drivers"</li>
+                    <li>Install if found</li>
+                    <li>Restart laptop</li>
+                </ol>
+
+                <p><strong>Download driver from manufacturer (better method):</strong></p>
+                <ol>
+                    <li>Identify laptop model (check bottom sticker or Settings → System → About)</li>
+                    <li>Visit manufacturer website:
+                        <ul>
+                            <li><strong>Dell:</strong> dell.com/support → Enter service tag → Drivers</li>
+                            <li><strong>HP:</strong> support.hp.com → Download drivers → Enter product name</li>
+                            <li><strong>Lenovo:</strong> support.lenovo.com → Detect product → Drivers</li>
+                            <li><strong>Asus:</strong> asus.com/support → Find your model → Drivers</li>
+                        </ul>
+                    </li>
+                    <li>Download "Touchpad Driver" or "Mouse Driver"</li>
+                    <li>Run installer</li>
+                    <li>Restart</li>
+                </ol>
+
+                <p><strong>Reinstall touchpad driver (if update doesn't work):</strong></p>
+                <ol>
+                    <li>Device Manager → Mice and other pointing devices</li>
+                    <li>Right-click touchpad → "Uninstall device"</li>
+                    <li>Check "Delete the driver software for this device" (if option appears)</li>
+                    <li>Click "Uninstall"</li>
+                    <li>Restart laptop</li>
+                    <li>Windows automatically reinstalls driver on boot</li>
+                    <li>Or manually install manufacturer driver</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Windows Update breaking touchpad drivers:</strong> Major Windows feature updates (twice yearly) sometimes overwrite touchpad drivers with generic Microsoft drivers that don't support gestures. After big Windows updates, always reinstall touchpad driver from laptop manufacturer website.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">6</span> Enable Touchpad in Device Manager <span class="success-rate">Success: 40%</span></h3>
+                <p><strong>When to try:</strong> Touchpad disabled in Device Manager, or shows error icon.</p>
+
+                <p><strong>Check Device Manager status:</strong></p>
+                <ol>
+                    <li>Right-click Start → Device Manager</li>
+                    <li>Expand "Mice and other pointing devices"</li>
+                    <li>Look for your touchpad</li>
+                </ol>
+
+                <p><strong>Touchpad status indicators:</strong></p>
+                <ul>
+                    <li><strong>Normal icon:</strong> Enabled and working</li>
+                    <li><strong>Down arrow ⬇:</strong> Disabled → Right-click → "Enable device"</li>
+                    <li><strong>Yellow triangle ⚠:</strong> Driver error → Update or reinstall driver</li>
+                    <li><strong>Red X:</strong> Device disabled or hardware failure</li>
+                    <li><strong>Not listed:</strong> Driver not installed or hardware not detected</li>
+                </ul>
+
+                <p><strong>If touchpad disabled (down arrow):</strong></p>
+                <ol>
+                    <li>Right-click touchpad device</li>
+                    <li>Select "Enable device"</li>
+                    <li>Wait few seconds</li>
+                    <li>Test touchpad</li>
+                </ol>
+
+                <p><strong>If touchpad has yellow triangle:</strong></p>
+                <ol>
+                    <li>Right-click → Properties</li>
+                    <li>Device status shows error code</li>
+                    <li>Common codes:
+                        <ul>
+                            <li><strong>Code 10:</strong> "Device cannot start" → Reinstall driver</li>
+                            <li><strong>Code 28:</strong> "Drivers not installed" → Install touchpad driver</li>
+                            <li><strong>Code 43:</strong> "Windows has stopped this device" → Hardware or driver issue</li>
+                        </ul>
+                    </li>
+                    <li>Try: Update driver or reinstall</li>
+                </ol>
+            </div>
+
+            <h2 id="settings">Settings & Configuration Solutions</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">7</span> Enable Tap-to-Click <span class="success-rate">Success: 35%</span></h3>
+                <p><strong>When to try:</strong> Cursor moves but clicking doesn't work, or tapping touchpad does nothing.</p>
+
+                <p><strong>Windows 11 - Enable tap-to-click:</strong></p>
+                <ol>
+                    <li>Settings → Bluetooth & devices → Touchpad</li>
+                    <li>Scroll to "Taps"</li>
+                    <li>Enable these options:
+                        <ul>
+                            <li>"Tap with a single finger to single-click" → ON</li>
+                            <li>"Tap with two fingers to right-click" → ON</li>
+                            <li>"Tap twice and drag to multi-select" → ON (if desired)</li>
+                        </ul>
+                    </li>
+                    <li>Test tapping on touchpad</li>
+                </ol>
+
+                <p><strong>Windows 10 - Enable tap-to-click:</strong></p>
+                <ol>
+                    <li>Settings → Devices → Touchpad</li>
+                    <li>Under "Taps": Change to "Medium sensitivity" or "Most sensitive"</li>
+                    <li>Make sure tap sensitivity not set to "No taps"</li>
+                </ol>
+
+                <p><strong>Advanced touchpad settings (Synaptics/ELAN):</strong></p>
+                <ol>
+                    <li>Control Panel → Mouse</li>
+                    <li>Click touchpad tab (Synaptics, ELAN, or Device Settings)</li>
+                    <li>Settings button</li>
+                    <li>Look for "Tapping" section</li>
+                    <li>Enable "Tap to click"</li>
+                    <li>Adjust tap sensitivity if needed</li>
+                </ol>
+
+                <p><strong>Physical clicking not working:</strong></p>
+                <ul>
+                    <li>If tap-to-click works but physical click doesn't:</li>
+                    <li>Touchpad buttons may be broken (hardware issue)</li>
+                    <li>Use tap-to-click as workaround</li>
+                    <li>Or see Solution #13 (hardware repair)</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">8</span> Enable Touchpad Gestures <span class="success-rate">Success: 30%</span></h3>
+                <p><strong>When to try:</strong> Two-finger scroll, pinch-to-zoom, or swipe gestures not working.</p>
+
+                <p><strong>Windows 11 - Enable gestures:</strong></p>
+                <ol>
+                    <li>Settings → Bluetooth & devices → Touchpad</li>
+                    <li>Scroll to "Three-finger gestures" and "Four-finger gestures"</li>
+                    <li>Enable desired gestures:
+                        <ul>
+                            <li><strong>Two-finger scroll:</strong> Under "Scroll and zoom" → Enable</li>
+                            <li><strong>Pinch to zoom:</strong> Under "Scroll and zoom" → Enable</li>
+                            <li><strong>Three-finger swipe:</strong> Set to "Switch apps" or "Show desktop"</li>
+                            <li><strong>Four-finger swipe:</strong> Set to "Switch desktops"</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Windows 10 - Enable gestures:</strong></p>
+                <ol>
+                    <li>Settings → Devices → Touchpad</li>
+                    <li>Scroll down to gesture sections</li>
+                    <li>Configure each gesture type</li>
+                    <li>Make sure "Scrolling direction" set to preference</li>
+                </ol>
+
+                <p><strong>Precision Touchpad vs Legacy:</strong></p>
+                <ul>
+                    <li><strong>Precision Touchpad (Windows 10/11):</strong> Full gesture support built into Windows, no extra software needed</li>
+                    <li><strong>Legacy touchpad (Synaptics/ELAN):</strong> Gestures configured in manufacturer software
+                        <ul>
+                            <li>Open Synaptics/ELAN control panel</li>
+                            <li>Enable gestures in software</li>
+                            <li>Some old touchpads don't support multi-touch gestures at all</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Test gestures:</strong></p>
+                <ul>
+                    <li><strong>Two-finger scroll:</strong> Place two fingers on touchpad, move up/down</li>
+                    <li><strong>Pinch-to-zoom:</strong> Two fingers together, move apart (zoom in) or together (zoom out)</li>
+                    <li><strong>Three-finger swipe:</strong> Three fingers left/right to switch apps</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">9</span> Adjust Touchpad Sensitivity & Palm Rejection <span class="success-rate">Success: 25%</span></h3>
+                <p><strong>When to try:</strong> Cursor jumping erratically, touchpad too sensitive, or activates while typing.</p>
+
+                <p><strong>Windows 11 - Adjust sensitivity:</strong></p>
+                <ol>
+                    <li>Settings → Bluetooth & devices → Touchpad</li>
+                    <li><strong>Touchpad sensitivity:</strong> Change from "Most sensitive" to "Medium" or "Low"</li>
+                    <li>Test cursor movement</li>
+                    <li>Adjust until comfortable</li>
+                </ol>
+
+                <p><strong>Enable palm rejection (prevent accidental touches while typing):</strong></p>
+                <ul>
+                    <li>Windows doesn't have separate palm rejection toggle</li>
+                    <li>Built into Precision Touchpad automatically</li>
+                    <li>For legacy touchpads:
+                        <ul>
+                            <li>Control Panel → Mouse → Touchpad tab → Settings</li>
+                            <li>Look for "Palm Check" or "Palm Rejection"</li>
+                            <li>Enable and adjust sensitivity</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Delay before touchpad activates after typing:</strong></p>
+                <ul>
+                    <li>Synaptics software: Settings → "Delay before touchpad works after typing"</li>
+                    <li>Set to 1-2 seconds</li>
+                    <li>Prevents accidental cursor jumps while typing</li>
+                </ul>
+
+                <p><strong>Cursor speed adjustment:</strong></p>
+                <ol>
+                    <li>Settings → Bluetooth & devices → Mouse</li>
+                    <li>Or: Control Panel → Mouse → Pointer Options</li>
+                    <li>Adjust "Select a pointer speed" slider</li>
+                    <li>Uncheck "Enhance pointer precision" if cursor feels weird</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">10</span> Disable Touchpad Delay / Enhance Pointer Precision <span class="success-rate">Success: 20%</span></h3>
+                <p><strong>When to try:</strong> Touchpad feels laggy, cursor moves after you stop moving finger, or acceleration feels off.</p>
+
+                <p><strong>Disable pointer precision (acceleration):</strong></p>
+                <ol>
+                    <li>Control Panel → Mouse → Pointer Options tab</li>
+                    <li>UNCHECK "Enhance pointer precision"</li>
+                    <li>This removes Windows mouse acceleration</li>
+                    <li>Cursor movement becomes 1:1 with finger movement</li>
+                    <li>Apply → OK</li>
+                </ol>
+
+                <p><strong>Reduce touchpad input lag:</strong></p>
+                <ul>
+                    <li>Update touchpad driver to latest version (reduces lag)</li>
+                    <li>Close background apps using CPU (high CPU = input lag)</li>
+                    <li>Disable any touchpad software running in background if not needed</li>
+                </ul>
+
+                <p><strong>For gamers (touchpad lag):</strong></p>
+                <ul>
+                    <li>Touchpads have inherent lag (10-30ms) vs gaming mice (1-5ms)</li>
+                    <li>Can't be eliminated completely</li>
+                    <li>Use external mouse for gaming</li>
+                </ul>
+            </div>
+
+            <h2 id="advanced">Advanced Solutions & Hardware Fixes</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">11</span> Check BIOS Settings <span class="success-rate">Success: 15%</span></h3>
+                <p><strong>When to try:</strong> Touchpad not detected anywhere (Device Manager, BIOS), or corporate laptop with restricted settings.</p>
+
+                <p><strong>Access BIOS:</strong></p>
+                <ol>
+                    <li>Restart laptop</li>
+                    <li>Immediately press BIOS key repeatedly:
+                        <ul>
+                            <li><strong>Dell:</strong> F2</li>
+                            <li><strong>HP:</strong> F10 or Esc</li>
+                            <li><strong>Lenovo:</strong> F1 or F2</li>
+                            <li><strong>Asus:</strong> F2 or Delete</li>
+                            <li><strong>Acer:</strong> F2</li>
+                        </ul>
+                    </li>
+                    <li>Enter BIOS/UEFI setup</li>
+                </ol>
+
+                <p><strong>Find touchpad setting in BIOS:</strong></p>
+                <ul>
+                    <li>Navigate with arrow keys</li>
+                    <li>Look in:
+                        <ul>
+                            <li><strong>Advanced</strong> tab</li>
+                            <li><strong>Device Configuration</strong></li>
+                            <li><strong>System Configuration</strong></li>
+                            <li><strong>Integrated Devices</strong></li>
+                        </ul>
+                    </li>
+                    <li>Setting may be called:
+                        <ul>
+                            <li>"Internal Pointing Device"</li>
+                            <li>"Touchpad"</li>
+                            <li>"Pointing Device"</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Enable touchpad in BIOS:</strong></p>
+                <ol>
+                    <li>Find touchpad setting</li>
+                    <li>Change from "Disabled" to "Enabled"</li>
+                    <li>Press F10 to "Save and Exit"</li>
+                    <li>Laptop restarts</li>
+                    <li>Test touchpad</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ BIOS warning:</strong> Only change settings you understand. Wrong BIOS settings can prevent laptop from booting. If unsure, load "BIOS defaults" (usually F9).
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">12</span> Clean Touchpad Surface <span class="success-rate">Success: 20%</span></h3>
+                <p><strong>When to try:</strong> Touchpad erratic, cursor jumps, or feels "sticky" to touch.</p>
+
+                <p><strong>What you need:</strong></p>
+                <ul>
+                    <li>Microfiber cloth</li>
+                    <li>Isopropyl alcohol 70% (rubbing alcohol)</li>
+                    <li>Cotton swabs (for edges)</li>
+                </ul>
+
+                <p><strong>Cleaning procedure:</strong></p>
+                <ol>
+                    <li>Shut down laptop completely</li>
+                    <li>Unplug power cable</li>
+                    <li>Dampen microfiber cloth with alcohol (not dripping wet!)</li>
+                    <li>Wipe touchpad surface in circular motions</li>
+                    <li>Clean edges and corners with cotton swab</li>
+                    <li>Pay attention to:
+                        <ul>
+                            <li>Oils from fingers</li>
+                            <li>Dust and debris around edges</li>
+                            <li>Sticky residue</li>
+                        </ul>
+                    </li>
+                    <li>Let alcohol evaporate (1-2 minutes)</li>
+                    <li>Power on and test</li>
+                </ol>
+
+                <p><strong>Why cleaning helps:</strong></p>
+                <ul>
+                    <li>Finger oils create uneven surface → cursor jumps</li>
+                    <li>Dust/crumbs interfere with capacitive sensing</li>
+                    <li>Clean touchpad = more accurate tracking</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Don't use:</strong> Glass cleaner (Windex), bleach, or harsh chemicals. Can damage touchpad coating. Stick to isopropyl alcohol 70%+ only.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">13</span> Test for Hardware Damage <span class="success-rate">Diagnostic</span></h3>
+                <p><strong>When to try:</strong> All software fixes failed, or touchpad physically damaged.</p>
+
+                <p><strong>Signs of hardware failure:</strong></p>
+                <ul>
+                    <li>Touchpad never detected (not in Device Manager, BIOS shows enabled)</li>
+                    <li>Physical damage visible (cracks, dents, scratches)</li>
+                    <li>Liquid spill on touchpad area</li>
+                    <li>Touchpad surface bulging or uneven</li>
+                    <li>Click buttons physically broken or stuck</li>
+                    <li>Partial touchpad dead (top half works, bottom doesn't)</li>
+                </ul>
+
+                <p><strong>Test touchpad hardware:</strong></p>
+                <ol>
+                    <li><strong>Boot from USB/Live Linux:</strong>
+                        <ul>
+                            <li>Create Ubuntu Live USB</li>
+                            <li>Boot laptop from USB</li>
+                            <li>Test touchpad in Linux environment</li>
+                            <li>If works in Linux but not Windows → Windows driver issue</li>
+                            <li>If doesn't work in Linux either → Hardware failure</li>
+                        </ul>
+                    </li>
+                    <li><strong>Check BIOS:</strong>
+                        <ul>
+                            <li>Enter BIOS setup</li>
+                            <li>Try using touchpad in BIOS menus</li>
+                            <li>If works in BIOS → Windows issue</li>
+                            <li>If doesn't work in BIOS → Hardware problem</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Common hardware failures:</strong></p>
+                <ul>
+                    <li><strong>Ribbon cable disconnected:</strong> Internal cable from touchpad to motherboard loose (fixable if comfortable opening laptop)</li>
+                    <li><strong>Touchpad controller failed:</strong> Chip on touchpad PCB dead (requires touchpad replacement)</li>
+                    <li><strong>Liquid damage:</strong> Corrosion from spills (may be repairable if caught early)</li>
+                    <li><strong>Physical trauma:</strong> Laptop dropped, pressure on touchpad (touchpad cracked)</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">14</span> Hardware Repair / Replacement <span class="success-rate">Varies</span></h3>
+                <p><strong>When needed:</strong> Hardware failure confirmed, touchpad physically broken, or all troubleshooting failed.</p>
+
+                <p><strong>Touchpad replacement cost:</strong></p>
+                <ul>
+                    <li><strong>Professional repair:</strong> $100-250 (parts + labor)
+                        <ul>
+                            <li>Parts: $30-80 (replacement touchpad)</li>
+                            <li>Labor: $70-170 (1-2 hours)</li>
+                        </ul>
+                    </li>
+                    <li><strong>DIY repair:</strong> $30-80 (parts only)
+                        <ul>
+                            <li>Difficulty: Medium-high</li>
+                            <li>Requires: Opening laptop, disconnecting ribbon cables</li>
+                            <li>Risk: Can damage other components if not careful</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Warranty coverage:</strong></p>
+                <ul>
+                    <li><strong>Under warranty (1 year):</strong> Free repair if defect, not accidental damage</li>
+                    <li><strong>Extended warranty/protection plan:</strong> May cover accidental damage</li>
+                    <li><strong>Out of warranty:</strong> Full repair cost applies</li>
+                </ul>
+
+                <p><strong>DIY touchpad replacement steps (advanced):</strong></p>
+                <ol>
+                    <li>Identify exact laptop model</li>
+                    <li>Buy replacement touchpad (eBay, AliExpress, laptop parts sites)</li>
+                    <li>Find disassembly guide (YouTube: "[laptop model] touchpad replacement")</li>
+                    <li>Tools needed:
+                        <ul>
+                            <li>Phillips screwdriver (small)</li>
+                            <li>Plastic pry tools</li>
+                            <li>Tweezers</li>
+                        </ul>
+                    </li>
+                    <li>General process:
+                        <ul>
+                            <li>Remove battery (if removable)</li>
+                            <li>Remove bottom panel</li>
+                            <li>Disconnect touchpad ribbon cable from motherboard</li>
+                            <li>Remove screws holding touchpad</li>
+                            <li>Install new touchpad</li>
+                            <li>Reconnect ribbon cable carefully</li>
+                            <li>Reassemble</li>
+                        </ul>
+                    </li>
+                    <li>⚠️ Ribbon cables VERY fragile - break easily</li>
+                </ol>
+
+                <p><strong>Alternative: Use external mouse permanently:</strong></p>
+                <ul>
+                    <li>If repair cost too high ($200+) on old laptop ($300-500 value)</li>
+                    <li>Wireless mouse: $15-40 (works as well as touchpad)</li>
+                    <li>Trackball mouse: $30-80 (stationary, don't need desk space)</li>
+                    <li>Portable mouse: Small USB mouse for travel</li>
+                    <li>Much cheaper than touchpad repair</li>
+                </ul>
+
+                <p><strong>Repair vs Replace decision:</strong></p>
+                <ul>
+                    <li><strong>Repair if:</strong>
+                        <ul>
+                            <li>Laptop less than 3 years old</li>
+                            <li>Under warranty (free repair)</li>
+                            <li>High-end laptop ($1000+)</li>
+                            <li>Repair cost under $150</li>
+                        </ul>
+                    </li>
+                    <li><strong>Use external mouse if:</strong>
+                        <ul>
+                            <li>Laptop 4+ years old</li>
+                            <li>Repair cost over $200</li>
+                            <li>Budget laptop ($300-500 value)</li>
+                            <li>Multiple hardware issues</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>Prevention & Best Practices</h2>
+
+            <h3>1. Avoid Accidental Disabling</h3>
+            <ul>
+                <li><strong>Learn your touchpad hotkey:</strong> Know Fn+F? disables touchpad</li>
+                <li><strong>Be careful gaming:</strong> Easy to accidentally press Fn keys</li>
+                <li><strong>Disable hotkey if possible:</strong> Some laptops allow disabling touchpad toggle in BIOS</li>
+            </ul>
+
+            <h3>2. Keep Touchpad Clean</h3>
+            <ul>
+                <li><strong>Weekly wipe:</strong> Microfiber cloth, dry or slightly damp</li>
+                <li><strong>Monthly deep clean:</strong> Isopropyl alcohol wipe</li>
+                <li><strong>Wash hands before use:</strong> Reduces oil buildup</li>
+                <li><strong>Don't eat over laptop:</strong> Crumbs get under touchpad</li>
+            </ul>
+
+            <h3>3. Driver Maintenance</h3>
+            <ul>
+                <li><strong>After Windows updates:</strong> Check touchpad still works, reinstall manufacturer driver if needed</li>
+                <li><strong>Keep manufacturer drivers updated:</strong> Check laptop support page every 6 months</li>
+                <li><strong>Backup working driver:</strong> When touchpad works perfectly, export driver (Device Manager → Properties → Driver → Driver Details → copy files)</li>
+            </ul>
+
+            <h3>4. Physical Care</h3>
+            <ul>
+                <li><strong>Don't press too hard:</strong> Touchpads are capacitive, don't need pressure</li>
+                <li><strong>Keep laptop dry:</strong> Liquid spills = touchpad death sentence</li>
+                <li><strong>Avoid impact:</strong> Don't drop laptop or put heavy objects on it</li>
+                <li><strong>Use palm rest correctly:</strong> Don't rest full weight on touchpad area</li>
+            </ul>
+
+            <h3>5. External Mouse as Backup</h3>
+            <ul>
+                <li><strong>Always carry USB mouse when traveling:</strong> Touchpad fails = can still use laptop</li>
+                <li><strong>Bluetooth mouse for regular use:</strong> Saves touchpad wear and tear</li>
+                <li><strong>Test both regularly:</strong> Make sure both touchpad and mouse work</li>
+            </ul>
+
+            <h2>Common Questions</h2>
+
+            <p><strong>Q: My touchpad works but two-finger scroll doesn't. How to fix?</strong></p>
+            <p>A: Settings → Touchpad → Enable "Scroll and zoom" gestures. If option greyed out: Your touchpad might not support multi-touch (old laptop, legacy touchpad). Check Device Manager - if says "HID-compliant mouse" instead of "Precision Touchpad", you don't have gesture support. Only solution: External mouse or upgrade laptop.</p>
+
+            <p><strong>Q: Touchpad cursor jumps around while I'm typing. How to stop this?</strong></p>
+            <p>A: Palm rejection issue. Solutions: (1) Lower touchpad sensitivity (Settings → Touchpad → "Low sensitivity"), (2) Enable typing delay (Synaptics software → Settings → Delay 1-2 seconds), (3) Raise wrists while typing (don't rest palms on touchpad area), (4) Use external keyboard if typing a lot.</p>
+
+            <p><strong>Q: Can I disable touchpad permanently and only use external mouse?</strong></p>
+            <p>A: Yes. Three methods: (1) Fn+F7 to disable (resets on restart), (2) Settings → Touchpad → Toggle OFF, (3) Device Manager → Right-click touchpad → Disable (permanent until re-enabled). Recommendation: Keep enabled as backup in case mouse fails.</p>
+
+            <p><strong>Q: My Dell/HP/Lenovo touchpad stopped working after BIOS update. Fix?</strong></p>
+            <p>A: BIOS updates sometimes reset settings. Enter BIOS → Find "Internal Pointing Device" or "Touchpad" → Make sure "Enabled". Save and exit. If still doesn't work: Reinstall touchpad driver from manufacturer website.</p>
+
+            <p><strong>Q: Touchpad works in Safe Mode but not normal Windows. Why?</strong></p>
+            <p>A: Driver or software conflict. Safe Mode uses basic drivers. Solution: Boot normal Windows, uninstall touchpad driver completely (Device Manager → Uninstall), restart, let Windows reinstall fresh driver. Or: Clean boot to identify conflicting software.</p>
+
+            <p><strong>Q: Can I replace touchpad with different model/brand?</strong></p>
+            <p>A: No. Touchpads are laptop-specific (different sizes, mounting points, ribbon cable connectors). Must use exact replacement part for your laptop model. Find on eBay/AliExpress by searching "[laptop model] touchpad replacement part".</p>
+
+            <p><strong>Q: My touchpad click buttons are broken but tap-to-click works. Do I need repair?</strong></p>
+            <p>A: No. Use tap-to-click permanently. Enable in Settings → Touchpad → Tap to click. Works just as well as physical clicking. Save $100-200 repair cost. Only repair if tap-to-click also doesn't work.</p>
+
+            <p><strong>Q: Why does my touchpad randomly stop working for few seconds then start again?</strong></p>
+            <p>A: Intermittent hardware failure. Usually: (1) Loose ribbon cable inside laptop (fixable by reseating cable), (2) Touchpad controller overheating (give laptop more ventilation), (3) USB controller glitching (update chipset drivers). If frequent (10+ times/day): Hardware dying, plan for replacement or external mouse.</p>
+
+            <p><strong>Q: Does Windows 11 support all touchpad gestures from Windows 10?</strong></p>
+            <p>A: Yes, plus more. Windows 11 adds extra gestures (four-finger tap, edge swipes). But only if you have Precision Touchpad. Legacy touchpads (Synaptics/ELAN) have same gestures as Windows 10. To check: Settings → Touchpad → If you see full gesture options = Precision Touchpad. If basic options only = Legacy.</p>
+
+            <p><strong>Q: My MacBook trackpad not clicking anymore. How to fix?</strong></p>
+            <p>A: MacBooks use Force Touch (haptic feedback, not physical click). If not clicking: (1) Trackpad → Tap to click → Enable (Settings → Trackpad), (2) Adjust click pressure (Settings → Trackpad → Force Click), (3) SMC reset (shut down, Shift+Control+Option+Power for 10 sec), (4) If Force Touch motor failed: $200-400 repair at Apple. Workaround: Enable tap-to-click.</p>
+
+            <div class="success-box">
+                <h3>✓ Touchpad Troubleshooting Summary</h3>
+                <p><strong>Quick wins (try first, 5 min):</strong></p>
+                <ol>
+                    <li>Press Fn+F7 or touchpad hotkey (50% success) - #1 fix!</li>
+                    <li>Restart laptop (30% success)</li>
+                    <li>Unplug external mouse (35% success)</li>
+                    <li>Check enabled in Settings (40% success)</li>
+                </ol>
+                <p><strong>Driver fixes (10-15 min):</strong></p>
+                <ul>
+                    <li>Update touchpad driver (45% success)</li>
+                    <li>Enable in Device Manager (40% success)</li>
+                    <li>Reinstall driver from manufacturer (50% success)</li>
+                </ul>
+                <p><strong>Settings fixes (5-10 min):</strong></p>
+                <ul>
+                    <li>Enable tap-to-click (35% success for clicking issues)</li>
+                    <li>Enable gestures (30% success for scroll issues)</li>
+                    <li>Adjust sensitivity (25% success for erratic cursor)</li>
+                </ul>
+                <p><strong>Hardware issues:</strong></p>
+                <ul>
+                    <li>Check BIOS (15% success - corporate laptops)</li>
+                    <li>Clean touchpad (20% success - maintenance)</li>
+                    <li>Repair/replace ($100-250) vs external mouse ($15-40)</li>
+                </ul>
+                <p><strong>When to use external mouse instead of repair:</strong></p>
+                <ul>
+                    <li>Laptop 4+ years old</li>
+                    <li>Repair cost over $150</li>
+                    <li>Budget laptop (not worth expensive repair)</li>
+                </ul>
+                <p><strong>Overall success rate:</strong> 80% of touchpad issues fixable with Fn key, settings, and driver updates!</p>
+            </div>
+
+        </div>
+
+        <div class="related-problems">
+            <h3>🔗 Related Problems</h3>
+            <div class="related-list">
+                <a href="/all-problems/keyboard-keys-not-working/" class="related-item">
+                    <h4>Keyboard Keys Not Working</h4>
+                    <p>Fix stuck keys, WASD lock, unresponsive buttons</p>
+                </a>
+                <a href="/all-problems/mouse-not-responding/" class="related-item">
+                    <h4>Mouse Not Responding</h4>
+                    <p>Fix wired and wireless mouse cursor issues</p>
+                </a>
+                <a href="/all-problems/laptop-screen-black/" class="related-item">
+                    <h4>Laptop Screen Black</h4>
+                    <p>Fix black screen, no display on laptop</p>
+                </a>
+                <a href="/all-problems/slow-computer/" class="related-item">
+                    <h4>Computer Running Slow</h4>
+                    <p>Speed up your PC or Mac with proven methods</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

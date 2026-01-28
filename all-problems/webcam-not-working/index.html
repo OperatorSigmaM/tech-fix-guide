@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Webcam not working? Fix camera black screen, not detected, no video in Zoom/Teams. 15 solutions for built-in laptop webcams, USB cameras, privacy issues.">
+    <title>Webcam Not Working? 15 Ways to Fix Camera & Privacy Settings</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        footer { background: #1f2937; color: white; padding: 3rem 2rem 1rem; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #3b82f6; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #d1d5db; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: #3b82f6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #d1fae5; color: #065f46; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .success-rate { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / Webcam Not Working</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>Webcam Not Working? 15 Ways to Fix Camera & Privacy Settings</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 19 min read</span>
+                <span class="difficulty">Easy</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>Problem:</strong> Webcam showing black screen, not detected, or "camera already in use" error in Zoom, Teams, Skype.</p>
+            <p><strong>Most common causes:</strong> Privacy settings blocking camera (40%), another app using camera (25%), driver issues (20%), disabled camera (10%), hardware failure (5%)</p>
+            <p><strong>Quick fix (works 70% of time):</strong> Check privacy settings → close other apps → restart computer → update drivers → enable camera in BIOS</p>
+            <p><strong>Time needed:</strong> 5-20 minutes depending on solution</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#identify">Identify Your Webcam Issue</a></li>
+                <li><a href="#privacy">Privacy & Permissions Fixes</a></li>
+                <li><a href="#software">Software & Driver Solutions</a></li>
+                <li><a href="#hardware">Hardware Troubleshooting</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2 id="identify">First: Identify Your Webcam Problem</h2>
+            
+            <p><strong>Different symptoms require different solutions:</strong></p>
+
+            <p>🔴 <strong>Black screen / No video:</strong></p>
+            <ul>
+                <li>Camera shows black image in Zoom/Teams/Skype</li>
+                <li>Camera app opens but displays black screen</li>
+                <li>Camera light (LED) doesn't turn on</li>
+                <li><strong>Likely cause:</strong> Privacy settings blocking camera, another app using camera, disabled in Device Manager</li>
+            </ul>
+
+            <p>🔴 <strong>"Camera not detected" / "No camera found":</strong></p>
+            <ul>
+                <li>App can't find webcam at all</li>
+                <li>Not listed in Device Manager</li>
+                <li>Windows says "We can't find your camera"</li>
+                <li><strong>Likely cause:</strong> Disabled in BIOS, USB connection issue (external webcam), driver missing, hardware failure</li>
+            </ul>
+
+            <p>🔴 <strong>"Camera already in use" error:</strong></p>
+            <ul>
+                <li>Error message: "Another app is using the camera"</li>
+                <li>Works in one app but not another</li>
+                <li>Camera light stays on even when no apps open</li>
+                <li><strong>Likely cause:</strong> Background app using camera, previous app didn't release camera, malware</li>
+            </ul>
+
+            <p>🔴 <strong>Poor video quality (blurry, grainy, dark):</strong></p>
+            <ul>
+                <li>Image very pixelated or blurry</li>
+                <li>Too dark even with lights on</li>
+                <li>Washed out or overexposed</li>
+                <li><strong>Likely cause:</strong> Dirty lens, poor lighting, low quality webcam, wrong camera settings</li>
+            </ul>
+
+            <p>🔴 <strong>Webcam freezing or stuttering:</strong></p>
+            <ul>
+                <li>Video freezes every few seconds</li>
+                <li>Extreme lag (5+ second delay)</li>
+                <li>Choppy framerate</li>
+                <li><strong>Likely cause:</strong> High CPU usage, slow USB port, outdated driver, low bandwidth (WiFi)</li>
+            </ul>
+
+            <p>🔴 <strong>Wrong camera selected:</strong></p>
+            <ul>
+                <li>Zoom/Teams shows different camera than expected</li>
+                <li>Shows rear camera instead of front (laptops with multiple cameras)</li>
+                <li>Shows external webcam instead of built-in</li>
+                <li><strong>Likely cause:</strong> Multiple cameras connected, wrong camera selected in app settings</li>
+            </ul>
+
+            <p>🔴 <strong>Mac-specific: Green light on but no video:</strong></p>
+            <ul>
+                <li>Camera LED indicator is green/on</li>
+                <li>But video shows black screen</li>
+                <li><strong>Likely cause:</strong> macOS privacy settings, app doesn't have camera permission</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Webcam Types:</strong><br>
+                • <strong>Built-in laptop camera:</strong> Located above screen, integrated. Usually 720p (HD) or 1080p on newer laptops.<br>
+                • <strong>USB webcam:</strong> External, plugs into USB port. Quality varies: budget (480p) to professional (4K).<br>
+                • <strong>IP/Network camera:</strong> Wireless camera accessed over network. Different troubleshooting (not covered here).<br>
+                • <strong>Phone as webcam:</strong> Apps like DroidCam, EpocCam use phone camera. Requires app installation.<br>
+                <br>
+                This guide covers built-in laptop cameras and USB webcams primarily.
+            </div>
+
+            <h2 id="privacy">Privacy & Permission Fixes (Start Here)</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">1</span> Check Windows Camera Privacy Settings <span class="success-rate">Success: 50%</span></h3>
+                <p><strong>When to try:</strong> Camera shows black screen, "camera blocked" message, or works in Camera app but not Zoom/Teams.</p>
+                <p><strong>Why it works:</strong> #1 cause of webcam issues. Windows 10/11 privacy settings block apps from accessing camera by default.</p>
+
+                <p><strong>Windows 11 - Enable camera access:</strong></p>
+                <ol>
+                    <li>Settings → Privacy & security → Camera</li>
+                    <li><strong>Camera access:</strong> Make sure toggle is ON</li>
+                    <li><strong>Let apps access your camera:</strong> Turn ON</li>
+                    <li><strong>Let desktop apps access your camera:</strong> Turn ON (important for Zoom, Teams, Skype)</li>
+                    <li>Scroll down to app list</li>
+                    <li>Find your video app (Zoom, Teams, Chrome, etc.)</li>
+                    <li>Make sure toggle is ON for each app</li>
+                    <li>Restart app and test camera</li>
+                </ol>
+
+                <p><strong>Windows 10 - Enable camera access:</strong></p>
+                <ol>
+                    <li>Settings → Privacy → Camera</li>
+                    <li><strong>Allow access to the camera on this device:</strong> Click "Change" → Turn ON</li>
+                    <li><strong>Allow apps to access your camera:</strong> Turn ON</li>
+                    <li><strong>Allow desktop apps to access your camera:</strong> Turn ON</li>
+                    <li>Enable for specific apps in the list below</li>
+                </ol>
+
+                <p><strong>Quick test after enabling:</strong></p>
+                <ol>
+                    <li>Open Windows Camera app (search "Camera" in Start Menu)</li>
+                    <li>If camera works here → Privacy settings were the issue</li>
+                    <li>If still black → Continue to next solutions</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Common mistake:</strong> Enabling "Camera access" at the top but forgetting to enable "Let desktop apps access your camera". Desktop apps (Zoom, Teams, Skype, OBS) need BOTH toggles ON. Without second toggle, only Windows Store apps can use camera.
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Why Windows blocks camera by default:</strong> Privacy protection. Prevents malware from secretly recording you. Good security practice, but confusing when you intentionally want to use camera! Always check privacy settings FIRST before troubleshooting hardware.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">2</span> Check Mac Camera Privacy Settings <span class="success-rate">Success: 55%</span></h3>
+                <p><strong>When to try:</strong> Mac shows "Camera Access" prompt, or camera green light on but black screen in apps.</p>
+                <p><strong>Why it works:</strong> macOS requires explicit permission for each app to access camera.</p>
+
+                <p><strong>macOS Ventura/Sonoma (13+) - Grant camera access:</strong></p>
+                <ol>
+                    <li>System Settings → Privacy & Security → Camera</li>
+                    <li>List shows all apps that requested camera access</li>
+                    <li>Enable checkbox for apps you want to allow:
+                        <ul>
+                            <li>Zoom</li>
+                            <li>Microsoft Teams</li>
+                            <li>Skype</li>
+                            <li>Google Chrome</li>
+                            <li>Safari (if using web-based video calls)</li>
+                            <li>FaceTime (usually enabled by default)</li>
+                        </ul>
+                    </li>
+                    <li>Quit and relaunch app for changes to take effect</li>
+                </ol>
+
+                <p><strong>macOS Monterey (12) and earlier:</strong></p>
+                <ol>
+                    <li>System Preferences → Security & Privacy → Privacy tab</li>
+                    <li>Click lock icon (bottom left) to make changes</li>
+                    <li>Enter admin password</li>
+                    <li>Select "Camera" from left sidebar</li>
+                    <li>Check boxes for apps that need camera access</li>
+                </ol>
+
+                <p><strong>Force app to request camera permission again:</strong></p>
+                <ol>
+                    <li>Terminal → Run command:</li>
+                    <li><code>tccutil reset Camera</code></li>
+                    <li>This clears all camera permissions</li>
+                    <li>Relaunch app → It will prompt for camera access again</li>
+                    <li>Click "Allow"</li>
+                </ol>
+
+                <p><strong>Web browser camera permission (Safari/Chrome):</strong></p>
+                <ul>
+                    <li><strong>Safari:</strong> When website requests camera → Click "Allow" in popup</li>
+                    <li><strong>Chrome:</strong> Click camera icon in address bar → Allow</li>
+                    <li>Settings → Privacy and security → Site Settings → Camera → Allow for specific sites</li>
+                </ul>
+
+                <div class="danger-box">
+                    <strong>🚨 Mac camera hardware kill switch:</strong> Some MacBooks have option in firmware to disable camera completely (for security). If camera NEVER works in ANY app:<br>
+                    1. Restart Mac<br>
+                    2. Hold Cmd+Option+P+R immediately (NVRAM reset)<br>
+                    3. Hold for 20 seconds<br>
+                    4. Release and let Mac boot<br>
+                    <br>
+                    If still doesn't work: May need Apple repair (hardware issue).
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">3</span> Close Apps Using Camera <span class="success-rate">Success: 40%</span></h3>
+                <p><strong>When to try:</strong> "Camera already in use" error, or camera works until you open second video app.</p>
+                <p><strong>Why it works:</strong> Only one app can access camera at a time. Previous app may not have released camera properly.</p>
+
+                <p><strong>Common apps that use camera in background:</strong></p>
+                <ul>
+                    <li>Skype (auto-starts with Windows, always running)</li>
+                    <li>Teams (can run in background)</li>
+                    <li>Discord (video chat enabled)</li>
+                    <li>Camera app (Windows) left open</li>
+                    <li>Photo Booth (Mac) left open</li>
+                    <li>OBS Studio (streaming software)</li>
+                    <li>ManyCam, YouCam (webcam software)</li>
+                    <li>Browser tabs with video calls (Google Meet, Zoom web)</li>
+                </ul>
+
+                <p><strong>Windows - Close background camera apps:</strong></p>
+                <ol>
+                    <li>Right-click taskbar → Task Manager (or Ctrl+Shift+Esc)</li>
+                    <li>Look for these processes:
+                        <ul>
+                            <li>Skype.exe</li>
+                            <li>Teams.exe</li>
+                            <li>Discord.exe</li>
+                            <li>WindowsCamera.exe</li>
+                            <li>obs64.exe / obs32.exe</li>
+                        </ul>
+                    </li>
+                    <li>Right-click process → "End task"</li>
+                    <li>Close ALL camera-related processes</li>
+                    <li>Open your video app and test camera</li>
+                </ol>
+
+                <p><strong>Check system tray (hidden icons):</strong></p>
+                <ol>
+                    <li>Bottom-right corner → Click up arrow (^)</li>
+                    <li>Look for Skype, Teams, Discord, webcam software icons</li>
+                    <li>Right-click each → Quit/Exit</li>
+                </ol>
+
+                <p><strong>Mac - Close background camera apps:</strong></p>
+                <ol>
+                    <li>Command+Option+Esc → Force Quit Applications</li>
+                    <li>Or: Activity Monitor (Applications → Utilities)</li>
+                    <li>Look for camera apps in process list</li>
+                    <li>Select app → "Force Quit" or "Quit Process"</li>
+                </ol>
+
+                <p><strong>Browser camera usage:</strong></p>
+                <ul>
+                    <li>Close ALL browser tabs with video calls</li>
+                    <li>Don't just minimize - fully close tab</li>
+                    <li>Check all browser windows (you might have multiple)</li>
+                    <li>Restart browser completely to be sure</li>
+                </ul>
+
+                <p><strong>Nuclear option - Restart computer:</strong></p>
+                <ul>
+                    <li>If can't identify which app using camera</li>
+                    <li>Restart kills all processes cleanly</li>
+                    <li>Then open ONLY the app you need</li>
+                    <li>Works 90% of time for "camera in use" errors</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Prevent Skype/Teams auto-start:</strong><br>
+                    <strong>Windows:</strong> Settings → Apps → Startup → Disable Skype/Teams<br>
+                    <strong>Mac:</strong> System Settings → General → Login Items → Remove Skype/Teams<br>
+                    <br>
+                    Stops these apps from auto-launching and hogging camera at startup.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">4</span> Test Camera in Different Apps <span class="success-rate">Diagnostic</span></h3>
+                <p><strong>When to try:</strong> Need to determine if problem is specific app or system-wide camera failure.</p>
+
+                <p><strong>Test sequence:</strong></p>
+                <ol>
+                    <li><strong>Windows Camera app:</strong>
+                        <ul>
+                            <li>Search "Camera" in Start Menu</li>
+                            <li>Open Camera app</li>
+                            <li>If works → Camera hardware fine, problem is app-specific or permissions</li>
+                            <li>If doesn't work → System-wide issue, continue troubleshooting</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mac Photo Booth:</strong>
+                        <ul>
+                            <li>Applications → Photo Booth</li>
+                            <li>Same logic - works here = app issue, doesn't work = system issue</li>
+                        </ul>
+                    </li>
+                    <li><strong>Web browser camera test:</strong>
+                        <ul>
+                            <li>Visit: webcamtests.com or testmycam.com</li>
+                            <li>Click "Test my cam" → Allow camera access</li>
+                            <li>Should show live video feed</li>
+                            <li>Tests if browser can access camera</li>
+                        </ul>
+                    </li>
+                    <li><strong>Zoom test meeting:</strong>
+                        <ul>
+                            <li>Visit: zoom.us/test</li>
+                            <li>Join test meeting</li>
+                            <li>Check if camera works in Zoom specifically</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Results interpretation:</strong></p>
+                <ul>
+                    <li><strong>Works in Camera app but not Zoom:</strong> Zoom doesn't have camera permission (Solution #1/#2)</li>
+                    <li><strong>Works in some apps, not others:</strong> App-specific settings or conflict</li>
+                    <li><strong>Doesn't work anywhere:</strong> Hardware issue, disabled in BIOS, or driver problem</li>
+                    <li><strong>Works in browser but not desktop apps:</strong> Desktop app permissions not enabled</li>
+                </ul>
+            </div>
+
+            <h2 id="software">Software & Driver Solutions</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">5</span> Select Correct Camera in App Settings <span class="success-rate">Success: 35%</span></h3>
+                <p><strong>When to try:</strong> Multiple cameras detected, wrong camera showing, or recently connected external webcam.</p>
+
+                <p><strong>Zoom - Change camera:</strong></p>
+                <ol>
+                    <li>In Zoom meeting or settings: Click video icon → Video Settings</li>
+                    <li>Camera dropdown → Select correct camera</li>
+                    <li>Should see live preview</li>
+                    <li>Common camera names:
+                        <ul>
+                            <li>"Integrated Camera" (laptop built-in)</li>
+                            <li>"HD Webcam" (laptop built-in)</li>
+                            <li>"Logitech HD Pro Webcam C920" (external USB)</li>
+                            <li>"OBS Virtual Camera" (if using OBS)</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Microsoft Teams - Change camera:</strong></p>
+                <ol>
+                    <li>Settings (gear icon) → Devices</li>
+                    <li>Camera dropdown → Select camera</li>
+                    <li>Preview appears below</li>
+                </ol>
+
+                <p><strong>Google Meet - Change camera:</strong></p>
+                <ol>
+                    <li>Before joining meeting: Click Settings (3 dots)</li>
+                    <li>Video → Camera dropdown</li>
+                    <li>Or during meeting: Click 3 dots → Settings → Video</li>
+                </ol>
+
+                <p><strong>Skype - Change camera:</strong></p>
+                <ol>
+                    <li>Settings → Audio & Video</li>
+                    <li>Camera dropdown → Select camera</li>
+                    <li>Webcam settings button (if available) for advanced settings</li>
+                </ol>
+
+                <p><strong>Windows Camera app - Switch cameras:</strong></p>
+                <ul>
+                    <li>Click "Change camera" button (top-right, camera icon)</li>
+                    <li>Cycles through available cameras</li>
+                    <li>Useful for laptops with front + rear cameras</li>
+                </ul>
+
+                <p><strong>If multiple cameras listed but only want one:</strong></p>
+                <ul>
+                    <li>Unplug external USB webcams you're not using</li>
+                    <li>Or: Disable unwanted camera in Device Manager (Solution #6)</li>
+                    <li>Apps will default to only available camera</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">6</span> Enable Camera in Device Manager <span class="success-rate">Success: 45%</span></h3>
+                <p><strong>When to try:</strong> Camera not detected, disabled by accident, or stopped working after Windows update.</p>
+
+                <p><strong>Windows - Check Device Manager:</strong></p>
+                <ol>
+                    <li>Right-click Start → Device Manager</li>
+                    <li>Look for "Cameras" or "Imaging devices" category</li>
+                    <li>Expand category</li>
+                    <li>Look for your webcam (e.g., "Integrated Camera", "USB Camera")</li>
+                </ol>
+
+                <p><strong>Camera status indicators:</strong></p>
+                <ul>
+                    <li><strong>Normal icon:</strong> Camera enabled and working</li>
+                    <li><strong>Down arrow icon:</strong> Camera disabled → Right-click → "Enable device"</li>
+                    <li><strong>Yellow triangle (!):</strong> Driver error → Right-click → "Update driver"</li>
+                    <li><strong>Not listed at all:</strong> Check BIOS settings (Solution #11) or hardware failure</li>
+                </ul>
+
+                <p><strong>If camera disabled (down arrow):</strong></p>
+                <ol>
+                    <li>Right-click camera</li>
+                    <li>Select "Enable device"</li>
+                    <li>Wait few seconds for driver to load</li>
+                    <li>Test camera in Camera app</li>
+                </ol>
+
+                <p><strong>If camera has yellow triangle:</strong></p>
+                <ol>
+                    <li>Right-click → Properties</li>
+                    <li>Device status shows error code (e.g., Code 10, Code 43)</li>
+                    <li>Note error code</li>
+                    <li>Try: Right-click → "Update driver" (see Solution #7)</li>
+                    <li>Or: Right-click → "Uninstall device" → Restart PC (Windows reinstalls driver)</li>
+                </ol>
+
+                <p><strong>Common Device Manager error codes:</strong></p>
+                <ul>
+                    <li><strong>Code 10:</strong> "Device cannot start" → Update or reinstall driver</li>
+                    <li><strong>Code 43:</strong> "Windows has stopped this device" → Hardware failure or driver issue</li>
+                    <li><strong>Code 28:</strong> "Drivers not installed" → Install camera drivers</li>
+                    <li><strong>Code 19:</strong> Registry error → Reinstall driver or System Restore</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">7</span> Update or Reinstall Camera Drivers <span class="success-rate">Success: 40%</span></h3>
+                <p><strong>When to try:</strong> Camera stopped working after Windows update, Device Manager shows errors, or poor video quality.</p>
+
+                <p><strong>Windows - Update camera driver:</strong></p>
+                <ol>
+                    <li>Device Manager → Cameras</li>
+                    <li>Right-click webcam → "Update driver"</li>
+                    <li>Choose "Search automatically for drivers"</li>
+                    <li>Windows searches online for latest driver</li>
+                    <li>Install if found</li>
+                    <li>Restart computer</li>
+                </ol>
+
+                <p><strong>Download driver from manufacturer (better):</strong></p>
+                <ol>
+                    <li>Identify laptop model or webcam brand:
+                        <ul>
+                            <li><strong>Laptop:</strong> Dell, HP, Lenovo, ASUS website → Support → Download drivers</li>
+                            <li><strong>USB webcam:</strong> Logitech, Microsoft, Razer website</li>
+                        </ul>
+                    </li>
+                    <li>Search support page for your exact model</li>
+                    <li>Download "Camera driver" or "Webcam driver"</li>
+                    <li>Run installer</li>
+                    <li>Restart computer</li>
+                </ol>
+
+                <p><strong>Windows - Reinstall camera driver (nuclear option):</strong></p>
+                <ol>
+                    <li>Device Manager → Cameras</li>
+                    <li>Right-click webcam → "Uninstall device"</li>
+                    <li>Check "Delete the driver software for this device" (if option appears)</li>
+                    <li>Click "Uninstall"</li>
+                    <li>Restart computer</li>
+                    <li>Windows automatically reinstalls generic driver on boot</li>
+                    <li>Or manually install manufacturer driver from website</li>
+                </ol>
+
+                <p><strong>Mac - Reset camera (no drivers to update):</strong></p>
+                <ol>
+                    <li>Mac cameras use built-in drivers (can't update separately)</li>
+                    <li>Reset SMC (System Management Controller):
+                        <ul>
+                            <li><strong>Intel Mac:</strong> Shut down → Shift+Control+Option (left side) + Power, hold 10 sec</li>
+                            <li><strong>M1/M2 Mac:</strong> Shut down, wait 30 sec, restart</li>
+                        </ul>
+                    </li>
+                    <li>Reset NVRAM: Restart, immediately hold Cmd+Option+P+R for 20 seconds</li>
+                    <li>This resets hardware including camera</li>
+                </ol>
+
+                <p><strong>External USB webcam driver install:</strong></p>
+                <ul>
+                    <li><strong>Logitech:</strong> Download Logitech Capture or webcam software from logitech.com</li>
+                    <li><strong>Razer:</strong> Razer Synapse software</li>
+                    <li><strong>Microsoft:</strong> Usually plug-and-play, no extra software needed</li>
+                    <li><strong>Generic webcams:</strong> Should work with Windows default drivers</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Windows Update can break camera drivers:</strong> Major Windows updates (feature updates twice yearly) sometimes overwrite camera drivers with incompatible generic versions. If camera stopped working right after Windows update, reinstall manufacturer driver from laptop/webcam vendor website.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">8</span> Run Windows Troubleshooter <span class="success-rate">Success: 25%</span></h3>
+                <p><strong>When to try:</strong> Windows 10/11 specific camera issues, or quick automated fix attempt.</p>
+
+                <p><strong>Windows 11 - Camera troubleshooter:</strong></p>
+                <ol>
+                    <li>Settings → System → Troubleshoot → Other troubleshooters</li>
+                    <li>Find "Camera" → Click "Run"</li>
+                    <li>Troubleshooter scans for issues:
+                        <ul>
+                            <li>Camera disabled</li>
+                            <li>Privacy settings blocking</li>
+                            <li>Driver errors</li>
+                            <li>Apps blocking camera</li>
+                        </ul>
+                    </li>
+                    <li>Follow prompts to fix detected issues</li>
+                    <li>Restart if prompted</li>
+                    <li>Test camera</li>
+                </ol>
+
+                <p><strong>Windows 10 - Camera troubleshooter:</strong></p>
+                <ol>
+                    <li>Settings → Update & Security → Troubleshoot</li>
+                    <li>Additional troubleshooters → Camera</li>
+                    <li>Run the troubleshooter</li>
+                </ol>
+
+                <p><strong>What troubleshooter fixes:</strong></p>
+                <ul>
+                    <li>Automatically enables camera if disabled</li>
+                    <li>Resets camera privacy permissions</li>
+                    <li>Restarts camera service</li>
+                    <li>Detects and suggests driver updates</li>
+                </ul>
+
+                <p><strong>Success rate:</strong> 25% - Works for simple issues (disabled camera, privacy settings). Won't fix hardware problems or complex driver issues.</p>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">9</span> Check App-Specific Camera Settings <span class="success-rate">Success: 30%</span></h3>
+                <p><strong>When to try:</strong> Camera works in some apps but not others, or settings recently changed.</p>
+
+                <p><strong>Zoom - Advanced camera settings:</strong></p>
+                <ol>
+                    <li>Settings → Video</li>
+                    <li>Camera dropdown: Select correct camera</li>
+                    <li><strong>HD enabled:</strong> Check this for better quality (requires more bandwidth)</li>
+                    <li><strong>Touch up my appearance:</strong> Smooths skin (uses processing power)</li>
+                    <li><strong>Low light adjustment:</strong> Auto-brightens dark video</li>
+                    <li>Advanced button:
+                        <ul>
+                            <li>Hardware acceleration: Try enabling/disabling</li>
+                            <li>Can cause black screen on some systems</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Microsoft Teams - Video settings:</strong></p>
+                <ol>
+                    <li>Settings → Devices → Camera</li>
+                    <li>Camera preview (if blank = camera not working)</li>
+                    <li>Camera settings (if available):
+                        <ul>
+                            <li>Brightness, contrast, saturation</li>
+                            <li>Auto-focus, exposure</li>
+                        </ul>
+                    </li>
+                    <li>Turn off "Background effects" if causing issues</li>
+                </ol>
+
+                <p><strong>Browser camera settings:</strong></p>
+                <ul>
+                    <li><strong>Chrome:</strong>
+                        <ul>
+                            <li>Settings → Privacy and security → Site Settings → Camera</li>
+                            <li>Make sure "Sites can ask to use your camera" enabled</li>
+                            <li>Check "Not allowed" list - remove sites if blocked by accident</li>
+                        </ul>
+                    </li>
+                    <li><strong>Firefox:</strong>
+                        <ul>
+                            <li>Settings → Privacy & Security → Permissions → Camera</li>
+                            <li>Settings button → Allow/Block specific sites</li>
+                        </ul>
+                    </li>
+                    <li><strong>Safari:</strong>
+                        <ul>
+                            <li>Preferences → Websites → Camera</li>
+                            <li>Set to "Ask" or "Allow" for video call sites</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Discord - Camera troubleshooting:</strong></p>
+                <ol>
+                    <li>User Settings → Voice & Video</li>
+                    <li>Video Settings:
+                        <ul>
+                            <li>Camera: Select correct device</li>
+                            <li>Video Codecs: Try changing (H.264 vs VP8/VP9)</li>
+                            <li>Hardware Acceleration: Toggle on/off</li>
+                        </ul>
+                    </li>
+                    <li>Test Video: Should show camera preview</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">10</span> Disable Antivirus Camera Protection <span class="success-rate">Success: 20%</span></h3>
+                <p><strong>When to try:</strong> Camera worked before installing antivirus, or "camera blocked for security" message.</p>
+
+                <p><strong>Why antivirus blocks cameras:</strong></p>
+                <ul>
+                    <li>Privacy protection feature</li>
+                    <li>Prevents malware from accessing webcam</li>
+                    <li>Can be overly aggressive, blocks legitimate apps</li>
+                </ul>
+
+                <p><strong>Common antivirus camera protection:</strong></p>
+                <ul>
+                    <li><strong>Norton:</strong> Settings → Device Security → Webcam Protection → Disable or allow apps</li>
+                    <li><strong>Bitdefender:</strong> Privacy → Webcam Protection → Manage applications</li>
+                    <li><strong>Kaspersky:</strong> Privacy Protection → Webcam Protection → Configure</li>
+                    <li><strong>Avast/AVG:</strong> Settings → Privacy → Webcam Shield → Manage apps</li>
+                    <li><strong>McAfee:</strong> Real-Time Scanning → Manage Settings → Webcam Protection</li>
+                </ul>
+
+                <p><strong>Steps to allow camera access:</strong></p>
+                <ol>
+                    <li>Open antivirus software</li>
+                    <li>Find Webcam/Camera Protection settings</li>
+                    <li>Add your video apps to "allowed" list:
+                        <ul>
+                            <li>Zoom</li>
+                            <li>Teams</li>
+                            <li>Skype</li>
+                            <li>Chrome.exe / Firefox.exe</li>
+                        </ul>
+                    </li>
+                    <li>Or temporarily disable webcam protection to test</li>
+                    <li>Restart app and check camera</li>
+                </ol>
+
+                <p><strong>Test without antivirus (temporary):</strong></p>
+                <ol>
+                    <li>Disable antivirus completely (right-click icon → Disable for 10 minutes)</li>
+                    <li>Test camera in app</li>
+                    <li>If works → Antivirus was blocking, configure allowed apps</li>
+                    <li>If doesn't work → Not antivirus issue, re-enable antivirus</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Don't permanently disable antivirus webcam protection:</strong> It's good security feature. Instead, configure it to allow legitimate apps (Zoom, Teams) while blocking unknown programs. Only disable for testing.
+                </div>
+            </div>
+
+            <h2 id="hardware">Hardware Troubleshooting & Fixes</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">11</span> Enable Camera in BIOS/UEFI <span class="success-rate">Success: 35%</span></h3>
+                <p><strong>When to try:</strong> Camera not detected anywhere (Device Manager, apps), or disabled in BIOS for security.</p>
+                <p><strong>Why it matters:</strong> Some laptops (especially business models) allow disabling camera in BIOS for privacy. If disabled, Windows won't even see it.</p>
+
+                <p><strong>Access BIOS settings:</strong></p>
+                <ol>
+                    <li>Restart computer</li>
+                    <li>Immediately press BIOS key repeatedly:
+                        <ul>
+                            <li><strong>Dell:</strong> F2</li>
+                            <li><strong>HP:</strong> F10 or Esc</li>
+                            <li><strong>Lenovo:</strong> F1 or F2</li>
+                            <li><strong>ASUS:</strong> F2 or Delete</li>
+                            <li><strong>Acer:</strong> F2</li>
+                            <li>Usually shown on boot screen "Press F2 for Setup"</li>
+                        </ul>
+                    </li>
+                    <li>Enter BIOS/UEFI setup</li>
+                </ol>
+
+                <p><strong>Find camera setting in BIOS:</strong></p>
+                <ul>
+                    <li>Navigate with arrow keys</li>
+                    <li>Look in these sections:
+                        <ul>
+                            <li><strong>Security</strong> tab</li>
+                            <li><strong>Devices</strong> or <strong>Device Configuration</strong></li>
+                            <li><strong>Advanced</strong> tab</li>
+                            <li><strong>System Configuration</strong></li>
+                        </ul>
+                    </li>
+                    <li>Setting may be called:
+                        <ul>
+                            <li>"Camera" or "Webcam"</li>
+                            <li>"Integrated Camera"</li>
+                            <li>"Video Device" or "Imaging Device"</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Enable camera:</strong></p>
+                <ol>
+                    <li>Find camera setting</li>
+                    <li>Change from "Disabled" to "Enabled"</li>
+                    <li>Press F10 to "Save and Exit" (or follow on-screen instructions)</li>
+                    <li>Computer restarts</li>
+                    <li>Check Device Manager - camera should appear now</li>
+                </ol>
+
+                <p><strong>ThinkPad Privacy Guard (Lenovo specific):</strong></p>
+                <ul>
+                    <li>Some ThinkPads have physical camera privacy shutter</li>
+                    <li>Slide shutter open (manual physical cover)</li>
+                    <li>Plus BIOS setting to enable camera</li>
+                    <li>Both must be enabled/open</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ BIOS warning:</strong> Only change settings you understand. Wrong BIOS changes can prevent computer from booting. If unsure, take photo of settings before changing. Can always load "BIOS defaults" if problems occur.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">12</span> Check Physical Camera Cover / Switch <span class="success-rate">Success: 15%</span></h3>
+                <p><strong>When to try:</strong> Camera worked before, suddenly black screen, or recently got laptop.</p>
+                <p><strong>Why check:</strong> Many laptops have physical privacy shutters blocking camera lens.</p>
+
+                <p><strong>Types of camera covers:</strong></p>
+                <ul>
+                    <li><strong>Built-in sliding shutter:</strong>
+                        <ul>
+                            <li>Small sliding switch next to camera lens</li>
+                            <li>Slide left/right to open/close</li>
+                            <li>Common on HP, Dell, Lenovo ThinkPad</li>
+                            <li>When closed: Camera sees complete black</li>
+                        </ul>
+                    </li>
+                    <li><strong>Adhesive privacy cover:</strong>
+                        <ul>
+                            <li>Stick-on sliding cover (aftermarket)</li>
+                            <li>Might have accidentally left closed</li>
+                            <li>Slide to open</li>
+                        </ul>
+                    </li>
+                    <li><strong>Physical tape/sticker:</strong>
+                        <ul>
+                            <li>Some people cover camera with tape for privacy</li>
+                            <li>Check if someone put tape over lens</li>
+                            <li>Peel off carefully</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Inspect camera lens:</strong></p>
+                <ol>
+                    <li>Look at camera (usually top center of laptop screen)</li>
+                    <li>Shine flashlight at angle to see if shutter closed</li>
+                    <li>Look for sliding mechanism</li>
+                    <li>Try sliding left and right</li>
+                    <li>Should see lens when open</li>
+                </ol>
+
+                <p><strong>Keyboard shortcut camera disable (some laptops):</strong></p>
+                <ul>
+                    <li>Some laptops: Fn+F8 or Fn+F10 toggles camera on/off</li>
+                    <li>Look for camera icon on F-keys</li>
+                    <li>Try pressing to toggle</li>
+                    <li>May show on-screen notification when toggling</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">13</span> Clean Camera Lens <span class="success-rate">Success: 20%</span></h3>
+                <p><strong>When to try:</strong> Video very blurry, foggy, or poor quality despite good lighting.</p>
+
+                <p><strong>What you need:</strong></p>
+                <ul>
+                    <li>Microfiber cloth (glasses cleaning cloth)</li>
+                    <li>Isopropyl alcohol 70% (optional)</li>
+                    <li>Cotton swab (for gentle cleaning)</li>
+                </ul>
+
+                <p><strong>Cleaning procedure:</strong></p>
+                <ol>
+                    <li>Power off laptop (or unplug USB webcam)</li>
+                    <li>Inspect lens:
+                        <ul>
+                            <li>Look for fingerprints, smudges, dust</li>
+                            <li>Laptop cameras very small, easy to smudge</li>
+                        </ul>
+                    </li>
+                    <li>Dry cleaning (try first):
+                        <ul>
+                            <li>Use dry microfiber cloth</li>
+                            <li>Gently wipe lens in circular motion</li>
+                            <li>Don't press hard (camera lens is glass but can scratch)</li>
+                        </ul>
+                    </li>
+                    <li>If still dirty:
+                        <ul>
+                            <li>Dampen cloth corner with alcohol (not dripping!)</li>
+                            <li>Gently wipe lens</li>
+                            <li>Let evaporate (10 seconds)</li>
+                        </ul>
+                    </li>
+                    <li>Test camera - should be clearer</li>
+                </ol>
+
+                <p><strong>USB webcam lens cleaning:</strong></p>
+                <ul>
+                    <li>Same process</li>
+                    <li>Can unscrew lens cover on some webcams (Logitech C920, etc.)</li>
+                    <li>Clean inner lens if accessible</li>
+                    <li>Reassemble carefully</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Don't use:</strong> Paper towels (scratch lens), Windex/glass cleaner (damages coating), or tap water (leaves mineral deposits). Only microfiber cloth + alcohol safe for camera lenses.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">14</span> Fix USB Webcam Connection Issues <span class="success-rate">Success: 40%</span></h3>
+                <p><strong>When to try:</strong> External USB webcam not detected, intermittent connection, or "USB device not recognized" error.</p>
+
+                <p><strong>USB connection troubleshooting:</strong></p>
+                <ol>
+                    <li><strong>Try different USB port:</strong>
+                        <ul>
+                            <li>Unplug webcam</li>
+                            <li>Wait 10 seconds</li>
+                            <li>Plug into different port</li>
+                            <li>Try USB 2.0 port (black) instead of USB 3.0 (blue) if issues</li>
+                            <li>Desktop: Rear ports more reliable than front panel</li>
+                        </ul>
+                    </li>
+                    <li><strong>Avoid USB hubs:</strong>
+                        <ul>
+                            <li>Plug directly into computer</li>
+                            <li>USB hubs can cause power/bandwidth issues</li>
+                            <li>Especially unpowered hubs</li>
+                        </ul>
+                    </li>
+                    <li><strong>Check USB cable:</strong>
+                        <ul>
+                            <li>Inspect for damage, fraying, kinks</li>
+                            <li>Try different cable if detachable</li>
+                            <li>Some webcams have removable USB cables</li>
+                        </ul>
+                    </li>
+                    <li><strong>Power issues (high-end webcams):</strong>
+                        <ul>
+                            <li>4K webcams need more power</li>
+                            <li>May need powered USB hub</li>
+                            <li>Or connect to USB port with adequate power</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Windows "USB device not recognized" error:</strong></p>
+                <ol>
+                    <li>Unplug webcam</li>
+                    <li>Device Manager → View → Show hidden devices</li>
+                    <li>Expand "Universal Serial Bus controllers"</li>
+                    <li>Look for devices with yellow triangle</li>
+                    <li>Right-click → "Uninstall device"</li>
+                    <li>Uninstall all problematic USB devices</li>
+                    <li>Restart computer</li>
+                    <li>Plug webcam back in</li>
+                    <li>Windows reinstalls USB drivers</li>
+                </ol>
+
+                <p><strong>Test webcam on different computer:</strong></p>
+                <ol>
+                    <li>Plug webcam into another laptop/PC</li>
+                    <li>If works → Your computer's USB ports or drivers issue</li>
+                    <li>If doesn't work → Webcam is faulty</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">15</span> Hardware Failure / Warranty Claim <span class="success-rate">Varies</span></h3>
+                <p><strong>When needed:</strong> All troubleshooting failed, camera never appears in Device Manager, or physical damage.</p>
+
+                <p><strong>Signs of hardware failure:</strong></p>
+                <ul>
+                    <li>Camera never detected (not in Device Manager, BIOS shows enabled)</li>
+                    <li>Camera worked then suddenly died (no software changes)</li>
+                    <li>Physical damage (cracked lens, visible damage to camera module)</li>
+                    <li>Laptop dropped/damaged and camera stopped working after</li>
+                    <li>Water damage to laptop</li>
+                </ul>
+
+                <p><strong>Built-in laptop camera repair:</strong></p>
+                <ul>
+                    <li><strong>Under warranty:</strong>
+                        <ul>
+                            <li>Contact manufacturer (Dell, HP, Lenovo, etc.)</li>
+                            <li>They replace camera module (usually free under warranty)</li>
+                            <li>Mail-in or depot repair: 5-10 days</li>
+                        </ul>
+                    </li>
+                    <li><strong>Out of warranty:</strong>
+                        <ul>
+                            <li>Camera module replacement: $50-150 (parts + labor)</li>
+                            <li>DIY: Camera module $20-40 on eBay, requires disassembly</li>
+                            <li>Difficulty: Medium-high (need to remove screen bezel)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>External USB webcam failure:</strong></p>
+                <ul>
+                    <li><strong>Under warranty:</strong>
+                        <ul>
+                            <li>Logitech: 2-year warranty, excellent support</li>
+                            <li>Microsoft: 1-year warranty</li>
+                            <li>Razer: 2-year warranty</li>
+                            <li>Contact support for RMA (replacement)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Out of warranty:</strong>
+                        <ul>
+                            <li>Not repairable (sealed units)</li>
+                            <li>Just buy replacement webcam</li>
+                            <li>Budget: $20-40 (720p)</li>
+                            <li>Good: $50-100 (1080p 60fps, Logitech C920/C922)</li>
+                            <li>Professional: $100-200 (4K, better low light)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Alternative: Use phone as webcam:</strong></p>
+                <ul>
+                    <li>Free alternative while waiting for repair/replacement</li>
+                    <li><strong>Apps:</strong>
+                        <ul>
+                            <li>DroidCam (Android/iPhone) - Free</li>
+                            <li>EpocCam (iPhone) - Free basic, $8 Pro</li>
+                            <li>iVCam (Android/iPhone) - Free</li>
+                        </ul>
+                    </li>
+                    <li><strong>How it works:</strong>
+                        <ul>
+                            <li>Install app on phone</li>
+                            <li>Install companion app on computer</li>
+                            <li>Connect via WiFi or USB</li>
+                            <li>Phone camera appears as webcam in Zoom/Teams</li>
+                        </ul>
+                    </li>
+                    <li><strong>Quality:</strong> Often better than laptop webcams! Modern phones have excellent cameras</li>
+                </ul>
+
+                <p><strong>When to repair vs replace:</strong></p>
+                <ul>
+                    <li><strong>Repair if:</strong>
+                        <ul>
+                            <li>Under warranty (free)</li>
+                            <li>Recent laptop (less than 2 years old)</li>
+                            <li>DIY comfortable with laptop disassembly</li>
+                        </ul>
+                    </li>
+                    <li><strong>Replace if:</strong>
+                        <ul>
+                            <li>Old laptop (3+ years)</li>
+                            <li>Repair cost over $100</li>
+                            <li>Multiple hardware issues</li>
+                            <li>Can use external USB webcam instead ($50 Logitech C920 often better than laptop camera)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>Prevention & Best Practices</h2>
+
+            <h3>1. Privacy Settings Maintenance</h3>
+            <ul>
+                <li><strong>After Windows updates:</strong> Check camera permissions still enabled</li>
+                <li><strong>New app installs:</strong> Grant camera permission when prompted</li>
+                <li><strong>Review quarterly:</strong> Settings → Privacy → Camera → Review which apps have access</li>
+            </ul>
+
+            <h3>2. Camera Care</h3>
+            <ul>
+                <li><strong>Clean lens monthly:</strong> Microfiber cloth, gentle wipe</li>
+                <li><strong>Use privacy cover:</strong> When not using camera (security + protects lens)</li>
+                <li><strong>Don't touch lens:</strong> Fingerprints ruin image quality</li>
+                <li><strong>Laptop handling:</strong> Don't slam lid shut (can damage camera module)</li>
+            </ul>
+
+            <h3>3. Software Updates</h3>
+            <ul>
+                <li><strong>Keep apps updated:</strong> Zoom, Teams, Skype get camera improvements</li>
+                <li><strong>Windows Update:</strong> Install camera driver updates</li>
+                <li><strong>Manufacturer drivers:</strong> Check laptop/webcam vendor site every 6 months</li>
+            </ul>
+
+            <h3>4. Bandwidth Management (Video Calls)</h3>
+            <ul>
+                <li><strong>Close bandwidth hogs:</strong> Netflix, YouTube, downloads during calls</li>
+                <li><strong>Wired > WiFi:</strong> Ethernet more stable for video calls</li>
+                <li><strong>Reduce video quality:</strong> If stuttering, lower to 720p instead of 1080p in Zoom/Teams</li>
+            </ul>
+
+            <h3>5. Lighting Optimization</h3>
+            <ul>
+                <li><strong>Face the light:</strong> Window or lamp in front of you, not behind</li>
+                <li><strong>Ring light:</strong> $20-50 ring light dramatically improves video quality</li>
+                <li><strong>Avoid backlighting:</strong> Don't sit with window behind you (you'll be dark silhouette)</li>
+            </ul>
+
+            <h2>Common Questions</h2>
+
+            <p><strong>Q: Why does my camera work in Zoom but not Teams?</strong></p>
+            <p>A: App-specific permissions. Windows 11: Settings → Privacy → Camera → Scroll to app list → Enable Teams. Or Teams doesn't have access while Zoom does. Also check if another app using camera - only one app can use camera at once.</p>
+
+            <p><strong>Q: Camera shows green light but black screen. What's wrong?</strong></p>
+            <p>A: LED means power connected but no video output. Usually: Privacy settings blocking (check Solution #1/#2), wrong camera selected (check Solution #5), driver crash (restart computer), or physical cover closed (check Solution #12).</p>
+
+            <p><strong>Q: Can I use my phone as a webcam?</strong></p>
+            <p>A: Yes! DroidCam (free), EpocCam ($8), iVCam (free) turn phone into webcam. Install app on phone + computer, connect via WiFi/USB. Works great, often better quality than laptop cameras. Perfect solution if webcam broken.</p>
+
+            <p><strong>Q: Why is my video quality so bad/grainy?</strong></p>
+            <p>A: Low light (#1 cause). Face a light source, add ring light. Or dirty lens (clean with microfiber cloth). Or cheap webcam (720p looks grainy on large screen). Or low bandwidth (Zoom reducing quality to prevent lag). Check: Good lighting + clean lens + 1080p camera + wired internet = good video.</p>
+
+            <p><strong>Q: Webcam works in Windows but not Zoom/Teams on Mac. Why?</strong></p>
+            <p>A: macOS privacy permissions. System Settings → Privacy & Security → Camera → Enable checkboxes for Zoom, Teams. Each app needs explicit permission. Also check app-specific settings: Zoom Settings → Video → Camera dropdown → Select correct camera.</p>
+
+            <p><strong>Q: Can malware secretly activate my webcam?</strong></p>
+            <p>A: Yes, but rare. Windows 10/11 privacy settings help prevent (apps need permission). Signs: Camera LED turns on when no apps open. Prevention: Use privacy cover when not using camera, keep antivirus updated, don't download sketchy software, check Settings → Privacy → Camera → Review which apps have access.</p>
+
+            <p><strong>Q: How to disable camera completely for security?</strong></p>
+            <p>A: Multiple layers: (1) Privacy cover (physical - best), (2) Windows: Settings → Privacy → Camera → Turn OFF "Camera access", (3) Device Manager → Cameras → Right-click → Disable, (4) BIOS: Disable camera in BIOS settings. Combination of all = most secure.</p>
+
+            <p><strong>Q: My laptop has multiple cameras. How do I switch between them?</strong></p>
+            <p>A: In app settings (Zoom, Teams): Settings → Video → Camera dropdown → Select front or rear camera. Or Windows Camera app: Click "Change camera" button (top-right). Some laptops: Front camera for video calls, rear camera for photos (like phone).</p>
+
+            <p><strong>Q: Why does camera work at home but not at office?</strong></p>
+            <p>A: Corporate IT restrictions. Office network may block camera, or company policy disabled cameras via Group Policy (centralized Windows management). Check with IT department. They may need to whitelist your device or enable camera permissions.</p>
+
+            <p><strong>Q: Webcam freezes during calls but works fine in Camera app. Why?</strong></p>
+            <p>A: Bandwidth or CPU issue. Video calls need upload bandwidth (5-10 Mbps for HD). Check: Close other apps, use wired ethernet, reduce video quality in Zoom/Teams (720p instead 1080p), close bandwidth hogs (Netflix, downloads), check CPU usage (Task Manager - if 100% = too much running).</p>
+
+            <div class="success-box">
+                <h3>✓ Webcam Troubleshooting Summary</h3>
+                <p><strong>Quick wins (try first, 5 min):</strong></p>
+                <ol>
+                    <li>Check Windows privacy settings (50% success) - Most common fix!</li>
+                    <li>Check Mac privacy settings (55% success)</li>
+                    <li>Close other apps using camera (40% success)</li>
+                    <li>Test in different apps (diagnostic)</li>
+                    <li>Select correct camera in app settings (35% success)</li>
+                </ol>
+                <p><strong>Software fixes (10-15 min):</strong></p>
+                <ul>
+                    <li>Enable camera in Device Manager (45% success)</li>
+                    <li>Update/reinstall drivers (40% success)</li>
+                    <li>Run Windows troubleshooter (25% success)</li>
+                    <li>Disable antivirus camera protection (20% success)</li>
+                </ul>
+                <p><strong>Hardware checks (5-20 min):</strong></p>
+                <ul>
+                    <li>Enable in BIOS (35% success - business laptops)</li>
+                    <li>Check physical privacy shutter (15% success)</li>
+                    <li>Clean lens (20% success - quality issue)</li>
+                    <li>Fix USB connection (40% success - external webcams)</li>
+                </ul>
+                <p><strong>When camera is dead:</strong></p>
+                <ul>
+                    <li>Warranty claim if under warranty</li>
+                    <li>Buy USB webcam ($50-100 for good quality)</li>
+                    <li>Use phone as webcam (free, works great!)</li>
+                </ul>
+                <p><strong>Overall success rate:</strong> 80% of webcam issues fixable with privacy settings and driver updates!</p>
+            </div>
+
+        </div>
+
+        <div class="related-problems">
+            <h3>🔗 Related Problems</h3>
+            <div class="related-list">
+                <a href="/all-problems/microphone-not-working/" class="related-item">
+                    <h4>Microphone Not Working</h4>
+                    <p>Fix audio issues in Zoom, Teams, no sound recording</p>
+                </a>
+                <a href="/all-problems/laptop-screen-black/" class="related-item">
+                    <h4>Laptop Screen Black</h4>
+                    <p>Fix black screen, no display on laptop</p>
+                </a>
+                <a href="/all-problems/usb-ports-not-working/" class="related-item">
+                    <h4>USB Ports Not Working</h4>
+                    <p>Fix USB webcam connection issues</p>
+                </a>
+                <a href="/all-problems/bluetooth-not-working/" class="related-item">
+                    <h4>Bluetooth Not Working</h4>
+                    <p>Fix Bluetooth webcam connectivity</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

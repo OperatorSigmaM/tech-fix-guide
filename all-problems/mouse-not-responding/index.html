@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mouse not responding? Fix cursor lag, frozen pointer, clicking issues on wireless, wired, gaming mice. 14 solutions for Windows, Mac trackball problems.">
+    <title>Mouse Not Responding? 14 Ways to Fix Cursor Lag & Clicking Issues</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W0QQ5THL5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6W0QQ5THL5');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1f2937; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        footer { background: #1f2937; color: white; padding: 3rem 2rem 1rem; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #3b82f6; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section a { color: #d1d5db; text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: #3b82f6; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
+        .breadcrumb a { color: #3b82f6; text-decoration: none; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .article-header h1 { font-size: 2.5rem; color: #1e40af; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1.5rem; color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .difficulty { padding: 0.25rem 0.75rem; background: #d1fae5; color: #065f46; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .quick-summary { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; }
+        .quick-summary h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc { background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .toc h3 { color: #1e40af; margin-bottom: 1rem; }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.75rem; }
+        .toc a { color: #3b82f6; text-decoration: none; }
+        .content h2 { color: #1e40af; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .content p { margin-bottom: 1.25rem; }
+        .content ul, .content ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .solution-box { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .solution-box h3 { color: #1e40af; margin-top: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .solution-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #3b82f6; color: white; border-radius: 50%; font-weight: 700; }
+        .success-rate { background: #d1fae5; color: #065f46; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: auto; }
+        .info-box { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .success-box { background: #d1fae5; border-left: 4px solid #10b981; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 1.25rem; margin: 1.5rem 0; border-radius: 8px; }
+        .related-problems { background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem; }
+        .related-list { display: grid; gap: 1rem; }
+        .related-item { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: inherit; display: block; border-left: 4px solid #3b82f6; }
+        .related-item h4 { color: #1e40af; margin-bottom: 0.25rem; }
+        .related-item p { color: #6b7280; font-size: 0.9rem; margin: 0; }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .article-header h1 { font-size: 1.75rem; } 
+            .article-container { padding: 1rem; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🔧 Tech Fix Guide</a>
+            <ul class="nav-links">
+                <li><a href="/problems/">Problems</a></li>
+                <li><a href="/glossary/">Glossary</a></li>
+                <li><a href="/calculators/">Calculators</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/problems/">Problems</a> / Mouse Not Responding</div>
+    
+    <article class="article-container">
+        <div class="article-header">
+            <h1>Mouse Not Responding? 14 Ways to Fix Cursor Lag & Clicking Issues</h1>
+            <div class="article-meta">
+                <span>📅 Updated: January 2025</span>
+                <span>⏱️ 17 min read</span>
+                <span class="difficulty">Easy</span>
+            </div>
+        </div>
+
+        <div class="quick-summary">
+            <h3>🎯 Quick Summary</h3>
+            <p><strong>Problem:</strong> Mouse cursor not moving, lagging, jumping around, or clicks not registering.</p>
+            <p><strong>Most common causes:</strong> Dead batteries (wireless, 30%), dirty sensor (25%), USB connection (20%), driver issues (15%), surface problems (10%)</p>
+            <p><strong>Quick fix (works 70% of time):</strong> Replace batteries → clean mouse sensor → try different USB port → restart computer → use mouse pad</p>
+            <p><strong>Time needed:</strong> 5-20 minutes depending on solution</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#identify">Identify Your Mouse Issue</a></li>
+                <li><a href="#quick">Quick Fixes (Start Here)</a></li>
+                <li><a href="#wireless">Wireless Mouse Solutions</a></li>
+                <li><a href="#advanced">Advanced Troubleshooting</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2 id="identify">First: Identify Your Mouse Problem</h2>
+            
+            <p><strong>Different symptoms require different solutions:</strong></p>
+
+            <p>🔴 <strong>Cursor not moving at all:</strong></p>
+            <ul>
+                <li>Mouse lights are on but cursor frozen</li>
+                <li>Or: Mouse has no lights, appears completely dead</li>
+                <li>Clicking buttons does nothing</li>
+                <li><strong>Likely cause:</strong> Dead batteries (wireless), USB disconnected, driver crash, frozen computer</li>
+            </ul>
+
+            <p>🔴 <strong>Cursor jumping/stuttering:</strong></p>
+            <ul>
+                <li>Cursor teleports randomly across screen</li>
+                <li>Movement is jerky, not smooth</li>
+                <li>Cursor skips and lags behind actual movement</li>
+                <li><strong>Likely cause:</strong> Dirty sensor, poor surface, wireless interference, low DPI setting</li>
+            </ul>
+
+            <p>🔴 <strong>Cursor moving very slowly or erratically:</strong></p>
+            <ul>
+                <li>Need to move mouse several times to cross screen</li>
+                <li>Cursor drifts when mouse is stationary</li>
+                <li>Sensitivity feels way too low</li>
+                <li><strong>Likely cause:</strong> Mouse sensitivity settings, dirty sensor, failing laser/optical sensor</li>
+            </ul>
+
+            <p>🔴 <strong>Clicks not registering (single or double-click):</strong></p>
+            <ul>
+                <li>Must click multiple times for one action</li>
+                <li>Double-click doesn't work</li>
+                <li>Clicks happen randomly without pressing</li>
+                <li><strong>Likely cause:</strong> Worn switches (physical failure), debounce issues, driver problems</li>
+            </ul>
+
+            <p>🔴 <strong>Right-click or middle-click not working:</strong></p>
+            <ul>
+                <li>Left click works but right-click doesn't</li>
+                <li>Scroll wheel doesn't click</li>
+                <li><strong>Likely cause:</strong> Broken switch, dirt under button, driver configuration</li>
+            </ul>
+
+            <p>🔴 <strong>Scroll wheel not working:</strong></p>
+            <ul>
+                <li>Wheel spins but doesn't scroll</li>
+                <li>Scrolls erratically or backwards</li>
+                <li>Wheel feels loose or gritty</li>
+                <li><strong>Likely cause:</strong> Dirty encoder wheel, broken encoder, driver issue</li>
+            </ul>
+
+            <p>🔴 <strong>Wireless mouse constantly disconnecting:</strong></p>
+            <ul>
+                <li>Works for few seconds then stops</li>
+                <li>Reconnects when moving mouse aggressively</li>
+                <li>Windows "USB device disconnected" sound plays</li>
+                <li><strong>Likely cause:</strong> Low battery, loose USB receiver, interference, range too far</li>
+            </ul>
+
+            <p>🔴 <strong>Gaming mouse specific issues:</strong></p>
+            <ul>
+                <li>DPI switch button not working</li>
+                <li>RGB lights work but mouse doesn't respond</li>
+                <li>Programmable buttons don't work</li>
+                <li><strong>Likely cause:</strong> Software/firmware issue, driver conflict, onboard memory settings</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Mouse Technology Types:</strong><br>
+                • <strong>Optical mouse:</strong> Red LED light, works on most surfaces except glass/glossy. Most common type.<br>
+                • <strong>Laser mouse:</strong> Uses laser (invisible), works on more surfaces including glass. Higher precision.<br>
+                • <strong>Trackball:</strong> Ball on top/side you rotate. Stationary mouse, cursor moves via ball. Different troubleshooting.<br>
+                • <strong>Gaming mouse:</strong> High DPI (sensitivity), programmable buttons, RGB lights, dedicated software.<br>
+                • <strong>Wireless (2.4GHz):</strong> USB receiver dongle. Better latency than Bluetooth.<br>
+                • <strong>Bluetooth mouse:</strong> No dongle needed. Slightly more latency, lower battery life.
+            </div>
+
+            <h2 id="quick">Quick Fixes (Start Here - 70% Success Rate)</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">1</span> Replace Batteries (Wireless Mouse) <span class="success-rate">Success: 40%</span></h3>
+                <p><strong>When to try:</strong> Wireless mouse cursor lagging, jumping, disconnecting, or completely dead.</p>
+                <p><strong>Why it works:</strong> #1 cause of wireless mouse problems. Low battery = erratic behavior before completely dying.</p>
+
+                <p><strong>Signs of low battery:</strong></p>
+                <ul>
+                    <li>Mouse works intermittently</li>
+                    <li>Cursor stutters or lags</li>
+                    <li>Red battery LED indicator (if mouse has one)</li>
+                    <li>Range decreases (must be closer to receiver)</li>
+                    <li>Works fine right after inserting batteries, degrades over days</li>
+                </ul>
+
+                <p><strong>Battery replacement procedure:</strong></p>
+                <ol>
+                    <li>Flip mouse over, open battery compartment</li>
+                    <li>Remove old batteries (note + and - orientation!)</li>
+                    <li>Insert fresh batteries:
+                        <ul>
+                            <li><strong>Best:</strong> Quality alkaline batteries (Duracell, Energizer)</li>
+                            <li><strong>Avoid:</strong> Cheap dollar store batteries (die quickly, may leak)</li>
+                            <li><strong>Alternative:</strong> Rechargeable NiMH (Eneloop) - cost-effective long term</li>
+                        </ul>
+                    </li>
+                    <li>Make sure batteries properly seated (click into place)</li>
+                    <li>Close compartment</li>
+                    <li>Test mouse immediately</li>
+                </ol>
+
+                <p><strong>Battery life expectations:</strong></p>
+                <ul>
+                    <li><strong>Standard wireless mouse:</strong> 3-12 months on alkaline batteries</li>
+                    <li><strong>Gaming mouse (RGB lights):</strong> 1-3 months (lights drain fast)</li>
+                    <li><strong>Bluetooth mouse:</strong> 1-6 months (Bluetooth uses more power)</li>
+                    <li><strong>Logitech MX series:</strong> Up to 4 months on single charge (rechargeable)</li>
+                </ul>
+
+                <p><strong>Extend battery life:</strong></p>
+                <ul>
+                    <li>Turn mouse off when not using (if has power switch)</li>
+                    <li>Disable RGB lighting (drains battery fast)</li>
+                    <li>Lower polling rate in software (1000Hz → 500Hz saves power)</li>
+                    <li>Keep receiver close to mouse (less power needed for strong signal)</li>
+                    <li>Use quality batteries (cheap ones die faster)</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Battery warning signs before total failure:</strong> Cursor starts lagging in mornings (after sitting overnight), range decreases, need to re-pair occasionally. Replace batteries at first sign of weirdness - waiting until mouse dies completely is frustrating!
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">2</span> Clean Mouse Sensor & Bottom <span class="success-rate">Success: 50%</span></h3>
+                <p><strong>When to try:</strong> Cursor jumping, erratic movement, or mouse works on some surfaces but not others.</p>
+                <p><strong>Why it works:</strong> Dust, hair, and debris on sensor lens prevent accurate tracking.</p>
+
+                <p><strong>What you need:</strong></p>
+                <ul>
+                    <li>Cotton swab (Q-tip)</li>
+                    <li>Isopropyl alcohol 70%+ (rubbing alcohol)</li>
+                    <li>Microfiber cloth</li>
+                    <li>Compressed air (optional)</li>
+                </ul>
+
+                <p><strong>Cleaning procedure:</strong></p>
+                <ol>
+                    <li>Unplug mouse (or turn off wireless mouse)</li>
+                    <li>Flip mouse upside down</li>
+                    <li>Locate sensor (small glass/plastic window with LED):
+                        <ul>
+                            <li>Optical mouse: Red LED, circular window</li>
+                            <li>Laser mouse: May not see light (invisible laser)</li>
+                        </ul>
+                    </li>
+                    <li>Inspect sensor closely:
+                        <ul>
+                            <li>Look for dust, hair, lint stuck to lens</li>
+                            <li>Check for scratches (means sensor damaged)</li>
+                        </ul>
+                    </li>
+                    <li>Clean sensor:
+                        <ul>
+                            <li>Dip cotton swab in alcohol (not dripping wet!)</li>
+                            <li>Gently wipe sensor lens in circular motion</li>
+                            <li>Don't press hard (can scratch sensor)</li>
+                            <li>Use fresh swab if first one dirty</li>
+                        </ul>
+                    </li>
+                    <li>Clean mouse feet (teflon pads):
+                        <ul>
+                            <li>Wipe with alcohol-dampened cloth</li>
+                            <li>Remove any stuck debris</li>
+                            <li>Check if feet worn down (can cause uneven glide)</li>
+                        </ul>
+                    </li>
+                    <li>Clean entire mouse bottom with cloth</li>
+                    <li>Let alcohol evaporate (1-2 minutes)</li>
+                    <li>Reconnect/turn on mouse and test</li>
+                </ol>
+
+                <p><strong>Signs sensor needs cleaning:</strong></p>
+                <ul>
+                    <li>Cursor moves fine on clean desk, jumps on mousepad</li>
+                    <li>Movement works but randomly stops tracking</li>
+                    <li>Visible dust/hair on sensor when inspected</li>
+                    <li>Mouse hasn't been cleaned in 6+ months</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Don't use:</strong> Paper towels (leave fibers), sharp objects (scratch lens), glass cleaner (may damage coating), or too much liquid (can seep inside mouse). Be gentle - sensor is delicate optical component.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">3</span> Use Proper Mouse Surface <span class="success-rate">Success: 35%</span></h3>
+                <p><strong>When to try:</strong> Mouse cursor jumps randomly, won't track on certain surfaces, or works on desk but not mousepad.</p>
+                <p><strong>Why it works:</strong> Optical/laser sensors need proper surface texture to track movement. Wrong surface = no tracking.</p>
+
+                <p><strong>Surfaces that DON'T work well:</strong></p>
+                <ul>
+                    <li><strong>Glass/glossy surfaces:</strong> Optical mice fail completely (laser mice work but poorly)</li>
+                    <li><strong>Mirrors/reflective surfaces:</strong> Too much light reflection confuses sensor</li>
+                    <li><strong>Pure white surfaces:</strong> Sensor can't detect texture (no contrast)</li>
+                    <li><strong>Black glass:</strong> Worst combination - reflective AND dark</li>
+                    <li><strong>Rough wood grain:</strong> Uneven texture causes jumping</li>
+                    <li><strong>Fabric/cloth (without mousepad):</strong> Fibers catch sensor light</li>
+                </ul>
+
+                <p><strong>Best surfaces for mice:</strong></p>
+                <ol>
+                    <li><strong>Dedicated mouse pad:</strong> Best option, designed for optical sensors
+                        <ul>
+                            <li>Cloth mousepad: Smooth tracking, comfortable</li>
+                            <li>Hard plastic mousepad: Fast, low friction</li>
+                            <li>Cost: $5-30 (basic) to $30-100 (gaming)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Plain paper:</strong> Temporary solution, works surprisingly well</li>
+                    <li><strong>Matte plastic/acrylic:</strong> Smooth, non-reflective</li>
+                    <li><strong>Wood desk (smooth, matte finish):</strong> Works okay</li>
+                    <li><strong>Laminate desk surface:</strong> Usually fine</li>
+                </ol>
+
+                <p><strong>Quick surface test:</strong></p>
+                <ol>
+                    <li>Move mouse to different surface (try paper, book, desk mat)</li>
+                    <li>If cursor suddenly tracks perfectly → original surface is problem</li>
+                    <li>If still jumps on all surfaces → clean sensor or check settings</li>
+                </ol>
+
+                <p><strong>Gaming mousepad considerations:</strong></p>
+                <ul>
+                    <li><strong>Speed pads (hard surface):</strong> Low friction, fast cursor movements</li>
+                    <li><strong>Control pads (cloth):</strong> More friction, precise aiming</li>
+                    <li><strong>Size matters:</strong> Too small = run out of space, need to lift mouse frequently</li>
+                    <li><strong>Desk mat (900x400mm):</strong> Covers keyboard + mouse area, very comfortable</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Laser vs Optical on surfaces:</strong> Laser mice work on more surfaces (including glass) but can be TOO sensitive on cloth mousepads (causes jittery cursor). Optical mice need mousepad but give smoother tracking. For gaming, optical usually better.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">4</span> Try Different USB Port <span class="success-rate">Success: 35%</span></h3>
+                <p><strong>When to try:</strong> Wired mouse not responding, USB receiver not recognized, or intermittent connection.</p>
+
+                <p><strong>USB port troubleshooting:</strong></p>
+                <ol>
+                    <li>Unplug mouse or wireless receiver</li>
+                    <li>Wait 10 seconds</li>
+                    <li>Try different USB port:
+                        <ul>
+                            <li><strong>Desktop:</strong> Rear ports more reliable than front panel</li>
+                            <li><strong>Laptop:</strong> Try port on opposite side</li>
+                            <li><strong>USB 2.0 vs 3.0:</strong> Try USB 2.0 port (black) if USB 3.0 (blue) causing issues</li>
+                        </ul>
+                    </li>
+                    <li>Plug in firmly (should hear Windows "device connected" sound)</li>
+                    <li>Test mouse</li>
+                </ol>
+
+                <p><strong>USB port quality differences:</strong></p>
+                <ul>
+                    <li><strong>Motherboard USB (desktop rear):</strong> Best, directly connected to chipset</li>
+                    <li><strong>Front panel USB (desktop):</strong> Can be loose, lower quality cables</li>
+                    <li><strong>USB hubs:</strong> Avoid for wireless receivers (adds latency, shares bandwidth)</li>
+                    <li><strong>USB-C adapters:</strong> Work but add potential failure point</li>
+                </ul>
+
+                <p><strong>Wireless receiver positioning:</strong></p>
+                <ul>
+                    <li><strong>Best:</strong> USB extension cable, place receiver on desk near mouse</li>
+                    <li><strong>Why:</strong> Computer case blocks signal, especially metal cases</li>
+                    <li><strong>Distance:</strong> Keep receiver within 3 feet of mouse for best signal</li>
+                    <li><strong>Line of sight:</strong> No obstructions between mouse and receiver</li>
+                </ul>
+
+                <p><strong>Check for USB port failure:</strong></p>
+                <ol>
+                    <li>Plug mouse into another device (different computer, laptop)</li>
+                    <li>If works elsewhere: Your USB port is faulty</li>
+                    <li>If doesn't work anywhere: Mouse is faulty</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ USB hub warning:</strong> Don't use USB hubs for wireless gaming mouse receivers. Adds input lag (bad for gaming) and can cause disconnections. Always plug receiver directly into computer USB port, ideally using extension cable to place near mouse.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">5</span> Restart Computer <span class="success-rate">Success: 30%</span></h3>
+                <p><strong>When to try:</strong> Mouse stopped working suddenly, cursor frozen, or after driver update.</p>
+                <p><strong>Why it works:</strong> Clears driver crashes, resets USB controllers, terminates conflicting processes.</p>
+
+                <p><strong>If mouse completely dead (can't click restart):</strong></p>
+                <ol>
+                    <li>Use keyboard to navigate:
+                        <ul>
+                            <li>Press Windows key → Arrow keys to navigate → Enter to select</li>
+                            <li>Or: Ctrl+Alt+Delete → Arrow to "Restart" → Enter</li>
+                        </ul>
+                    </li>
+                    <li>Or: Press and hold Power button 5-10 seconds (force shutdown)</li>
+                    <li>Wait 30 seconds, power back on</li>
+                </ol>
+
+                <p><strong>After restart:</strong></p>
+                <ul>
+                    <li>Wait for Windows to fully load</li>
+                    <li>Listen for "USB device connected" sound</li>
+                    <li>Move mouse to test cursor</li>
+                    <li>If still doesn't work → driver issue (see Solution #9)</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 When restart fixes it:</strong> If mouse works immediately after restart then fails again hours later, it's software issue (driver, background process, Windows update conflict). Permanent fix: Update drivers or check for Windows updates.
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">6</span> Adjust Mouse Sensitivity (DPI) <span class="success-rate">Success: 25%</span></h3>
+                <p><strong>When to try:</strong> Cursor moving too slow/fast, or DPI button accidentally pressed changing sensitivity.</p>
+
+                <p><strong>Windows - Adjust mouse sensitivity:</strong></p>
+                <ol>
+                    <li>Settings → Bluetooth & devices → Mouse</li>
+                    <li>Mouse pointer speed slider → Adjust to preference</li>
+                    <li>Or: Control Panel → Mouse → Pointer Options</li>
+                    <li>Adjust "Motion" slider (middle is default)</li>
+                    <li>Uncheck "Enhance pointer precision" (causes acceleration - bad for gaming)</li>
+                </ol>
+
+                <p><strong>Mac - Adjust tracking speed:</strong></p>
+                <ol>
+                    <li>System Settings → Mouse</li>
+                    <li>Tracking speed slider → Adjust</li>
+                    <li>For gaming: Disable "Natural scrolling"</li>
+                </ol>
+
+                <p><strong>Gaming mouse DPI settings:</strong></p>
+                <ul>
+                    <li><strong>DPI button on mouse:</strong> Cycles through preset DPI levels (400, 800, 1600, 3200, etc.)</li>
+                    <li><strong>LED indicator:</strong> Different colors = different DPI</li>
+                    <li><strong>Accidentally pressed:</strong> Very common! Try clicking DPI button to cycle back</li>
+                    <li><strong>Software control:</strong> Razer Synapse, Logitech G HUB, Corsair iCUE
+                        <ul>
+                            <li>Set custom DPI levels</li>
+                            <li>Disable DPI button if you keep hitting accidentally</li>
+                            <li>Create profiles for different games</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>DPI explained:</strong></p>
+                <ul>
+                    <li><strong>Low DPI (400-800):</strong> Cursor moves slowly, need more mouse movement, better precision (gaming snipers, design work)</li>
+                    <li><strong>Medium DPI (800-1600):</strong> Balanced, good for general use and gaming</li>
+                    <li><strong>High DPI (1600-3200):</strong> Cursor flies across screen, less physical movement needed (office work, small desks)</li>
+                    <li><strong>Ultra-high (3200+):</strong> Marketing gimmick, unusable for most people</li>
+                </ul>
+
+                <p><strong>Finding your ideal sensitivity:</strong></p>
+                <ol>
+                    <li>Start with 800 DPI or medium Windows setting</li>
+                    <li>Too fast → Lower DPI or Windows sensitivity</li>
+                    <li>Too slow → Increase DPI or Windows sensitivity</li>
+                    <li>Goal: Comfortable to move across entire screen without lifting mouse</li>
+                </ol>
+            </div>
+
+            <h2 id="wireless">Wireless Mouse Specific Solutions</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">7</span> Re-pair Wireless Mouse to Receiver <span class="success-rate">Success: 45%</span></h3>
+                <p><strong>When to try:</strong> Wireless mouse not responding, receiver not recognized, or after replacing batteries.</p>
+
+                <p><strong>2.4GHz wireless mouse (USB receiver) pairing:</strong></p>
+                <ol>
+                    <li>Insert fresh batteries in mouse</li>
+                    <li>Plug USB receiver into computer</li>
+                    <li>Look for pairing button:
+                        <ul>
+                            <li><strong>On mouse:</strong> Usually small button on bottom (may need pin to press)</li>
+                            <li><strong>On receiver:</strong> Some receivers have button (rare)</li>
+                        </ul>
+                    </li>
+                    <li>Pairing procedure (varies by brand):
+                        <ul>
+                            <li><strong>Logitech:</strong> Press Connect button on mouse bottom for 3-5 sec until LED flashes</li>
+                            <li><strong>Microsoft:</strong> Press pairing button, wait for LED to flash</li>
+                            <li><strong>Generic mice:</strong> Turn off, hold button while turning on</li>
+                        </ul>
+                    </li>
+                    <li>Wait for pairing (5-15 seconds)</li>
+                    <li>LED stops flashing when connected</li>
+                    <li>Test mouse movement</li>
+                </ol>
+
+                <p><strong>Bluetooth mouse pairing:</strong></p>
+                <ol>
+                    <li>Windows: Settings → Bluetooth & devices → Add device</li>
+                    <li>Mac: System Settings → Bluetooth</li>
+                    <li>Put mouse in pairing mode:
+                        <ul>
+                            <li>Hold pairing button for 3-5 seconds</li>
+                            <li>LED blinks rapidly when in pairing mode</li>
+                        </ul>
+                    </li>
+                    <li>Select mouse from list of available devices</li>
+                    <li>Click Pair/Connect</li>
+                    <li>Wait for connection (can take 10-30 seconds)</li>
+                </ol>
+
+                <p><strong>Logitech Unifying Receiver (special case):</strong></p>
+                <ul>
+                    <li>One receiver can pair up to 6 Logitech devices</li>
+                    <li>Download Logitech Unifying Software (free)</li>
+                    <li>Run software → Follow pairing wizard</li>
+                    <li>More reliable than button pairing</li>
+                    <li>Can manage multiple devices easily</li>
+                </ul>
+
+                <p><strong>If pairing fails:</strong></p>
+                <ul>
+                    <li>Try different USB port</li>
+                    <li>Replace batteries even if seem okay</li>
+                    <li>Move mouse closer to receiver (within 1 foot during pairing)</li>
+                    <li>Remove other wireless devices nearby</li>
+                    <li>Restart computer and try again</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">8</span> Fix Wireless Interference <span class="success-rate">Success: 40%</span></h3>
+                <p><strong>When to try:</strong> Wireless mouse lags, stutters, or disconnects randomly but works fine when close to receiver.</p>
+                <p><strong>Why it works:</strong> 2.4GHz mice share frequency with WiFi, Bluetooth, microwaves, other devices causing interference.</p>
+
+                <p><strong>Common interference sources:</strong></p>
+                <ul>
+                    <li><strong>WiFi router:</strong> 2.4GHz WiFi strongest interferer (5GHz WiFi doesn't interfere)</li>
+                    <li><strong>Bluetooth devices:</strong> Headphones, speakers, keyboards</li>
+                    <li><strong>Other wireless mice/keyboards:</strong> Multiple 2.4GHz devices near each other</li>
+                    <li><strong>Microwave ovens:</strong> When running (2.4GHz radiation leaks)</li>
+                    <li><strong>Cordless phones:</strong> 2.4GHz models</li>
+                    <li><strong>Baby monitors:</strong> Older models use 2.4GHz</li>
+                    <li><strong>USB 3.0 ports/cables:</strong> Emit RF noise that interferes with 2.4GHz</li>
+                </ul>
+
+                <p><strong>Reduce interference:</strong></p>
+                <ol>
+                    <li><strong>Move USB receiver away from interference:</strong>
+                        <ul>
+                            <li>Use USB extension cable (6-12 inches)</li>
+                            <li>Place receiver on desk, not behind PC case</li>
+                            <li>Keep away from WiFi router (at least 3 feet)</li>
+                            <li>Avoid USB 3.0 ports (use USB 2.0 if available)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Change WiFi channel:</strong>
+                        <ul>
+                            <li>Router settings → Wireless → Change 2.4GHz channel</li>
+                            <li>Try channels 1, 6, or 11 (least overlap)</li>
+                            <li>Or switch to 5GHz WiFi (doesn't interfere with mouse)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Turn off nearby wireless devices:</strong>
+                        <ul>
+                            <li>Temporarily disable to isolate problem</li>
+                            <li>Move devices farther apart</li>
+                        </ul>
+                    </li>
+                    <li><strong>Use shielded USB extension cable:</strong>
+                        <ul>
+                            <li>Reduces interference pickup</li>
+                            <li>Especially important near USB 3.0 ports</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Test for interference:</strong></p>
+                <ol>
+                    <li>Move mouse very close to receiver (within 6 inches)</li>
+                    <li>If works perfectly close but fails farther away → interference problem</li>
+                    <li>If still fails close up → mouse or receiver faulty</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 USB 3.0 interference:</strong> USB 3.0 ports (blue) emit RF noise in 2.4GHz range that directly interferes with wireless mice. Intel identified this issue in 2012. Solution: Use USB 2.0 port or shielded extension cable to move receiver away from USB 3.0 ports/cables.
+                </div>
+            </div>
+
+            <h2 id="advanced">Advanced Troubleshooting & Repair</h2>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">9</span> Update or Reinstall Mouse Drivers <span class="success-rate">Success: 35%</span></h3>
+                <p><strong>When to try:</strong> Mouse stopped working after Windows update, extra buttons not working, or cursor behaves strangely.</p>
+
+                <p><strong>Windows - Update mouse driver:</strong></p>
+                <ol>
+                    <li>Right-click Start → Device Manager</li>
+                    <li>Expand "Mice and other pointing devices"</li>
+                    <li>Right-click your mouse</li>
+                    <li>Select "Update driver"</li>
+                    <li>Choose "Search automatically for drivers"</li>
+                    <li>Let Windows find and install latest driver</li>
+                    <li>Restart computer</li>
+                </ol>
+
+                <p><strong>Windows - Reinstall mouse driver:</strong></p>
+                <ol>
+                    <li>Device Manager → Mice and other pointing devices</li>
+                    <li>Right-click mouse → "Uninstall device"</li>
+                    <li>Check "Delete the driver software" if option appears</li>
+                    <li>Click "Uninstall"</li>
+                    <li>Restart computer</li>
+                    <li>Windows automatically reinstalls driver on boot</li>
+                    <li>Test mouse</li>
+                </ol>
+
+                <p><strong>Gaming mouse software (important!):</strong></p>
+                <ul>
+                    <li><strong>Logitech:</strong> Logitech G HUB or Logitech Options</li>
+                    <li><strong>Razer:</strong> Razer Synapse</li>
+                    <li><strong>Corsair:</strong> iCUE</li>
+                    <li><strong>SteelSeries:</strong> SteelSeries GG</li>
+                    <li><strong>What it does:</strong> DPI settings, button programming, RGB, firmware updates</li>
+                    <li><strong>Common issue:</strong> Software running causes conflicts → Try uninstalling, test mouse without software</li>
+                </ul>
+
+                <p><strong>Update gaming mouse firmware:</strong></p>
+                <ol>
+                    <li>Open manufacturer software (G HUB, Synapse, etc.)</li>
+                    <li>Check for firmware updates</li>
+                    <li>Follow update process (usually automatic)</li>
+                    <li>DON'T disconnect mouse during firmware update (can brick mouse)</li>
+                    <li>Restart computer after update</li>
+                </ol>
+
+                <p><strong>Mac - Reset mouse drivers:</strong></p>
+                <ol>
+                    <li>System Settings → Bluetooth (for Bluetooth mice)</li>
+                    <li>Remove mouse, re-pair</li>
+                    <li>Or: Reset SMC (for USB mice issues)</li>
+                    <li>Or: Reset NVRAM: Restart, hold Cmd+Opt+P+R for 20 seconds</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">10</span> Fix Mouse Button Clicking Issues (Debounce) <span class="success-rate">Success: 30%</span></h3>
+                <p><strong>When to try:</strong> Single-click registers as double-click, must click multiple times, or random unwanted clicks.</p>
+                <p><strong>Why it happens:</strong> Mouse switches wear out (mechanical failure), causing "bounce" - registering multiple clicks from single press.</p>
+
+                <p><strong>Test for switch failure:</strong></p>
+                <ol>
+                    <li>Go to: clicktest.io or mouse-test.com</li>
+                    <li>Click each button slowly and deliberately</li>
+                    <li>Check if:
+                        <ul>
+                            <li>Single clicks register as 2-3 clicks (double-click)</li>
+                            <li>Clicks don't register at all</li>
+                            <li>Random clicks without pressing</li>
+                        </ul>
+                    </li>
+                    <li>If yes → switch physically worn out</li>
+                </ol>
+
+                <p><strong>Software fix (temporary):</strong></p>
+                <ul>
+                    <li><strong>Windows - Adjust double-click speed:</strong>
+                        <ul>
+                            <li>Control Panel → Mouse → Buttons tab</li>
+                            <li>Double-click speed slider → Slower</li>
+                            <li>Helps reduce accidental double-clicks</li>
+                        </ul>
+                    </li>
+                    <li><strong>Third-party debounce software:</strong>
+                        <ul>
+                            <li>Download: "X-Mouse Button Control" (free)</li>
+                            <li>Set debounce delay (10-30ms)</li>
+                            <li>Ignores extra clicks within delay period</li>
+                            <li>Workaround, not permanent fix</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Hardware fix (advanced - requires soldering):</strong></p>
+                <ol>
+                    <li>Open mouse case (screws on bottom)</li>
+                    <li>Identify faulty switch (Omron, Huano, TTC brand)</li>
+                    <li>Desolder old switch</li>
+                    <li>Solder new switch (buy on Amazon/AliExpress, $0.50-2 each)</li>
+                    <li>Reassemble</li>
+                    <li><strong>Difficulty:</strong> Medium-high (need soldering skills)</li>
+                    <li><strong>Time:</strong> 30-60 minutes</li>
+                    <li><strong>Success rate:</strong> 90% if done correctly</li>
+                </ol>
+
+                <p><strong>Replace vs Repair decision:</strong></p>
+                <ul>
+                    <li><strong>Repair if:</strong> Expensive mouse ($50+), you can solder, replacement switches available</li>
+                    <li><strong>Replace if:</strong> Budget mouse ($10-30), no soldering experience, multiple buttons failing</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Omron switch lifespan:</strong> Standard Omron D2FC switches rated for 10-20 million clicks. Heavy use (gaming) = 1-2 years before failure. Newer Omron 50M switches last longer but some users report more double-click issues. Japanese-made Omrons (D2F-01F) more reliable than Chinese-made (D2FC-F-7N).
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">11</span> Fix Scroll Wheel Not Working <span class="success-rate">Success: 40%</span></h3>
+                <p><strong>When to try:</strong> Scroll wheel doesn't scroll, scrolls erratically, or wheel feels loose/gritty.</p>
+
+                <p><strong>Quick fixes first:</strong></p>
+                <ol>
+                    <li><strong>Check scroll wheel settings (Windows):</strong>
+                        <ul>
+                            <li>Settings → Bluetooth & devices → Mouse</li>
+                            <li>"Lines to scroll at a time" → Set to 3</li>
+                            <li>If set to 0 = scrolling disabled!</li>
+                        </ul>
+                    </li>
+                    <li><strong>Clean scroll wheel:</strong>
+                        <ul>
+                            <li>Spray compressed air around wheel while spinning it</li>
+                            <li>Use toothpick to remove visible debris</li>
+                            <li>Cotton swab with alcohol around wheel edges</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Hardware repair (if cleaning doesn't help):</strong></p>
+                <ol>
+                    <li>Open mouse (remove bottom screws)</li>
+                    <li>Locate encoder wheel (small disk with notches)</li>
+                    <li>Common problems:
+                        <ul>
+                            <li><strong>Dirty encoder:</strong> Clean with alcohol, compressed air</li>
+                            <li><strong>Broken encoder spring:</strong> Spring gives "notchy" feel, if broken = mushy wheel</li>
+                            <li><strong>Failed encoder sensor:</strong> Electronic component, harder to fix</li>
+                        </ul>
+                    </li>
+                    <li>Clean encoder thoroughly</li>
+                    <li>If spring broken: Order replacement encoder ($2-5 on AliExpress)</li>
+                    <li>Reassemble and test</li>
+                </ol>
+
+                <p><strong>Scroll wheel scrolls backwards (rare issue):</strong></p>
+                <ul>
+                    <li>Driver issue or encoder wired backwards</li>
+                    <li>Solution: Reinstall drivers, or use software to reverse scroll direction</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">12</span> Check for Hardware Damage <span class="success-rate">Diagnostic</span></h3>
+                <p><strong>When to try:</strong> Mouse physically damaged (dropped, liquid spill, cable damaged) or all software fixes failed.</p>
+
+                <p><strong>Visual inspection:</strong></p>
+                <ul>
+                    <li><strong>Wired mouse cable:</strong>
+                        <ul>
+                            <li>Look for fraying, kinks, exposed wires near USB connector</li>
+                            <li>Bend cable while mouse connected - if cursor flickers = cable damaged</li>
+                            <li>Cable damage at mouse entry point very common</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mouse feet:</strong>
+                        <ul>
+                            <li>Worn down, missing, or peeling off</li>
+                            <li>Causes uneven glide, can expose screws that scratch desk</li>
+                            <li>Replacement feet: $3-8 on Amazon</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cracks in housing:</strong>
+                        <ul>
+                            <li>From drops or impacts</li>
+                            <li>Can expose internals to dust/liquid</li>
+                        </ul>
+                    </li>
+                    <li><strong>Sensor lens scratched:</strong>
+                        <ul>
+                            <li>Inspect with flashlight</li>
+                            <li>Deep scratches = sensor ruined, need new mouse</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Liquid damage:</strong></p>
+                <ul>
+                    <li>If spilled liquid on mouse:
+                        <ol>
+                            <li>Immediately unplug or turn off</li>
+                            <li>Remove batteries if wireless</li>
+                            <li>Open mouse case</li>
+                            <li>Wipe visible liquid with cloth</li>
+                            <li>Spray compressed air inside</li>
+                            <li>Let dry 24-48 hours</li>
+                            <li>Clean PCB with isopropyl alcohol 90%+</li>
+                            <li>Reassemble and test</li>
+                        </ol>
+                    </li>
+                    <li>Success rate: 40% if cleaned immediately, 10% if waited 24+ hours</li>
+                </ul>
+
+                <p><strong>Test with different computer:</strong></p>
+                <ol>
+                    <li>Connect mouse to different PC/laptop</li>
+                    <li>If works → Problem is your computer (drivers, settings, USB ports)</li>
+                    <li>If doesn't work → Mouse is faulty</li>
+                </ol>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">13</span> Disable Mouse Acceleration (Gaming) <span class="success-rate">Success: 20%</span></h3>
+                <p><strong>When to try:</strong> Cursor moves unpredictably, aiming feels "off" in games, or cursor speed inconsistent.</p>
+                <p><strong>Why it matters:</strong> Mouse acceleration makes cursor move faster if you move mouse quickly. Good for office work, BAD for gaming precision.</p>
+
+                <p><strong>Windows - Disable acceleration:</strong></p>
+                <ol>
+                    <li>Control Panel → Mouse → Pointer Options</li>
+                    <li>UNCHECK "Enhance pointer precision"</li>
+                    <li>This is Windows mouse acceleration</li>
+                    <li>Click Apply</li>
+                    <li>Cursor now 1:1 with mouse movement (consistent)</li>
+                </ol>
+
+                <p><strong>Mac - Disable acceleration (requires third-party):</strong></p>
+                <ul>
+                    <li>Mac has acceleration built-in, can't disable in settings</li>
+                    <li>Download: LinearMouse (free) or SteerMouse ($20)</li>
+                    <li>Disables acceleration for precise gaming</li>
+                </ul>
+
+                <p><strong>Gaming mouse software settings:</strong></p>
+                <ul>
+                    <li>Logitech G HUB: Disable "Acceleration" in DPI settings</li>
+                    <li>Razer Synapse: Ensure acceleration disabled</li>
+                    <li>Set raw input in games: Most competitive games ignore Windows settings anyway</li>
+                </ul>
+            </div>
+
+            <div class="solution-box">
+                <h3><span class="solution-number">14</span> Warranty Claim / Replacement <span class="success-rate">Varies</span></h3>
+                <p><strong>When to pursue:</strong> Mouse under warranty, hardware failure confirmed, or repair cost exceeds replacement.</p>
+
+                <p><strong>Check warranty status:</strong></p>
+                <ul>
+                    <li><strong>Budget mice ($10-30):</strong> Usually 1-year warranty</li>
+                    <li><strong>Gaming mice:</strong> 2-3 years (Logitech, Razer, Corsair, SteelSeries)</li>
+                    <li><strong>Logitech:</strong> Best warranty service, often replaces without proof of purchase</li>
+                    <li><strong>Razer:</strong> 2-year warranty, requires proof of purchase</li>
+                </ul>
+
+                <p><strong>Warranty claim process:</strong></p>
+                <ol>
+                    <li>Visit manufacturer support website</li>
+                    <li>Create support ticket</li>
+                    <li>Describe issue (clicking problems, cursor lag, etc.)</li>
+                    <li>Provide proof of purchase (receipt, order confirmation)</li>
+                    <li>May need to provide video showing problem</li>
+                    <li>If approved:
+                        <ul>
+                            <li>RMA number issued</li>
+                            <li>Ship mouse to manufacturer (sometimes prepaid label)</li>
+                            <li>They send replacement (usually doesn't need return)</li>
+                            <li>Turnaround: 1-3 weeks</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Logitech warranty (easiest):</strong></p>
+                <ul>
+                    <li>Chat or email support</li>
+                    <li>Often send replacement without requiring return</li>
+                    <li>Sometimes waive proof of purchase</li>
+                    <li>Best warranty experience in peripheral industry</li>
+                </ul>
+
+                <p><strong>When to just buy new mouse:</strong></p>
+                <ul>
+                    <li>Out of warranty + cheap mouse ($10-30) = not worth hassle</li>
+                    <li>New mice better technology anyway (sensors improve yearly)</li>
+                    <li>Wireless mouse with dead battery circuit = unrepairable</li>
+                    <li>Multiple components failed (buttons + scroll wheel + sensor)</li>
+                </ul>
+
+                <p><strong>Budget replacement recommendations:</strong></p>
+                <ul>
+                    <li><strong>$10-20:</strong> Logitech M330, Microsoft Basic Optical</li>
+                    <li><strong>$20-40:</strong> Logitech M510, Razer DeathAdder Essential</li>
+                    <li><strong>$40-80 (gaming):</strong> Logitech G502, Razer DeathAdder V2, Corsair Dark Core</li>
+                </ul>
+            </div>
+
+            <h2>Prevention: Keep Mouse Working Longer</h2>
+
+            <h3>1. Regular Cleaning</h3>
+            <ul>
+                <li><strong>Weekly:</strong> Wipe with slightly damp cloth</li>
+                <li><strong>Monthly:</strong> Clean sensor with alcohol, check mouse feet</li>
+                <li><strong>Every 6 months:</strong> Open case, clean internals with compressed air</li>
+                <li><strong>Use mouse pad:</strong> Reduces dust entering mouse</li>
+            </ul>
+
+            <h3>2. Proper Storage & Use</h3>
+            <ul>
+                <li><strong>Don't slam mouse:</strong> Gaming rage damages switches faster</li>
+                <li><strong>Keep drinks away:</strong> Spills kill mice instantly</li>
+                <li><strong>Store in clean area:</strong> Dust is enemy</li>
+                <li><strong>Wireless mice:</strong> Turn off when not using (saves battery, prevents accidental clicks)</li>
+            </ul>
+
+            <h3>3. Cable Care (Wired Mice)</h3>
+            <ul>
+                <li><strong>Don't bend sharply:</strong> Damages internal wires</li>
+                <li><strong>Use cable bungee (gaming):</strong> Prevents cable from pulling/twisting</li>
+                <li><strong>Avoid rolling over cable:</strong> Chair wheels damage cable</li>
+                <li><strong>Inspect regularly:</strong> Catch fraying early</li>
+            </ul>
+
+            <h3>4. Battery Maintenance (Wireless)</h3>
+            <ul>
+                <li><strong>Replace before fully dead:</strong> Prevents low-voltage issues</li>
+                <li><strong>Use quality batteries:</strong> Cheap batteries leak and damage contacts</li>
+                <li><strong>Remove if storing long-term:</strong> Prevents corrosion</li>
+                <li><strong>Clean battery contacts:</strong> Alcohol on cotton swab if corroded</li>
+            </ul>
+
+            <h3>5. Software Updates</h3>
+            <ul>
+                <li><strong>Keep drivers updated:</strong> Fixes bugs, improves performance</li>
+                <li><strong>Update gaming mouse firmware:</strong> Manufacturer software notifies you</li>
+                <li><strong>Clean install after Windows updates:</strong> Major Windows updates can corrupt drivers</li>
+            </ul>
+
+            <h2>Common Questions</h2>
+
+            <p><strong>Q: My mouse cursor is shaking or jittering. What's wrong?</strong></p>
+            <p>A: Usually dirty sensor or wrong surface. Clean sensor with alcohol, try mouse pad. If gaming mouse: Lower DPI (3200 → 1600), disable surface calibration in software. Laser mice often jitter on cloth pads - use hard pad or switch to optical mouse.</p>
+
+            <p><strong>Q: Wireless mouse works but has noticeable lag. How to fix?</strong></p>
+            <p>A: Move USB receiver closer to mouse (use extension cable). Reduce wireless interference (move WiFi router away). Replace batteries. Gaming mice: Use 2.4GHz mode instead of Bluetooth (much lower latency). Check polling rate in software (should be 1000Hz for gaming).</p>
+
+            <p><strong>Q: Can I use any mouse on Mac?</strong></p>
+            <p>A: Yes, all mice work on Mac (plug and play). But: Side buttons may not work without software, DPI buttons might not work, RGB software usually Windows-only. For full functionality: Use Mac-compatible software (Logitech Options, SteerMouse) or mice designed for Mac (Logitech MX Master, Apple Magic Mouse).</p>
+
+            <p><strong>Q: My gaming mouse RGB lights work but cursor doesn't move. Why?</strong></p>
+            <p>A: RGB LEDs and sensor separate circuits. RGB power from USB but sensor driver crashed or disabled. Solution: Reinstall drivers, update firmware via manufacturer software, or reset mouse to factory defaults. If persists: sensor hardware failed, need warranty claim.</p>
+
+            <p><strong>Q: Mouse cursor freezes for 1-2 seconds randomly. What causes this?</strong></p>
+            <p>A: CPU spikes (check Task Manager when freeze happens), antivirus scanning, Windows update installing in background, or driver issue. Hardware: Wireless interference, receiver in bad USB port. Test: Try different USB port, disable antivirus temporarily, check if freezes happen during specific programs.</p>
+
+            <p><strong>Q: Is Bluetooth mouse or 2.4GHz wireless better?</strong></p>
+            <p>A: 2.4GHz better for gaming (lower latency ~1-2ms vs 10-15ms), longer range, better battery life. Bluetooth better for portability (no dongle to lose), multi-device switching, cleaner desk (one less USB port used). For office work: Bluetooth fine. For gaming: 2.4GHz strongly recommended.</p>
+
+            <p><strong>Q: My mouse double-clicks when I single-click. Can I fix without soldering?</strong></p>
+            <p>A: Temporary software fix: Use "X-Mouse Button Control" (free) to set debounce delay 20-30ms. Slows down click registration to ignore bounces. Or: Adjust Windows double-click speed to slowest (Control Panel → Mouse). But these are workarounds - switch physically failing, will get worse. Permanent fix requires soldering new switches or buying new mouse.</p>
+
+            <p><strong>Q: Can I repair wireless mouse that won't charge?</strong></p>
+            <p>A: If rechargeable mouse won't charge: Check USB cable (try different cable), inspect charging port for debris/damage, try different USB power source. If battery completely dead and won't accept charge: Battery failed (common after 2-3 years). Some mice have replaceable Li-ion batteries (disassemble, replace), others soldered in (hard to replace). Often cheaper/easier to buy new mouse.</p>
+
+            <p><strong>Q: Why does my mouse work on laptop touchpad but not as external mouse?</strong></p>
+            <p>A: This question is confusing - touchpad and external mouse are different devices. If you mean external mouse doesn't work: Check USB port, try different port, test mouse on different computer. If touchpad and external mouse both not working: Major driver issue, reinstall all pointing device drivers or restore Windows.</p>
+
+            <p><strong>Q: How long should a gaming mouse last?</strong></p>
+            <p>A: With normal use: 2-5 years. Heavy gaming: 1-2 years before switch failure (10-20 million clicks). Sensor rarely fails - switches (buttons) fail first. Premium mice (Logitech G Pro, Razer Viper) last longer than budget. Wireless battery: 2-3 years before significantly degraded. Best longevity: Logitech (great warranty), worst: cheap Chinese brands (6 months - 1 year).</p>
+
+            <div class="success-box">
+                <h3>✓ Mouse Troubleshooting Summary</h3>
+                <p><strong>Quick wins (try first, 5-10 min):</strong></p>
+                <ol>
+                    <li>Replace batteries (wireless) - 40% success</li>
+                    <li>Clean sensor with alcohol - 50% success</li>
+                    <li>Use proper mouse pad - 35% success</li>
+                    <li>Try different USB port - 35% success</li>
+                    <li>Restart computer - 30% success</li>
+                </ol>
+                <p><strong>Wireless-specific (10-15 min):</strong></p>
+                <ul>
+                    <li>Re-pair mouse to receiver - 45% success</li>
+                    <li>Reduce interference (move receiver) - 40% success</li>
+                    <li>Use USB extension cable - 30% success</li>
+                </ul>
+                <p><strong>Hardware issues:</strong></p>
+                <ul>
+                    <li>Double-clicking: Replace switches (requires soldering) or buy new</li>
+                    <li>Scroll wheel: Clean encoder or replace encoder wheel</li>
+                    <li>Cable damage: Unrepairable, buy new mouse</li>
+                </ul>
+                <p><strong>When to replace vs repair:</strong></p>
+                <ul>
+                    <li>Mouse under $30 + out of warranty = just replace</li>
+                    <li>Gaming mouse $50+ = worth warranty claim or DIY repair</li>
+                    <li>Cable damaged = always replace (not worth repair)</li>
+                    <li>Sensor failed = replace (sensors can't be fixed)</li>
+                </ul>
+                <p><strong>Overall success rate:</strong> 75% of mouse issues fixable with battery replacement, cleaning, and driver updates!</p>
+            </div>
+
+        </div>
+
+        <div class="related-problems">
+            <h3>🔗 Related Problems</h3>
+            <div class="related-list">
+                <a href="/all-problems/keyboard-keys-not-working/" class="related-item">
+                    <h4>Keyboard Keys Not Working</h4>
+                    <p>Fix unresponsive keys, stuck keys, WASD lock issues</p>
+                </a>
+                <a href="/all-problems/laptop-touchpad-not-working/" class="related-item">
+                    <h4>Laptop Touchpad Not Working</h4>
+                    <p>Fix touchpad cursor issues, gestures not working</p>
+                </a>
+                <a href="/all-problems/usb-ports-not-working/" class="related-item">
+                    <h4>USB Ports Not Working</h4>
+                    <p>Fix USB ports not recognizing mouse or other devices</p>
+                </a>
+                <a href="/all-problems/bluetooth-not-working/" class="related-item">
+                    <h4>Bluetooth Not Working</h4>
+                    <p>Fix Bluetooth connection issues for wireless mice</p>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Popular Guides</h3>
+                <ul>
+                    <li><a href="/all-problems/iphone-not-charging/">iPhone Not Charging</a></li>
+                    <li><a href="/all-problems/laptop-overheating/">Laptop Overheating</a></li>
+                    <li><a href="/all-problems/wifi-not-connecting/">WiFi Problems</a></li>
+                    <li><a href="/all-problems/blue-screen-windows/">Blue Screen Fix</a></li>
+                    <li><a href="/all-problems/phone-battery-drain/">Battery Drain</a></li>
+                    <li><a href="/all-problems/slow-computer/">Slow Computer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Tech Glossary</h3>
+                <ul>
+                    <li><a href="/all-glossary/ram/">What is RAM?</a></li>
+                    <li><a href="/all-glossary/cpu/">What is CPU?</a></li>
+                    <li><a href="/all-glossary/gpu/">What is GPU?</a></li>
+                    <li><a href="/all-glossary/vpn/">What is VPN?</a></li>
+                    <li><a href="/all-glossary/ssd/">SSD vs HDD</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Calculators</h3>
+                <ul>
+                    <li><a href="/all-calculators/storage/">Storage Calculator</a></li>
+                    <li><a href="/all-calculators/ram/">RAM Calculator</a></li>
+                    <li><a href="/all-calculators/bandwidth/">Bandwidth Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fix Guide. All rights reserved. | Helping you solve tech problems since 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>
