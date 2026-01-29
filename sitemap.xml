@@ -1,172 +1,429 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.0</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/about/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/contact/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/privacy/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>yearly</changefreq>
-		<priority>0.3</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/terms/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>yearly</changefreq>
-		<priority>0.3</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/affiliate-disclosure/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>yearly</changefreq>
-		<priority>0.3</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/problems/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.9</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/calculators/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.9</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/glossary/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.9</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-problems/iphone-not-charging/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-problems/laptop-overheating/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-problems/wifi-not-connecting/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-problems/blue-screen-windows/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-problems/phone-battery-drain/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-problems/slow-computer/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-calculators/storage/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-calculators/ram/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-calculators/bandwidth/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-glossary/cpu/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.7</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-glossary/gpu/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.7</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-glossary/ram/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.7</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-glossary/ssd/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.7</priority>
-	</url>
-	
-	<url>
-		<loc>https://tech-fix-guide.vercel.app/all-glossary/vpn/</loc>
-		<lastmod>2025-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.7</priority>
-	</url>
-
-	<url>
-   		<loc>https://tech-fix-guide.vercel.app/all-glossary/ip-address/</loc>
-  		<lastmod>2025-12-29</lastmod>
-  		<changefreq>monthly</changefreq>
-  		<priority>0.7</priority>
-	</url>
-	
+  
+  <!-- Main Pages -->
+  <url>
+    <loc>https://techfixguide.com/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/about/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/contact/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/privacy/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/terms/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/affiliate-disclosure/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/thank-you/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Category Index Pages -->
+  <url>
+    <loc>https://techfixguide.com/problems/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/glossary/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-glossary/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/calculators/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-calculators/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Problem Guides (41 pages) -->
+  
+  <!-- Smartphones -->
+  <url>
+    <loc>https://techfixguide.com/all-problems/iphone-not-charging/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/phone-battery-drain/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/phone-won't-turn-on/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/phone-overheating/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/screen-not-responding/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/no-sound-on-phone/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Laptops & Computers -->
+  <url>
+    <loc>https://techfixguide.com/all-problems/laptop-overheating/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/slow-computer/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/blue-screen-windows/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/laptop-wont-charge/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/black-screen-on-startup/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/laptop-touchpad-not-working/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Gaming Consoles -->
+  <url>
+    <loc>https://techfixguide.com/all-problems/PS5-won't-turn-on/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/xbox-controller-not-connecting/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/nintendo-switch-not-charging/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/console-overheating/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/disc-not-reading/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/HDMI-no-signal/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/controller-drift-fix/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Tablets & iPads -->
+  <url>
+    <loc>https://techfixguide.com/all-problems/ipad-not-charging/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/tablet-screen-frozen/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/touch-screen-not-working/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/tablet-wont-update/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/storage-full-on-tablet/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/ipad-stuck-on-apple-logo/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Wearables -->
+  <url>
+    <loc>https://techfixguide.com/all-problems/apple-watch-not-pairing/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/smartwatch-wont-charge/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/fitness-tracker-not-syncing/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/heart-rate-not-working/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/watch-battery-draining-fast/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/watch-screen-black/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Accessories -->
+  <url>
+    <loc>https://techfixguide.com/all-problems/wifi-not-connecting/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/bluetooth-not-pairing/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/headphones-no-sound/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/keyboard-keys-not-working/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/mouse-not-responding/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-problems/webcam-not-working/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Glossary Pages (6 pages) -->
+  <url>
+    <loc>https://techfixguide.com/all-glossary/cpu/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-glossary/gpu/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-glossary/ram/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-glossary/ssd/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-glossary/vpn/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-glossary/ip-address/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Calculator Pages (3 pages) -->
+  <url>
+    <loc>https://techfixguide.com/all-calculators/storage/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-calculators/ram/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfixguide.com/all-calculators/bandwidth/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
 </urlset>
